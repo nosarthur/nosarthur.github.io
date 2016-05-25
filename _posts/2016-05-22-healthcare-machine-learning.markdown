@@ -32,13 +32,12 @@ tags: [healthcare, machine learning]
 
 ### others
 * GE Hospital Quest: [Think it’s possible to make hospital visits hassle-free? GE does.][GE]
-* Merck Molecular Activity Challenge: Help develop safe and effective medicines by predicting molecular activity.
-* West Nile Virus Prediction: Predict West Nile virus in mosquitos across the city of Chicago
-* Predicting a Biological Response: Predict a biological response of molecules from their chemical properties
-* Flu Forecasting: Predict when, where and how strong the flu will be
-* Prescription Volume Prediction: Predict future prescription volume
+* Merck Molecular Activity Challenge: [Help develop safe and effective medicines by predicting molecular activity][molecular]
+* West Nile Virus Prediction: [Predict West Nile virus in mosquitos across the city of Chicago][Nile]
+* Predicting a Biological Response: [Predict a biological response of molecules from their chemical properties][chemical]
+* Flu Forecasting: [Predict when, where and how strong the flu will be][flu]
+* Prescription Volume Prediction: [Predict future prescription volume][prescription]
 
-## 
 
 
 [ultrasound]: https://www.kaggle.com/c/ultrasound-nerve-segmentation
@@ -59,3 +58,8 @@ tags: [healthcare, machine learning]
 [MEG]: https://www.kaggle.com/c/decoding-the-human-brain
 [Parkinson]: https://www.kaggle.com/c/predicting-parkinson-s-disease-progression-with-smartphone-data
 [GE]: https://www.gequest.com/c/hospital
+[molecular]: https://www.kaggle.com/c/MerckActivity
+[Nile]: https://www.kaggle.com/c/predict-west-nile-virus
+[chemical]: https://www.kaggle.com/c/bioresponse
+[flu]: https://www.kaggle.com/c/genentech-flu-forecasting
+[prescription]: https://www.kaggle.com/c/RxVolumePrediction
