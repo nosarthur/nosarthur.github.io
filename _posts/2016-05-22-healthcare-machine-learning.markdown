@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "What can you do in healthcare with machine learning?"
+title:  What can you do in healthcare with machine learning?
 date:   2016-05-22 23:43:08 -0400
 categories: jekyll update
+comments: true
 tags: [healthcare, machine learning]
 ---
 ## Kaggle competitions
@@ -38,6 +39,8 @@ tags: [healthcare, machine learning]
 * Flu Forecasting: [Predict when, where and how strong the flu will be][flu]
 * Prescription Volume Prediction: [Predict future prescription volume][prescription]
 
+{% if page.comments %}
+{% endif %}
 
 
 [ultrasound]: https://www.kaggle.com/c/ultrasound-nerve-segmentation
