@@ -39,9 +39,6 @@ tags: [healthcare, machine learning]
 * Flu Forecasting: [Predict when, where and how strong the flu will be][flu]
 * Prescription Volume Prediction: [Predict future prescription volume][prescription]
 
-{% if page.comments %}
-{% endif %}
-
 
 [ultrasound]: https://www.kaggle.com/c/ultrasound-nerve-segmentation
 [diabetic]: https://www.kaggle.com/c/diabetic-retinopathy-detection
