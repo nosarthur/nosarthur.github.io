@@ -7,10 +7,10 @@ permalink: /about/
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-2">
         <ul class="social-media-list"> 
-        <li> <a href="http://scholar.google.com/citations?hl=en&user=9RcAQTUAAAAJ">Google Scholar</a></li>
-        <li><a href="https://www.linkedin.com/in/dong-zhou-84252914">LinkedIn</a></li>
-        <li><a href="mailto:{{ site.email }}">Email</a></li>
         <li><a href="{{ site.url }}/assets/DongZHOU.pdf">CV</a> </li>
+        <li><a href="mailto:{{ site.email }}">Email</a></li>
+        <li><a href="https://www.linkedin.com/in/dong-zhou-84252914">LinkedIn</a></li>
+        <li> <a href="http://scholar.google.com/citations?hl=en&user=9RcAQTUAAAAJ">Google Scholar</a></li>
         </ul>
       </div>
 
