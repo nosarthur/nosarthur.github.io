@@ -2,7 +2,7 @@
 layout: post
 title:  What can you do in healthcare with machine learning?
 date:   2016-05-22 23:43:08 -0400
-categories: jekyll update
+categories: machine learning
 comments: true
 tags: [healthcare, machine learning]
 ---

@@ -34,14 +34,21 @@ One may need a large training set for a sophisticated NN otherwise the system is
 Regularization helps in these cases. Also data augmentation can be used to increase the training data.
 
 The cost function can take on many forms, as long as it aims to characterize the difference between ground truth and model output. 
-A typical choice is the cross-entropy function, i.e., , where y(x) is the ground truth result for the input x and a is the NN output. 
-The overall cost function is . 
-To minimized the cost function, one needs to calculate  where the partial derivatives are with respect to the weights and biases. 
+A typical choice is the cross-entropy function, i.e.,
+
+$$C_x = -[y(x)\log a + (1-y(x))\log(1-a)] $$
+
+where $$y(x)$$ is the ground truth result for the input $$x$$ and $$a$$ is the NN output. 
+The overall cost function is $$C = \sum_x C_x$$. 
+To minimized the cost function, one needs to calculate $$\nabla C_x$$ 
+where the partial derivatives are with respect to the weights and biases. 
 In theory it is possible to write down explicit expression of these derivatives for each neuron. 
 But such approach would make the coding extremely tedious and any change in the NN structure would require big change in the code. 
-Fortunately, the layered structure of NN enables a layer-by-layer update of all the partial derivatives of C, starting from the output layer towards the input layer. 
+Fortunately, the layered structure of NN enables a layer-by-layer update of all the partial derivatives of $$C$$, 
+starting from the output layer towards the input layer. 
 This technique is called back propagation, which is essentially the chain rule of calculus. 
-At each layer, it is helpful to introduce an intermediate variable  where j refers to the neuron index and . 
+At each layer, it is helpful to introduce an intermediate variable $$\delta_j^k\equiv\frac{\partial C}{\partial z_j^k}$$ 
+where $$j$$ refers to the neuron index and $$z^k\equiv Wa^{k-1}+b$$. 
 Note here the superscript denotes the layer index. 
 Then starting from the output layer, all the partial derivatives can be easily derived.
 
@@ -55,8 +62,14 @@ convolutional neural network (CNN)
 
 recurrent neural network (RNN)
 
-Resources
+#### References
 
-Michael Nielsen's book
-deep learning book by Ian Goodfellow, Yoshua Bengio and Aaron Courville
-Stanford deep learning tutorial
+* [book][1] by [Michael Nielsen][MN]
+* [deep learning book][2] by Ian Goodfellow, Yoshua Bengio and Aaron Courville
+* Stanford deep learning [tutorial][3]
+
+[MN]: http://michaelnielsen.org/
+[1]: http://neuralnetworksanddeeplearning.com/
+[2]: http://www.deeplearningbook.org/
+[3]: http://deeplearning.stanford.edu/tutorial/
+

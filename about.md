@@ -3,15 +3,35 @@ layout: page
 title: About
 permalink: /about/
 ---
+  <div class="wrapper">
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          {% if site.github_username %}
+          <li>
+            {% include icon-github.html username=site.github_username %}
+          </li>
+          {% endif %}
 
-|[Google Scholar][scholar]|[LinkedIn][linkedin]|[CV][CV]
+          {% if site.twitter_username %}
+          <li>
+            {% include icon-twitter.html username=site.twitter_username %}
+          </li>
+          {% endif %}
+          <li><a href="mailto:{{ site.email }}">email</a></li>
+        </ul>
+      </div>
 
-A scientist and programmer. Interested in applying machine learning to solve social problems, especially in the fields of education and healthcare. 
+      <div class="footer-col footer-col-3">
+        <p>{{ site.description }}</p>
+      </div>
 
-### Reviewer for 
-|Journal of Physics A: mathematical and theoretical| IEEE TBME| PLOS ONE| Quantum Information Processing| New Journal of Physics| Medicine| Journal of Neuroscience Methods| NeuroImage| Magnetic Resonance in Medicine| Medical Physics| NMR in Biomedicine|
+    </div>
+  </div>
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+* [Google Scholar][scholar]
+* [LinkedIn][linkedin]
+* [CV][CV]
 
 
 
