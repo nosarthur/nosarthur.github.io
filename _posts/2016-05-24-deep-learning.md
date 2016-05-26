@@ -2,7 +2,7 @@
 layout: post
 title:  Deep learning
 date:   2016-05-24 23:43:08 -0400
-categories: machine learning
+categories: [machine learning]
 comments: true
 tags: [machine learning]
 ---
