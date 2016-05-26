@@ -16,9 +16,9 @@ layout: default
         </h2>
         <p class="description">
             {% if post.description %}
-                {{ post.description | strip_html | strip_newlines | truncate: 250 }}
+                {{ post.description | strip_html | strip_newlines | truncate: 140 }}
             {% else %}
-                {{ post.content | strip_html | strip_newlines | truncate: 250 }}
+                {{ post.content | strip_html | strip_newlines | truncate: 140 }}
             {% endif %}</p>
       </li>
     {% endfor %}
