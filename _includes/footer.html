@@ -2,11 +2,14 @@
 
   <div class="wrapper">
     <div class="footer-col-wrapper">
-    <div class="footer-col-3 footer-col">
-      <p>© 2016–2016 Dong Zhou. 
-        Released under the 
-        <a href="http://opensource.org/licenses/MIT">MIT License</a>.
+    <div class="footer-col-1 footer-col">
+      <p>© 2016–2016 by Dong Zhou
       </p>
+    </div>
+    <div class="footer-col-2 footer-col">
+      {% if site.github_username %}
+        {% include icon-github.html username=site.github_username %}
+      {% endif %}
     </div>
     <div class="footer-col-2 footer-col">
       <p align='right' class="text-right menu-icon">
