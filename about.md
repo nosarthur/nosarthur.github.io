@@ -18,7 +18,6 @@ permalink: /about/
             {% include icon-twitter.html username=site.twitter_username %}
           </li>
           {% endif %}
-          <li><a href="mailto:{{ site.email }}">email</a></li>
         </ul>
       </div>
 
@@ -29,12 +28,11 @@ permalink: /about/
     </div>
   </div>
 
-* [Google Scholar][scholar]
-* [LinkedIn][linkedin]
-* [CV][CV]
+<ul class="social-media-list"> 
+<li><a href="mailto:{{ site.email }}">email</a></li>
+<li> <a href="http://scholar.google.com/citations?hl=en&user=9RcAQTUAAAAJ">Google Scholar</a></li>
+<li><a href="https://www.linkedin.com/in/dong-zhou-84252914">LinkedIn</a></li>
+<li><a href="{{ site.url }}/assets/DongZHOU.pdf">CV</a> </li>
+</ul>
 
 
-
-[scholar]: http://scholar.google.com/citations?hl=en&user=9RcAQTUAAAAJ
-[linkedin]: https://www.linkedin.com/in/dong-zhou-84252914
-[CV]: {{ site.url }}/assets/DongZHOU.pdf
