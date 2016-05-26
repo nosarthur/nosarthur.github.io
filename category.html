@@ -4,7 +4,7 @@ title: Categories
 permalink: /category/
 ---
 
-<ul class="tag-box inline">
+<ul>
 {% assign tags_list = site.categories %}  
   {% if tags_list.first[0] == null %}
     {% for tag in tags_list %} 
@@ -20,7 +20,7 @@ permalink: /category/
 
 {% for tag in site.categories %} 
   <h3 id="{{ tag[0] }}">{{ tag[0] | capitalize }}</h2>
-  <ul>
+  <ul class="social-media-list">
     {% assign pages_list = tag[1] %}  
     {% for post in pages_list %}
       {% if post.title != null %}
