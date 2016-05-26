@@ -21,5 +21,5 @@ In my `_include/head.html`, I added the `MathJax` link as follows
 ```
 Then inline latex formula can be rendered using `$$F=ma$$`. 
 To get math formula in display mode, make sure there are blank 
-lines before and after the formula. 
+line before and after the formula. 
 

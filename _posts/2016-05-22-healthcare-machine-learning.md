@@ -4,7 +4,7 @@ title:  What can you do in healthcare with machine learning?
 date:   2016-05-22 23:43:08 -0400
 categories: [machine learning]
 comments: true
-description: Kaggle has hosted quite a few competitions on healthcare problems.
+description: Here I listed all the Kaggle competitions on healthcare problems.
 tags: [healthcare, machine learning]
 ---
 ## Kaggle competitions

@@ -57,10 +57,7 @@ This is because when there are many layers, the partial derivatives with respect
 This problem limited the early NN research to shadow network structures. 
 From around 2006, special NN structures have been proposed, 
 which are deep (with many layers) and somewhat easier to train due to their designs.
-
-convolutional neural network (CNN)
-
-recurrent neural network (RNN)
+Two examples are convolutional neural network (CNN) and recurrent neural network (RNN).
 
 #### References
 
