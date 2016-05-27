@@ -2,16 +2,6 @@
 Author: Kushagra Gour (http://kushagragour.in)
 MIT Licensed
 */
-.super-search-btn {
-	position: fixed;
-	right: 10px;
-	top: 15px;
-	fill: #DDD;
-}
-.super-search-btn:hover {
-	fill: #BBB;
-}
-
 .super-search {
 	position: fixed;
 	background-color: rgba(100, 100, 100, 0.85);
@@ -84,7 +74,7 @@ MIT Licensed
 .search-btn {
     position: fixed;
     right: 10px;
-    top: 15px;
+    top: 10px;
     fill: #DDD;
 }
 .search-btn:hover {
