@@ -201,6 +201,13 @@
 /**
  * Posts
  */
+
+.tag-text{
+    border: 2px solid;
+    padding: 5px;
+    margin: 5px; 
+    background-color: #eef;
+}
 .post-header {
     margin-bottom: $spacing-unit;
 }

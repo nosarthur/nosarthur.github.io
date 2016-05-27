@@ -4,7 +4,7 @@ title:  Deep learning
 date:   2016-05-24 23:43:08 -0400
 categories: [machine learning]
 comments: true
-tags: [machine learning]
+tags: [machine learning, neural network]
 ---
 
 Deep learning (DP) is built upon the older field of neural networks (NN). 
