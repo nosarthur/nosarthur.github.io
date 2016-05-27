@@ -80,3 +80,17 @@ MIT Licensed
 .search-btn:hover {
     fill: #BBB;
 }
+
+@media (max-width: 750px) {
+
+	.super-search__input {
+		font-size: 33px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
+	.super-search__result-date {
+		position: static;
+		display: block;
+	}
+}
