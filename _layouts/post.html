@@ -5,12 +5,18 @@ layout: default
 
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}
+    <p class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}
     
-      {% for tags in page.tags %}
-      <span class="tag-text"> {{ tags }} </span>
-     {% endfor %}
+       {% for tags in page.tags %}
+        <span class="tag-text"> {{ tags }} </span>
+       {% endfor %}
     </p>
+    {% if page.last_update %}
+    <p class="post-meta">
+       Last modification: <time datetime="{{page.last_update|date_to_xmlschema}}" itemprop="datePublished">{{ page.last_update |date: "%b %-d, %Y"}}</time>
+    </p>
+    {% endif %} 
   </header>
 
   <div class="post-content" itemprop="articleBody">
