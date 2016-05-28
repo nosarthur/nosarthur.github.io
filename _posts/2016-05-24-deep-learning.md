@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  Deep learning
-date:   2016-05-24 23:43:08 -0400
-last_update:   2016-05-28 03:43:08 -0400
+date:   2016-05-24 23:43:08 -0500
+last_update:   2016-05-28 03:43:08 -0500
 categories: [machine learning]
 description: My note on this topic.
 comments: true
