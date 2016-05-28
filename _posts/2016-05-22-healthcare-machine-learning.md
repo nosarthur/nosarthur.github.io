@@ -4,9 +4,14 @@ title:  What can you do in healthcare with machine learning?
 date:   2016-05-22 23:43:08 -0400
 categories: [machine learning]
 comments: true
-description: Here I listed all the Kaggle competitions on healthcare problems.
+description: A list of what others are doing
 tags: [healthcare, machine learning]
 ---
+## Start-ups
+
+* [behold.ai][behold]:  State-of-the-art artificial intelligence technology to help radiologists make better medical decisions
+* [enlitic][enlitic]: Enlitic applies the state of the art in deep learning technology to medicine
+
 ## Kaggle competitions
 
 ### image processing
@@ -64,3 +69,5 @@ tags: [healthcare, machine learning]
 [chemical]: https://www.kaggle.com/c/bioresponse
 [flu]: https://www.kaggle.com/c/genentech-flu-forecasting
 [prescription]: https://www.kaggle.com/c/RxVolumePrediction
+[behold]: http://behold.ai/
+[enlitic]: http://www.enlitic.com/
