@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Use latex in jekyll
-date:   2016-05-25 13:19:08 -0400
+date:   2016-05-25 13:19:08 -0500
 categories: others
 comments: true
 tags: [latex, jekyll]

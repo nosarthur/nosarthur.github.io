@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  What can you do in healthcare with machine learning?
-date:   2016-05-22 23:43:08 -0400
+date:   2016-05-22 23:43:08 -0500
 categories: [machine learning]
 comments: true
 description: A list of what others are doing
