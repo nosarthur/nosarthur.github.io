@@ -11,6 +11,15 @@ tags: [healthcare, machine learning]
 
 * [behold.ai][behold]:  State-of-the-art artificial intelligence technology to help radiologists make better medical decisions
 * [enlitic][enlitic]: Enlitic applies the state of the art in deep learning technology to medicine
+    * make medical diagnostics based on medical images, doctor notes, structured lab tests, etc
+* [ginger.io][ginger]: Take control of depression and anxiety, right from your pocket
+    * predictive model
+* [wellframe][wellframe]: Connecting People. Amplifying Care.
+    * infrastructure for mobile-enabled care management platform
+* [medaware][medaware]: Eliminating prescription errors.
+    * rist management based on Electronic Medical Records (EMRs)
+* [lumiata][lumiata]: AI-powered Analytics for Risk-Bearing Organizations
+    * predictive analytics 
 
 ## Kaggle competitions
 
@@ -71,3 +80,7 @@ tags: [healthcare, machine learning]
 [prescription]: https://www.kaggle.com/c/RxVolumePrediction
 [behold]: http://behold.ai/
 [enlitic]: http://www.enlitic.com/
+[ginger]: https://ginger.io
+[wellframe]: http://wellframe.com/
+[medaware]: http://www.medaware.com
+[lumiata]: http://lumiata.com

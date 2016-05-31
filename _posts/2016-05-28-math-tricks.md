@@ -16,6 +16,8 @@ $$ 1-\sigma(x) = \sigma(-x) $$
 
 $$ \log\sigma(x) = -\zeta(-x) $$
 
+$$ \tanh(z) = 2\sigma(2z)-1$$
+
 $$ \zeta'(x) = \sigma(x) $$
 
 $$ \forall x\in(0,1),  \sigma^{-1}(x) = \log\frac{x}{1-x} $$

@@ -10,7 +10,7 @@ tags: [latex, jekyll]
 It turns out to be quite straightforward to add latex support in jekyll.
 In my `_include/head.html`, I added the `MathJax` link as follows
 
-```
+``` html
 <head>
   ....
   ....
@@ -21,5 +21,5 @@ In my `_include/head.html`, I added the `MathJax` link as follows
 ```
 Then inline latex formula can be rendered using `$$F=ma$$`. 
 To get math formula in display mode, make sure there are blank 
-line before and after the formula. 
+lines before and after the formula. 
 
