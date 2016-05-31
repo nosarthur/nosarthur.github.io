@@ -2,7 +2,7 @@
 layout: post
 title:  Deep learning
 date:   2016-05-24 23:43:08 -0500
-last_update:   2016-05-28 03:43:08 -0500
+last_update:   2016-05-31 03:43:08 -0500
 categories: [machine learning]
 description: My note on this topic.
 comments: true
@@ -11,7 +11,7 @@ tags: [machine learning, neural network]
 
 ## Introduction
 
-Deep learning (DP) is a buzzword nowadays. 
+Deep learning (DL) is a buzzword nowadays. 
 It has found great success in object recognition, speech 
 recognition, image segmentation, machine translation, etc
 (see the [nature review paper][nature] in 2015).
@@ -22,16 +22,20 @@ resources can be found on [ChristosChristofidis' page][awesome].
 
 ## What it is
 
-Deep learning is built upon the older field of neural networks (NN). 
+DL is built upon the older field of neural networks (NN). 
 Roughly speaking, it is a NN with many layers. 
 Typically it is used as supervised learning. 
 Like NN, its structure encodes a nonlinear input-output relationship
 and parameters are to be fitted using known input-output data (training set). 
 After parameter fitting, 
 generalization to unseen input (test data) is then possible. 
-Although one is still solving an optimization problem in DP or NN, 
+Although one is still solving an optimization problem in DL or NN, 
 the explicit parametrization of the cost function is too cumbersome to write down. 
 On the other hand, the cost function naturally has layered structure thus allows updates to be done layer by layer (back propagation).
+
+Comparing to more conventional machine learning methods, 
+DL has the advantage that data features are not defined manually, 
+thus allowing the processing of natural data in their raw form.
 
 ## A brief history
 
@@ -91,7 +95,7 @@ Note the number of parameters grows rapidly with the number of neurons and the n
 Thus a large training data set is needed for a sophisticated NN otherwise the system is under-determined. 
 Regularization helps in these cases. Also data augmentation can be used to increase the training data.
 
-## The solver: back propagation and statistical gradient descent
+## The solver
 The cost function can take on various forms, 
 as long as it aims to characterize the difference between ground truth and model output. 
 Due to the complex structure of NN and the nonlinearity of the 
@@ -131,9 +135,11 @@ Then starting from the output layer, all the partial derivatives can be easily d
 For a long time, NN with many layers cannot be solve in reasonable time due to a so-called vanishing gradient problem. 
 This is because when there are many layers, the partial derivatives with respect to the early layers become too small. 
 This problem limited the early NN research to shadow network structures. 
-From 2006, special NN structures have been proposed, 
+From 2006, progress has been made to efficiently train NNs
 which are deep (with many layers) and somewhat easier to train due to their designs.
 Two examples are convolutional neural network (CNN) and recurrent neural network (RNN).
+
+## CNN and RNN
 
 CNN plays an important role in computer vision. 
 It was proposed in the early 90's and was motivated by the mechanisms in the visual neuroscience. 
@@ -157,11 +163,14 @@ In practice, there are multiple layers of convolutional layers and
 pooling layers. This hierarchical structure encodes the idea that 
 higher-level features are abstracted from lower-level features.
 
-RNN reinforcement learning.
+RNN is commonly used for tasks with sequential inputs, such as speech
+recognition. reinforcement learning.
+
 
 ## The future
 
-[nature paper][nature]
+According to the [nature review paper][nature], the future of 
+DL resides in unsupervised learning. 
 
 To be continued ...
 
