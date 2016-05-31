@@ -106,8 +106,11 @@ be tractable
 for the gradient descent based methods to converge fast.
 Note that the choice of the activation function also affects the 
 size of the gradient. 
+It is also worth noting that considering the complexity of the 
+whole NN, it is not clear why gradient descent works so well in 
+practice.
 
-A common choice is the cross-entropy function, i.e.,
+A common choice of the cost function is the cross-entropy function, i.e.,
 
 $$C_x = -[y(x)\log a + (1-y(x))\log(1-a)] $$
 
@@ -133,7 +136,26 @@ which are deep (with many layers) and somewhat easier to train due to their desi
 Two examples are convolutional neural network (CNN) and recurrent neural network (RNN).
 
 CNN plays an important role in computer vision. 
-local receptive fields, shared weights and biases, pooling.
+It was proposed in the early 90's and was motivated by the mechanisms in the visual neuroscience. 
+There are four key ideas behind CNN: 
+
+* local receptive fields
+* shared weights and biases
+* pooling
+* the use of many layers
+
+A typical CNN is composed of convolutional layers, pooling layers and fully-connected layers.
+Neurons in the convolutional and pooling layers are not fully 
+connected to the neurons in the previous layer. Instead, each 
+neuron is only connected a group of neighboring neurons in the 
+previous layer, thus the name of local receptive fields. 
+Furthermore, all weights and biases are the same for the neurons
+in the convolutional layer, which greatly reduces the number of 
+parameters. The shared weights and biases also reflect the intuition
+that the same feature is to be searched. 
+In practice, there are multiple layers of convolutional layers and 
+pooling layers. This hierarchical structure encodes the idea that 
+higher-level features are abstracted from lower-level features.
 
 RNN reinforcement learning.
 
