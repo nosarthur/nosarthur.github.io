@@ -1,7 +1,10 @@
 ---
-layout: page
-title: Links 
-permalink: /links/
+layout: post 
+title: transition to data science 
+date:   2016-08-12 20:43:00 -0500
+categories: others
+comments: true
+tags: [data science]
 ---
 
 
