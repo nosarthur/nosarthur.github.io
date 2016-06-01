@@ -1,6 +1,6 @@
 
 var margin = {top: 30, right: 20, bottom: 30, left: 20},
-    width = 460 - margin.left - margin.right,
+    width = 500 - margin.left - margin.right,
     barHeight = 20,
     barWidth = width * .8;
 
