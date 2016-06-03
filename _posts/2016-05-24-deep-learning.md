@@ -163,8 +163,11 @@ In practice, there are multiple layers of convolutional layers and
 pooling layers. This hierarchical structure encodes the idea that 
 higher-level features are abstracted from lower-level features.
 
-RNN is commonly used for tasks with sequential inputs, such as speech
-recognition. reinforcement learning.
+RNN is commonly used for tasks with sequential inputs, such as
+natural language processing, speech
+recognition. Unlike CNN, where the outputs of the earlier layers
+are fed to layer layers (also known as feedforward NN), RNN contains
+feedback structure. 
 
 
 ## The future
