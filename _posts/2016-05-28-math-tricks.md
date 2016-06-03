@@ -2,7 +2,7 @@
 layout: post
 title:  Useful identities in machine learning
 date:   2016-05-28 13:34:08 -0500
-categories: [machine learning]
+categories: [machine learning, math]
 description: math identities
 comments: true
 tags: [machine learning, math]

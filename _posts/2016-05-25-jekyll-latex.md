@@ -23,3 +23,7 @@ Then inline latex formula can be rendered using `$$F=ma$$`.
 To get math formula in display mode, make sure there are blank 
 lines before and after the formula. 
 
+Sometimes the latex is not rendered correctly and it seems the 
+problem is that the markdown interpreter tries to interpret 
+the latex. In these cases, the solution is to put `<span> ... </span>`
+or `<div> ... </div>` around the latex.
