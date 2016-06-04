@@ -23,11 +23,11 @@ permalink: /links/
 
 ### gadgets and cheat-sheets
 
-* [Markdown cheat-sheet][md]
 * [To verify JSON][json]
 * [To verify HTML][html]
 * [To verify CSS][css]
 * [Interactive coding editor for d3.js][d3]
+* [Markdown cheat-sheet][md]
 
 ### data science transitions
 
