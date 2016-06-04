@@ -6,9 +6,9 @@ permalink: /links/
 
 ### blogs
 * [Michael Nielsen][nielsen] 
-* [off the convex path][off]
 * [Christopher Olah][colah]
 * [Andrej Karpathy][karthy]
+* [off the convex path][off]
 * [rare-technologies][rare]
 
 ### conferences
