@@ -21,8 +21,9 @@ permalink: /links/
 * [Chinese Text Project][chinese]
 * [Buddhist Education and Information][buddhist]
 
-### useful links
-* [Markdown cheatsheet][md]
+### gadgets and cheat-sheets
+
+* [Markdown cheat-sheet][md]
 * [To verify JSON][json]
 * [To verify HTML][html]
 * [To verify CSS][css]
