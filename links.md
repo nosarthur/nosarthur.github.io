@@ -27,6 +27,7 @@ permalink: /links/
 * [To verify HTML][html]
 * [To verify CSS][css]
 * [Interactive coding editor for d3.js][d3]
+* [git cheat-sheet](http://zackperdue.com/tutorials/super-useful-need-to-know-git-commands)
 * [Markdown cheat-sheet][md]
 
 ### data science transitions
