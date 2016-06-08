@@ -46,18 +46,18 @@ Due to the complex structure of NN, fancy numerical optimization
 methods usually do not apply. Gradient descent and its variants 
 are commonly used.
 The cost function naturally has layered structure which allows 
-updates to be done in a layer by layer fashion (back propagation).
+gradient descent updates to be done in a layer by layer fashion (back propagation).
 
 Compared to more conventional machine learning methods, 
 DL has the advantage that data features are not defined manually, 
 thus allowing the processing of natural data in their raw form.
 Also it has been demonstrated many times that 
-hand crafted features do not work as well as learned features.
+hand crafted features do not work as well as learned ones.
 
 ## A brief history
 
-According to the [book][2] by Ian Goodfellow, Yoshua Bengio and Aaron Courville, there have been three major waves of development of 
-deep learning. 
+According to the [book][2] by Ian Goodfellow, Yoshua Bengio and Aaron Courville, 
+there have been three major waves of development of deep learning. 
 
 1. cybernetics 1940s - 1960s
     * idea: intelligence may be modeled by reverse engineering 
