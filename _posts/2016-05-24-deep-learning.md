@@ -99,7 +99,7 @@ or activated with different intensities ($$z>0$$).
 
 ## The network
 
-In a DP NN there are layers of neurons and there is freedom how 
+In a DL NN there are layers of neurons and there is freedom how 
 to connect the neurons. 
 The outputs of previous layers are fed into the succeeding layer as inputs. 
 A succinct way to write the input-output relationship for one layer 
@@ -114,7 +114,7 @@ Thus the parameters of the NN are the weights and biases of the
 neurons. 
 The purpose of the training data is to fit out these parameters. 
 Note the number of parameters grows rapidly with the number of neurons and the number of layers. 
-Thus a large training data set is needed for a sophisticated DP NN
+Thus a large training data set is needed for a sophisticated DL NN
 otherwise the system is under-determined. 
 Regularization may help in these cases. 
 Also data augmentation can be used to increase the training data.
@@ -211,10 +211,10 @@ do interesting applications such as captioning images.
 According to the [nature review paper][nature], the future of 
 DL resides in unsupervised learning. 
 In the 2015 ICML panel discussion, NLP was considered to have 
-potential for big improvement with DP, 
+potential for big improvement with DL, 
 particularly the natural language dialog systems. 
 Aslo medicine/healthcare was 
-identified as the next big thing for DP, for example, 
+identified as the next big thing for DL, for example, 
 medical image analysis and drug discovery.
 
 Another future direction is about hardware, the ones that are more
@@ -238,5 +238,5 @@ and Geoffrey Hinton, Nature 521, 436 (2015)
 [nature]: http://www.nature.com/nature/journal/v521/n7553/full/nature14539.html
 [LeCun]: http://yann.lecun.com/
 [IC]: http://feynman.mit.edu/ike/homepage/index.html
-[qc]: http://www.amazon.com/Quantum-Computation-Information-10th-Anniversary/dp/1107002176
+[qc]: http://www.amazon.com/Quantum-Computation-Information-10th-Anniversary/DL/1107002176
 [rnn]: http://colah.github.io/posts/2015-08-Understanding-LSTMs/

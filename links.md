@@ -10,6 +10,7 @@ permalink: /links/
 * [Andrej Karpathy][karthy]
 * [off the convex path][off]
 * [rare-technologies][rare]
+* [Tim Dettmers](http://timdettmers.com)
 
 ### conferences
 
