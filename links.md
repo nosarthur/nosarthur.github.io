@@ -5,6 +5,7 @@ permalink: /links/
 ---
 
 ### blogs
+
 * [Michael Nielsen][nielsen] 
 * [Christopher Olah][colah]
 * [Andrej Karpathy][karthy]
