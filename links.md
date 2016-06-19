@@ -32,6 +32,7 @@ permalink: /links/
 * [matlab & numpy](http://mathesaurus.sourceforge.net/matlab-numpy.html)
 * [git cheat-sheet](http://zackperdue.com/tutorials/super-useful-need-to-know-git-commands)
 * [Markdown cheat-sheet][md]
+* [Python re](https://developers.google.com/edu/python/regular-expressions)
 
 ### data science transitions
 
