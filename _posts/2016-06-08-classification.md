@@ -193,6 +193,7 @@ $$ \min\|w\|, \quad s.t. \quad  y^{(i)} z^{(i)}\ge 1.$$
 
 It is a convex optimization problem and can be efficiently 
 solved using primal dual method.
+Further complications of SVM can be found in [this post]({% post_url 2016-06-20-svm %}).
 
 ## Their differences
 
@@ -216,7 +217,7 @@ SVM (solid) given 3 data points.
 As for which method is better, it may depend on the problem. 
 For example, what kind of outlier does one expect in the data set.
 In real life, data might not even be linearly separable.
-In that case, kernel SVM will be an option.
+In that case, kernel SVM with soft margin will be an option.
 
 The code to generate Fig. 4 is as follows. 
 The parameter `C` controls the size of regularization. 
