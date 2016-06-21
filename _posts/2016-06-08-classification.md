@@ -193,7 +193,7 @@ $$ \min\|w\|, \quad s.t. \quad  y^{(i)} z^{(i)}\ge 1.$$
 
 It is a convex optimization problem and can be efficiently 
 solved using primal dual method.
-Further complications of SVM can be found in [this post]({% post_url 2016-06-20-svm %}).
+Further complications of SVM can be found in this post.
 
 ## Their differences
 
