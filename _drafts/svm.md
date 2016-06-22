@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Support vevtor machine
+title:  Support vector machine
 date:   2016-06-20 13:43:08 -0500
 categories: [machine learning]
 comments: true
@@ -83,11 +83,48 @@ $$\frac{\partial\mathcal L}{\partial w}=0,
 which give rise to 
 
 $$w=\sum_{i=1}^m \alpha_i y^{(i)}x^{(i)} \\
-\sum_{i=1}^m \alpha_iy^{(i)}=0$$
+\sum_{i=1}^m \alpha_iy^{(i)}=0 \\
+C-\alpha_i=r_i\ge0$$
 
+It shows that the normal vector $$w$$ of the separation plane is 
+a linear combination of the data points $$x^{(i)}$$.
+The data points $$x^{(i)}$$ with non-zero $$\alpha_i$$ are called
+the support vectors. 
+Ideally, the number of support vectors is small.
+
+The KKT complementary condition requires
+
+$$ \alpha_i\left(1-\xi_i-y^{(i)}z^{(i)}\right)=0 \\
+r_i\xi_i =0 $$
+
+If $$r_i=0$$, then $$\alpha_i=C$$. As a result of the first condition,
+$$ y^{(i)}z^{(i)}\le 1.$$
+
+If $$\xi_i=0$$, then $$\alpha_i\le C$$. There are two cases from here.
+In the first case, if $$0<\alpha_i\le C$$,
+then the first condition requires $$ y^{(i)}z^{(i)}=1.$$
+In the second case, if $$\alpha_i=0$$, then $$ y^{(i)}z^{(i)}\ge1.$$
+
+To summarize, the complementary conditions give rise to 
+
+$$ \alpha_i=0 \rightarrow y^{(i)}z^{(i)}\ge1 \\
+\alpha_i=C \rightarrow y^{(i)}z^{(i)}\le1 \\
+0<\alpha_i<C \rightarrow y^{(i)}z^{(i)}=1 $$
+
+
+Plugging the expression of $$w$$ back into the Lagrangian, we have
+
+$$\mathcal L(\alpha)=\sum_{i=1}^m\alpha_i-\frac{1}{2}\sum_{i,j=1}^m\alpha_i\alpha_jy^{(i)}y^{(j)}\left<x^{(i)},x^{(j)}\right> $$
+
+where the brackets denote inner product. 
+Thus the dual problem is a quadratic programming 
+
+$$ \max_{\alpha} \mathcal L \\
+s.t. \sum_{i=1}^m\alpha_iy^{(i)}=0,\quad 0\le\alpha_i\le C$$
 
 In general it is preferable to use SVM with soft margin even if the
 data are linearly separable. One example is shown in Fig. 2.
+
 
 <svg width='350' height='200'> 
 <circle cx='25' cy='21' r='5' fill='white' stroke='black'/> 
