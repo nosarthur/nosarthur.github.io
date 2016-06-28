@@ -3,7 +3,6 @@ layout: post
 title:  Deep learning
 date:   2016-05-24 23:43:08 -0500
 categories: [machine learning]
-description: My note on this topic.
 comments: true
 tags: [machine learning, neural network]
 ---
@@ -17,7 +16,8 @@ recognition, image segmentation, machine translation, etc
 In this post I will give a short overview of it.
 
 For the avid learner, a comprehensive list of deep learning 
-resources can be found on the github page of [ChristosChristofidis][awesome].
+resources can be found on the github pages of [ChristosChristofidis][awesome]
+and [Awesome RNN](https://github.com/kjw0612/awesome-rnn).
 
 ## What it is
 
