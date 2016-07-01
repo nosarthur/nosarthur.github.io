@@ -12,6 +12,7 @@ permalink: /links/
 * [off the convex path][off]
 * [rare-technologies][rare]
 * [Tim Dettmers](http://timdettmers.com)
+* [Mat Kelcey](http://matpalm.com/blog/)
 
 ### conferences
 

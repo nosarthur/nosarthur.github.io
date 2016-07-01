@@ -228,6 +228,7 @@ suitable for NN computations.
 and Geoffrey Hinton, Nature 521, 436 (2015)
 * Stanford deep learning [tutorial][3]
 * [Machine learning packages][pack]
+* [U Toronto CSC2535](http://www.cs.toronto.edu/~hinton/csc2535/)
 
 [MN]: http://michaelnielsen.org/
 [1]: http://neuralnetworksanddeeplearning.com/
