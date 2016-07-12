@@ -13,6 +13,7 @@ permalink: /links/
 * [rare-technologies][rare]
 * [Tim Dettmers](http://timdettmers.com)
 * [Mat Kelcey](http://matpalm.com/blog/)
+* [fastML](http://fastml.com/)
 
 ### conferences
 
