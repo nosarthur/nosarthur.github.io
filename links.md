@@ -14,6 +14,7 @@ permalink: /links/
 * [Tim Dettmers](http://timdettmers.com)
 * [Mat Kelcey](http://matpalm.com/blog/)
 * [fastML](http://fastml.com/)
+* [dataQuest](https://www.dataquest.io/blog/)
 
 ### conferences
 
@@ -35,6 +36,13 @@ permalink: /links/
 * [git cheat-sheet](http://zackperdue.com/tutorials/super-useful-need-to-know-git-commands)
 * [Markdown cheat-sheet][md]
 * [Python re](https://developers.google.com/edu/python/regular-expressions)
+
+### public data sets
+
+* [data.gov](http://catalog.data.gov/dataset)
+* [google data](https://cloud.google.com/bigquery/public-data/#usa-names)
+* [awesome datasets](https://github.com/caesar0301/awesome-public-datasets)
+* [rs.io](http://rs.io/100-interesting-data-sets-for-statistics/)
 
 ### data science transitions
 
@@ -59,3 +67,5 @@ permalink: /links/
 [colah]: http://colah.github.io
 [karthy]: http://karpathy.github.io
 [rare]: http://rare-technologies.com/blog/
+
+ 

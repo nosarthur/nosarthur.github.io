@@ -22,6 +22,14 @@ For a comprehensive list of these online resources, check out this
 [page][list] from bestcollegereviews.org.
 
 
+Education should be goal-oriented.
+
+The advantages of online education:
+
+* cheap
+    * to propagate
+    * to personalize
+
 
 ## Are we there already? 
 
