@@ -9,7 +9,7 @@
 title: nos' blog
 email: zhou.dong@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  A scientist and programmer. Familiar with magnetic resonance imaging, quantum computing and biophysics.
+  A scientist and programmer. Familiar with magnetic resonance imaging, quantum computing and biophysics. <br>
   A reader and writer. Interested in martial arts, yoga, and other antient teachings. 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://nosarthur.github.io" # the base hostname & protocol for your site
