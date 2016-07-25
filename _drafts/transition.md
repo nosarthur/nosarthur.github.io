@@ -2,7 +2,7 @@
 layout: post
 title: my transition to data scientist job 
 date:   2016-02-18 23:43:08 -0500
-categories: [others]
+categories: [life]
 comments: true
 tags: [job hunting]
 ---
