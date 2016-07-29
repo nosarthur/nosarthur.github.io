@@ -43,6 +43,7 @@ permalink: /links/
 * [google data](https://cloud.google.com/bigquery/public-data/#usa-names)
 * [awesome datasets](https://github.com/caesar0301/awesome-public-datasets)
 * [rs.io](http://rs.io/100-interesting-data-sets-for-statistics/)
+* [fivethirtyeight](https://github.com/fivethirtyeight/data)
 
 ### data science transitions
 
