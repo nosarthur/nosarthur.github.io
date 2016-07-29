@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Classification 
+title:  SVM and logistic regression
 date:   2016-06-08 13:43:08 -0500
 categories: [machine learning]
 comments: true
