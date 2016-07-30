@@ -16,7 +16,7 @@ permalink: /about/
       </div>
 
       <div class="footer-col footer-col-3">
-        <p>{{ site.description }}</p>
+        <p style="color:black;">{{ site.description }}</p>
         Current reading list:
         <ul>
         <li> Influence: the psychology of persuation by Robert B. Cialdini </li>
