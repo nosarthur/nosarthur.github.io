@@ -17,6 +17,8 @@ tags: [job hunting]
 
 ## after thoughts
 
+* Let as many people as possible know that you are looking for jobs.
+
 
 ## learning resources
 
@@ -56,6 +58,7 @@ tags: [job hunting]
     * Scientific Software Developer 7.22
 1. Google DeepMind
 1. Princeton University Associate Professional Specialist 7.29 
+1. Weill Cornell Medicine Engineers & Scientists in Dalio 7.31
 
 
 
