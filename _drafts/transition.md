@@ -11,11 +11,20 @@ tags: [job hunting]
 
 ## why data scientist
 
+## my timeline 
+
+* Left postdoc job on May 6, 2016.
+
+## after thoughts
+
+
 ## learning resources
 
 * [dataQuest](https://www.dataquest.io)
     
     I discovered this site in late July and wished I could have found it much earlier. 
+    It is an online learning platform for breaking into data analyst, data scientist and data engineer jobs. The premium subscription is $49/month. 
+    The nice thing is that you can video chat with the founder [Vik Paruchuri](http://www.vikparuchuri.com) for 10 min every week.
 * [Stanford database course](https://lagunita.stanford.edu/courses/DB/2014/SelfPaced/about)
 
     I do not have experience with SQL before and this course taught me the basics.
@@ -45,7 +54,8 @@ tags: [job hunting]
 13. Schrodinger 
     * Senior Scientific Software Developer 7.22
     * Scientific Software Developer 7.22
-
+1. Google DeepMind
+1. Princeton University Associate Professional Specialist 7.29 
 
 
 

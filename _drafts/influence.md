@@ -12,22 +12,31 @@ psychology of compliance. This book grew out of his field study
 of joining the compliance professional workforce (sales operators,
 fund raisers, recruiters, advertisers, etc) 
 as an under-covered researcher in a three year period.
+It also contains many anecdotes of the author, famous historical 
+events, and research studies. 
 
 He summarized six basic principles of all the tactics. 
 Here is a brief summary of them.
 
 * Reciprocation: when a small favor is given, even if it's uninvited, the feeling of obligation arises.
-    * the reciprocity rule
+    * the [reciprocity rule](https://en.wikipedia.org/wiki/Reciprocity_(social_psychology))
     * the rejeciton-then-retreat technique
-    * the contrast principle
+    * the [contrast principle](https://en.wikipedia.org/wiki/Contrast_effect)
 * Consistency: after taking an initial stand, one has the luxury to stop thinking any more.
-    * the foot-in-the-door technique
-    * the 'throwing a lowball' trick
-* Social proof: 
-    * 'pluralistic ignorance'
-    * 
+    * the [foot-in-the-door technique](https://en.wikipedia.org/wiki/Foot-in-the-door_technique)
+    * the '[throwing a lowball](https://en.wikipedia.org/wiki/Low-ball)' trick
+* Social proof: monkey see, monkey do, especially when uncertain
+    * [pluralistic ignorance](https://en.wikipedia.org/wiki/Pluralistic_ignorance)
+    * '[Werther effect](https://en.wikipedia.org/wiki/Copycat_suicide)'
+    * consumers from Mars
+* Liking: people are more compliant to the ones they like
+    * the 'endless-chain' method
+    * [halo effect](https://en.wikipedia.org/wiki/Halo_effect)
+    * the '[jigsaw classroom](https://en.wikipedia.org/wiki/Jigsaw_(teaching_technique))'
+    * the 'luncheon technique'
+    * the association principle
 * Authority:
-* Liking:
+    * 
 * Scarcity:
 
 There are many interesting examples in the book for these principles. 

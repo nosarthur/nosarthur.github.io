@@ -7,6 +7,7 @@ permalink: /links/
 ### blogs
 
 * [Michael Nielsen][nielsen] 
+* [Sebastian Raschka](http://sebastianraschka.com)
 * [Christopher Olah][colah]
 * [Andrej Karpathy][karthy]
 * [off the convex path][off]
@@ -15,6 +16,7 @@ permalink: /links/
 * [Mat Kelcey](http://matpalm.com/blog/)
 * [fastML](http://fastml.com/)
 * [dataQuest](https://www.dataquest.io/blog/)
+* [Vik Paruchuri](http://www.vikparuchuri.com)
 
 ### conferences
 
