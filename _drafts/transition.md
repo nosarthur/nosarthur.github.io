@@ -18,7 +18,7 @@ tags: [job hunting]
 ## after thoughts
 
 * Let as many people as possible know that you are looking for jobs.
-
+* Don't apply if you won't accept the offer. 
 
 ## learning resources
 
