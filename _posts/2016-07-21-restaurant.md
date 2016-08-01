@@ -4,7 +4,7 @@ title: DOHMH New York City Restaurant Inspection Results
 date:   2016-07-21 13:43:08 -0500
 categories: [side project]
 comments: true
-description: A python pandas exercise on public dataset 
+description: A python pandas exercise on New York city public dataset 
 tags: [pandas]
 ---
 ## introduction
