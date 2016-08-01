@@ -64,13 +64,26 @@ In the figure below, I plot some fictitious <span>$$P(x_i|y)$$</span>.
 Now suppose the new fruit is heavy, green and hard. Then we can quite confidently conclude that
 it is an apple based on the plots. 
 
+You may wonder why do we estimate <span>$$P(x_i|y)$$</span>, instead of <span>$$P(\mathbf x|y)$$</span>. There are several reasons.
 
-Bayes' rule
+* My little brain prefers to think about single variable, rather than multi-variable functions
+* With a given dataset, 
+
+The Bayes' rule
 
 $$
 P(y|x) = \frac{P(x|y)P(y)}{P(x)}
 $$
 
+$$
+\text{posterior} = \frac{\text{prior}\times\text{likelihood}}{\text{evidence}}
+$$
+
+The chain-rule 
+
+$$
+P(y|\mathbf x) = \frac{P(y)}{P(\mathbf x)}P(x_1|y)P(x_2|y, x_1)P(x_3|y, x_1, x_2)
+$$
 
 ## summary 
 

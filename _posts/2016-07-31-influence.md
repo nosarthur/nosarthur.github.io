@@ -37,7 +37,7 @@ Here is a brief summary of them.
     * the 'luncheon technique'
     * the association principle
 * Authority: people are more compliant to authorities, or even symbols of authority
-* Scarcity: the idea of potential loss
+* Scarcity: the idea of potential loss scares us
     * the [scarcity principle](https://en.wikipedia.org/wiki/Scarcity_(social_psychology))
     * the 'limited-number' tactic
     * the 'deadline' tactic

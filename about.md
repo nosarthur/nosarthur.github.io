@@ -19,7 +19,6 @@ permalink: /about/
         <p style="color:black;">{{ site.description }}</p>
         Current reading list:
         <ul>
-        <li> Influence: the psychology of persuation by Robert B. Cialdini </li>
         <li> A random walk down Wall street by Burton Malkiel </li>
         <li> Wisdom of the West by Bertrand Russell </li>
         <li> The hero with a thousand faces by Joseph Campbell </li>
