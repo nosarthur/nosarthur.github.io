@@ -4,7 +4,7 @@ title: Naive Bayes classifier
 date:   2016-01-01 03:43:08 -0500
 categories: [machine learning]
 comments: true
-tags: [Bayes]
+tags: [naive Bayes]
 ---
 
 ## introduction 
@@ -64,10 +64,45 @@ In the figure below, I plot some fictitious <span>$$P(x_i|y)$$</span>.
 Now suppose the new fruit is heavy, green and hard. Then we can quite confidently conclude that
 it is an apple based on the plots. 
 
-You may wonder why do we estimate <span>$$P(x_i|y)$$</span>, instead of <span>$$P(\mathbf x|y)$$</span>. There are several reasons.
+### digression No. 1
+You may wonder why do we estimate <span>$$P(x_i|y)$$</span>, instead of <span>$$P(\mathbf x|y)$$</span>. 
+Indeed, it makes more sense to use the latter to make predictions on the new fruit
+and it is essentially the [maximum likelihood method](https://en.wikipedia.org/wiki/Maximum_likelihood_estimation).
 
-* My little brain prefers to think about single variable, rather than multi-variable functions
-* With a given dataset, 
+However, there are several reasons against it:
+
+* My little brain prefers to think about single-variable, rather than multi-variable functions
+* With a given dataset (sample size), it's easier and much more reliable to estimate a single-variable distribution.
+
+The second reason is a more practical and limiting one. With the [curse of dimensionality](https://en.wikipedia.org/wiki/Curse_of_dimensionality), accurate estimation of the probability distribution quickly becomes difficult as the number of features increases. To make things worse, the features may be continuous variables, and we may not have good prior information about the functional form of the distribution. In these cases, estimating <span>$$P(\mathbf x|y)$$</span> from a dataset becomes mission impossible.
+
+### digression No. 2
+
+What if the new fruit is medium weight, red and soft?
+
+These unpleasant situations need to be handled by mathematical formula, instead of human eyeballing.
+For me, it's very tempting to simply multiply the single-feature condtional probabilities together, i.e.,
+
+$$
+P(x_1^{\text{new}}|y)P(x_2^{\text{new}}|y)P(x_3^{\text{new}}|y)
+$$
+
+Then we compare the $$y=1$$ and $$y=0$$ case and decide. Hopefully this approach will vaguely make some sense to you too.
+
+What is the rationale behind this hand-waving approach? For me, I am secretly hoping that the following 'equation' is true.
+
+$$
+P(x_1, x_2, x_3|y) \overset{?}= P(x_1|y)P(x_2|y)P(x_3|y)
+$$
+
+In other words, I was hoping that <span>$$P(\mathbf x|y)$$</span> could be calculated cheaply from <span>$$P(x_i|y)$$</span>.
+
+$$
+P(x_1, x_2, x_3) \neq P(x_1)P(x_2)P(x_3)
+$$
+
+
+## more formal treatment
 
 The Bayes' rule
 
