@@ -4,6 +4,7 @@ title: Naive Bayes classifier
 date:   2016-01-01 03:43:08 -0500
 categories: [machine learning]
 comments: true
+description: A guild to naive Bayes classifer
 tags: [naive Bayes]
 ---
 

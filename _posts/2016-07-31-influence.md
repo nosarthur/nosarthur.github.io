@@ -3,8 +3,8 @@ layout: post
 title: "Influence: the psychology of persuasion by Robert B. Cialdini"
 date:   2016-07-31 13:43:08 -0500
 categories: [readings]
-description: My brief summary after reading
 comments: true
+description: "Summary of Robert Cialdini's book - Influence: the psychology of persuasion"
 tags: [psychology]
 ---
 

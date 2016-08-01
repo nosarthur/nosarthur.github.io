@@ -4,6 +4,7 @@ title:  Deep learning
 date:   2016-05-24 23:43:08 -0500
 categories: [machine learning]
 comments: true
+description: Notes on deep learning
 tags: [neural network]
 ---
 

@@ -4,7 +4,7 @@ title:  What can you do in healthcare with machine learning?
 date:   2016-05-22 23:43:08 -0500
 categories: [machine learning]
 comments: true
-description: A list of what others are doing
+description: Lists of start-ups and kaggle competitions on healthcare topics
 tags: [healthcare, machine learning]
 ---
 ## Start-ups

@@ -4,6 +4,7 @@ title:  Logistic regression and support vector machine
 date:   2016-06-08 13:43:08 -0500
 categories: [machine learning]
 comments: true
+description: A tutorial on logistic regression and support vector machine
 tags: [SVM, logistic regression]
 ---
 
