@@ -3,17 +3,18 @@ layout: post
 title: "Influence: the psychology of persuasion by Robert B. Cialdini"
 date:   2016-07-14 13:43:08 -0500
 categories: [readings]
+description: My brief summary after reading
 comments: true
 tags: [psychology]
 ---
 
 The author is a psychologist specialised in the 
 psychology of compliance. This book grew out of his field study
-of joining the compliance professional workforce (sales operators,
+of infiltrating the compliance professional workforce (sales operators,
 fund raisers, recruiters, advertisers, etc) 
 as an under-covered researcher in a three year period.
 It also contains many anecdotes of the author, famous historical 
-events, and research studies. 
+events, and research studies (there is a more than 16 pages bibliography). 
 
 He summarized six basic principles of all the tactics. 
 Here is a brief summary of them.
@@ -35,11 +36,15 @@ Here is a brief summary of them.
     * the '[jigsaw classroom](https://en.wikipedia.org/wiki/Jigsaw_(teaching_technique))'
     * the 'luncheon technique'
     * the association principle
-* Authority:
-    * 
-* Scarcity:
+* Authority: people are more compliant to authorities, or even symbols of authority
+* Scarcity: the idea of potential loss
+    * the [scarcity principle](https://en.wikipedia.org/wiki/Scarcity_(social_psychology))
+    * the 'limited-number' tactic
+    * the 'deadline' tactic
+    * the [Romeo and Juliet effect](https://en.wikipedia.org/wiki/Romeo_and_Juliet_effect)
 
 There are many interesting examples in the book for these principles. 
 Even better, the author provided strategies to defend oneself to 
-each type of exploitations.
+each of them.
 
+Overall, it is a very pleasant read to kill some free time.
