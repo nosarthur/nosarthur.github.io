@@ -1,7 +1,18 @@
+---
+layout: post
+title: Kaggle titanic challenge II
+date:   2016-08-30 13:43:08 -0500
+categories: [side project]
+comments: true
+description: My solution with score 0.78469 on Kaggle titanic competition
+tags: [feature engineering, random forest]
+---
 
+## fine tuning the classifiers
 
+decision threshold 
 
-* feature engineering
+## feature engineering
 
 * Untraviolet analytics' [blog](http://www.ultravioletanalytics.com/2014/11/05/kaggle-titanic-competition-part-iii-variable-transformations/)
 * Trevor Stephens' [blog](http://trevorstephens.com/kaggle-titanic-tutorial/r-part-4-feature-engineering/)
