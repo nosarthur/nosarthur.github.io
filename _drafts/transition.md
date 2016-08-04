@@ -32,6 +32,10 @@ tags: [job hunting]
     I do not have experience with SQL before and this course taught me the basics.
 * [LeetCode](https://leetcode.com) and [LeetCode solutions](https://lefttree.gitbooks.io/leetcode-categories/content/index.html)
 
+* Python for Data Analysis by Wes McKinney
+
+* Python Machine Learning by Sebastian Raschka
+
 ## my job applications 
 
 1. insight data science program
