@@ -8,8 +8,6 @@ permalink: /links/
 
 * [Michael Nielsen][nielsen] 
 * [Sebastian Raschka](http://sebastianraschka.com)
-* [Christopher Olah][colah]
-* [Andrej Karpathy][karthy]
 * [off the convex path][off]
 * [rare-technologies][rare]
 * [Tim Dettmers](http://timdettmers.com)
@@ -17,6 +15,10 @@ permalink: /links/
 * [fastML](http://fastml.com/)
 * [dataQuest](https://www.dataquest.io/blog/)
 * [Vik Paruchuri](http://www.vikparuchuri.com)
+* [Jason Brownlee](http://machinelearningmastery.com/blog/)
+* [Christopher Olah][colah]
+* [Andrej Karpathy][karthy]
+* [Ando Saabas](http://blog.datadive.net/)
 
 ### conferences
 

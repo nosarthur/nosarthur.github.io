@@ -9,6 +9,11 @@ tags: [job hunting]
 
 ## who am I 
 
+* Strength
+    * My math and coding background enables me to learn new tools quickly.
+* Weakness:
+    * No industry experience
+
 ## why data scientist
 
 ## my timeline 
@@ -16,6 +21,10 @@ tags: [job hunting]
 * Left postdoc job on May 6, 2016.
 
 ## after thoughts
+
+My mistakes include 
+
+* Don't waste time on deep learning 
 
 * Let as many people as possible know that you are looking for jobs.
 * Don't apply if you won't accept the offer. 
@@ -26,22 +35,24 @@ tags: [job hunting]
     
     I discovered this site in late July and wished I could have found it much earlier. 
     It is an online learning platform for breaking into data analyst, data scientist and data engineer jobs. The premium subscription is $49/month. 
-    The nice thing is that you can video chat with the founder [Vik Paruchuri](http://www.vikparuchuri.com) for 10 min every week.
+    The nice thing is that you can video chat with the founder [Vik Paruchuri](http://www.vikparuchuri.com) for 10 min every week as office hour.
 * [Stanford database course](https://lagunita.stanford.edu/courses/DB/2014/SelfPaced/about)
 
     I do not have experience with SQL before and this course taught me the basics.
-* [LeetCode](https://leetcode.com) and [LeetCode solutions](https://lefttree.gitbooks.io/leetcode-categories/content/index.html)
+* coding preparation
+    * [LeetCode](https://leetcode.com) and [LeetCode solutions](https://lefttree.gitbooks.io/leetcode-categories/content/index.html)
+    * [codewars](http://codewars.com) 
 
-* Python for Data Analysis by Wes McKinney
-
-* Python Machine Learning by Sebastian Raschka
+* books
+    * Python for Data Analysis by Wes McKinney
+    * Python Machine Learning by Sebastian Raschka
 
 ## my job applications 
 
 1. insight data science program
     * ~~NYC May 2016~~ 
-    * NYC Sep 2016
-    * Boston healthcare Sep 2016
+    * ~~NYC Sep 2016~~
+    * ~~Boston healthcare Sep 2016~~
 2. Bit.ly data science intern  7.8
 5. ~~Gallup data scientist - Predictive Analytics 7.18~~
 6. Spreemo data scientist/statistician 7.20
@@ -58,11 +69,14 @@ tags: [job hunting]
     * Senior MR Scientist 7.22
 18. GE Medical Image Analysis Scientist 7.22
 13. Schrodinger 
-    * Senior Scientific Software Developer 7.22
+    * ~~Senior Scientific Software Developer 7.22~~
     * Scientific Software Developer 7.22
 1. Google DeepMind
 1. Princeton University Associate Professional Specialist 7.29 
 1. Weill Cornell Medicine Engineers & Scientists in Dalio 7.31
+2. Penguin Random House Junior Data Scientist 8.6
+
+
 
 
 
