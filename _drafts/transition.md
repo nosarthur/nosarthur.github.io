@@ -13,23 +13,30 @@ tags: [job hunting]
     * My math and coding background enables me to learn new tools quickly.
 * Weakness:
     * No industry experience
+    * No machine learning experience
 
 ## why data scientist
 
+    * low pay in academia
+
 ## my timeline 
 
-* Left postdoc job on May 6, 2016.
+* Left postdoc job in early May 2016
+* Start application in late July 2016
+* Accept offer  in 
 
 ## after thoughts
 
-My mistakes include 
-
+* Do let people know that you are looking for job
+* Do participate in [kaggle][1] competitions ASAP
 * Don't waste time on deep learning 
+* Don't apply if you won't accept the offer 
 
-* Let as many people as possible know that you are looking for jobs.
-* Don't apply if you won't accept the offer. 
+Many of my former classmates and colleagues are working as data scientists in industry. Two of them even wrote a book on [Data Science Interview Exposed](https://www.amazon.com/Science-Interviews-Exposed-Yanping-Huang/dp/1511977485).
 
 ## learning resources
+
+* [kaggle][1]
 
 * [dataQuest](https://www.dataquest.io)
     
@@ -46,16 +53,22 @@ My mistakes include
 * books
     * Python for Data Analysis by Wes McKinney
     * Python Machine Learning by Sebastian Raschka
+* data science programs
+
+    There are many short-term programs nowaday to help people break ice into the data scientist jobs, 
+    e.g., [insight](http://insightdatascience.com), [data incubator](https://www.thedataincubator.com/). I didn't attend any programs. 
+
+    * [youtube project]({% post_url 2016-04-21-youtube %})
 
 ## my job applications 
 
 1. insight data science program
-    * ~~NYC May 2016~~ 
-    * ~~NYC Sep 2016~~
-    * ~~Boston healthcare Sep 2016~~
+    * ~~<mark>NYC May 2016</mark>~~ 
+    * ~~<mark>NYC Sep 2016</mark>~~
+    * ~~<mark>Boston healthcare Sep 2016</mark>~~
 2. Bit.ly data science intern  7.8
 5. ~~Gallup data scientist - Predictive Analytics 7.18~~
-6. Spreemo data scientist/statistician 7.20
+6. <mark>Spreemo data scientist/statistician 7.20</mark>
 7. IBM Watson
     * IBM Social Good Fellow 7.22
     * Postdoctoral Researcher - Healthcare Informatics 7.22
@@ -67,17 +80,18 @@ My mistakes include
     * Research Scientist in Image-Guided Interventions Technologies 7.22
     * Scientist, Staff 7.22
     * Senior MR Scientist 7.22
-18. GE Medical Image Analysis Scientist 7.22
-13. Schrodinger 
+18. <mark>GE Medical Image Analysis Scientist 7.22</mark>
+13. Schroedinger 
     * ~~Senior Scientific Software Developer 7.22~~
-    * Scientific Software Developer 7.22
-1. Google DeepMind
-1. Princeton University Associate Professional Specialist 7.29 
+    * <mark>Scientific Software Developer 7.22</mark>
+1. Google 
+    * DeepMind
+    * data scientist
 1. Weill Cornell Medicine Engineers & Scientists in Dalio 7.31
 2. Penguin Random House Junior Data Scientist 8.6
 
 
-
+[1]: http://www.kaggle.com
 
 
 

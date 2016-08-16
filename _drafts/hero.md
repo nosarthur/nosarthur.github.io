@@ -9,3 +9,5 @@ tags: [myth]
 
 The author holds that mythologies are disguised truths.
 
+
+{% include youtubePlayer.html id="YqIJUJmnc-Y" %}

@@ -8,6 +8,7 @@ permalink: /links/
 
 * [Michael Nielsen][nielsen] 
 * [Sebastian Raschka](http://sebastianraschka.com)
+* [Andrew Gelman](http://andrewgelman.com)
 * [off the convex path][off]
 * [rare-technologies][rare]
 * [Tim Dettmers](http://timdettmers.com)
