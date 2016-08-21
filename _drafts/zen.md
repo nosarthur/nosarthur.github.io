@@ -13,6 +13,8 @@ Before him, Buddhism had already been introduced to China.
 Documents shows the existence of Buddhist community in China 
 as early as A.D. 65. 
 
+This book contains the original Chinese text and English translations.
+
 ## Outline of Practice
 
 ## Bloodstream Sermon

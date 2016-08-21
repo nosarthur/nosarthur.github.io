@@ -187,3 +187,8 @@ sort(, key=)
 zip()
 zip(*)
 ```
+
+```python
+lambda x:
+```
+* ***lambda function*** 

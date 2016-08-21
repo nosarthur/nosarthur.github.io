@@ -8,6 +8,7 @@ description: An introduction on decision trees and random forest
 tags: [decision tree, random forest]
 ---
 
+As a physics major, I find the tree-based methods less natual to think of than the geometric methods such as logistic regression or support vector machine.
 
 
 * pros

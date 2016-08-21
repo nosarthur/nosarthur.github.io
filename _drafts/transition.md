@@ -17,7 +17,7 @@ tags: [job hunting]
 
 ## why data scientist
 
-    * low pay in academia
+* low pay in academia
 
 ## my timeline 
 
@@ -86,9 +86,11 @@ Many of my former classmates and colleagues are working as data scientists in in
     * <mark>Scientific Software Developer 7.22</mark>
 1. Google 
     * DeepMind
-    * data scientist
+    * ~~data analyst, google app for work 8.10 (referral)~~
+    * ~~Data Scientist / Quantitative Analyst, Engineering 8.10 (referral)~~
 1. Weill Cornell Medicine Engineers & Scientists in Dalio 7.31
 2. Penguin Random House Junior Data Scientist 8.6
+1. DataKind data scientist 8.16
 
 
 [1]: http://www.kaggle.com
