@@ -192,3 +192,6 @@ zip(*)
 lambda x:
 ```
 * ***lambda function*** 
+
+## references
+* [google python course](https://developers.google.com/edu/python/)

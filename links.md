@@ -53,6 +53,7 @@ permalink: /links/
 ### data science transitions
 
 * [Preparing for Insight][1]
+* [Preparing for DataIncubator][4]
 * [Preparing for the Transition to Data Science][2]
 * [The Definitive Guide to Do Data Science for Good][3]
 
@@ -67,6 +68,7 @@ permalink: /links/
 [1]: http://insightdatascience.com/blog/preparing_for_insight.html
 [2]: http://www.insightdatascience.com/blog/transition_to_ds.html
 [3]: http://blog.datalook.io/definitive-guide-data-science-good/
+[4]: http://blog.thedataincubator.com/2014/09/how-to-prepare-for-the-data-incubator/
 
 [off]: http://www.offconvex.org
 [nielsen]: http://michaelnielsen.org/

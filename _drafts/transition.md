@@ -19,6 +19,13 @@ tags: [job hunting]
 
 * low pay in academia
 
+* business analyst: report 
+    * statistics
+    * SQL
+* machine learning software development engineer: product
+    * machine learning
+    * software development
+
 ## my timeline 
 
 * Left postdoc job in early May 2016
@@ -49,16 +56,16 @@ Many of my former classmates and colleagues are working as data scientists in in
 * coding preparation
     * [LeetCode](https://leetcode.com) and [LeetCode solutions](https://lefttree.gitbooks.io/leetcode-categories/content/index.html)
     * [codewars](http://codewars.com) 
-
 * books
     * Python for Data Analysis by Wes McKinney
     * Python Machine Learning by Sebastian Raschka
 * data science programs
 
     There are many short-term programs nowaday to help people break ice into the data scientist jobs, 
-    e.g., [insight](http://insightdatascience.com), [data incubator](https://www.thedataincubator.com/). I didn't attend any programs. 
+    e.g., [insight](http://insightdatascience.com), [data incubator](https://www.thedataincubator.com/). I have interviews with insight but didn't get in. Here are the demos that didn't get me into the insight data science program.
 
     * [youtube project]({% post_url 2016-04-21-youtube %})
+    * [NYC restaurant project]({% post_url 2016-07-21-restaurant %})
 
 ## my job applications 
 
@@ -96,4 +103,7 @@ Many of my former classmates and colleagues are working as data scientists in in
 [1]: http://www.kaggle.com
 
 
+## more references
+
+* [five essential phone screen quesitons](https://sites.google.com/site/steveyegge2/five-essential-phone-screen-questions)
 

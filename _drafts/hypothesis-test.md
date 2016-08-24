@@ -29,6 +29,14 @@ the chance of getting a high $$\chi^2$$ decreases as the sample size increases
 
 p-value
 
+## t-test
+
+accounts for sample size
+
+multivariable regression, feature selection
+
+## $$\chi^2$$-test
+
 ## references
 * Allen Downey's [blog article I](http://allendowney.blogspot.com/2011/05/there-is-only-one-test.html) 
 * Allen Downey's [blog article II](http://allendowney.blogspot.com/2011/06/more-hypotheses-less-trivia.html)
