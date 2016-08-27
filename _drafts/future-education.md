@@ -31,6 +31,9 @@ The advantages of online education:
     * to personalize
 
 
+* feedback mechanism
+* credential 
+
 ## Are we there already? 
 
 ## What do we need to do?

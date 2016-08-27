@@ -1,11 +1,10 @@
 ---
 layout: post
-title:  Useful identities in machine learning
+title:  Useful math identities 
 date:   2016-05-28 13:34:08 -0500
 categories: [math]
 comments: true
-description: Math identities in machine learning
-tags: [machine learning, math]
+tags: [math]
 ---
 
 ### sigmoid function  and softplus function
@@ -43,3 +42,5 @@ $$ p(\mathbf x) = \Pi_{i=1}^n p(x_i | x_1, \cdots, x_{i-1})$$
 ### others 
 
 $$ \lim_{x\rightarrow0}x\log x = 0 $$
+
+$$ \log_a n = \log_a b \log_b n $$

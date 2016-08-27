@@ -43,7 +43,17 @@ Many of my former classmates and colleagues are working as data scientists in in
 
 ## learning resources
 
-* [kaggle][1]
+Basically, there are three sets of knowledge
+
+* statistics
+* machine learning
+* coding
+    * algorithms
+    * SQL
+
+The following 
+
+* [kaggle][1] and [drivendata](https://www.drivendata.org/competitions/)
 
 * [dataQuest](https://www.dataquest.io)
     
@@ -75,7 +85,7 @@ Many of my former classmates and colleagues are working as data scientists in in
     * ~~<mark>Boston healthcare Sep 2016</mark>~~
 2. Bit.ly data science intern  7.8
 5. ~~Gallup data scientist - Predictive Analytics 7.18~~
-6. <mark>Spreemo data scientist/statistician 7.20</mark>
+6. ~~<mark>Spreemo data scientist/statistician 7.20</mark>~~
 7. IBM Watson
     * IBM Social Good Fellow 7.22
     * Postdoctoral Researcher - Healthcare Informatics 7.22
@@ -103,7 +113,9 @@ Many of my former classmates and colleagues are working as data scientists in in
 [1]: http://www.kaggle.com
 
 
-## more references
+## more resources
 
+* [indeedoor](https://jcp1016.shinyapps.io/indeedoor/)
+* [resume secrets from data incubator](http://blog.thedataincubator.com/2016/07/5-secrets-for-writing-the-perfect-data-scientist-resume/)
 * [five essential phone screen quesitons](https://sites.google.com/site/steveyegge2/five-essential-phone-screen-questions)
-
+* [NYC coding bootcamps](https://www.coursereport.com/cities/new-york-city)

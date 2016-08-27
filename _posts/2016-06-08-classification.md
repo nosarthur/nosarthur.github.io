@@ -221,6 +221,8 @@ In real life, data might not even be linearly separable.
 In that case, kernel SVM with soft margin will be an option.
 In terms of computation cost, LR is way faster than SVM.
 
+## appendix
+
 The code to generate Fig. 4 is as follows. 
 The parameter `C` controls the size of regularization. 
 By setting `C` to be large, the regularization is effectively turned off.

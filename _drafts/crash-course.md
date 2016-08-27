@@ -35,7 +35,7 @@ While preparing the materials, I tried to follow the following principles as muc
 When planning out the materials, I see you as someone with quantitative background willing to get a data scientist job. 
 Ideally, you have a PhD in physics.
 
-Specifically, you should be familiar with the following
+Specifically, you should be familiar with the following concepts. 
 
 * linear algebra
     * e.g., matrix inverse, eigen values / vectors, SVD
@@ -50,16 +50,15 @@ Specifically, you should be familiar with the following
 * coding
     * python
         * basics
-        * pandas
-        * sklearn
+        * packages: pandas, sklearn, numpy, scipy
     * SQL
     * github
+    * interview problems
 * statistics
-    * A/B test
+    * hypothesis test
 * machine learning
     * tree based methods
     * [naive Bayes]({% post_url 2016-08-01-naive-Bayes %})
     * [logistic regression]({% post_url 2016-06-08-classification %})
     * [support vector machine]({% post_url 2016-06-22-svm %})
-    * boosting
 * portfolio projects

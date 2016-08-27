@@ -110,7 +110,7 @@ $$
 The above inequality becomes equality only when $$x_i$$ are independent random variables.
 
 Does the notion of independence exist in our conditioned situation?
-Nothing guarantees the [conditional independence][1] among the features. 
+Unfortunately there is no guarantee of the [conditional independence][1] among the features. 
 Thus in general our 'equation' with question mark does not hold and we can at best think of $$
 P(x_1^{\text{new}}|y)P(x_2^{\text{new}}|y)P(x_3^{\text{new}}|y) $$ as a hand-waving approximation of 
 <span>$$P({\mathbf x}^\text{new}|y)$$</span>. 
@@ -118,7 +118,7 @@ P(x_1^{\text{new}}|y)P(x_2^{\text{new}}|y)P(x_3^{\text{new}}|y) $$ as a hand-wav
 ### digression No. 3
 
 Suppose we somehow managed to get <span>$$P(\mathbf x|y)$$</span> from our stock, 
-or maybe we are satisfied with the hand-waving approximation of it from the second digression.
+or maybe we are satisfied with the hand-waving approximation of it from the digression No. 2.
 Now some trustworthy person comes in and provides an extra piece of information:
 there is 1 billion apples and 1 million oranges on this planet. 
 
@@ -186,7 +186,7 @@ P(x_2|y,x_1) \simeq P(x_2|y) \\
 P(x_3|y,x_1,x_2) \simeq P(x_3|y)
 $$
 
-In other words, we are assuming the [conditional independence][1] between the features, as alluded in the second digression.
+In other words, we are assuming the [conditional independence][1] between the features, as alluded in the digression No. 2.
 
 ## summary 
 
