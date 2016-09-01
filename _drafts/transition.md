@@ -90,7 +90,9 @@ The following
     * IBM Social Good Fellow 7.22
     * Postdoctoral Researcher - Healthcare Informatics 7.22
     * Research Staff Member - Cognitive Computing 7.22
-11. Mount Sinai School of Medicine: Image Data Scientist 7.22
+11. Mount Sinai School of Medicine: 
+    * Image Data Scientist 7.22
+    * SENIOR DATA ANALYST 8.31
 12. Interactions LLC Machine Learning Scientists & Engineers 7.22
 10. Siemens 
     * Research Scientist, Medical Imaging and Analysis 7.22
@@ -108,6 +110,9 @@ The following
 1. Weill Cornell Medicine Engineers & Scientists in Dalio 7.31
 2. Penguin Random House Junior Data Scientist 8.6
 1. DataKind data scientist 8.16
+1. NYU Langone medical center
+    * Associate Research Scientist – Division of Learning Analytics 8.31
+    * Senior Research Scientist 8.31
 
 
 [1]: http://www.kaggle.com

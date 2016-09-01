@@ -4,6 +4,7 @@ var data = [[0.12, 0.2, 0], [0.2, 0.8, 0], // black dots
             [0.89, 0.9, 1], [0.6, 0.8, 1], // white dots
             [0.62, 0.6, 1], [0.33, 0.4,1], [0.35, 0.1, 1]];
 
+
 var margin = {top: 10, right: 15, bottom: 50, left: 50},
     width  = 300,
     height = 300;
@@ -57,7 +58,6 @@ svg.append("g")
    .attr("transform", "translate(" + width+ ",0)")
    .call(yAxis2);
 
-
 svg.append("text")
    .attr("class", "x label")
    .attr("text-anchor", "middle")
@@ -81,4 +81,43 @@ svg.selectAll('circle')
    .attr('stroke', 'black')
    .attr('r', 5);
 
+var clicked = false;
+var lines = [0.3, 0.5, 0.4];
+
+function updateData() {
+    if (clicked){
+        d3.selectAll(".dline").remove();
+    }
+    else {
+    var line1 = svg.append("line")
+                   .attr('class', 'dline')
+                   .attr("stroke", "steelblue")
+                   .attr("stroke-width", "2")
+                   .attr("x1", xScale(lines[0]))
+                   .attr("y1", yScale(0))
+                   .attr("x2", xScale(lines[0]))
+                   .attr("y2", yScale(1))
+                   .attr("fill", "none");
+    var line2 = svg.append('line')
+                   .attr('class', 'dline')
+                   .attr("stroke", "steelblue")
+                   .attr("stroke-width", "2")
+                   .attr("x1", xScale(lines[0]))
+                   .attr("y1", yScale(lines[1]))
+                   .attr("x2", xScale(1))
+                   .attr("y2", yScale(lines[1]))
+                   .attr("fill", "none");
+    var line3 = svg.append('line')
+                   .attr('class', 'dline')
+                   .attr("stroke", "steelblue")
+                   .attr("stroke-width", "2")
+                   .attr("x1", xScale(lines[2]))
+                   .attr("y1", yScale(0))
+                   .attr("x2", xScale(lines[2]))
+                   .attr("y2", yScale(lines[1]))
+                   .attr("fill", "none");
+    }
+
+    clicked = !clicked;
+}
 

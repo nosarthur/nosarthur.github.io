@@ -20,7 +20,6 @@ permalink: /links/
 * [Christopher Olah][colah]
 * [Andrej Karpathy][karthy]
 * [Ando Saabas](http://blog.datadive.net/)
-* [leanpub](https://leanpub.com/blog)
 
 ### conferences
 

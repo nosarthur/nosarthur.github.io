@@ -79,6 +79,13 @@ a.extend([0, 1, 2])
 * Concatenation creates a new list and thus is expensive. For large list, it is better to use the `extend()` method.
 
 ```python
+a = (1, 2) + (3,)
+b = (1, 2) * 2
+```
+* `(3,)` informs python of tuple data type
+* Concatenation works for other iterable data types, such as list and str. 
+
+```python
 a = [0, 'asdf', 33, 2.2]
 for i, x in enumerate(a):
     print(a[i])

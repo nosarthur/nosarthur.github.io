@@ -29,6 +29,7 @@ While preparing the materials, I tried to follow the following principles as muc
 * concise is better than verbose
 * concrete is better than abstract
 * intuition is better than rigor
+* self-contain is better than referencing
 
 ## The ideal reader
 
