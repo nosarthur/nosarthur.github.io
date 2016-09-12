@@ -11,6 +11,12 @@ tags: [hypothesis test, A/B test]
 Professor Allen Downey wrote some very nice blog posts to summarize the 
 essence of hypothesis test. 
 
+## axioms of probability
+
+1. $$0\le P(A)\le 1 for \forall A$$
+1. $$P(\text{all})=1$$, $$P(\emptyset)=0$$
+1. $$P(A)+P(B)-P(A,B) = P(A\lor B)$$
+
 * Null hypothesis H0: 
 
 For example, a common scenario for hypothesis test is to decide whether two groups are the same.

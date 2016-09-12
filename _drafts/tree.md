@@ -13,9 +13,9 @@ Their pros and cons are as follows.
 * pros
     * relatively fast to train
     * able to achieve very good performance
-    * able to classify data that are not linearly separable
-    * able to treat categorical features out-of-box
+    * able to classify data that are NOT linearly separable
     * somewhat easy to interpret the results
+    * able to treat categorical features almost out-of-box
 * cons
     * unstable (of high variance, somewhat difficult to generalize)
 
@@ -26,7 +26,7 @@ In this post, I will cover four major topics
 * random forest
 * boosted trees
 
-Decision tree is the basic building block of all tree-based classifiers. 
+Among them, decision tree is the basic building block of all tree-based classifiers. 
 The later three classifiers average over many trees for better results.
 In terms of the machine learning jargon, they are ensemble methods that 
 build strong learner out of weak learners.
@@ -37,11 +37,11 @@ Both random forest and boosted trees can be good to get some out-of-box
 base-line performance. I have seen many examples in books saying that 
 boosted trees may be slightly better than random forest.
 
-For simplicity, I will use an example of binary classification
+For simplicity, I will use examples of binary classification
 using binary decision trees.
 The class labels are black and white, or $$Y\in\{0, 1\}$$ and 
-the features are two real valued variables $$(x_1, x_2)$$, 
- The training data are shown as follows
+the features are two real valued variables $$(x_1, x_2)$$.
+Thus the data can be visualized in a plane, as shown in Figure 1.
 
 <style> /* set the CSS */
 .axis path,
@@ -62,10 +62,10 @@ the features are two real valued variables $$(x_1, x_2)$$,
 > Figure 1. Black and white dots to be trained. Click the update button to show/hide decision boundaries.
 
 As a physics major, I find the tree-based classifiers less natural to think 
-of than the geometric methods such as logistic regression or support vector machine.
-It deviates from my comfortable zone of linear algebra + calculus + 
-optimization and contains some messiness and magic. I will elaborate on 
-them along the way.
+of than the more 'geometric' methods such as logistic regression or support vector machine.
+They deviate from my comfortable zone of *linear algebra* + *calculus* + 
+*optimization* and contain some messiness and magic. I will elaborate on 
+this point along the way.
 
 ## decision tree
 
@@ -74,7 +74,7 @@ decisions to determine the class label. In the case of binary decision
 trees, the decisions are responses to yes/no questions, as shown in 
 Figure 2. It is similar to the game [Botticelli](https://en.wikipedia.org/wiki/Botticelli_(game)).
 
-The root node and internal nodes of the tree are the decisions to be made
+The root node and internal nodes of the tree are the decisions to be made,
 whereas the terminal nodes (leaves) are the class labels.
 
 <svg width='500' height='280'> 
@@ -114,11 +114,11 @@ Figure 1.
 
 Geometrically, these yes/no questions form hard boundaries that partition
 the feature space into rectangles (boxes) for
-data with different labels (click the update button in Figure 1).
+data with different labels. Please click the update button in Figure 1 to see one possible partition.
 
 At the training stage, one needs to figure out the decision boundaries
 (the splitting values for the yes/no questions).
-This process is also known as branching. 
+This process is known as branching. 
 For the test data, one simply follows the branches to get the class labels.
 
 ### branching
@@ -132,9 +132,9 @@ Intuitively, the goal is to make the resultant partitions as pure as
 possible after each yes/no question. 
 Practically, there are infinitely many ways to do the partitions and it is
 even hard to define what 'optimal' partition means.
-As a result, many (naive) empirical strategies exist. Usually, one 
-partitions the data based on one feature and then iterates over the 
-features. For a chosen feature, one can 
+As a result, many (naive) empirical strategies exist. For example, one 
+can partition the data on one feature at a time.
+For a chosen feature, one can 
 
 * pick N random values of that feature and pick the best one among them based on a purity measure
 * always partition at the median/mean value of that feature 
@@ -146,23 +146,28 @@ and pick the best feature with its best splitting point.
 To be fancier, you may want to define 'optimality' as the least number of
 decision boundaries, or maybe you want to parametrize the decision boundary
 using more than one feature (e.g., a tilted line in Figure 1). 
-Such attempts immediately make the 
-determination of branching a lot harder. And the effort is probably not 
-justified: in the end, one really only cares about the performance on 
+Such attempts immediately make 
+branching a lot harder. And the effort is probably not 
+justified: in the end, one really only cares about the classification performance on 
 unseen test data, which is very unlikely to be related to these artificial
 'optimality' measures.
 
-In general, there are more details one needs to worry about
+In general, there are more details one needs to worry about. For example
 
-* how many branches to use at one splitting point
-
-    So far we stick to two branches. More branches can be implemented easily.
-* how deep the tree is (stopping criteria for tree growth)
-
-    As you can see, with a deep tree (a lot of decision questions), it is 
-always possible to classify the training data perfectly. But it may simply be over-fitting.
+* how many branches to use at one splitting point?
+* how deep the tree is (stopping criteria for tree growth)?
 
 Unfortunately, there is no clean answer to them. 
+For the first question, two branches as well as 
+$$\sqrt{N_\text{features}}$$ branches are commonly used.
+For the second question, some limits would be applied to the tree growth 
+since a fully grown tree classifies the training data perfectly and is 
+almost for sure an overfit. Possible limits include
+
+* set the minimum number of data points at tree leaf
+* set the depth of the tree
+* prune the tree after it is fully grown
+
 Thus (a lot of) try and error is needed in practice to fine tune the tree parameters. 
 
 ### (im)purity measure
@@ -207,7 +212,7 @@ a and b. Then the entropy after splitting is given by
 $$EH = \sum_{i={a,b}}\frac{N_i}{N} H(p_i) $$
 
 where $$p_a$$ is the percentage of white dots in group a,
-$$N_a$$ is the number of data points (both black and white), 
+$$N_a$$ is the number of data points (both black and white) in group a, 
 $$N$$ is the total number of data points in both groups.
 In other words, it is the average entropy of the two groups.
 
@@ -219,8 +224,7 @@ pick the splitting condition that minimizes $$EH$$.
 The biggest problem with decision tree is its instability, i.e., if the
 training data changes a little bit due to noise and/or sampling, 
 the decision boundaries may change a lot. 
-In other words, the exact locations of the decision boundaries are hard
-to justify. Thus for any particular test data point, the predicted class
+Thus for any particular test data point, the predicted class
 label is likely to change as a result of 
 
 * including/excluding certain training data points (not necessarily outliers)
@@ -243,7 +247,7 @@ The [voting classifier](http://scikit-learn.org/stable/modules/generated/sklearn
 
 $$\epsilon_{VC} = \sum_{k>\frac{n}{2}}^n\binom{n}{k}\epsilon^k(1-\epsilon)^{n-k}$$
 
-In other words, it is wrong only when more than half of the weak learners
+In other words, it is wrong only when more than half of the base classifiers
 are wrong. The numerical value of $$\epsilon_{VC}$$ for 11 and 51 base
 classifier is shown in Figure 3.
 
@@ -282,7 +286,7 @@ following the two rules
 For example, if our dataset is two balls in an urn, one black one red, then the bootstrap sample could be (black, black), (black, red) or (red, red).
 Thus if we compare the bootstrap dataset to the original dataset, 
 some data points would be excluded and some would have several copies.
-Now if we run an unstable classifier on the bootstrap dataset, we are
+If we run an unstable classifier on the bootstrap dataset, we are
 almost guaranteed to get a somewhat different model: more uncorrelated
 to the original one if the classifier is more unstable.
 
@@ -342,43 +346,55 @@ from each other), see Figure 5 for an example.
 > Figure 5. Voting classifier gets 100% accuracy even though the 3 base classifiers all have 80% accuracy.
 
 As a summary, bagging does not always work. It only works for unstable 
-classifiers, well, if the classifiers trained on bootstrap data do not
-agree too much. Thus the magic is partly in the classifier and partly in 
+classifiers when the classifiers trained on bootstrap data do not
+agree too much. Thus the magic is partly in the classifiers and partly in 
 the data itself.
 
-For example, suppose there is a region with many white dots clustered 
-together. Even with bootstrap the decision tree outcome probably wouldn't 
-change much, thus we should not expect much improvement. 
+One example is shown in Figure 6 where the data points follow Gaussian
+distributions. The two Gaussians center at (1, 1) and (3, 1) and share
+the same standard deviation 0.5. 
+Ideally the decision boundary should be at $$x_1=2$$.
+The code can be found [here](https://github.com/nosarthur/bagged-trees).
 
-Suppose in another region we have only one white dot and one black dot
-and they are somewhat far away from all the other dots. Bootstrap will 
-have a dramatic effect for this region since the exclusion of these 
-critical dots moves the decision boundary a lot.
-However, I don't think this is where bagging helps.
-This is because in this data sparse case it is hard to justify whether the 
-decision boundary is moving towards a better location.
+As you can see, one black dot is mingled to the white dot region and 
+it strongly affects the decision tree result.
+On the other hand, the bootstrap samples may not contain this 'outlier'
+and thus provide less deviated decision boundaries.
+In this case, the bagged trees classifier has much higher accuracy
+than the decision tree classifier for the test data.
 
-Finally there may be a region where white dots and black dots mingle.
-As a result, the decision boundary may be of complicated shapes, 
-composing contributions from many yes/no questions. 
-Bootstrap will probably change the decision boundaries in this case.
-In my opinion, this is when bagging helps since each complicated decision
-boundary is probably too *ad hoc* and the smoothed out version from bagging
-is more likely to be true.
+![two blobs](/assets/two_blobs.png){:width="400px"}
+
+> Figure 6. Decision boundary of decision tree and bagged trees classifiers
+for two Gaussian blobs centered at (1, 1) and (3, 1). 
 
 ## random forest
+
+Two ideas are used in the random forest classifier:
 
 * bagging
 * random feature subsets for each tree
 
+The second idea makes the individual trees less correlated to each other. 
+
 ## boosted trees
 
-As you have seen in Figure 4 and 5, the voting classifier works better
-when the base ones do not agree with each other on the same regions
-(uncorrelated). The technique of [boosting](https://en.wikipedia.org/wiki/Boosting_(machine_learning))
+As you have seen in Figure 4 and 5, the voting classifier works 
+when the base ones do not agree with each other on the same regions.
+The technique of [boosting](https://en.wikipedia.org/wiki/Boosting_(machine_learning)) explicitly construct base classifiers to perform well on different data points.
 
-* 
-* 
+The boosted trees classifier contains an iterative process to construct 
+base classifiers. Typically the base classifiers are trees with depth one,
+also called stumps. 
 
-## references
-* [xgboost tutorial](http://xgboost.readthedocs.io/en/latest/model.html)
+Two weights will be introduced 
+
+* a weight $$w_i$$ at the iterative stage for focusing on the data points wrongly classified in the previous rounds 
+* a weight $$\alpha_i$$ at the voting stage for focusing on the good base classifiers
+
+
+
+## summary
+
+
+

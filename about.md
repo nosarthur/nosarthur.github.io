@@ -23,6 +23,11 @@ permalink: /about/
         <li> Wisdom of the West by Bertrand Russell </li>
         <li> A random walk down Wall street by Burton Malkiel </li>
         </ul>
+        To-read list:
+        <ul>
+        <li> Godel, Escher, Bach: An Eternal Golden Braid by Douglas R. Hofstadter </li>
+        <li> How to Win Friends & Influence People by Dale Carnegie </li>
+        </ul>
 
       </div>
 

@@ -10,13 +10,17 @@ tags: [coding interview preparation]
 
 ## introduction 
 
+Interview problems usually can be solved with
+
+* less than 20 lines  
+* less complex than $$O(n^3)$$ algorithm
+
+Also $$O(\log n)$$ solution is somewhat unlikely.
+
 * brutal force
 * divide and conquer
     * decrease and conquer
     * dynamic programming
-
-For interview problems, one hardly needs to implement an $$O(n^3)$$ algorithm. 
-Also $$O(\log n)$$ is somewhat unlikely.
 
 ## computational complexity
 
@@ -40,7 +44,7 @@ O(n^{\log_b a}) \quad \text{if }a>b^d \end{cases} $$
 ## dynamic programming
 
 Dynamic programming (DP) has always been somewhat mysterious to me until I watched [Erik Demaine](http://erikdemaine.org)'s lectures on it.
-There are four lectures and the first one is as follows. 
+There are four lectures and the first one is shown below.
 
 {% include youtubePlayer.html id="OQ5jsbhAv_M" %}
 
@@ -60,7 +64,15 @@ To break down the problem into sub-problems,
 
 ### knapsack 
 
-## resources
 
+## common tricks
+
+* array
+    * two pointers
+* linked list
+    * add dummy before head
+    * two pointers: one fast one slow
+
+## resources
 * [MIT 6.006 Fall 2011](http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/)
 

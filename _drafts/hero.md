@@ -34,3 +34,9 @@ all myths, fairy tales and religious stories are essentially the same, which he 
 
 
 For example, George Lucas stated that the story of Star Wars was influenced by Joseph Campbell's work on mono-myth. 
+
+symbols 
+
+* guardian angel
+* threshold angel
+* father / mother
