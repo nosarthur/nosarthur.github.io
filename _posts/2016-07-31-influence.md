@@ -16,6 +16,8 @@ as an under-covered researcher in a three year period.
 It also contains many anecdotes of the author, famous historical 
 events, and research studies (there is a more than 16 pages bibliography). 
 
+<a href="https://www.amazon.com/gp/product/006124189X/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=006124189X&linkCode=as2&tag=nosarthur2016-20&linkId=9e0cba21696aecb76cd9fbb472e5d5a0" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=006124189X&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=nosarthur2016-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=nosarthur2016-20&l=am2&o=1&a=006124189X" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+
 He summarized six basic principles of all the tactics. 
 Here is a brief summary of them.
 
