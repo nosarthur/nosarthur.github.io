@@ -63,3 +63,26 @@ Specifically, you should be familiar with the following concepts.
     * [logistic regression]({% post_url 2016-06-08-classification %})
     * [support vector machine]({% post_url 2016-06-22-svm %})
 * portfolio projects
+
+### data science transitions
+
+* [Preparing for Insight][1]
+* [Preparing for DataIncubator][4]
+* [Preparing for the Transition to Data Science][2]
+* [The Definitive Guide to Do Data Science for Good][3]
+
+### public data sets
+
+* [data.gov](http://catalog.data.gov/dataset)
+* [google data](https://cloud.google.com/bigquery/public-data/#usa-names)
+* [awesome datasets](https://github.com/caesar0301/awesome-public-datasets)
+* [rs.io](http://rs.io/100-interesting-data-sets-for-statistics/)
+* [fivethirtyeight](https://github.com/fivethirtyeight/data)
+
+
+[1]: http://insightdatascience.com/blog/preparing_for_insight.html
+[2]: http://www.insightdatascience.com/blog/transition_to_ds.html
+[3]: http://blog.datalook.io/definitive-guide-data-science-good/
+[4]: http://blog.thedataincubator.com/2014/09/how-to-prepare-for-the-data-incubator/
+
+

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: my transition to data scientist job 
+title: my transition to industry job 
 date:   2016-02-18 23:43:08 -0500
 categories: [life]
 comments: true

@@ -6,7 +6,16 @@ permalink: /links/
 
 ### blogs
 
+#### interesting people
+
 * [Michael Nielsen][nielsen] 
+
+#### finance
+* [Mr Money Mustache](http://www.mrmoneymustache.com)
+* [Frugal Woods](http://www.frugalwoods.com)
+
+#### machine learning
+
 * [Sebastian Raschka](http://sebastianraschka.com)
 * [Andrew Gelman](http://andrewgelman.com)
 * [off the convex path][off]
@@ -20,11 +29,6 @@ permalink: /links/
 * [Christopher Olah][colah]
 * [Andrej Karpathy][karthy]
 * [Ando Saabas](http://blog.datadive.net/)
-
-### conferences
-
-* [ICML](http://icml.cc/)
-* [ICLR](http://www.iclr.cc/)
 
 ### ancient texts
 
@@ -41,21 +45,6 @@ permalink: /links/
 * [git cheat-sheet](http://zackperdue.com/tutorials/super-useful-need-to-know-git-commands)
 * [Markdown cheat-sheet][md]
 
-### public data sets
-
-* [data.gov](http://catalog.data.gov/dataset)
-* [google data](https://cloud.google.com/bigquery/public-data/#usa-names)
-* [awesome datasets](https://github.com/caesar0301/awesome-public-datasets)
-* [rs.io](http://rs.io/100-interesting-data-sets-for-statistics/)
-* [fivethirtyeight](https://github.com/fivethirtyeight/data)
-
-### data science transitions
-
-* [Preparing for Insight][1]
-* [Preparing for DataIncubator][4]
-* [Preparing for the Transition to Data Science][2]
-* [The Definitive Guide to Do Data Science for Good][3]
-
 [chinese]: http://ctext.org/
 [buddhist]: http://www.buddhanet.net/
 [md]: https://sourceforge.net/p/jekyllc/bugs/markdown_syntax
@@ -63,11 +52,6 @@ permalink: /links/
 [html]: http://validator.w3.org/#validate_by_input
 [css]: http://jigsaw.w3.org/css-validator/#validate_by_input
 [json]: http://jsonlint.com/
-
-[1]: http://insightdatascience.com/blog/preparing_for_insight.html
-[2]: http://www.insightdatascience.com/blog/transition_to_ds.html
-[3]: http://blog.datalook.io/definitive-guide-data-science-good/
-[4]: http://blog.thedataincubator.com/2014/09/how-to-prepare-for-the-data-incubator/
 
 [off]: http://www.offconvex.org
 [nielsen]: http://michaelnielsen.org/
