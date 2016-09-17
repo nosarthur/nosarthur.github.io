@@ -27,7 +27,6 @@ permalink: /about/
         <ul>
         <li> Godel, Escher, Bach: An Eternal Golden Braid by Douglas R. Hofstadter </li>
         <li> How to Win Friends & Influence People by Dale Carnegie </li>
-        <li> The Millionaire Fastlane: Crack the Code to Wealth and Live Rich for a Lifetime by MJ DeMarco </li>
         </ul>
 
       </div>

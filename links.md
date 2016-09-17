@@ -10,7 +10,7 @@ permalink: /links/
 
 * [Michael Nielsen][nielsen] 
 
-#### finance
+#### early retirement
 * [Mr Money Mustache](http://www.mrmoneymustache.com)
 * [Frugal Woods](http://www.frugalwoods.com)
 

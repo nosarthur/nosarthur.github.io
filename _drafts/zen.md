@@ -66,6 +66,11 @@ desires need to be recognized and accepted as part of self. If desires are not f
 
 ## Bloodstream Sermon
 
+* A Buddha isn't a Buddha.
+* "All appearances are illusions."
+* "That which is free of all form is the Buddha."
+* Seeing your own nature is Zen.
+
 ## Wake-up Sermon
 
 ## Breakthrough Sermon

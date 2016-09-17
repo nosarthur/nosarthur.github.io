@@ -1,7 +1,7 @@
 ---
 layout: post
-title: my transition to industry job 
-date:   2016-02-18 23:43:08 -0500
+title: My transition to industry job 
+date:   2016-09-12 23:43:08 -0500
 categories: [life]
 comments: true
 tags: [job hunting]
@@ -9,37 +9,36 @@ tags: [job hunting]
 
 ## who am I 
 
+I received PhD in theoretical physics in 2011 and remained in postdoc positions until 2016.
+
+
 * Strength
     * My math and coding background enables me to learn new tools quickly.
+    * I have a lot of friends working for top companies in industry
 * Weakness:
     * No industry experience
-    * No machine learning experience
 
-## why data scientist
+## why transition
 
-* low pay in academia
+There are two major reason for my transition
 
-* business analyst: report 
-    * statistics
-    * SQL
-* machine learning software development engineer: product
-    * machine learning
-    * software development
+* lack of vision in research
+* lack of financial freedom
+
+Although I have been in school for many years (a fully zodiac cycle after college), I never have the clarity of a long term research plan.
+In my opinion, this lack of vision is vital to academic career: after all, destination is hard to reach by random walk.
+
+I was more interest-driven instead of goal-driven.
+
+low pay in academia
 
 ## my timeline 
 
-* Left postdoc job in early May 2016
-* Start application in late July 2016
+* Left postdoc job in May 2016
+* Start application in July 2016
 * Accept offer  in 
 
-## after thoughts
-
 * Do let people know that you are looking for job
-* Do participate in [kaggle][1] competitions ASAP
-* Don't waste time on deep learning 
-* Don't apply if you won't accept the offer 
-
-Many of my former classmates and colleagues are working as data scientists in industry. Two of them even wrote a book on [Data Science Interview Exposed](https://www.amazon.com/Science-Interviews-Exposed-Yanping-Huang/dp/1511977485).
 
 ## learning resources
 
@@ -53,29 +52,14 @@ Basically, there are three sets of knowledge
 
 The following 
 
-* [kaggle][1] and [drivendata](https://www.drivendata.org/competitions/)
 
 * [dataQuest](https://www.dataquest.io)
     
     I discovered this site in late July and wished I could have found it much earlier. 
     It is an online learning platform for breaking into data analyst, data scientist and data engineer jobs. The premium subscription is $49/month. 
     The nice thing is that you can video chat with the founder [Vik Paruchuri](http://www.vikparuchuri.com) for 10 min every week as office hour.
-* [Stanford database course](https://lagunita.stanford.edu/courses/DB/2014/SelfPaced/about)
+* 
 
-    I do not have experience with SQL before and this course taught me the basics.
-* coding preparation
-    * [LeetCode](https://leetcode.com) and [LeetCode solutions](https://lefttree.gitbooks.io/leetcode-categories/content/index.html)
-    * [codewars](http://codewars.com) 
-* books
-    * Python for Data Analysis by Wes McKinney
-    * Python Machine Learning by Sebastian Raschka
-* data science programs
-
-    There are many short-term programs nowaday to help people break ice into the data scientist jobs, 
-    e.g., [insight](http://insightdatascience.com), [data incubator](https://www.thedataincubator.com/). I have interviews with insight but didn't get in. Here are the demos that didn't get me into the insight data science program.
-
-    * [youtube project]({% post_url 2016-04-21-youtube %})
-    * [NYC restaurant project]({% post_url 2016-07-21-restaurant %})
 
 ## my job applications 
 
@@ -115,7 +99,6 @@ The following
     * Senior Research Scientist 8.31
 
 
-[1]: http://www.kaggle.com
 
 
 ## more resources
