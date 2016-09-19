@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A crash course on python
-date:   2016-08-12 13:43:08 -0500
+date:   2016-09-18 13:43:08 -0500
 categories: [coding]
 comments: true
 tags: [python]
