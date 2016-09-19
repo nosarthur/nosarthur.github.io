@@ -38,8 +38,9 @@ The work responsibility of data scientist varies a lot from company to company.
 * Do participate in [kaggle][k] competitions ASAP
 * Don't waste time on deep learning 
 
-Many of my former classmates and colleagues are working as data scientists in industry. Two of them even wrote a book on [Data Science Interview Exposed](https://www.amazon.com/Science-Interviews-Exposed-Yanping-Huang/dp/1511977485).
+Many of my former classmates and colleagues are working as data scientists in industry. Two of them even wrote a book on data science interviews
 
+<a href="https://www.amazon.com/gp/product/1511977485/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1511977485&linkCode=as2&tag=nosarthur2016-20&linkId=7b8242100ed91c5b3a911ae10fba1494" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=1511977485&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=nosarthur2016-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=nosarthur2016-20&l=am2&o=1&a=1511977485" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 
 ## The guiding principles
 

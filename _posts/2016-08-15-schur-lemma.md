@@ -10,7 +10,7 @@ tags: [group theory, ensemble average]
 
 While in graduate school, I was quite fascinated by the various counting
 and book-keeping techniques in graph theory and group theory.
-One nice example is [Burnside's lemma](https://en.wikipedia.org/wiki/Burnside%27s_lemma), which helps to count the number of different necklaces that can be made out of 5 black stones and 4 white stones.
+One nice example is [Burnside's lemma](https://en.wikipedia.org/wiki/Burnside%27s_lemma), which helps to count the number of different necklaces that can be made out of say 5 black stones and 4 white stones.
 I will write a separate post for it when I get some free time.
 
 On the other hand, there are many theorems and techniques that I don't have much feelings for, mostly because I don't see the applications. 
@@ -23,7 +23,7 @@ The lemma is quite intuitive by itself.
 At the time, I actually wondered why people bothered to write it down and even name it.
 
 Many years later, my colleague at medical school needed to evaluate some 
-expressions for her [NeuroImage](http://www.journals.elsevier.com/neuroimage/) paper (in case you do not know,
+expressions for her [NeuroImage paper][1] (in case you do not know,
 NeuroImage is a not-so-technical journal that publishes pretty 
 brain images and bar plots from statistical analysis).
 To my surprise, her problem was in a perfect set-up for Schur's lemma and
@@ -57,7 +57,7 @@ p_1=\begin{bmatrix}0&1&0&0\\1&0&0&0\\0&0&1&0\\0&0&0&1\end{bmatrix}, \quad
 p_2=\begin{bmatrix}1&0&0&0\\0&1&0&0\\0&0&0&1\\0&0&1&0\end{bmatrix}, \quad
 p_3=\begin{bmatrix}0&1&0&0\\1&0&0&0\\0&0&0&1\\0&0&1&0\end{bmatrix}. $$ 
 
-This is not an [irreducible representation](https://en.wikipedia.org/wiki/Irreducible_representation).
+This is not an [irreducible representation](https://en.wikipedia.org/wiki/Irreducible_representation) due to its block-diagonal structure.
 As a result, the matrices that commutes with all four group members
 are not all proportional to the identity matrix.
 For example, the one below also commutes with all four elements.
@@ -67,9 +67,9 @@ $$ \begin{bmatrix} 1&0&0&0\\0&1&0&0\\0&0&2&0\\0&0&0&2\end{bmatrix} $$
 
 ## application in averaging tensors
 
-### the objective
-In our NeuroImage paper, we would like to evaluate two ensemble averages
-of the susceptibility tensor $$\chi$$ over rotations
+### the goal
+In our [NeuroImage paper][1], we would like to evaluate two ensemble averages
+of the susceptibility tensor $$\chi$$ over all possible rotations
 
 $$\begin{align}
 \left<\chi \right>_1 &=  \sum_i R_i \chi R_i^{-1} \\
@@ -96,7 +96,7 @@ The summation over rotations $$R_i$$ and $$Q_i$$ may appear a bit abrupt to you.
 
 What happens is that we know the magnetic susceptibility tensor (a 3-by-3 
 matrix) for each molecule and we want to know the averaged tensor for an ensemble 
-of the same molecules.
+of the molecules.
 
 For $$\left<\chi\right>_1$$, we assume the molecules are randomly oriented,
 i.e., each one of them is pointing to a random direction and is then
@@ -148,9 +148,11 @@ $$\begin{align}
 It is nice that some random stuff from the past, especially one that I considered to be somewhat trivial and useless, can actually be put in use in a totally unexpected way. I am looking forward to seeing how my other random dots are going to connect in the future.
 
 ## references
-* M. Hamermesh, Group theory and its application to physical problems, Dover Publications (1962)
-* C. Wisnieff, T. Liu, P. Spincemaille, S. Wang, D. Zhou, and Y. Wang, [Magnetic susceptibility anisotropy: Cylindrical symmetry from macroscopically ordered anisotropic molecules and accuracy of MRI measurements using
+* C. Wisnieff, T. Liu, P. Spincemaille, S. Wang, D. Zhou, and Y. Wang, 
+[Magnetic susceptibility anisotropy: Cylindrical symmetry from macroscopically ordered anisotropic molecules and accuracy of MRI measurements using
 few orientations][1], NeuroImage 70, 363 (2013).
-
+* M. Hamermesh, Group theory and its application to physical problems, Dover Publications (1962)
+<a href="https://www.amazon.com/gp/product/0486661814/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0486661814&linkCode=as2&tag=nosarthur2016-20&linkId=596b2c0b9c62e22946e635d01a3cd4fe" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=0486661814&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=nosarthur2016-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=nosarthur2016-20&l=am2&o=1&a=0486661814" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+<br> I am unable to read math books that only show theorems and proofs.  As a physicist, I would rather see the intuition and motivation rather than mathematical rigor. This group theory book is very readable and even enjoyable for me. 
 
 [1]: http://www.ncbi.nlm.nih.gov/pubmed/23296181
