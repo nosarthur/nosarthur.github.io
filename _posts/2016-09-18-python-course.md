@@ -93,7 +93,7 @@ necessary:
     * class definition: `class`
     * error handling: `try`, `except`, `finally`
 
-## Code examples
+## Basic examples
 
 ```python
 a = 0.8
@@ -236,14 +236,17 @@ def binary_search(nums, x):
 * `None` is the default return value if `return` statement is missing in a function definition.
 
 ```python
-def square(x):
-    return x**2
-# lambda function
-square_lambda = lambda x: x**2
-
-square_lambda(3)
+a = [0, 1, 2, None, 4]
+a_sum = 0
+for x in a:
+    if x is not None:
+        a_sum += x
 ```
-* Short functions can be defined using the `lambda` keyword. You almost never want to assign it to a variable like I did here.
+* `None` is of its own data type `NoneType` and cannot be converted to other types 
+* `is` and `is not` should be used to compare variable to `None`
+* `==` and `!=` compare the value whereas `is` and `is not` compare memory location `id()`
+
+## Gotchas
 
 ```python
 # mutable 
@@ -280,16 +283,7 @@ def letgo2(x):
 * After the execution of `letgo2(nums)`, `nums` remains `[10, 20, 30]`. 
 * Inside the function scope, `x` is a local variable which you can think of as `only_here.x`. When the function is called, an assignment `only_here.x = x` happens first where `x` is the input. Then the behavior can be understood as the previous example.
 
-```python
-a = [0, 1, 2, None, 4]
-a_sum = 0
-for x in a:
-    if x is not None:
-        a_sum += x
-```
-* `None` is of its own data type `NoneType` and cannot be converted to other types 
-* `is` and `is not` should be used to compare variable to `None`
-* `==` and `!=` compare the value whereas `is` and `is not` compare memory location `id()`
+## More tricks 
 
 ```python
 a = x if x>0 else 0
@@ -307,6 +301,17 @@ flattened = [x for y in b for x in y]
 * `list` can be created using `for` loop and `if` statements. This is called list comprehension.
 * Multiple `for` loop is allowed for list comprehension.
 * To write a list comprehension, simply move the execution block before the `for` statements and `if` statements and remove the `:`.
+
+```python
+def square(x):
+    return x**2
+# lambda function
+square_lambda = lambda x: x**2
+
+square_lambda(3)
+```
+* Short functions can be defined using the `lambda` keyword. You almost never want to assign it to a variable like I did here.
+* Functions are objects too.
 
 ## Further study
 

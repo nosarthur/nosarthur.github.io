@@ -1,27 +1,22 @@
 ---
 layout: post
-title: A partial crash course on data science
+title: A partial guide for data scientist jobs
 date:   2016-08-12 13:43:08 -0500
 categories: [side project]
-description: The outline of my data science course to break into the field.
 comments: true
 tags: [data science]
 ---
 
 ## The motive
 
-I left my postdoc job in May 2016 and started preparing for data scientist job full time. Since the best way to learn is to teach, I started to 
-organize learning materials.
+I left my postdoc job in May 2016 and started preparing for data scientist jobs. Since the best way to learn is to teach, I started to organize learning materials.
 Unfortunately (fortunately), I landed in a non-data-scientist job before all materials are finished.
 
 You can read my transition to industry job if interested.
 
-
 ## The job
 
-Specifically, I would like to walk you through the preparation process for
-data scientist jobs, with median base salary $104k (add 13k if you have a PhD) in the US according to [the O'Reilly's 2015 survey](https://www.oreilly.com/ideas/2015-data-science-salary-survey/). 
-
+Data scientist jobs pay a median base salary $104k (add 13k if you have a PhD) in the US according to [the O'Reilly's 2015 survey](https://www.oreilly.com/ideas/2015-data-science-salary-survey/). 
 
 The work responsibility of data scientist varies a lot from company to company.
 
@@ -71,7 +66,7 @@ Specifically, you should be familiar with the following concepts.
 
 * coding
     * python
-        * basics
+        * [basics]({% post_url 2016-09-18-python-course %})
         * packages: pandas, sklearn, numpy, scipy
             * Python Machine Learning by Sebastian Raschka
             * Python for Data Analysis by Wes McKinney
