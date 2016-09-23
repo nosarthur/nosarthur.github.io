@@ -313,6 +313,27 @@ square_lambda(3)
 * Short functions can be defined using the `lambda` keyword. You almost never want to assign it to a variable like I did here.
 * Functions are objects too.
 
+```python
+mul = lambda x, y, z=2: x * y * z
+t = (3, 4, 5)
+mul(*t)
+d = {'x':3, 'y':4}
+mul(**d)
+```
+* `lambda` function can take multiple input parameters, even default parameters 
+* `*` unpacks tuple and `**` unpacks dictionary. One standard usage is `*args, **argc`.
+* When using `**`, you need to make sure the variable names match with the dictionary keys.
+
+```python
+seq1 = ['a', 'b', 'c']
+seq2 = [1, 2, 3]
+z = zip(seq1, seq2)
+unz1, unz2 = zip(*z)
+```
+* The built-in function `zip()` helps to pair up elements in sequences.
+* `z` is `[('a', 1), ('b', 2), ('c', 3)]`
+* `unz1` is `('a', 'b', 'c')` and `unz2` is `(1, 2, 3)`.
+
 ## Further study
 
 * [Google python course](https://developers.google.com/edu/python/) provides a succinct tutorial of the python language.

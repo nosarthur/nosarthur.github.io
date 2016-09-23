@@ -83,7 +83,7 @@ The following
     * Research Scientist in Image-Guided Interventions Technologies 7.22
     * Scientist, Staff 7.22
     * Senior MR Scientist 7.22
-18. <mark>GE Medical Image Analysis Scientist 7.22</mark>
+18. ~~<mark>GE Medical Image Analysis Scientist 7.22</mark>~~
 13. Schroedinger 
     * ~~Senior Scientific Software Developer 7.22~~
     * <mark>Scientific Software Developer 7.22</mark>

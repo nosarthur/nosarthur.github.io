@@ -24,7 +24,6 @@ permalink: /links/
 * [Mat Kelcey](http://matpalm.com/blog/)
 * [fastML](http://fastml.com/)
 * [dataQuest](https://www.dataquest.io/blog/)
-* [Vik Paruchuri](http://www.vikparuchuri.com)
 * [Jason Brownlee](http://machinelearningmastery.com/blog/)
 * [Christopher Olah][colah]
 * [Andrej Karpathy][karthy]
@@ -32,7 +31,7 @@ permalink: /links/
 
 ### ancient texts
 
-* [Chinese Text Project][chinese]
+* [Chinese Text Project](http://ctext.org/)
 * [Buddhist Education and Information][buddhist]
 
 ### gadgets and cheat-sheets
@@ -45,7 +44,6 @@ permalink: /links/
 * [git cheat-sheet](http://zackperdue.com/tutorials/super-useful-need-to-know-git-commands)
 * [Markdown cheat-sheet][md]
 
-[chinese]: http://ctext.org/
 [buddhist]: http://www.buddhanet.net/
 [md]: https://sourceforge.net/p/jekyllc/bugs/markdown_syntax
 [d3]: http://tributary.io/
