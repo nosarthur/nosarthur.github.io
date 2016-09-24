@@ -264,6 +264,26 @@ i = 1
 * Using the built-in function `id()`, you can see that `i` and `j` refer to different locations in memory whereas `a` and `b` refer to the same location.
 
 ```python
+a = [1, 2, 3, 4]
+for x in a:
+    x += 1
+```
+* `a` remains its original values
+* `x` gets assigned to each entry of `a` and gets incremented.
+
+```python
+x = 10
+def bar():
+    print x
+bar()
+def foo():
+    print x
+    x += 1
+```
+* `bar()` works and `foo()` does not.
+* When an assignment to a variable is made in the function, it becomes a local variable and shadows variables with the same name outside the scope.
+
+```python
 a = [0, 1, 2]
 b = a
 b = [3, 4]
@@ -282,6 +302,24 @@ def letgo2(x):
 * After the execution of `letgo(nums)`, `nums` becomes `[10, 20]`.
 * After the execution of `letgo2(nums)`, `nums` remains `[10, 20, 30]`. 
 * Inside the function scope, `x` is a local variable which you can think of as `only_here.x`. When the function is called, an assignment `only_here.x = x` happens first where `x` is the input. Then the behavior can be understood as the previous example.
+* Modifying the value of a variable inside a function is bad practice (explicit is better than implicit). It's better to return a new object and make assignment to function return.
+
+```python
+a = ('abc'
+     'def')
+```
+* `a` is a `str` variable `'abcdef'`
+* This is a feature but could be a bug if one plans for tuple but forgets to put `,`.
+
+```python
+def is_it():
+    return False
+if is_it:
+    print 'Yes'
+else:
+    print 'No'
+```
+* Since functions are objects in python, this code still runs although `()` is missing for the function call. No error no warning and you get the wrong result.
 
 ## More tricks 
 
