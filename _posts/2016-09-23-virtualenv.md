@@ -57,6 +57,6 @@ To check the packages installed for the virtual environment, use
 pip freeze
 ```
 
-## more reading
+## further reading
 
 * [python software foundation](https://packaging.python.org/installing/)

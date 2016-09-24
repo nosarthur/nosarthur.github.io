@@ -85,13 +85,14 @@ Finally, there are some features to save typing
 * `;` is not needed at the end of line.
 * Parentheses are not needed for the logic test in looping and conditional statement.
 * Unlike other languages where curly braces are used to define code blocks,
-python uses indentation and `:`. There are five cases where code blocks are
+python uses indentation and `:`. There are fix cases where code blocks are
 necessary:
     * conditional statement: `if`, `else`, `elif`
     * looping statement: `while`, `for`
     * function definition: `def` 
     * class definition: `class`
     * error handling: `try`, `except`, `finally`
+    * context generation: `with`, `as`
 
 ## Basic examples
 
@@ -135,6 +136,22 @@ thus is more efficient with big data size. `list(xrange(4))` will create `[0, 1,
 * `for` loop can directly loop over the elements instead of indices.
 * To access the elements of a sequence, the first two ways are not as pythonic as the third way. 
 * It is bad practice to modify a `list` (or any mutable sequence) inside a `for` loop while looping over it. It may cause bugs since python internally tracks the index location of the `for` loop. 
+
+```python
+a = [1, 2, 3]
+old_id = id(a)
+a[0] = 11
+print id(a) == old_id
+
+x = 3
+old_id = id(x)
+x += 4
+print id(x) == old_id
+```
+* The equality check gives `True` and `False`.
+* The built-in function `id()` gives the memory location of a variable.
+* Changing the mutable data type with indexing or member functions does not change the memory location of the variable 
+* Variable assignment always changes the associated memory location, for both mutable and immutable data types.
 
 ```python
 a = [23, 70]
@@ -189,7 +206,7 @@ a = 2 ** 3
 a, b = 'abc', 4 ** 0.5
 a, b = b, a
 ```
-* Type declaration is not needed and the same variable can be dynamically linked to different types.
+* Type declaration is not needed and the same variable can be dynamically linked to different types, although it is bad practice to change data type for the same variable.
 * The second expression assigns `'abc'` to `a` and `4**0.5` to `b`
 * `**` is the exponential operator, e.g., `4**0.5=2.0`
 * The last expression swaps the values of `a` and `b`
@@ -208,7 +225,7 @@ else:
 ```
 * Anything after `#` is commented out
 * `pass` does not do anything. It is a place-holder.
-* C style string formatting can be used, although the more pythonic way is to use `'negative: {:0.2f}'.format(x)`.
+* C style string formatting can be used, although the more pythonic way is to use `'negative: {:0.2f}'.format(x)`. See [PEP 3101](https://www.python.org/dev/peps/pep-3101/).
 
 ```python
 def binary_search(nums, x):
@@ -375,9 +392,9 @@ unz1, unz2 = zip(*z)
 ## Further study
 
 * [Google python course](https://developers.google.com/edu/python/) provides a succinct tutorial of the python language.
-* [Zen of Python](https://www.python.org/dev/peps/pep-0020/) talks about general principles about python programming.
+* [The Zen of Python](https://www.python.org/dev/peps/pep-0020/) talks about general principles about python programming.
+* [The Hitchhiker’s Guide to Python!](http://docs.python-guide.org/en/latest/) has many useful topics on python programming.
 * Matt Harrison's 150 page book talks about more advanced features such as generators, iterators, decorators and functional programming.
 
 <a href="https://www.amazon.com/gp/product/149055095X/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=149055095X&linkCode=as2&tag=nosarthur2016-20&linkId=51404148fd08fe0b10d4260dc8dbfaf2" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=149055095X&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=nosarthur2016-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=nosarthur2016-20&l=am2&o=1&a=149055095X" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
-
 
