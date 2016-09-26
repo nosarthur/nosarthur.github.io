@@ -17,8 +17,11 @@ He married one of his student and had no children. He passed away at the age of 
 
 There are interview clips of him on Youtube and you can see that he is a very intense person. 
 
-This book is his first book and also arguably the most famous one. 
-It has its own [wiki page](https://en.wikipedia.org/wiki/The_Hero_with_a_Thousand_Faces).
+{% include youtubePlayer.html id="EKtZrJOyW9k" %}
+
+
+[This book](https://en.wikipedia.org/wiki/The_Hero_with_a_Thousand_Faces) is his first book and also arguably the most famous one. 
+It ranks number 30 in the [TIME magazine's all TIME 100 best non-fiction books since 1923](http://www.goodreads.com/list/show/12719.Time_Magazine_s_All_TIME_100_Best_Non_Fiction_Books).
 
 <a href="https://www.amazon.com/gp/product/1577315936/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1577315936&linkCode=as2&tag=nosarthur2016-20&linkId=f8458783799868ac322a7210fef5bf29" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=1577315936&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=nosarthur2016-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=nosarthur2016-20&l=am2&o=1&a=1577315936" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 
