@@ -9,8 +9,7 @@ tags: [job hunting]
 
 ## who am I 
 
-I received PhD in theoretical physics in 2011 and remained in postdoc positions until 2016.
-
+I received PhD in physics in 2011 and remained in postdoc positions until 2016.
 
 * Strength
     * My math and coding background enables me to learn new tools quickly.
@@ -36,7 +35,7 @@ low pay in academia
 
 * Left postdoc job in May 2016
 * Start application in July 2016
-* Accept offer  in 
+* Accept offer in 
 
 * Do let people know that you are looking for job
 

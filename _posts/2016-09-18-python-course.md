@@ -31,10 +31,10 @@ Thus I organized this material to get you started quickly.
 
 There are four major parts of this post:
 
-* basic facts: boring stuff
-* basic examples: essential syntax
-* common gotchas: boring stuff but important to know
-* advanced tricks: syntactic sugars 
+* [basic facts: boring stuff](#facts)
+* [basic examples: essential syntax](#basic)
+* [common gotchas: boring stuff but important to know](#gotchas)
+* [advanced tricks: syntactic sugars](#sugars)
 
 ### about you
 
@@ -46,7 +46,7 @@ Two things you should probably do before coding python
 * use white space instead of tab for indentation (`set expandtab` if you use [vi](https://en.wikipedia.org/wiki/Vi))
 
 
-## Basic facts (boring)
+## <a name='facts'></a> Basic facts (boring)
 
 *Warning: these facts may be too dry for the first read,
 you can come back to them after going over the basic examples.*
@@ -102,7 +102,7 @@ defined:
     * error handling: `try`, `except`, `else`, `finally`
     * context generation: `with`, `as`
 
-## Basic examples (essential syntax)
+## <a name='basic'></a> Basic examples (essential syntax)
 
 ```python
 a = 0.8
@@ -256,7 +256,7 @@ for x in a:
 * `is` and `is not` should be used to compare variable to `None`
 * `==` and `!=` compare value whereas `is` and `is not` compare memory location `id()`
 
-## Gotchas (boring but important)
+## <a name='gotchas'></a> Gotchas (boring but important)
 
 ```python
 # mutable 
@@ -351,7 +351,7 @@ id3 = id(a)
 * `id2` and `id3` are equal, and they differ from `id1` 
 * For list, `+=` is equivalent to `.extend()` instead of assignment. It is a member function call `__iadd__()`
 
-## More tricks 
+## <a name='sugars'></a> More tricks 
 
 ```python
 a = x if x > 0 else 0
