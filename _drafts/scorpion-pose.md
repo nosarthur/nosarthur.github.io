@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "my yoga challenge: scorpion pose"
+title: "my yoga challenge: the scorpion pose"
 date:   2016-02-18 23:43:08 -0500
 categories: [life]
 comments: true

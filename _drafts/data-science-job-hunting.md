@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A partial guide for data scientist jobs
-date:   2016-08-12 13:43:08 -0500
+date:   2016-10-02 13:43:08 -0500
 categories: [side project]
 comments: true
 tags: [data science]
@@ -86,6 +86,9 @@ Specifically, you should be familiar with the following concepts.
 * portfolio projects
     * [kaggle][k] and [drivendata](https://www.drivendata.org/competitions/)
 
+<a href="https://www.amazon.com/gp/product/1783555130/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1783555130&linkCode=as2&tag=nosarthur2016-20&linkId=2ee4b687ce82f8951c5da8c79ec58e9d" target='_blank'><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=1783555130&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=nosarthur2016-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=nosarthur2016-20&l=am2&o=1&a=1783555130" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+<a href="https://www.amazon.com/gp/product/1449319793/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1449319793&linkCode=as2&tag=nosarthur2016-20&linkId=f5078360e619a6aee93ebedfa23f71a5" target='_blank'><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=1449319793&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=nosarthur2016-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=nosarthur2016-20&l=am2&o=1&a=1449319793" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+
 Some notes:
 
 * The best way to learn pandas is via project. Wes McKinney's pandas book is nicely written but will be too dry if you only read.  Here is a tutorial by Wes McKinney's in 2012 
@@ -96,6 +99,11 @@ Some notes:
     * [youtube project]({% post_url 2016-04-21-youtube %})
     * [NYC restaurant project]({% post_url 2016-07-21-restaurant %})
 
+* [dataQuest](https://www.dataquest.io)
+    
+    I discovered this site in late July and wished I could have found it much earlier. 
+    It is an online learning platform for breaking into data analyst, data scientist and data engineer jobs. The premium subscription is $49/month. 
+    The nice thing is that you can video chat with the founder [Vik Paruchuri](http://www.vikparuchuri.com) for 10 min every week as office hour.
 
 ## Other guides of data science transitions
 
