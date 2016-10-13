@@ -24,5 +24,14 @@ The limiting factors:
 * strength
     * shoulder 
 
+## step 1: head stand
+
+## step 2: forearm stand
+
+preliminaries Enough flexibility in the shoulder such that 
+
+* forehead touches the floor in downward dog pose
+* hands are right below the shoulders in wheel pose
+
 ## end
 
