@@ -1,11 +1,13 @@
 ---
 layout: post
-title:  Free energy perturbation
+title: Computer-aided drug design 
 date:   2016-10-14 23:43:08 -0500
 categories: [science and technology]
 comments: true
-tags: [computer-aided drug design]
+tags: [free energy perturbation]
 ---
+
+Free energy perturbation
 
 ## theory
 
