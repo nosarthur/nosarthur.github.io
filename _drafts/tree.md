@@ -7,7 +7,7 @@ comments: true
 description: An introduction on decision trees, random forest and boosted trees
 tags: [decision tree, random forest, boosted tree]
 ---
-Tree-based classification methods are very commonly used in practice.
+Tree-based classifiers are commonly used in practice.
 Their pros and cons are as follows.
 
 * pros
@@ -19,19 +19,19 @@ Their pros and cons are as follows.
 * cons
     * unstable (of high variance, somewhat difficult to generalize)
 
-In this post, I will cover four major topics
+In this post, I will cover four models
 
-* decision tree
-* bagged trees
-* random forest
-* boosted trees
+* [decision tree](#tree)
+* [bagged trees](#bag)
+* [random forest](#forest)
+* [boosted trees](#boost)
 
-Among them, decision tree is the basic building block of all tree-based classifiers. 
-The later three classifiers average over many trees for better results.
-In terms of the machine learning jargon, they are ensemble methods that 
+Decision tree is the basic building block of all tree-based classifiers. 
+The later three classifiers average over many trees for better result.
+In machine learning jargon, they are ensemble methods that 
 build strong learner out of weak learners.
 
-In practice, you probably don't want to use decision tree as it is due to 
+In practice, you probably don't want to use decision tree due to 
 its instability.
 Both random forest and boosted trees can be good to get some out-of-box
 base-line performance. I have seen many examples in books saying that 
@@ -67,7 +67,7 @@ They deviate from my comfortable zone of *linear algebra* + *calculus* +
 *optimization* and contain some messiness and magic. I will elaborate on 
 this point along the way.
 
-## decision tree
+## <a name='tree'></a> decision tree
 
 The decision tree classifier uses a series of 
 decisions to determine the class label. In the case of binary decision 
@@ -268,7 +268,7 @@ Otherwise there is no point averaging them.
 The ways of how to construct uncorrelated trees differentiate the later 
 development such as bagging, boosting and random forest model.
 
-## bagged trees
+## <a name='bag'></a> bagged trees
 
 Bagging is short for bootstrap aggregating. 
 As the name indicates, you first bootstrap then average over the results.
@@ -368,7 +368,7 @@ than the decision tree classifier for the test data.
 > Figure 6. Decision boundary of decision tree and bagged trees classifiers
 for two Gaussian blobs centered at (1, 1) and (3, 1). 
 
-## random forest
+## <a name='forest'></a> random forest
 
 Two ideas are used in the random forest classifier:
 
@@ -377,7 +377,7 @@ Two ideas are used in the random forest classifier:
 
 The second idea makes the individual trees less correlated to each other. 
 
-## boosted trees
+## <a name='boost'></a> boosted trees
 
 As you have seen in Figure 4 and 5, the voting classifier works 
 when the base ones do not agree with each other on the same regions.
