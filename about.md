@@ -26,7 +26,6 @@ permalink: /about/
         To-read list:
         <ul>
         <li> Godel, Escher, Bach: An Eternal Golden Braid by Douglas R. Hofstadter </li>
-        <li> How to Win Friends & Influence People by Dale Carnegie </li>
         </ul>
 
       </div>

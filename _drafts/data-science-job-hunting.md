@@ -111,6 +111,9 @@ Some notes:
 * [Preparing for DataIncubator][4]
 * [Preparing for the Transition to Data Science][2]
 * [The Definitive Guide to Do Data Science for Good][3]
+* [resume secrets from data incubator](http://blog.thedataincubator.com/2016/07/5-secrets-for-writing-the-perfect-data-scientist-resume/)
+* [NYC coding bootcamps](https://www.coursereport.com/cities/new-york-city)
+* [indeedoor](https://jcp1016.shinyapps.io/indeedoor/)
 
 ## Public data sets
 
