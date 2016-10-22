@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Preparation for coding interviews
-date:   2016-08-12 13:43:08 -0500
+date:   2017-08-12 13:43:08 -0500
 categories: [coding]
 description: A review of algorithm design for coding interviews
 comments: true

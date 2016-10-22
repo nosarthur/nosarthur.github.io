@@ -2,8 +2,7 @@
 layout: post
 title: Schur's lemma and white matter tracks
 date:   2016-08-15 13:43:08 -0500
-categories: [math]
-description: An application of group theory to white matter tracks
+categories: [math and physics]
 comments: true
 tags: [group theory, ensemble average]
 ---

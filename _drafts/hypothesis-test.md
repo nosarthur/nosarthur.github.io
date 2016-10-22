@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Hypothesis test
-date:   2016-08-12 13:43:08 -0500
-categories: [math]
+date:   2017-08-12 13:43:08 -0500
+categories: [math and physics]
 description: A tutorial on hypothesis test
 comments: true
 tags: [hypothesis test, A/B test]

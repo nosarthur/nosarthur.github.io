@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Bias-Variance tradeoff
-date:   2016-08-01 03:43:08 -0500
-categories: [machine learning, math]
+date:   2017-08-01 03:43:08 -0500
+categories: [math and physics]
 comments: true
 description: An explanation of Bias-Variance tradeoff
 tags: [variance, bias]

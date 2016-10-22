@@ -2,7 +2,7 @@
 layout: post
 title:  Useful math identities 
 date:   2016-05-28 13:34:08 -0500
-categories: [math]
+categories: [math and physics]
 comments: true
 tags: [math]
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A partial guide for data scientist jobs
-date:   2016-10-02 13:43:08 -0500
+date:   2016-11-02 13:43:08 -0500
 categories: [side project]
 comments: true
 tags: [data science]

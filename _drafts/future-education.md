@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  The future of education
-date:   2016-05-24 23:43:08 -0500
+date:   2026-05-24 23:43:08 -0500
 categories: [Thoughts]
 comments: true
 tags: [education]

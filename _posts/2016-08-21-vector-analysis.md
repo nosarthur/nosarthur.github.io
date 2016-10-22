@@ -2,7 +2,7 @@
 layout: post
 title: Vector analysis formulas
 date:   2016-08-20 13:43:08 -0500
-categories: [math]
+categories: [math and physics]
 description: A trick for deriving vector identities 
 comments: true
 tags: [vector analysis]

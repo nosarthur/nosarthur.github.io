@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Zen teaching of Bodhidharma translated by Red Pine
-date:   2015-09-25 10:00:00 -0500
+date:   2016-12-25 10:00:00 -0500
 categories: [readings]
 comments: true
 tags: [Zen, Buddhism]
