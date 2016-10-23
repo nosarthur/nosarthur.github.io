@@ -137,7 +137,7 @@ a STEM PhD. Specifically, you should be familiar with the following concepts.
 
 Finally, there is the question of how much preparation is needed.
 I have been thinking about this question quite often along my way of preparation and finally figured it out:
-when you consider joining a company as doing them a favor instead of the company doing you a favor, you are ready.
+when you stop considering receiving an offer as getting lucky or receiving a favor, you are ready.
 (I haven't reached to that point though.)
 
 ## Other guides of data science transitions
