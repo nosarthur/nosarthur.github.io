@@ -6,28 +6,24 @@ permalink: /links/
 
 ### blogs
 
-#### interesting people
-
-* [Michael Nielsen][nielsen] 
-
-#### early retirement
-* [Mr Money Mustache](http://www.mrmoneymustache.com)
-* [Frugal Woods](http://www.frugalwoods.com)
-
-#### machine learning
-
-* [Sebastian Raschka](http://sebastianraschka.com)
-* [Andrew Gelman](http://andrewgelman.com)
-* [off the convex path][off]
-* [rare-technologies][rare]
-* [Tim Dettmers](http://timdettmers.com)
-* [Mat Kelcey](http://matpalm.com/blog/)
-* [fastML](http://fastml.com/)
-* [dataQuest](https://www.dataquest.io/blog/)
-* [Jason Brownlee](http://machinelearningmastery.com/blog/)
-* [Christopher Olah][colah]
-* [Andrej Karpathy][karthy]
-* [Ando Saabas](http://blog.datadive.net/)
+* interesting people
+    * [Michael Nielsen][nielsen] 
+* early retirement
+    * [Mr Money Mustache](http://www.mrmoneymustache.com)
+    * [Frugal Woods](http://www.frugalwoods.com)
+* machine learning
+    * [Sebastian Raschka](http://sebastianraschka.com)
+    * [Andrew Gelman](http://andrewgelman.com)
+    * [off the convex path][off]
+    * [rare-technologies][rare]
+    * [Tim Dettmers](http://timdettmers.com)
+    * [Mat Kelcey](http://matpalm.com/blog/)
+    * [fastML](http://fastml.com/)
+    * [dataQuest](https://www.dataquest.io/blog/)
+    * [Jason Brownlee](http://machinelearningmastery.com/blog/)
+    * [Christopher Olah][colah]
+    * [Andrej Karpathy][karthy]
+    * [Ando Saabas](http://blog.datadive.net/)
 
 ### ancient texts
 
