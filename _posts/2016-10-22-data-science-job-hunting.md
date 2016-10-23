@@ -135,6 +135,10 @@ a STEM PhD. Specifically, you should be familiar with the following concepts.
 * Do participate in [kaggle][k] competitions ASAP
 * Don't waste time on deep learning (even though it's fun)
 
+Finally, there is the question of how much preparation is needed.
+I have been thinking about this question quite often along my way of preparation and finally figured it out:
+when you consider joining the company as doing them a favor instead of the company doing you a favor, you are ready.
+
 ## Other guides of data science transitions
 
 * [Preparing for Insight][1]
