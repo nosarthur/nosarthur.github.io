@@ -258,6 +258,10 @@ for x in a:
 
 ## <a name='gotchas'></a> Gotchas (boring but important)
 
+Oct.30.2016: I came across a talk by [Ned Batchelder](http://nedbatchelder.com/) illustrating a few of points in this section. He made nice diagrams to make the points more visual.
+
+{% include youtubePlayer.html id="_AEJHKGk9ns" %}
+
 ```python
 # mutable 
 a = [0, 1, 2]
