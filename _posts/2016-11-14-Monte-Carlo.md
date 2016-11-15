@@ -370,5 +370,5 @@ they give a great review of the technical details of many Monte Carlo methods, t
 <a target="_blank"  href="https://www.amazon.com/gp/product/1107074029/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1107074029&linkCode=as2&tag=nosarthur2016-20&linkId=52b6b96d7036c8930d1cba627606c7fe" target="_blank"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=1107074029&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=nosarthur2016-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=nosarthur2016-20&l=am2&o=1&a=1107074029" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 
 I should also warn you that this book is not an introductory book.
-It is more like a cheat sheet for experts. Unfortunately I don't know really
+It is more like a cheat sheet for experts. Unfortunately I don't really know 
 any good introductory book on Monte Carlo methods.
