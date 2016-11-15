@@ -7,6 +7,9 @@ comments: true
 tags: [yoga]
 ---
 
+I started practicing yoga since 2/7/2013.
+Initially my intention is to loosen up my muscles and tendons 
+
 Vrscikasana
 
 ## beginning (Aug 2016)
@@ -34,4 +37,6 @@ preliminaries Enough flexibility in the shoulder such that
 * hands are right below the shoulders in wheel pose
 
 ## end
+
+to come
 

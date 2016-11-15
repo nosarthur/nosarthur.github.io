@@ -9,6 +9,10 @@ tags: [free energy perturbation]
 
 Free energy perturbation
 
+1kcal/mole = 0.0433 eV = 503K
+
+* covalent bond: 50-150 kcal/mole
+
 ## theory
 
 In the canonical ensemble, the Helmholtz free energy 
