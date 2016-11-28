@@ -7,9 +7,6 @@ comments: true
 tags: [yoga]
 ---
 
-I started practicing yoga since 2/7/2013.
-Initially my intention is to loosen up my muscles and tendons 
-
 Vrscikasana
 
 ## beginning (Aug 2016)
@@ -27,9 +24,15 @@ The limiting factors:
 * strength
     * shoulder 
 
+
 ## step 1: head stand
 
 ## step 2: forearm stand
+
+range of motion check 
+
+* In downward dog pose, does the head touch the floor?
+* In wheel pose, are the shoulders vertically above the hands?
 
 preliminaries Enough flexibility in the shoulder such that 
 

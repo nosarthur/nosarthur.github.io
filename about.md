@@ -22,10 +22,12 @@ permalink: /about/
         <li> The hero with a thousand faces by Joseph Campbell </li>
         <li> Wisdom of the West by Bertrand Russell </li>
         <li> A random walk down Wall street by Burton Malkiel </li>
+        <li> Design pattern by Erich Gamma, Richard Helm, Ralph Johnson and John Vlissides </li>
         </ul>
         To-read list:
         <ul>
         <li> Godel, Escher, Bach: An Eternal Golden Braid by Douglas R. Hofstadter </li>
+        <li> The Annotated Turing by Charles Petzold </li>
         </ul>
 
       </div>
