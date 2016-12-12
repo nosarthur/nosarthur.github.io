@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Design pattern by Erich Gamma, Richard Helm, Ralph Johnson and John Vlissides
-date:   2016-11-18 13:43:08 -0500
+date:   2016-12-18 13:43:08 -0500
 categories: [coding]
 comments: true
 tags: [design]
@@ -41,6 +41,7 @@ Here are some interesting quotes from it
 * Favoring object composition over class inheritance helps you keep each class encapsulated and focused on one task.
 * The main advantage of delegation is that it makes it easy to compose behaviors at run-time and to change the way they're composed.
 * A design pattern should only be applied when the flexibility it affords is actually needed.
+* Encapsulate the concept that varies.
 
 The design patterns are summarized in the following table
 

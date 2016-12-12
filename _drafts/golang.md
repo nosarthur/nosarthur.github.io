@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A crash course on golang
-date:   2016-12-18 13:43:08 -0500
+date:   2017-02-18 13:43:08 -0500
 categories: [coding]
 comments: true
 tags: [go]
@@ -25,6 +25,17 @@ tags: [go]
     * channel
 * interface types
 
+* comparable 
+    * basic types
+    * channel
+    * composite types (if its type is comparable)?
+        * interface 
+* not comparable 
+    * slice
+    * map
+    * functions
+
+
 ## control flow
 
 ```
@@ -38,7 +49,25 @@ for key, value := range xx{
 }
 ```
 
-## method and interface
+## function
+
+call-by-value
+
+```
+func name (parameter-list) (result-list) {
+    body
+}
+```
+
+## polymorphism (method and interface)
+
+implicit type matching 
+
+interface 
+
+* method (subtype polymorphism)
+* union (ad hoc polymorphism)
+
 
 different data structures can have the same method
 

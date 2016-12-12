@@ -1,7 +1,7 @@
 ---
 layout: post
 title: my hobbies
-date:   2016-11-23 18:43:08 -0500
+date:   2016-12-23 18:43:08 -0500
 categories: [life]
 comments: true
 tags: [hobby]
@@ -10,8 +10,9 @@ tags: [hobby]
 I enjoy many hobbies. Over the years, some fade away. Right now they are 
 stabilized. In this post, 
 
-For some unknown reason, my hobbies are all physical. Intellectual games such 
+For some unknown reason, my hobbies are mostly physical. Intellectual games such 
 as bridge and poker somehow does not interest me very much.
+The only two non-physical hobbies are reading books and watching Youtube videos.
 
 
 * autonomous
