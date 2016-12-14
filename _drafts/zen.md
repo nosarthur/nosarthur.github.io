@@ -57,8 +57,12 @@ This book contains four works by Bodhidharma
 
 Both the original Chinese text and English translations are included. They are placed side by side (Chinese on the left and English on the right), and the author made sure that the two texts flow with the same pace.
 
-I am far from understanding the texts. 
-What I write in this post may be totally wrong and unorthodox. 
+Before going into the sermon, I would like to explain the word 'buddha'.
+It is the Sanskrit for awareness, and it usually refers to 
+
+* someone who has realized the Path. In the Wake up Sermon, Bodhidharma gave an definition: mortals whose minds minds are aware reach the Way of Enlightenment and are therefore called buddhas.
+* [Gautama the Buddha](https://en.wikipedia.org/wiki/Gautama_Buddha), who is theIndian prince who created Buddhism 
+
 
 ## Outline of Practice
 
@@ -80,12 +84,6 @@ It is pointed out that the understanding is
 
 ## Bloodstream Sermon
 
-Before going into the sermon, I would like to explain the word 'buddha'.
-It is the Sanskrit for awareness, and it usually refers to 
-
-* someone who has realized the Path. In the Wake up Sermon, Bodhidharma gave an definition: mortals whose minds minds are aware reach the Way of Enlightenment and are therefore called buddhas.
-* [Gautama the Buddha](https://en.wikipedia.org/wiki/Gautama_Buddha), who is theIndian prince who created Buddhism 
-
 In this sermon, there are a few important points
 
 * This mind is the buddha.
@@ -99,8 +97,11 @@ In this sermon, there are a few important points
 
 * The essence of the Way is detachment and the goal of those who practice is free from appearances.
 * To transcend motion and stillness is the highest meditation.
+* Without the mind there's no buddha means that the buddha comes from the mind. The mind gives birth to the buddha. But although the buddha comes from the mind, the mind doesn't come from the buddha, just as fish come from water, but water doesn't come from fish. And whoever wants to see a buddha sees the mind before he sees the buddha. Once you've seen the fish, you forget about the water. And once you've seen the buddha, you forget about the mind. If you don't forget about the mind, the mind will confuse you, just as the water will confuse you if you don't forget about it.
+* The tathagata isn't on this shore or the other shore. And he isn't in midstream. Arhats are in midstream and mortals are the this shore. On the other shore is buddhahood.
 
 ## Breakthrough Sermon
 
+* The most essential method, which includes all other methods, is beholding the mind.
 
 
