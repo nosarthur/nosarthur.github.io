@@ -26,8 +26,11 @@ Windsurfing is a very good sport to practice one's awareness, both to the body a
 The sail needs to be constantly adjusted to the wind (the wind on [Lake Mendota](https://en.wikipedia.org/wiki/Lake_Mendota) is quite shitty).
 You will also need to read the ripples for the gusts. Without good body control, it's also not possible to enter the planing state.
 
+Another effect of windsurfing on me is cultivating awe of nature.
+In front of big wind and big wave, the strength of a person is basically nothing.
+
 My friend Chamond has a windsurfing site with a lot of information
 
 * [windsurfing for the rest of us](http://windsurfing.happystoic.com/)
 
-If you happen to visit Madison, WI in the summer, sailing/windsurfing can be a fun option.
+If you happen to visit Madison in the summer, sailing/windsurfing can be a fun option.

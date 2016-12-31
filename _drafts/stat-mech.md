@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Review of statistical mechanics and thermodynamics
-date:   2016-11-12 13:43:08 -0500
+date:   2017-01-12 13:43:08 -0500
 categories: [math and physics]
 comments: true
 tags: [statistical mechanics, thermodynamics]
@@ -83,6 +83,7 @@ the direction of the arrow.
 $$U = -T^2\frac{\partial(F/T)}{\partial T} $$
 
 #### $$S \simeq \text{DOS}$$
+
 
 #### $$ A = U - TS $$
 

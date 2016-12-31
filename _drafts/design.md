@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Design pattern by Erich Gamma, Richard Helm, Ralph Johnson and John Vlissides
-date:   2016-12-18 13:43:08 -0500
+date:   2017-01-18 13:43:08 -0500
 categories: [coding]
 comments: true
 tags: [design]
