@@ -42,6 +42,7 @@ Here are some interesting quotes from it
 * The main advantage of delegation is that it makes it easy to compose behaviors at run-time and to change the way they're composed.
 * A design pattern should only be applied when the flexibility it affords is actually needed.
 * Encapsulate the concept that varies.
+* A class is more reusable when you minimize the assumtions other classes must make to use it.
 
 The design patterns are summarized in the following table
 
