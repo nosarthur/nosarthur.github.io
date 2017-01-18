@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The hero with a thousand faces by Joseph Campbell
-date:   2017-01-16 13:43:08 -0500
+date:   2017-05-16 13:43:08 -0500
 categories: [readings]
 comments: true
 tags: [myth]

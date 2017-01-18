@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "my yoga challenge: the scorpion pose"
-date:   2017-02-18 23:43:08 -0500
+date:   2017-11-18 23:43:08 -0500
 categories: [life]
 comments: true
 tags: [yoga]
@@ -12,10 +12,10 @@ Vrscikasana
 ## beginning (Aug 2016)
 
 My starting point:
-* I am able to do head stand
-* I can only do crow pose for 20 s 
-* My head barely touches the floor in downward dog pose 
-* I can only touch heels in camel pose
+* I was able to do head stand
+* I could only do crow pose for 20 s 
+* My head barely touched the floor in downward dog pose 
+* I could only touch heels in camel pose
 
 The limiting factors:
 * flexibility 

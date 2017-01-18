@@ -12,12 +12,32 @@ tags: [algorithm, graph theory]
 * subgraph isomorphism (whether one molecule contains another molecule)
 * maximal common subgraph (what is the common structure between two molecules)
 
+
 maximum common subgraph (MCS)
 
-* maximum common induced subgraph (MCIS)
-* maximum common edge subgraph (MCES)
+There are two types of MCS due to a subtlety in the definition of subgraph: a subgraph can be created by deleting either edges or vertices.
 
-[induced subgraph](https://en.wikipedia.org/wiki/Induced_subgraph) means subgraph by vertex deletion
+When a vertex is deleted, the edges associated with it automatically get deleted.
+The subgraph created by vertex deletion is also called [induced subgraph](https://en.wikipedia.org/wiki/Induced_subgraph).
+For the edge deletion case, the vertices associated with the edge are not deleted.
+As a result, the MCS created using these two ways are different.
+
+* maximum common induced subgraph (MCIS): vertex deletion
+* maximum common edge subgraph (MCES): edge deletion
+
+As an example, 
+
+<svg width='430' height='180'> 
+<circle cx='400' cy='30' r='20' fill='white' stroke-width='3' stroke='black' /> 
+<circle cx='300' cy='30' r='20' fill='white' stroke-width='3' stroke='black' /> 
+<circle cx='300' cy='130' r='20' fill='white' stroke-width='3' stroke='black' /> 
+
+<circle cx='135' cy='30' r='20' fill='white' stroke-width='3' stroke='black' /> 
+<circle cx='35' cy='30' r='20' fill='white' stroke-width='3' stroke='black' /> 
+<circle cx='35' cy='130' r='20' fill='white' stroke-width='3' stroke='black' /> 
+<line x1="35" y1="35" x2="35" y2="124" stroke="#000" stroke-width="3" />
+<line x1="122" y1="30" x2="40" y2="144" stroke="#000" stroke-width="3" />
+</svg>
 
 * vertex product graph
 * edge product graph
@@ -38,7 +58,7 @@ maximum clique  is also in the NP-complete class.
 
 ## algorithms
 
-There is a comprehensive review of existing algorithms
+There is a neat but somewhat old comprehensive review of existing algorithms
 
 * JW Raymond and P Willett, Maximum common subgraph isomorphism algorithms for the matching of chemical structures, Journal of Computer-Aided Molecular Design 16, 521 (2002)
 
@@ -49,21 +69,20 @@ The classic papers include
 * JR Ullmann, An Algorithm for Subgraph Isomorphism, Journal of the ACM 23, 31 (1976)
 * JJ McGregor, Backtrack search algorithms and the maximal common subgraph problem, Software: Practice and Experience 12, 23 (1982)
 
+##
 
-review papers
 
-* JW Raymond, P Willett, Maximum common subgraph isomorphism algorithms for the matching of chemical structures, Journal of Computer-Aided Molecular Design 16, 521 (2002)
+[PJ Durand, R Pasari, JW Baker, C Tsai, An Efficient Algorithm for Similarity Analysis of Molecules, Internet Journal of Chemistry 2, 17 (1999)](http://www.cs.kent.edu/~jbaker/paper/)
 
 strategies to speed up the tree search
 
 * branch and bound 
 * pruning
+    * best found, current + potential
+    * consider only connected subgraphs
+    * other graph properties, e.g., chromatic number is an upper bound for max clique size
 * ordering
 
-strategies to truncate the search tree
-
-* consider only connected subtrees
-* 
 
 Node correspondence table?
 
