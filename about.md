@@ -15,6 +15,7 @@ permalink: /about/
         </ul>
       </div>
 
+
       <div class="footer-col footer-col-3">
         <p style="color:black;">{{ site.description }}</p>
         Current reading list:
@@ -32,6 +33,7 @@ permalink: /about/
 
       </div>
 
+      <img src='https://raw.githubusercontent.com/nosarthur/CV_resume/master/keywords/wordcloud.png'>
     </div>
   </div>
 
