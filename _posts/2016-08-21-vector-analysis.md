@@ -73,3 +73,9 @@ After adopting the component-wise notation and the simplification rule for
 cross products, I never had any difficulty in simplifying expressions
 in electromagnetism. Hopefully you will find ease in vector analysis formulas too from now on.
 
+I suspect that I learned this trick from this book
+
+<a target="_blank"  href="https://www.amazon.com/gp/product/0199641390/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0199641390&linkCode=as2&tag=nosarthur2016-20&linkId=f7dccb402eb07e2ebcaa63348f3eb656"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=0199641390&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=nosarthur2016-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=nosarthur2016-20&l=am2&o=1&a=0199641390" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+
+However I can not say for sure since I have sold my copy.
+I would still highly recommend this book even if it does not contain this trick because it contains a lot of neat tricks.
