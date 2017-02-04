@@ -104,7 +104,7 @@ $$(\mathbf a\times\mathbf b)\times\mathbf a = a^2\mathbf b - \mathbf a\cdot\math
 The first one is basically [Pythagorean theorem](https://en.wikipedia.org/wiki/Pythagorean_theorem).
 The second identity has the geometric meaning of removing the vector component along a from vector b.
 
-Both vector identities can be easily derived using the antisymmetric tensor trick in [my other blog post]({% post_url 2016-08-20-vector-analysis%}).
+Both vector identities can be easily derived using the antisymmetric tensor trick in [my other blog post]({% post_url 2016-08-21-vector-analysis%}).
 
 To further simplify the notation, let's define 
 

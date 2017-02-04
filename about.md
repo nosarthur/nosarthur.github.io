@@ -21,7 +21,6 @@ permalink: /about/
         <ul>
         <li> The hero with a thousand faces by Joseph Campbell </li>
         <li> Wisdom of the West by Bertrand Russell </li>
-        <li> A random walk down Wall street by Burton Malkiel </li>
         </ul>
       </div>
 
