@@ -7,12 +7,15 @@ comments: true
 tags: [hobby]
 ---
 
-I enjoy many hobbies. Over the years, some fade away. Right now they are 
-stabilized. In this post, 
+I enjoy many hobbies. Over the years, however, many faded away.
+Here I will analyze why they faded.
 
-For some unknown reason, my hobbies are mostly physical. Intellectual games such 
-as bridge and poker somehow does not interest me very much.
-The only two non-physical hobbies are reading books and watching Youtube videos.
+For some unknown reason, my hobbies are mostly physical.
+Intellectual games such as bridge and poker somehow does not interest me very much.
+The only two non-physical hobbies are 
+
+* reading books 
+* watching Youtube videos.
 
 
 * autonomous
@@ -20,12 +23,12 @@ The only two non-physical hobbies are reading books and watching Youtube videos.
 
 Autonomous mean
 
-1. yoga
-2. martial art
+* yoga
+* martial art
     1. Brazilian Jiu-Jitsu 
     2. Kendo
     3. Karate
-1. rock climbing
-3. tennis
-1. wind surfing
-1. running
+* rock climbing
+* tennis
+* wind surfing
+* running

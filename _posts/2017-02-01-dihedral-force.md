@@ -137,6 +137,10 @@ Combining the two terms, we get
 
 $$ \nabla_a\cos\phi = \frac{\hat n \times\hat m \times \hat n \times \mathbf r_2}{|\mathbf r_1\times \mathbf r_2|} $$
 
+The validity of this solution can be seen intuitively.
+Two of atom a's three degrees of freedom do not change the dihedral angle, i.e., translation along $$\mathbf r_1$$ and $$\mathbf r2$$.
+Only its rotation about the axis $$\mathbf r2$$ changes the dihedral angle thus the force is perpendicular to the plane spanned $$\mathbf r_1$$ and $$\mathbf r_2$$, which is exactly what the solution is (the $$\hat n$$, $$\hat m$$ business gives rise to the right magnitude).
+
 ## the interior atoms: b and c 
 
 I will only show the derivation for atom b here. The result of atom c follows exactly the same way.
