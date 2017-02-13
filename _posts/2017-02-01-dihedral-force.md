@@ -138,8 +138,21 @@ Combining the two terms, we get
 $$ \nabla_a\cos\phi = \frac{\hat n \times\hat m \times \hat n \times \mathbf r_2}{|\mathbf r_1\times \mathbf r_2|} $$
 
 The validity of this solution can be seen intuitively.
-Two of atom a's three degrees of freedom do not change the dihedral angle, i.e., translation along $$\mathbf r_1$$ and $$\mathbf r2$$.
-Only its rotation about the axis $$\mathbf r2$$ changes the dihedral angle thus the force is perpendicular to the plane spanned $$\mathbf r_1$$ and $$\mathbf r_2$$, which is exactly what the solution is (the $$\hat n$$, $$\hat m$$ business gives rise to the right magnitude).
+Two of atom a's three degrees of freedom do not change the dihedral angle, i.e., translation along $$\mathbf r_1$$ and $$\mathbf r_2$$.
+Only its rotation about the axis $$\mathbf r_2$$ changes the dihedral angle thus the force is perpendicular to the plane spanned $$\mathbf r_1$$ and $$\mathbf r_2$$, which is exactly what the solution is (the $$\hat n$$, $$\hat m$$ business gives rise to the right magnitude).
+Recall that $$(\hat n\times\hat m)\times\hat n$$ is the component of $$\hat m$$ perpendicular to $$\hat n$$.
+
+To get the force on atom d, we can simply use the following mapping to the force on atom a
+
+$$ \begin{align}
+\mathbf r_1 &\rightarrow -\mathbf r_3\\
+\mathbf r_2 &\rightarrow -\mathbf r_2\\
+\mathbf r_3 &\rightarrow -\mathbf r_1
+\end{align}$$
+
+Thus we have 
+
+$$ \nabla_d\cos\phi = \frac{\hat m \times\hat n \times \hat m \times \mathbf r_2}{|\mathbf r_1\times \mathbf r_2|} $$
 
 ## the interior atoms: b and c 
 
@@ -169,6 +182,16 @@ $$ \frac{\mathbf r_3\times \hat n \hat m\cdot \hat n}{|\mathbf r_2\times \mathbf
 Combining all three terms, we get 
 
 $$\nabla_b\cos\phi = \frac{\hat n\times\hat m\times \hat n\times\mathbf r_3}{|\mathbf r_2\times \mathbf r_3|} - \frac{\hat m\times\hat n\times\hat m\times (\mathbf r_1+\mathbf r_2)}{|\mathbf r_1\times \mathbf r_2|} $$
+
+Again, intuitively, moving atom b along $$\mathbf r_2$$ does not change the dihedral angle thus there is no force on atom b along $$\mathbf r_2$$.
+However, it's hard to see it from the above equation. We can verify from 
+
+$$\begin{align}
+\mathbf r_2\cdot\nabla_b\cos\phi =& \left\{\frac{\hat n\times\hat m\times \hat n\times\mathbf r_3}{|\mathbf r_2\times \mathbf r_3|} - \frac{\hat m\times\hat n\times\hat m\times \mathbf r_1}{|\mathbf r_1\times \mathbf r_2|} \right\}\cdot \mathbf r_2\\
+\propto & [\mathbf r_1\times\mathbf r_2\times\mathbf r_3 - (\mathbf r_1\times\mathbf r_2)\cdot\hat n\hat n\times\mathbf r_3-\mathbf r_2\times\mathbf r_3\times \mathbf r_1 + \hat m\cdot(\mathbf r_2\times \mathbf r_3)\hat m \times \mathbf r_1]\cdot \mathbf r_2\\
+\propto& r_2^2\mathbf r_1\cdot\mathbf r_3 - \mathbf r_1\cdot\mathbf r_2\mathbf r_2\cdot\mathbf r_3 + (\mathbf r_1\times\mathbf r_2)\cdot(\mathbf r_2\times\mathbf r_3) \\
+=& 0
+\end{align}$$
 
 ## final caution
 
