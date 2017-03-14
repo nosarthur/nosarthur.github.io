@@ -5,7 +5,6 @@ date:   2018-05-26 13:43:08 -0500
 last_update:   2016-06-30 11:43:08 -0500
 categories: [readings]
 comments: true
-description: Quotes from the book
 tags: [philosophy]
 ---
 

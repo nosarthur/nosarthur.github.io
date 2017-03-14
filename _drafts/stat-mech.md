@@ -7,7 +7,7 @@ comments: true
 tags: [statistical mechanics, thermodynamics]
 ---
 
-Recently I joined a company where close to 50% of the employees are PhDs in
+Recently I joined a company where close to 60% of the employees are PhDs in
 computational chemistry.
 I figure it's time to review my statistical mechanics and thermodynamics for
 further engaging conversations.

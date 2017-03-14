@@ -8,6 +8,11 @@ tags: [algorithm, graph theory]
 ---
 ## introduction
 
+I have always been interested in graph theory and group theory.
+In graduate school, I had a lot of fun [applying quantum random walk to the graph isomorphism problem](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.81.052313) with my collegues.
+In my current company, I help out with some graph theory related [cheminformatics](https://en.wikipedia.org/wiki/Cheminformatics).
+In this post, I will review the maximum common subgraph problem in the context of mapping atoms between two molecules.
+
 * graph isomorphism (whether two molecules are the same)
 * subgraph isomorphism (whether one molecule contains another molecule)
 * maximal common subgraph (what is the common structure between two molecules)
@@ -35,8 +40,11 @@ As an example,
 <circle cx='135' cy='30' r='20' fill='white' stroke-width='3' stroke='black' /> 
 <circle cx='35' cy='30' r='20' fill='white' stroke-width='3' stroke='black' /> 
 <circle cx='35' cy='130' r='20' fill='white' stroke-width='3' stroke='black' /> 
-<line x1="35" y1="35" x2="35" y2="124" stroke="#000" stroke-width="3" />
-<line x1="122" y1="30" x2="40" y2="144" stroke="#000" stroke-width="3" />
+<line x1="300" y1="49" x2="300" y2="111" stroke="#000" stroke-width="3" />
+<line x1="390" y1="47" x2="317" y2="122" stroke="#000" stroke-width="3" />
+<line x1="35" y1="49" x2="35" y2="111" stroke="#000" stroke-width="3" />
+<line x1="125" y1="47" x2="52" y2="122" stroke="#000" stroke-width="3" />
+<line x1="54" y1="30" x2="115" y2="30" stroke="#000" stroke-width="3" />
 </svg>
 
 * vertex product graph

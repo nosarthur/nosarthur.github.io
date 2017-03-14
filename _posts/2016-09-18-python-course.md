@@ -306,8 +306,8 @@ def foo():
     print x
     x += 1
 ```
-* `bar()` works (are you surprised? I was) and `foo()` does not.
-* `bar()` works since python treats variables inside a function implicitly `global` if they are only referenced but not assigned
+* `bar()` works (are you surprised? I was until I learned [closure](https://en.wikipedia.org/wiki/Closure_(computer_programming))) and `foo()` does not.
+* `bar()` works since python treats variables inside a function implicitly like `global` if they are only referenced but not assigned
 * When a variable is assigned in the function, it becomes a local variable and shadows variables with the same name outside the function scope.
 
 ```python
