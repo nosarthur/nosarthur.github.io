@@ -197,6 +197,8 @@ $$\begin{align}
 
 In the derivations, I didn't check if any singularity exists at the origin.
 To do that, the easiest way I know is to use generalized functions.
-For more details you can check out this book:
+For more details you can check out this book 
+or [this post]({% post_url 2017-03-21-generalized-function %}).
 
 <a target="_blank"  href="https://www.amazon.com/gp/product/0817643435/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0817643435&linkCode=as2&tag=nosarthur2016-20&linkId=ed64adcee4d0cdd5a96d7caa3bc4ca83"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=0817643435&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=nosarthur2016-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=nosarthur2016-20&l=am2&o=1&a=0817643435" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+
