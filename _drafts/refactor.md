@@ -1,0 +1,36 @@
+---
+layout: post
+title: "Refactoring: Improving the Design of Existing Code by "
+date:   2017-04-17 13:43:08 -0500
+categories: [readings]
+comments: true
+tags: [coding]
+---
+
+
+<a target="_blank"  href="https://www.amazon.com/gp/product/0201485672/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0201485672&linkCode=as2&tag=nosarthur2016-20&linkId=1d4b1d1a2cbb83c0f2013074f861c1ec"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=0201485672&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=nosarthur2016-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=nosarthur2016-20&l=am2&o=1&a=0201485672" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+
+bad smells in codes
+
+* Duplicated Code 
+* Long Method 
+* Large Class 
+* Long Parameter List
+* Divergent Change
+* Shotgun Surgery
+* Feature Envy
+* Data Clumps
+* Primitive Obsession
+* Switch Statements
+* Parallel Inheritance Hierarchies
+* Lazy Class
+* Speculative Generality
+* Temporary Field
+* Message Chains
+* Middle Man
+* Inappropriate Intimacy
+* Alternative Classes with Different Interfaces
+* Incomplete Library Class
+* Data Class 
+* Refused Bequest
+* Comments

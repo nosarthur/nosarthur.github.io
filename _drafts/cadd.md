@@ -60,7 +60,6 @@ The standard binding free energy
 
 $$\Delta A_\text{binding}^0=-\frac{1}{\beta}\log(c^0K_a) $$
 
-### Bennett acceptance ratio (BAR) method
 
 ## single-topology paradigm and double-topology paradigm
 

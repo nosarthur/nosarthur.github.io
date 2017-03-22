@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Review of statistical mechanics and thermodynamics
-date:   2017-03-12 13:43:08 -0500
+date:   2017-05-12 13:43:08 -0500
 categories: [math and physics]
 comments: true
 tags: [statistical mechanics, thermodynamics]
