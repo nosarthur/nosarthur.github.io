@@ -1,7 +1,7 @@
 ---
 layout: post
 title: my hobbies
-date:   2017-02-23 18:43:08 -0500
+date:   2017-09-23 18:43:08 -0500
 categories: [life]
 comments: true
 tags: [hobby]

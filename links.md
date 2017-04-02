@@ -9,6 +9,7 @@ permalink: /links/
 * interesting people
     * [Michael Nielsen][nielsen] 
     * [Derek Lowe](http://blogs.sciencemag.org/pipeline/)
+    * [Gavin E. Crooks](http://threeplusone.com/gec/)
 * early retirement
     * [Mr Money Mustache](http://www.mrmoneymustache.com)
     * [Frugal Woods](http://www.frugalwoods.com)
