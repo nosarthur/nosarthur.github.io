@@ -13,8 +13,14 @@ In this post, I will try to explain how computer simulation can be used to predi
 often know as [computer-aided drug design](https://en.wikipedia.org/wiki/Drug_design#Computer-aided_drug_design).
 Since I don't really know much chemistry or biology, the explanation may be somewhat sketchy.
 
+Some nice references are 
+
 * [Chris Chipot 2010 talk](http://www.ks.uiuc.edu/Training/Workshop/Urbana_2010A/lectures/TCBG-2010.pdf)
 * [Andrew Pohorille, Christopher Jarzynski and Christophe Chipot, Good Practices in Free-Energy Calculations, J. Phys. Chem. B, 2010, 114 (32), 10235–10253](http://pubs.acs.org/doi/abs/10.1021/jp102971x)
+
+and lectures from Chris Chipot
+
+{% include youtubePlayer.html id="zn7Fd6F9lB0" %}
 
 ## free energy
 

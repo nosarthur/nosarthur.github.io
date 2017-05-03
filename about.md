@@ -19,8 +19,8 @@ permalink: /about/
         <p style="color:black;">{{ site.description }}</p>
         Current reading list:
         <ul>
-        <li> The hero with a thousand faces by Joseph Campbell </li>
         <li> Wisdom of the West by Bertrand Russell </li>
+        <li> One hundred years of solitude by Gabriel Garcia Marquez </li>
         </ul>
       </div>
 
