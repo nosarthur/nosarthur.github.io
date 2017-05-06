@@ -18,9 +18,9 @@ Basically, there are three potential causes
 * there are unreleased resources at the C/C++ level
 
 For each test function inside a test class,
-pytest creates a `unittest.TestCase` instance (we use the [unittests](https://docs.python.org/2.7/library/unittest.html) framework).
-This instance survives to the end of all the tests to provide statistics and extra information in case the test fails.
-Normally each `unittest.TestCase` instance is at most several hundred KB large, then we should be able to do several thousands tests without issue for 2GB memory limit.
+pytest creates a `TestReport` instance,
+which survives to the end of all the tests to provide statistics and extra information in case the test fails.
+Normally each `TestReport` instance is at most several hundred KB large (think of all the information needed for the final report), then we should be able to do several thousands tests without issue for 2GB memory limit.
 
 Thus in the case of large memory consumption during test, the first place we should check is whether these `unittest.TestCase` instances still retain resources, i.e., anything attached to `self`.
 Other places to check includes
@@ -41,7 +41,9 @@ p.memory_info()
 First of all, the question is whether the test failure is due to 
 memory leakage or 
 
-
+```
+import pytest; pytest.set_trace()
+```
 
 To install objgraph, simply run 
 
