@@ -1,7 +1,7 @@
 ---
 layout: post
 title: python test memory issues
-date:   2017-05-23 10:00:08 -0500
+date:   2017-05-13 10:00:08 -0500
 categories: [coding]
 comments: true
 tags: [testing]
@@ -11,16 +11,16 @@ Recently we run into a problem that our automated python testing fails
 due to the memory limit on the testing machine (2GB per process).
 Here I will summarize what I have learned from this occasion.
 
-Basically, there are three potential causes 
+Assuming there is no single test consuming close to 2GB memory, directly causing the memory shortage, there are three potential causes 
 
-* there are simply too many tests
-* there are unreleased resources at the python level
-* there are unreleased resources at the C/C++ level
+1. there are simply too many tests
+1. there are unreleased resources at the python level
+1. there are unreleased resources at the C/C++ level
 
 For each test function inside a test class,
 pytest creates a `TestReport` instance,
 which survives to the end of all the tests to provide statistics and extra information in case the test fails.
-Normally each `TestReport` instance is at most several hundred KB large (think of all the information needed for the final report), then we should be able to do several thousands tests without issue for 2GB memory limit.
+Normally each `TestReport` instance is at most several KB large (think of all the information needed for the final report), then we should be able to do several hundred thousands of tests without issue with 2GB memory assuming each test does not use 2GB memory.
 
 Thus in the case of large memory consumption during test, the first place we should check is whether these `unittest.TestCase` instances still retain resources, i.e., anything attached to `self`.
 Other places to check includes
