@@ -57,7 +57,7 @@ $$ \Delta F = -\left<W\right> -\frac{\beta \sigma_W^2}{2} $$
 
 [Crooks fluctuation theorem](https://en.wikipedia.org/wiki/Crooks_fluctuation_theorem)
 
-$$ \frac{\rou_F(-W)}{\rou_R(W)} = e^{\beta(-W+\Delta F)}
+$$ \frac{\rou_F(-W)}{\rou_R(W)} = e^{\beta(-W+\Delta F)} $$
 
 
 # references
