@@ -17,3 +17,10 @@ After this read, I take a little more. Basically Schrodinger tries to answer thr
 * What is the material basis of genes? Note that this book was published in 1944 and [DNA structure](https://en.wikipedia.org/wiki/DNA) was discovered in 1953.
 * How does living matter evade the decay to thermodynamic equilibrium?
 * What is consciousness?
+
+Interestingly, to reconcile the two paradoxes
+
+* one world many minds
+* one mind many cells (on an individual level)
+
+Schrodinger takes the view that there is only one mind.
