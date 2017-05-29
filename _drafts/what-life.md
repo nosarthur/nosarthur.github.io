@@ -18,9 +18,9 @@ After this read, I take a little more. Basically Schrodinger tries to answer thr
 * How does living matter evade the decay to thermodynamic equilibrium?
 * What is consciousness?
 
-Interestingly, to reconcile the two paradoxes
+Interestingly, Schrodinger takes the view that there is only one mind to reconcile the two paradoxes
 
 * one world many minds
 * one mind many cells (on an individual level)
 
-Schrodinger takes the view that there is only one mind.
+
