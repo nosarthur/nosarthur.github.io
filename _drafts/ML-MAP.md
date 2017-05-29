@@ -26,14 +26,16 @@ in the hope that we get full-rank or  over-determined system of
 
 $$AX  = b$$.
 
-Then the solution is simply 
+Then the solution is simply given by the Penrose pseudoinverse
 
 $$ X = (A^\dagger A)^{-1} A^\dagger b$$
 
 where $$A^\dagger$$ is the [conjugate transpose](https://en.wikipedia.org/wiki/Conjugate_transpose) of $$A$$.
 
-Image reconstruction of convensional [CT](https://en.wikipedia.org/wiki/CT_scan), [MRI](https://en.wikipedia.org/wiki/Magnetic_resonance_imaging) 
-and [super resolution imaging](https://en.wikipedia.org/wiki/Super-resolution_imaging) all follow this approach.
+Image reconstruction of convensional [CT](https://en.wikipedia.org/wiki/CT_scan), [MRI](https://en.wikipedia.org/wiki/Magnetic_resonance_imaging), 
+and [super resolution imaging](https://en.wikipedia.org/wiki/Super-resolution_imaging) all follow this paradigm.
+
+The [Penrose pseudoinverse](https://en.wikipedia.org/wiki/Moore–Penrose_pseudoinverse) solution can be considered as a ML solution with implicit assumption about the measurement noise (see more details in the next section). 
 
 ## maximum likelihood (ML)
 
