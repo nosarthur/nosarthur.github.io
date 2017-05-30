@@ -12,9 +12,9 @@ gas-and-piston system
 My understanding of the field can be summarized in Figure 1.
 
 <svg width='500' height='300'> 
-<rect x="0" y="0" width="250" height="450" fill='white' stroke='black'/>
-<text x='10' y='95' text-anchor='middle' font-size='18'> equil. </text>
-<text x='350' y='95' text-anchor='middle' font-size='18'> non-equil. </text>
+<rect x="45" y="0" width="450" height="250" fill='white' stroke='black'/>
+<text x='50' y='290' text-anchor='middle' font-size='18'> equil. </text>
+<text x='370' y='290' text-anchor='middle' font-size='18'> non-equil. </text>
 
 </svg>
 > Figure 1. Landscape
@@ -57,7 +57,7 @@ $$ \Delta F = -\left<W\right> -\frac{\beta \sigma_W^2}{2} $$
 
 [Crooks fluctuation theorem](https://en.wikipedia.org/wiki/Crooks_fluctuation_theorem)
 
-$$ \frac{\rou_F(-W)}{\rou_R(W)} = e^{\beta(-W+\Delta F)} $$
+$$ \frac{\rho_F(-W)}{\rho_R(W)} = e^{\beta(-W+\Delta F)} $$
 
 
 # references

@@ -19,9 +19,10 @@ layout: default
     {% endif %} 
   </header>
 
+
   <div class="post-content" itemprop="articleBody">
     {{ content }}
   </div>
-
+{% include share-page.html %}
 {% include disqus.html %}
 </article>
