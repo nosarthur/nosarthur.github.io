@@ -26,7 +26,7 @@ permalink: /category/
       {% if group == null or group == post.group %}
       <li><a href="{{ site.baseurl }}{{ post.url }}">
             <span class="entry-date">
-              <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished"> {{ post.date | date: "%b %d, %Y" }}
+              <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished"> {{ post.date | date: "%b %Y" }}
               </time>
             </span> -- {{ post.title }}
           </a>
