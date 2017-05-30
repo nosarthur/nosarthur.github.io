@@ -15,5 +15,6 @@ that **living organisms consume negative entropy to stay alive**.
 After this read, I take a little more. Basically Schrodinger tries to answer three questions:
 
 * What is the material basis of genes? Note that this book was published in 1944 and [DNA structure](https://en.wikipedia.org/wiki/DNA) was discovered in 1953.
-* How does living matter evade the decay to thermodynamic equilibrium?
+* How does living organisms evade the decay to thermodynamic equilibrium?
 * What is consciousness?
+
