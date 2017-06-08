@@ -5,7 +5,7 @@ permalink: /about/
 ---
   <div class="wrapper">
     <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-2">
+      <div class="footer-col footer-col-3">
         <ul class="social-media-list"> 
         <li><a href='https://rawgit.com/nosarthur/CV_resume/master/DongZHOU_CV.pdf'>CV</a> </li>
         <li><a href="mailto:{{ site.email }}">Email</a></li>
@@ -15,7 +15,7 @@ permalink: /about/
         </ul>
       </div>
 
-      <div class="footer-col footer-col-3">
+      <div class="footer-col footer-col-4">
         <p style="color:black;">{{ site.description }}</p>
         Current reading list:
         <ul>

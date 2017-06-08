@@ -6,7 +6,7 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: learn new tricks
+title: more 'N more tricks
 email: zhou.dong@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   A scientist and programmer. Familiar with magnetic resonance imaging, quantum computing, and biophysics. <br>
@@ -18,3 +18,5 @@ github_username:  nosarthur
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
+
