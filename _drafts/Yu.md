@@ -18,7 +18,7 @@ Yu is one of the few people I know who excel in everything they do. As far as I 
 * a body builder 
 * a skier and snowboarder
 * a skater
-
+* a regular blood donor
 
 
 {% include youtubePlayer.html id="7-NG6VOFDcA" %}
