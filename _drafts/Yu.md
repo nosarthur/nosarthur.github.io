@@ -16,7 +16,7 @@ Yu is one of the few people I know who excel in everything they do. As far as I 
 * a runner with Marathon
 * a singer whose coworker plays his songs in car
 * a body builder 
-* a skiier 
+* a skiier and snowboarder
 * a skater
 
 {% include youtubePlayer.html id="7-NG6VOFDcA" %}
