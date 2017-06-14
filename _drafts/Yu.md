@@ -14,7 +14,7 @@ Yu is one of the few people I know who excel in everything they do. As far as I 
 * an engineer who develops radiation oncology products to benefit the society
 * a windsurfer who devotes his time teaching windsurfing as a voluntary instructor at [Hoofer Sailing club](http://www.hoofersailing.org)
 * a runner who finishes full Marathon in 3.5 hours
-* a singer whose songs are played by his coworker in the car
+* a singer whose songs are played by his coworker while driving
 * a body builder 
 * a skier and snowboarder
 * a skater
