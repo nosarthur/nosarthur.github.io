@@ -6,7 +6,7 @@ categories: [life]
 comments: true
 tags: [life]
 ---
-This post is to pay tribute to my friend Yu Chen who lost his life in a tragic incident on Lake Mendota around 5:45PM on May 31, 2017.
+This post is to pay tribute to my friend Yu Chen who left us in a tragic incident on Lake Mendota around 5:45PM on May 31, 2017.
 
 Yu is one of the few people I know who excel in everything they do. As far as I know, he is 
 
@@ -19,6 +19,15 @@ Yu is one of the few people I know who excel in everything they do. As far as I 
 * a skier and snowboarder
 * a skater
 * a regular blood donor
+
+I first met Yu from a mutual friend, and really got to know him from wind surfing. 
+
+* passionate
+* talented, both intellectually and physically
+* persistent
+* compasionate
+
+Yu loves wind surfing. Whenever he met new friends, he would introduce this sport to them and describe in detail how cool it is. We used to joke that [Hoofer sailing club](http://www.hoofersailing.org) should pay commision to him as many people joined the club because of his advertisement, including me. Back in the summer of 2011, we would meet almost everyday on [lake mendota](https://en.wikipedia.org/wiki/Lake_Mendota). Even on windless days, we would checkout shortboards for [standup paddling](https://en.wikipedia.org/wiki/Standup_paddleboarding) to train body balance.
 
 
 {% include youtubePlayer.html id="7-NG6VOFDcA" %}
