@@ -1,6 +1,6 @@
 ---
 layout: post
-title: second law of thermodynamics
+title: Second law of thermodynamics
 date:   2017-05-07 16:43:08 -0500
 categories: [math and physics]
 comments: true

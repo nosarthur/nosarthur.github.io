@@ -1,6 +1,6 @@
 ---
 layout: post
-title: thermodynamics
+title: Thermodynamics
 date:   2017-04-07 10:40:00 -0500
 categories: [math and physics]
 comments: true
