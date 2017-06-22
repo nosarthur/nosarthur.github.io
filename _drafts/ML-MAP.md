@@ -34,17 +34,32 @@ in the hope that we get full-rank or  over-determined system of
 
 $$AX = b, \text{ where } A=\begin{bmatrix}P_1\\ P_2\\ \vdots\end{bmatrix}, b = \begin{bmatrix}y_1\\ y_2\\ \vdots \end{bmatrix}$$
 
-Then the solution is simply given by the Penrose pseudoinverse
+Then the solution is simply given by the [Penrose pseudoinverse](https://en.wikipedia.org/wiki/Moore–Penrose_pseudoinverse)
 
 $$ X = (A^\dagger A)^{-1} A^\dagger b$$
 
 where $$A^\dagger$$ is the [conjugate transpose](https://en.wikipedia.org/wiki/Conjugate_transpose) of $$A$$.
 
-Image reconstruction of convensional [CT](https://en.wikipedia.org/wiki/CT_scan), [MRI](https://en.wikipedia.org/wiki/Magnetic_resonance_imaging), 
+Image reconstruction of conventional [CT](https://en.wikipedia.org/wiki/CT_scan), [MRI](https://en.wikipedia.org/wiki/Magnetic_resonance_imaging), 
 and [super resolution imaging](https://en.wikipedia.org/wiki/Super-resolution_imaging) all follow this paradigm.
-To do a bit better, one can further take the noise property into
+To do a little better, one can further take the noise property into
 consideration, which is commonly known as the [maximum likelihood method](https://en.wikipedia.org/wiki/Maximum_likelihood_estimation).
-For example, the [Penrose pseudoinverse](https://en.wikipedia.org/wiki/Moore–Penrose_pseudoinverse) solution can be considered as a ML solution with implicit assumption about the measurement noise (see more details in the next section). 
+Typically, the noise information can be incorporated into a weighting matrix in the Penrose pseudoinverse.
+More details are included in the next section. 
+
+The downside of ML is that the linear system has to be full rank or over determined, which amounts to many measurements, possibly too expensive or even impossible to perform.
+The maximum a posteriori (MAP) method solves this dilemma by supplementing extra information.
+Typically, one can formulate it as a minimization problem.
+For example $$x_1+x_2 = 3$$ can be solved as follows
+
+$$ \text{argmin}_{x_1, x_2} \|x_1+x_2-3\|^2 + \lambda \|x_1\|^2 $$
+
+where the first term is data term, the second term is regularization term, and $$\lambda$$ is the so-called regularization parameter which is to be chosen.
+Here the regularization term tries to convey our prior information that $$x_1$$ is small. 
+
+Depending on the problem, the form of the regularization term could vary a lot. The determination of $$\lambda$$ is also a little bit arbitrary.
+In practice, MAP usually works very well. Tuning the regularization term and regularization parameters could be a bit like an art.
+
 
 ## maximum likelihood (ML)
 
