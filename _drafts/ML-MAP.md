@@ -39,6 +39,7 @@ Then the solution is simply given by the [Penrose pseudoinverse](https://en.wiki
 $$ X = (A^\dagger A)^{-1} A^\dagger b$$
 
 where $$A^\dagger$$ is the [conjugate transpose](https://en.wikipedia.org/wiki/Conjugate_transpose) of $$A$$.
+Again, since we may not be able to write $$A$$ explicitly (because we cannot do it for the individual $$P_i$$), iterative solvers are commonly in practice, for example [conjugate gradient method](https://en.wikipedia.org/wiki/Conjugate_gradient_method)
 
 Image reconstruction of conventional [CT](https://en.wikipedia.org/wiki/CT_scan), [MRI](https://en.wikipedia.org/wiki/Magnetic_resonance_imaging), 
 and [super resolution imaging](https://en.wikipedia.org/wiki/Super-resolution_imaging) all follow this paradigm.
@@ -70,11 +71,24 @@ To simplify the notation, let's denote it as
 
 $$\epsilon \sim G(0, \sigma)$$
 
+$$ x_{ML} =& argmax P(y|x) \\
+          =& argmin log P(y|x)$$
 
 
 ## maximum a posteriori (MAP)
+
+$$ x_{MAP} =& argmax P(x|y) \\ =& argmax P(y|x)P(x) =& argmin P(x) log P(y|x) $$
+
+where we have used  the Bayes’ rule
+
+$$ P(x|y) = \frac{P(y|x) P(x)}{P(y)} $$
+
+and the fact that $$P(y)$$ is irrelavent to the estimation of $$x$$ because 
 
 ## more recent development 
 
 * [compressive sensing](https://en.wikipedia.org/wiki/Compressed_sensing)
 * [dictionary learning](https://en.wikipedia.org/wiki/Sparse_dictionary_learning)
+
+## further readings
+* A very good resource to learn conjugate gradient method, full of geometrical meanings: [An Introduction to the Conjugate Gradient Method Without the Agonizing Pain](https://www.cs.cmu.edu/~quake-papers/painless-conjugate-gradient.pdf) 
