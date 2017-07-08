@@ -63,6 +63,15 @@ In practice, MAP usually works very well. Tuning the regularization term and reg
 
 ## maximum likelihood (ML)
 
+$$ y = ax + \epsilon $$
+
+where $$\epsilon$$ is assumed to be a Gaussian variable with zero mean and standard deviation $$\sigma$$. 
+To simplify the notation, let's denote it as
+
+$$\epsilon \sim G(0, \sigma)$$
+
+
+
 ## maximum a posteriori (MAP)
 
 ## more recent development 

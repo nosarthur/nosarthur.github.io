@@ -14,6 +14,70 @@ Amazon web services (AWS) is a cool product that provides infrastructure as a se
 * networking
 * database
 
+
+## configuration
+
+User group
+
+* AmazonS3FullAccess
+* AmazonEC2FullAccess
+* AmazonRDSFullAccess
+
+
+```
+pip install boto3, awscli
+```
+
+To make sure the installation is successful, run 
+
+```
+aws ec2 describe-instances
+```
+
+To set up the credentials
+
+```
+aws configure
+```
+
+AWS Access Key ID and AWS Secret Access Key
+
+```
+~/.aws/credentials
+```
+
+which looks like 
+
+```
+[default]
+aws_access_key_id = your_id
+aws_secret_access_key = your_key
+```
+
+To use multiple profiles, you can direct edit this credential file. For example, it may be like this
+
+```
+[default]
+aws_access_key_id = your_id
+aws_secret_access_key = your_key
+
+[admin]
+aws_access_key_id = admin_id
+aws_secret_access_key = admin_key
+aws_secret_access_key = your_key
+```
+
+```
+import boto3
+
+boto3.connect('us-east-1', profile='admin')
+key_name='myKey',
+    instance_type='c1.xlarge',
+        security_groups=['your-security-group-here']
+```
+
+## 
+
 virtualization
 
 lego 
@@ -22,6 +86,7 @@ lego
 
 [elastic compute cloud (EC2)](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html)
 
+Databases in Relational Database Service (RDS)
 
 * S3
     * buckets

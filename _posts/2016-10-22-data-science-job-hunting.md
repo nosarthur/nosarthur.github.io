@@ -82,7 +82,7 @@ a STEM PhD. Specifically, you should be familiar with the following concepts.
             * Python for Data Analysis by Wes McKinney
     * SQL
         * [Stanford database course](https://lagunita.stanford.edu/courses/DB/2014/SelfPaced/about)
-    * github
+    * git and github
     * interview problems
         * [LeetCode](https://leetcode.com) and [LeetCode solutions](https://lefttree.gitbooks.io/leetcode-categories/content/index.html)
         * [codewars](http://codewars.com) 
@@ -108,7 +108,7 @@ a STEM PhD. Specifically, you should be familiar with the following concepts.
     * [google data](https://cloud.google.com/bigquery/public-data/#usa-names)
     * [fivethirtyeight](https://github.com/fivethirtyeight/data)
     * [awesome datasets](https://github.com/caesar0301/awesome-public-datasets)
-* The best way to learn pandas is via project. Wes McKinney's pandas book is nicely written but will be too dry if you only read.  Here is a tutorial by Wes McKinney's in 2012 as well
+* The best way to learn pandas is also via project. Wes McKinney's pandas book is nicely written but will be too dry if you only read.  Here is a tutorial by Wes McKinney's in 2012 as well
 {% include youtubePlayer.html id="w26x-z-BdWQ" %}
 * data science programs
 
@@ -125,7 +125,7 @@ a STEM PhD. Specifically, you should be familiar with the following concepts.
 * [dataQuest](https://www.dataquest.io)
     
     I discovered this site in late July and wished I could have found it earlier. 
-    It is an online learning platform for data analyst, data scientist and data engineer jobs. The premium subscription is $49/month. 
+    It is an online learning platform for data analyst, data scientist, and data engineer jobs. The premium subscription is $49/month. 
     The nice thing is that you can video chat with the founder [Vik Paruchuri](http://www.vikparuchuri.com) for 10 min every week as office hour, and you can ask him anything.
 * [git](https://en.wikipedia.org/wiki/Git) is a must-learn
 

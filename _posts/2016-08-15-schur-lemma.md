@@ -102,7 +102,7 @@ i.e., each one of them is pointing to a random direction and is then
 parametrized as $$R_i\chi R_i^{-1}$$.
 
 For $$\left<\chi\right>_2$$, we assume the molecules are organized in a 
-special way. They firstly form rings in two dimension, then the rings form cylinders. This model is motivated by the myelin sheath in white matter tracks.  
+special way. They firstly form rings in two dimension, then the rings form cylinders. This model is motivated by the [myelin sheath](https://en.wikipedia.org/wiki/Myelin) in [white matter](https://en.wikipedia.org/wiki/White_matter) tracks.  
 
 More background 
 information of the project can be found in our [NeuroImage paper][1].
