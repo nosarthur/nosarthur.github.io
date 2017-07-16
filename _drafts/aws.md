@@ -94,14 +94,7 @@ aws_secret_access_key = admin_key
 aws_secret_access_key = your_key
 ```
 
-```
-import boto3
 
-boto3.connect('us-east-1', profile='admin')
-key_name='myKey',
-    instance_type='c1.xlarge',
-        security_groups=['your-security-group-here']
-```
 
 ## usage
 
@@ -122,9 +115,18 @@ key_name='myKey',
 
 low-level responses are python dictionaries. 
 
+```
+import boto3
+
+boto3.connect('us-east-1', profile='admin')
+key_name='myKey',
+    instance_type='c1.xlarge',
+        security_groups=['your-security-group-here']
+```
+
 {% include youtubePlayer.html id="Cb2czfCV4Dg" %}
 
-## resources
+## learning resources
 
 * [boto3 quick hands-on](https://gist.github.com/iMilnb/0ff71b44026cfd7894f8)
 * [introduction to aws and boto3](http://2017.compciv.org/guide/topics/aws/intro-to-aws-boto3.html)
