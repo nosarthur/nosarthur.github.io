@@ -119,4 +119,7 @@ low-level responses are python dictionaries.
 
 {% include youtubePlayer.html id="Cb2czfCV4Dg" %}
 
+## resources
 
+* [boto3 quick hands-on](https://gist.github.com/iMilnb/0ff71b44026cfd7894f8)
+* [introduction to aws and boto3](http://2017.compciv.org/guide/topics/aws/intro-to-aws-boto3.html)
