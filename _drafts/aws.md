@@ -7,12 +7,37 @@ comments: true
 tags: [aws]
 ---
 
+## introduction
+
 Amazon web services (AWS) is a cool product that provides infrastructure as a service (IaaS).
 
 * compute
 * storage
 * networking
 * database
+
+virtualization
+
+lego 
+
+[simple storage service (S3)](http://docs.aws.amazon.com/AmazonS3/latest/dev/Welcome.html)
+
+[elastic compute cloud (EC2)](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html)
+
+[Databases in Relational Database Service (RDS)](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html)
+
+* S3
+    * buckets
+    * objects: 5TB data limit
+        * object data
+        * metadata: name/value pairs
+    * permission
+    * keys
+    * regions
+        * US East (N. Virginia)
+        * US East (Ohio)
+        * US West (N. California)
+        * US West (Oregon)
 
 
 ## configuration
@@ -76,30 +101,8 @@ key_name='myKey',
         security_groups=['your-security-group-here']
 ```
 
-## 
+## usage
 
-virtualization
-
-lego 
-
-[simple storage service (S3)](http://docs.aws.amazon.com/AmazonS3/latest/dev/Welcome.html)
-
-[elastic compute cloud (EC2)](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html)
-
-Databases in Relational Database Service (RDS)
-
-* S3
-    * buckets
-    * objects: 5TB data limit
-        * object data
-        * metadata: name/value pairs
-    * permission
-    * keys
-    * regions
-        * US East (N. Virginia)
-        * US East (Ohio)
-        * US West (N. California)
-        * US West (Oregon)
 
 
 [boto3](https://boto3.readthedocs.io/en/latest/)
