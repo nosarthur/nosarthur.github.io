@@ -59,19 +59,13 @@ To make sure the installation is successful, run
 aws ec2 describe-instances
 ```
 
-To set up the credentials
+To set up the user profile, run
 
 ```
 aws configure
 ```
 
-AWS Access Key ID and AWS Secret Access Key
-
-```
-~/.aws/credentials
-```
-
-which looks like 
+It creates two files. The AWS Access Key ID and AWS Secret Access Key are stored in `~/.aws/credentials`, which looks like 
 
 ```
 [default]
@@ -79,7 +73,15 @@ aws_access_key_id = your_id
 aws_secret_access_key = your_key
 ```
 
-To use multiple profiles, you can direct edit this credential file. For example, it may be like this
+Other preferences are stored in `~/.aws/config`, which looks like
+
+```
+[default]
+output = json
+region = us-east-1
+```
+
+To use multiple profiles, you can edit this credential and config files directly. For example, it may be like this
 
 ```
 [default]
