@@ -39,10 +39,18 @@ lego
         * US West (N. California)
         * US West (Oregon)
 
+AWS provides 1 year free trial to the 
+
+[AWS free tier details](https://aws.amazon.com/free/)
 
 ## configuration
 
-User group
+After signing up for AWS (free tier), the first thing to do is to set up 
+
+* create individual IAM user, e.g., dev
+* create user group to assign permissions, e.g., dev-group
+
+To start with, we can attach the following permission to the user group
 
 * AmazonS3FullAccess
 * AmazonEC2FullAccess
@@ -123,6 +131,9 @@ key_name='myKey',
     instance_type='c1.xlarge',
         security_groups=['your-security-group-here']
 ```
+
+security group
+
 
 {% include youtubePlayer.html id="Cb2czfCV4Dg" %}
 
