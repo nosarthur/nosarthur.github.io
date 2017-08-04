@@ -1,3 +1,13 @@
+---
+layout: post
+title: Dao De Jing
+date:   2017-08-28 13:43:08 -0500
+categories: [readings]
+comments: true
+tags: [taoism]
+---
+
+[Dao de jing](https://en.wikipedia.org/wiki/Tao_Te_Ching) is a Chinese classic written by the [Taoism](https://en.wikipedia.org/wiki/Taoism) founder [Lao zi](https://en.wikipedia.org/wiki/Laozi)(around 500 BC).
 
 
 The famous ones are in bold font.
