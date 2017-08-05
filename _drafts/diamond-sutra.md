@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Diamond Sutra
-date:   2017-08-18 13:43:08 -0500
+date:   2017-09-18 13:43:08 -0500
 categories: [readings]
 comments: true
 tags: [buddhism]

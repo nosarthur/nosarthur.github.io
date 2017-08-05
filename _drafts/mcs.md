@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Maximum common subgraph 
-date:   2017-07-21 13:43:08 -0500
+date:   2017-11-21 13:43:08 -0500
 categories: [math and physics]
 comments: true
 tags: [algorithm, graph theory]

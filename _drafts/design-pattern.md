@@ -1,3 +1,11 @@
+---
+layout: post
+title: design patterns
+date:   2017-11-21 13:43:08 -0500
+categories: [coding]
+comments: true
+tags: [design pattern]
+---
 
 The principle of design is to **encapsulate what changes**.
 

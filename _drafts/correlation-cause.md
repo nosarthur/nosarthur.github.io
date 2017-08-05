@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Correlation and cause
-date:   2017-08-26 03:43:08 -0500
+date:   2018-02-26 03:43:08 -0500
 categories: [math and physics]
 comments: true
 description: An introduction on 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Polya enumeration theorem
-date:   2017-08-01 03:43:08 -0500
+date:   2017-08-21 03:43:08 -0500
 categories: [math and physics]
 comments: true
 tags: [combinatorics, graph theory]
@@ -15,14 +15,24 @@ question it answers is
 If one is only interested in the number of distinct necklaces,
 a weak version of it called [Burnside’s Lemma](https://en.wikipedia.org/wiki/Burnside%27s_lemma) can be used.
 
-For example, suppose N=2 and M=1.
+For example, suppose N=2 and M=2.
+It's easy to see there are two possibilities, shown in Figure 1.
 
 
+<svg width='400' height='280'> 
+<circle cx='70' cy='140' r='50' fill='none' stroke='black' /> 
+<circle cx='270' cy='140' r='50' fill='none' stroke='black' /> 
+</svg>
+> Figure 1. Two distinct necklaces with 2 black and 2 white beads.
+
+
+In math and physics, the concept of symmetry is captured by [group theory]().
 
 On a more abstract level, Polya enumeration theorem solves the following problem: given a set S (beads), some equivalence criteria, 
 
 
-stabilizer
+* stabilizer
+* orbit
 
 counting orbits
 

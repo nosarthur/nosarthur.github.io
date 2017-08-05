@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The Chinese elements and Indian elements"
-date:   2017-10-12 23:43:08 -0500
+date:   2018-10-12 23:43:08 -0500
 categories: others
 comments: true
 tags: [elements]

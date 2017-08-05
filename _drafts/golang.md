@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A crash course on golang
-date:   2017-10-18 13:43:08 -0500
+date:   2018-10-18 13:43:08 -0500
 categories: [coding]
 comments: true
 tags: [go]

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Amazon web services
-date:   2017-05-18 13:43:08 -0500
+date:   2017-10-18 13:43:08 -0500
 categories: [coding]
 comments: true
 tags: [aws]
@@ -9,20 +9,34 @@ tags: [aws]
 
 ## introduction
 
-Amazon web services (AWS) is a cool product that provides infrastructure as a service (IaaS).
+Amazon web services (AWS) provides infrastructure as a service (IaaS).
+The main components are
 
 * compute
 * storage
 * networking
 * database
 
+AWS provides 1 year free trial to the 
+
+[AWS free tier details](https://aws.amazon.com/free/)
+
+So far I find the official AWS documentations quite horrible: it is pretty much an encyclopedia.
+In practice, what I really need are recipes for individual tasks.
+And this post is my note to do the following tasks:
+
+* basic configurations
+* spin up and down an on-demand instance
+* spin up and down a spot instance
+* ssh to the instance
+
 virtualization
 
 lego 
 
-[simple storage service (S3)](http://docs.aws.amazon.com/AmazonS3/latest/dev/Welcome.html)
-
 [elastic compute cloud (EC2)](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html)
+
+[simple storage service (S3)](http://docs.aws.amazon.com/AmazonS3/latest/dev/Welcome.html)
 
 [Databases in Relational Database Service (RDS)](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html)
 
@@ -38,10 +52,6 @@ lego
         * US East (Ohio)
         * US West (N. California)
         * US West (Oregon)
-
-AWS provides 1 year free trial to the 
-
-[AWS free tier details](https://aws.amazon.com/free/)
 
 ## configuration
 
@@ -137,7 +147,23 @@ security group
 
 {% include youtubePlayer.html id="Cb2czfCV4Dg" %}
 
+* on-demand instances
+* [spot instances](https://aws.amazon.com/ec2/spot/)
+
+## ssh to the instance
+
+* key-pair
+* security group
+
+chmod 400 /path/my-key-pair.pem
+
+ssh -i /path/my-key-pair.pem ec2-user@ec2-198-51-100-1.compute-1.amazonaws.com
+
+
+[iam role](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html)
+
 ## learning resources
 
 * [boto3 quick hands-on](https://gist.github.com/iMilnb/0ff71b44026cfd7894f8)
+* [cheat sheep of boto3](https://linuxacademy.com/howtoguides/posts/show/topic/14209-automating-aws-with-python-and-boto3)
 * [introduction to aws and boto3](http://2017.compciv.org/guide/topics/aws/intro-to-aws-boto3.html)

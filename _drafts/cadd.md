@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Computer-aided drug design 
-date:   2017-05-14 23:43:08 -0500
+date:   2018-09-14 23:43:08 -0500
 categories: [technology]
 comments: true
 tags: [free energy perturbation]

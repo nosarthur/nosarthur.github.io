@@ -87,7 +87,7 @@ a STEM PhD. Specifically, you should be familiar with the following concepts.
         * [LeetCode](https://leetcode.com) and [LeetCode solutions](https://lefttree.gitbooks.io/leetcode-categories/content/index.html)
         * [codewars](http://codewars.com) 
 * statistics
-    * hypothesis test
+    * [hypothesis test]({% post_url 2017-08-05-hypothesis-test %})
     * bias-variance trade-off
 * machine learning
     * [naive Bayes]({% post_url 2016-08-01-naive-Bayes %})

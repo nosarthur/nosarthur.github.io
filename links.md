@@ -8,6 +8,7 @@ permalink: /links/
 
 * interesting people
     * [Michael Nielsen][nielsen] 
+    * [Allen Downey](http://allendowney.blogspot.com/)
     * [Derek Lowe](http://blogs.sciencemag.org/pipeline/)
     * [Gavin E. Crooks](http://threeplusone.com/gec/)
 * early retirement

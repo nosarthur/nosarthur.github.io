@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Dao De Jing
-date:   2017-08-28 13:43:08 -0500
+date:   2017-10-28 13:43:08 -0500
 categories: [readings]
 comments: true
 tags: [taoism]
