@@ -9,36 +9,31 @@ tags: [aws]
 
 ## introduction
 
-Amazon web services (AWS) provides infrastructure as a service (IaaS).
-The main components are
+[Amazon web services (AWS)](https://en.wikipedia.org/wiki/Amazon_Web_Services) provides on-demand cloud computing resources to users.
+It alleviates the pain of maintaining hardwares.
+Currently AWS provides 1 year free trial to new users. Details can be found  from the [AWS free tier page](https://aws.amazon.com/free/).
+
+So far I find the official AWS documentations quite horrible: it is pretty much an encyclopedia.
+In practice, what I really need are recipes for individual tasks.
+And this post is my note to do the following tasks, using [python boto3 library](http://boto3.readthedocs.io/en/latest/) for automation:
+
+* basic account configurations
+* spin up and down an on-demand instance
+* spin up and down a spot instance
+* ssh to the instance
+
+## basic resources
+
+The main components of AWS include
 
 * compute
 * storage
 * networking
 * database
 
-AWS provides 1 year free trial to the 
-
-[AWS free tier details](https://aws.amazon.com/free/)
-
-So far I find the official AWS documentations quite horrible: it is pretty much an encyclopedia.
-In practice, what I really need are recipes for individual tasks.
-And this post is my note to do the following tasks:
-
-* basic configurations
-* spin up and down an on-demand instance
-* spin up and down a spot instance
-* ssh to the instance
-
-virtualization
-
-lego 
-
-[elastic compute cloud (EC2)](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html)
-
-[simple storage service (S3)](http://docs.aws.amazon.com/AmazonS3/latest/dev/Welcome.html)
-
-[Databases in Relational Database Service (RDS)](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html)
+For a web application, the most essential resources are [Elastic Compute Cloud (EC2)](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html),
+[Simple Storage Service (S3)](http://docs.aws.amazon.com/AmazonS3/latest/dev/Welcome.html),
+and [Relational Database Service (RDS)](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html).
 
 * S3
     * buckets
@@ -53,9 +48,11 @@ lego
         * US West (N. California)
         * US West (Oregon)
 
-## configuration
+## basic account configuration
 
-After signing up for AWS (free tier), the first thing to do is to set up 
+After signing up for AWS (free tier account for example),
+the first thing to do is to [set up a user account](http://docs.aws.amazon.com/lambda/latest/dg/setting-up.html).
+There are two steps to this process:
 
 * create individual IAM user, e.g., dev
 * create user group to assign permissions, e.g., dev-group
@@ -82,8 +79,8 @@ To set up the user profile, run
 ```
 aws configure
 ```
-
-It creates two files. The AWS Access Key ID and AWS Secret Access Key are stored in `~/.aws/credentials`, which looks like 
+It will ask user input for AWS Access Key ID, AWS Secret Access Key, and other preferences.
+After execution, two files are created. The AWS Access Key ID and AWS Secret Access Key are stored in `~/.aws/credentials`, which looks like 
 
 ```
 [default]
@@ -152,18 +149,34 @@ security group
 
 ## ssh to the instance
 
-* key-pair
-* security group
+In order to ssh into EC2 instance, you need to assign to the instance
+
+* an [aws key-pair](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html) when launching the instance
+* a [security group with ssh permission](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/authorizing-access-to-an-instance.html)
+
+To check whether these two conditions are met for your instance, you can go to the aws EC2 Management console, click on your instance at the instance tab, and check if there is a Key pair name associated with it, and whether the Security groups inbound rule contains port 22 tcp protocol.
+
+```python
+rc = ec2.create_instances(ImageId=ubuntu_64bit,                            
+			  InstanceType='t2.nano',                          
+			  MinCount=1,                                      
+			  MaxCount=n_workers,                              
+			  KeyName='my-key',                               
+			  )  
+```
 
 chmod 400 /path/my-key-pair.pem
 
+```
 ssh -i /path/my-key-pair.pem ec2-user@ec2-198-51-100-1.compute-1.amazonaws.com
+```
 
+Depending on the image you load, the user name could vary. Possible ones include ec2-user, centos, ubuntu, root.
 
 [iam role](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html)
 
 ## learning resources
 
-* [boto3 quick hands-on](https://gist.github.com/iMilnb/0ff71b44026cfd7894f8)
-* [cheat sheep of boto3](https://linuxacademy.com/howtoguides/posts/show/topic/14209-automating-aws-with-python-and-boto3)
-* [introduction to aws and boto3](http://2017.compciv.org/guide/topics/aws/intro-to-aws-boto3.html)
+* [Boto3 quick hands-on](https://gist.github.com/iMilnb/0ff71b44026cfd7894f8)
+* [Automating AWS With Python and Boto3](https://linuxacademy.com/howtoguides/posts/show/topic/14209-automating-aws-with-python-and-boto3)
+* [Introduction to aws and boto3](http://2017.compciv.org/guide/topics/aws/intro-to-aws-boto3.html)
