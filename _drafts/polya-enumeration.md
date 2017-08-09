@@ -11,9 +11,7 @@ tags: [combinatorics, graph theory]
 
 [Polya enumeration theorem](https://en.wikipedia.org/wiki/P%C3%B3lya_enumeration_theorem) is a very powerful tool in combinatorics. The paradigm 
 question it answers is:
-**What are the distinct necklaces one can make out of N black and M white beads?**
-If one is only interested in the number of distinct necklaces,
-a weak version of it called [Burnside’s Lemma](https://en.wikipedia.org/wiki/Burnside%27s_lemma) can be used.
+**How many distinct necklaces can one make out of N black and M white beads?**
 
 For example, suppose N=2 and M=2.
 It's easy to see that there are only two possibilities, as shown in Figure 1.
@@ -117,15 +115,15 @@ This approach is not practical when the number of beads gets large.
 To demonstrate the power of Polya enumerate theorem, let me first show you the procedure to get that answer of 2 for our necklace counting problem.
 
 Each group is associated with a polynomial called [cycle index](https://en.wikipedia.org/wiki/Cycle_index),
-which is basically a fingerprint of the group in terms of how its individual element generates cycles.
+which is basically a fingerprint of the group in terms of how its individual element generates cycles (more details will be given in the next section).
 The cycle index of many famous groups are known. Even if it is unknown for a group, its calculation is very easy albeit somewhat tedious.
 For $$D_4$$ it is given by 
 
-$$Z_{D_4}(x_1,x_2,x_3,x_4) = \frac{x_1^4 + 2x_1^2x_2 + 3x_2^2 + 2x_4}{8} $$
+$$Z_{D_4}(x_1,x_2,x_3,x_4) = \frac{z_1^4 + 2z_1^2z_2 + 3z_2^2 + 2z_4}{8} $$
 
 Now we make the substitution 
 
-$$x_1\rightarrow B+W, x_2\rightarrow B^2+W^2, x_4\rightarrow B^4 + W^4$$
+$$z_1\rightarrow B+W, z_2\rightarrow B^2+W^2, z_4\rightarrow B^4 + W^4$$
 
 where $$B$$ and $$W$$ denote the color of the bead. After simplification, the polynomial becomes
 
@@ -134,29 +132,32 @@ $$B^4 + B^3W + 2B^2W^2 + BW^3 + W^4$$
 and the coefficient of $$B^2W^2$$, i.e., 2, is the number of distinct necklaces with 2 black beads and 2 white beads.
 Similarly, the coefficients of other terms are the number of distinct necklaces with the corresponding beads.
 Also, if we set $$B=W=1$$, then the polynomial evaluates to $$6$$, which is the number of distinct necklaces with four beads of two colors.
-Furthermore, if we set $$x_1=x_2=x_4=n$$, then the polynomial evaluates to the number of distinct necklaces with four beads of $$n$$ colors.
+Furthermore, if we set $$z_1=z_2=z_4=n$$, then the polynomial evaluates to the number of distinct necklaces with four beads of $$n$$ colors.
 
 I was quite shocked when I first learned this.
 
 ## the details
+
+In this section, I will try to explain why the previous magic works. Basic familarity with group theory is assumed.
+For example, you should know what [coset](https://en.wikipedia.org/wiki/Coset) means.
 
 * orbit
 * stabilizer
 * fixed points
 
 With these terminology, our necklace counting problem can be stated as:
-**given a group G acting on a set X (beads), how many different orbits are there?**
+**given a group G (symmetry, equivalence criterion) acting on a set X (beads), how many different orbits (necklaces) are there?**
 
 orbits partition the set
 
-In math and physics, the concept of symmetry is captured by [group theory]().
+<svg width='120' height='130'> 
+<rect x='20' y='20' width='80' height='80' fill='none' stroke='black' /> 
+<text x='20' y='15'> 4</text>
+<line x1='10' y1='10 x2='110' y2='110' stroke-dasharray='5, 5'>
 
+</svg>
 
-
-* stabilizer
-* orbit
-
-counting orbits
+Weighted version of [Burnside’s Lemma](https://en.wikipedia.org/wiki/Burnside%27s_lemma) can be used.
 
 
 $$(x+y)^2 = x^2 + xy + yx + y^2$$
