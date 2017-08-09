@@ -139,7 +139,9 @@ I was quite shocked when I first learned this.
 ## the details
 
 In this section, I will try to explain why the previous magic works. Basic familarity with group theory is assumed.
-For example, you should know what [coset](https://en.wikipedia.org/wiki/Coset) means.
+For example, you should know what [coset](https://en.wikipedia.org/wiki/Coset) is.
+
+The following three concepts are essential for Polya enumeration theorem:
 
 * orbit
 * stabilizer
@@ -156,6 +158,7 @@ orbits partition the set
 <line x1='10' y1='10 x2='110' y2='110' stroke-dasharray='5, 5'>
 
 </svg>
+> Figure 3. Labeling of the bead positions and the diagonal flip $$D_2$$ axis.
 
 Weighted version of [Burnside’s Lemma](https://en.wikipedia.org/wiki/Burnside%27s_lemma) can be used.
 
