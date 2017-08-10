@@ -141,26 +141,98 @@ I was quite shocked when I first learned this.
 In this section, I will try to explain why the previous magic works. Basic familarity with group theory is assumed.
 For example, you should know what [coset](https://en.wikipedia.org/wiki/Coset) is.
 
-The following three concepts are essential for Polya enumeration theorem:
+The following three concepts are essential for Polya enumeration theorem.
+We assume there is a set $$X$$, and a group $$G$$ that acts on it.
 
-* orbit
-* stabilizer
-* fixed points
+* **orbit**: the set of set elements reachable by the group action, i.e., <span>$$orb_G(x)=\{g(x)|g\in G\}$$</span>. For example, the two rows in Fig. 2 are two orbits.
+* **stabilizer**: the set of group elements that stabilize a particular set element, i.e., <span>$$stab_G(x)=\{g\in G|g(x)=x\}$$</span>.
+* **fixed points**: the set of set elements that are stabilized by a particular group element, i.e., <span>$$fix_X(g)=\{x\in X|g(x)=x\}$$</span>.
 
-With these terminology, our necklace counting problem can be stated as:
+To be concrete, in our necklace example in Fig. 1,
+let's call the necklaces in the first row $$a_i$$, and the ones in the second row $$b_i$$. 
+Then some of the stabilizers and fixed points are as follows
+
+$$stab_G(a_1)=\{R_0, H\}, stab_G(a_2)=\{R_0, V\}, stab_G(b_1)=\{R_0, R_{180},D_1, D_2\}\\
+fix_X(R_{90})=\varnothing, fix_X(H)=\{a_1,a_3\}, fix_X(D_1) = \{b_1, b_2\}
+$$
+
+If you take the trouble to work out all the stabilizers for each necklace in Fig. 1, 
+there is a pattern: all $$a_i$$ have 2 stabilizers, and all $$b_i$$ have 4 stabilizers. 
+Also note $$D_3$$ has 8 elements. It turns out all these observations are no coincidence. 
+There is a so-called orbit-stabilizer theorem which states:
+
+$$|G| = |orb_G(x)| |stab_G(x)|, \forall x \in X$$
+
+To prove it, notice that $$stab_G(x)$$ is a subgroup of $$G$$.
+Then all we need to do is to show **the existence of a one-to-one correspondence between the orbit of $$x$$ and the left cosets of $$stab_G(x)$$**.
+Such a mapping can be written as $$ \phi: orb_G(x) \rightarrow G/stab_G(x)$$
+and 
+
+$$ \phi(g(x)) = g * stab_G(x)$$
+
+where $$*$$ denotes the operation between group elements. I will omit it as long as it's not confusing.
+The proof then has three parts, i.e., $$\phi$$ needs to be
+
+* well-defined
+* injective
+* surjective
+
+For $$\phi$$ to be well-defined, we need to show that for $$g, h\in G$$, 
+if $$g(x)=h(x)$$, then $$\phi(g(x))=\phi(h(x))$$,
+i.e., same input should give same output.
+Note that the assumption immediately tells us that $$h^{-1}g\in stab_G(x)$$, thus $$h^{-1}g * stab_G(x) = stab_G(x)$$, which gives the desired result.
+
+For $$\phi$$ to be injective, we need to show that if $$\phi(g(x))=\phi(h(x))$$, then $$g(x)=h(x)$$.
+This proof is essentially the same as the well-defineness proof.
+
+Finally, the surjectiveness of $$\phi$$ is obvious.
+
+I find the orbit-stabilizer therorem quite neat because set $$X$$ has nothing to do with $$G$$, but still any element of it can be used to partition $$G$$.
+Furthermore, set elements in the same orbit have the same number of stabilizers.
+
+With these terminologies, our necklace counting problem can be stated as:
 **given a group G (symmetry, equivalence criterion) acting on a set X (beads), how many different orbits (necklaces) are there?**
 
-orbits partition the set
+In fact, orbit-stabilizer theorem is powerful enough to answer this question.
+To get the number of orbits, we need to utilize an auxiliary quantity:
+the total number of (stabilizer, fixed point) pairs.
+There are two ways to count it, either from the stabilizers or from the fixed points.
+The results should agree, i.e.,
+
+$$ \sum_{x\in X}|stab_G(x)| = \sum_{g\in G}|fix_X(g)|$$
+
+Since orbits partition the set, the first summation can be broken down as
+
+$$\sum_{o \in orbits}\sum_{x\in o}|stab_G(x)| = \sum_{o \in orbits}|G|$$
+
+Thus we have 
+
+$$\text{# of orbits} = \frac{1}{|G|} \sum_{g\in G}|fix_X(g)|$$
+
+This is known as [Burnside's lemma](https://en.wikipedia.org/wiki/Burnside%27s_lemma).
+There are still a lot of work involved in Burnside's lemma in the fixed points calculation.
 
 <svg width='120' height='130'> 
 <rect x='20' y='20' width='80' height='80' fill='none' stroke='black' /> 
 <text x='20' y='15'> 4</text>
-<line x1='10' y1='10 x2='110' y2='110' stroke-dasharray='5, 5'>
-
+<text x='90' y='15'> 1</text>
+<text x='20' y='115'> 3</text>
+<text x='90' y='115'> 2</text>
+<line x1='10' y1='10' x2='110' y2='110' stroke-dasharray='5, 5' stroke='black' />
 </svg>
 > Figure 3. Labeling of the bead positions and the diagonal flip $$D_2$$ axis.
+
+
+$$
+R_0: (1)(2)(3)(4) \rightarrow z_1^4\\
+D_2: (13)(2)(4) \rightarrow z^2_1z_2\\
+R_{90}: (1432) \rightarrow z_4 \\
+R_{180}: (13)(24) \rightarrow z_2^2
+$$
 
 Weighted version of [Burnside’s Lemma](https://en.wikipedia.org/wiki/Burnside%27s_lemma) can be used.
 
 
 $$(x+y)^2 = x^2 + xy + yx + y^2$$
+
+
