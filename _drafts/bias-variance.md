@@ -4,10 +4,30 @@ title: Bias-Variance tradeoff
 date:   2017-09-01 03:43:08 -0500
 categories: [math and physics]
 comments: true
-description: An explanation of Bias-Variance tradeoff
 tags: [variance, bias]
 ---
 
+## introduction
+
+When I was doing the image processing postdoc, one colleague pointed to me an interesting observation. 
+At the time we were doing regularized optimizion of the form
+
+$$ x = \text{argmin}_x \|y - f(x)\|^2_2 + \lambda\|L(x)\|_1 $$
+
+where $$y$$ is some 3D data, $$f$$ and $$L$$ are some functions.
+In a validation data set, we know what to expect for the value of $$x$$ inside a region, say 1.0.
+However, what we got was a bit off, say $$0.8\pm 0.4$$.
+Since 
+
+1. the variation $$0.4$$ is somewhat big
+2. there is reason to believe any particular value of $$\lambda$$ is optimal
+
+we decided to make increase the regularization parameter and see what happens. 
+And we got say $$0.7\pm 0.1$$, the variance indeed dropped but the mean got worse.
+
+And this is the topic of this post.
+
+## variance tradeoff
 
 $$ Y = f(X) +\epsilon$$
 
