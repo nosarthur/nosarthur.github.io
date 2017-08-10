@@ -210,7 +210,42 @@ Thus we have
 $$\text{# of orbits} = \frac{1}{|G|} \sum_{g\in G}|fix_X(g)|$$
 
 This is known as [Burnside's lemma](https://en.wikipedia.org/wiki/Burnside%27s_lemma).
-There are still a lot of work involved in Burnside's lemma in the fixed points calculation.
+There are still a lot of work involved in the fixed points calculation.
+To simplify this calculation, we need to introduce the concepts of cycle index monomials and polynomials.
+
+First let's give the four beads some labels, as shown in Fig. 3.
+Note that the group action on the set $$X$$ can be described as permutation of the labels, which can be further decomposes into [cycles](https://en.wikipedia.org/wiki/Cyclic_permutation). For example,
+
+$$
+R_0: (1)(2)(3)(4) \rightarrow z_1^4\\
+D_2: (13)(2)(4) \rightarrow z^2_1z_2\\
+R_{90}: (1432) \rightarrow z_4 \\
+R_{180}: (13)(24) \rightarrow z_2^2
+$$
+
+where the last term in each row is the cycle index monomial for the corresponding group element.
+It has the form
+
+$$\Pi_{i=1}^n z_i^{b_i}$$
+
+where $$n=|X|$$ is the size of set $$X$$, $$i$$ refers to the cycle length, and $$b_i$$ is the count of length-$$i$$ cycles. 
+It's easy to see that the following identity holds
+
+$$\sum_{i=1}^n i b_i = n$$
+
+Note also that in most cases, the 1-cycles are not written explicitly in [cycle notations](https://en.wikipedia.org/wiki/Cyclic_permutation). Don't forget to include them for cycle index monomials.
+
+The cycle index monomial of a group element $$g$$ is directly relevant to $$|fix_X(g)|$$.
+If the beads (labels) in the same cycle are of the same color, that necklace is fixed by $$g$$.
+Furthermore, **simplying polynomials are essentially counting combinations because the same terms represent the same combinations**. Thus we can make the replacement of 
+
+$$ z_i \rightarrow \sum_{k=1}^m c_k^i $$
+
+for the cycle index monomials to see all the possible combinations. Here $$m$$ is the number of colors and $$c_k$$ are color labels. For example, in the case of our 4-bead necklace with black and white colors
+
+$$D_4: z_1^z_2=(B+W)^2(B^2+W^2) = B^4 +2B^3W+2B^2W^2+2BW^3 + W^4$$
+
+You can easily check graphically on Fig.3 that all these coefficients are correct.
 
 <svg width='120' height='130'> 
 <rect x='20' y='20' width='80' height='80' fill='none' stroke='black' /> 
@@ -222,17 +257,12 @@ There are still a lot of work involved in Burnside's lemma in the fixed points c
 </svg>
 > Figure 3. Labeling of the bead positions and the diagonal flip $$D_2$$ axis.
 
+Let me further demonstrate the case of three colors, say black, white, and red with labels $$B, W, R$$.
+In this case, the replacement is 
 
-$$
-R_0: (1)(2)(3)(4) \rightarrow z_1^4\\
-D_2: (13)(2)(4) \rightarrow z^2_1z_2\\
-R_{90}: (1432) \rightarrow z_4 \\
-R_{180}: (13)(24) \rightarrow z_2^2
-$$
+$$ z_1 \rightarrow B+W+R, z_2\rightarrow B^2+W^2+R^2, \ldots$$
 
-Weighted version of [Burnside’s Lemma](https://en.wikipedia.org/wiki/Burnside%27s_lemma) can be used.
+This is because for any 1-cycle, i.e., single bead, all 3 colors can be used. 
+For 2-cycles, i.e., one bead becomes another bead under the action of the group element, both beads need to have the same color. 
 
-
-$$(x+y)^2 = x^2 + xy + yx + y^2$$
-
-
+Finally, the cycle index polymonial of the group is .
