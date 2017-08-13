@@ -7,16 +7,8 @@ comments: true
 tags: [hobby]
 ---
 
-I enjoy many hobbies. Over the years, however, many faded away.
-Here I will analyze why they faded.
-
-For some unknown reason, my hobbies are mostly physical.
-Intellectual games such as bridge and poker somehow does not interest me very much.
-The only two non-physical hobbies are 
-
-* reading books 
-* watching Youtube videos.
-
+I enjoy many hobbies, and most of them are physical activities.
+However, over the years,  many faded away.
 
 * autonomous
 * sustainable
@@ -32,3 +24,4 @@ Autonomous mean
 * tennis
 * wind surfing
 * running
+
