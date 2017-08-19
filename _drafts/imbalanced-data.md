@@ -40,6 +40,9 @@ The x-axis and y-axis are the FPR and TPR.
 
 area under the curve (AUC)
 
+![imbalance ROC](/assets/Fig2_SMOTE.png){:width='450px'}
+
+> Figure 1. adapted from Fig.2 of the SMOTE paper.
 
 * assign different costs to different classes 
 * re-sampling
