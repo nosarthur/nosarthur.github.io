@@ -17,12 +17,14 @@ So far I find the official AWS documentations quite horrible: it is pretty much 
 In practice, what I really need are recipes for individual tasks.
 And this post is my note to do the following tasks, using [python boto3 library](http://boto3.readthedocs.io/en/latest/) for automation:
 
-* basic account configurations
-* spin up and down an on-demand instance
-* spin up and down a spot instance
-* ssh to the instance
+* [basics](#basics)
+* [basic account configurations](#config)
+* [spin up and down an on-demand instance](#demand)
+* [spin up and down a spot instance](#spot)
+* [ssh to EC2 instance](#ssh)
+* [access S3 from EC2 instance without credentials](#s3)
 
-## basic resources
+## <a name='basics'></a> basic resources
 
 The main components of AWS include
 
@@ -48,7 +50,7 @@ and [Relational Database Service (RDS)](http://docs.aws.amazon.com/AmazonRDS/lat
         * US West (N. California)
         * US West (Oregon)
 
-## basic account configuration
+## <a name='config'></a>basic account configuration
 
 After signing up for AWS (free tier account for example),
 the first thing to do is to [set up a user account](http://docs.aws.amazon.com/lambda/latest/dg/setting-up.html).
@@ -147,7 +149,7 @@ security group
 * on-demand instances
 * [spot instances](https://aws.amazon.com/ec2/spot/)
 
-## ssh to the instance
+## <a name='ssh'></a>ssh to the instance
 
 In order to ssh into EC2 instance, you need to assign to the instance
 
@@ -173,10 +175,15 @@ ssh -i /path/my-key-pair.pem ec2-user@ec2-198-51-100-1.compute-1.amazonaws.com
 
 Depending on the image you load, the user name could vary. Possible ones include ec2-user, centos, ubuntu, root.
 
-[iam role](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html)
+## <a name='s3'></a> access S3 from EC2
+
+* create IAM policy
+* create [IAM role](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html)
+*
 
 ## learning resources
 
 * [Boto3 quick hands-on](https://gist.github.com/iMilnb/0ff71b44026cfd7894f8)
 * [Automating AWS With Python and Boto3](https://linuxacademy.com/howtoguides/posts/show/topic/14209-automating-aws-with-python-and-boto3)
 * [Introduction to aws and boto3](http://2017.compciv.org/guide/topics/aws/intro-to-aws-boto3.html)
+* [How to access S3 buckets without access credentials](http://parthicloud.com/how-to-access-s3-bucket-from-application-on-amazon-ec2-without-access-credentials/)
