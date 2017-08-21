@@ -16,6 +16,7 @@ interesting facts about Japanese:
 
 ## hiragana and katagana
 
+![gana](https://commons.wikimedia.org/wiki/File:FlowRoot3824.png#/media/File:FlowRoot3824.png){:width="600px"}
 
 ## vocabulary
 
