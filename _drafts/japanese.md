@@ -16,7 +16,17 @@ interesting facts about Japanese:
 
 ## hiragana and katagana
 
+Roughly speaking, there are 50 phonetic alphabets in Japanese, which can be decomposed 5 vowels and 10 consonants.
+
 ![gana](https://upload.wikimedia.org/wikipedia/commons/4/4a/FlowRoot3824.png){:width="600px"}
+
+
+
+[cursive script](https://en.wikipedia.org/wiki/Cursive_script_(East_Asia)).
+
+[Youren Yu](https://en.wikipedia.org/wiki/Yu_Youren)
+
+He is an important politician and caligraphy is only his hobby. He lived to 85 years old.
 
 ## vocabulary
 
