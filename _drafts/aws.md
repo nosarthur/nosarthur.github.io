@@ -201,10 +201,12 @@ Possible ones include ec2-user, centos, ubuntu, root, etc.
         * US West (N. California)
         * US West (Oregon)
 
+```
+aws --profile=dev s3 ls s3://harness-bucket
+```
 
 * create IAM policy
-* create [IAM role](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html)
-*
+* grant [permission to pass IAM role to instances](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html#permission-to-pass-iam-roles)
 
 [bucket permission](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/set-bucket-permissions.html)
 
