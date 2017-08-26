@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Amazon web services with boto3 library
-date:   2017-10-18 13:43:08 -0500
+date:   2017-10-26 13:43:08 -0500
 categories: [coding]
 comments: true
 tags: [aws]
@@ -12,7 +12,9 @@ tags: [aws]
 [Amazon web services (AWS)](https://en.wikipedia.org/wiki/Amazon_Web_Services)
 is a useful tool to alleviates the pain of maintaining infrastructure.
 It makes requesting cloud computing resources as easy as either clicking a few buttons or making an API call.
-Its main components include 
+The price is quite affordable even for individuals, and you can estimate the monthly cost based on approximate usage with [this page](http://calculator.s3.amazonaws.com/index.html).
+
+The main components of AWS include 
 
 * computing
 * storage
@@ -35,57 +37,46 @@ In this post I will share my notes for the following tasks:
 * [ssh to EC2 instance](#ssh)
 * [access S3 from EC2 instance without credentials](#s3)
 
-Both [AWS web console](https://aws.amazon.com/console/) and [python boto3 library](http://boto3.readthedocs.io/en/latest/) are used for them. The web console is convenient for configurations and the boto3 API is good for automation. 
-For the web console part, I only jot down what needs to be done and possibly include a link to the documentation.
+Both [AWS web console](https://aws.amazon.com/console/) and [python boto3 library](http://boto3.readthedocs.io/en/latest/) are used for these tasks. The web console is convenient for configurations and the boto3 API is good for automation. 
+For the web console part, I will only jot down what needs to be done and possibly include a link to the documentation.
 
-## <a name='config'></a>basic account configuration
+## <a name='config'></a>basic account configurations
 
 After signing up for AWS (free tier account for example),
 the first thing to do is to [set up a user account](http://docs.aws.amazon.com/lambda/latest/dg/setting-up.html).
-There are three steps to this process:
+It enables you to access the AWS resources from your own computer either with the command line interface [awscli](https://aws.amazon.com/cli/) or API calls.
+Without it, the only way to access AWS is to log into the [AWS web console](https://aws.amazon.com/console/) page.
 
-* create individual IAM user, e.g., dev
-* create user group to assign permissions, e.g., dev-group
-* create local credential files
+There are three steps to set it up:
+
+1. create individual IAM user, e.g., `dev`
+1. create user group to manage permissions, e.g., `dev-group`
+1. create local credential files
 
 The first two steps can be done via the aws web console.
-To start with, we can attach the following permission to the user group
+To start with, we can attach the following permissions to the user group
 
 * AmazonS3FullAccess
 * AmazonEC2FullAccess
 * AmazonRDSFullAccess
 
 To set up the local credential file, you can use the awscli command line tool.
-
-To install the boto3 library, run 
+To install it and the boto3 library, run 
 
 ```
 pip install boto3, awscli
 ```
 
-To make sure the installation is successful, run 
-
-```
-aws ec2 describe-instances
-```
-
-You should not see errors.
-And if there is no instance running, you will get some feedback like
-
-```
-{
-        "Reservations": []
-}
-```
-
-Simply run from your terminal 
+After installation, run from your terminal 
 
 ```
 aws configure
 ```
 
 It will ask user input for AWS Access Key ID, AWS Secret Access Key, and other preferences.
-After execution, two files are created. The AWS Access Key ID and AWS Secret Access Key are stored in `~/.aws/credentials`, which looks like 
+The access keys can be found on the aws web console as you create the account.
+After execution, two files will be created locally. 
+The AWS Access Key ID and AWS Secret Access Key are stored in `~/.aws/credentials`, which looks like 
 
 ```
 [default]
@@ -115,7 +106,6 @@ aws_access_key_id = admin_id
 aws_secret_access_key = admin_key
 ```
 
-
 ## <a name='instances'></a> spin up and down an EC2 instance
 
 There are two types of EC2 instances one can request
@@ -123,35 +113,52 @@ There are two types of EC2 instances one can request
 * on-demand instances
 * [spot instances](https://aws.amazon.com/ec2/spot/)
 
+The main difference is the [pricing model](https://aws.amazon.com/ec2/pricing/).
+For on-demand instances, you pay a fixed price up front with fixed rate.
+On the other hand, you provide a bid price for spot instances, and the usage is charged at the market price as long as it is lower than your bid price.
+When the market price exceeds the bid price, the running instance will be killed with [a two-minute courtesy window](https://aws.amazon.com/blogs/aws/new-ec2-spot-instance-termination-notices/).
 
-[boto3](https://boto3.readthedocs.io/en/latest/)
+The spot instance market price is usually much cheaper than the on-demand price.
+For example, I just took a peak at the US-East (N. Viginia) m4.large price. 
+The on-demand price is $0.1 per hour and the spot market price is $0.0274 per hour.
+
+The easiest way to spin up or down an EC2 instances is via the web console.
+However, automation is needed and in these cases
+[boto3](https://boto3.readthedocs.io/en/latest/) API is more useful.
 
 * boto3
     * session
     * config
-    * resources: high-level object-oriented API
+    * resource: high-level object-oriented API
         * identifiers and attributes
         * actions
         * references
         * subresources
         * collections
-    * clients: low-level access to Botocore
+    * client: low-level access to Botocore
 
-low-level responses are python dictionaries. 
+There are two sets of APIs in boto3, the so-called resource and client.
+Client API provides more functionalities than the slightly more user-friendly resource API. 
+Low-level responses are python dictionaries. 
 
 ```
 import boto3
 
-boto3.connect('us-east-1', profile='admin')
-key_name='myKey',
-    instance_type='c1.xlarge',
-        security_groups=['your-security-group-here']
+s = boto3.Session(profile_name='dev', region_name='us-east-1')
+ec2 = s.resource('ec2')
+	
+        rc = ec2.create_instances(ImageId='ami-4fffc834',
+                                  InstanceType='t2.nano',
+                                  MinCount=1,
+                                  MaxCount=n_workers,
+                                  UserData=startup,
+                                  KeyName='harness',
+                                  IamInstanceProfile={'Name': 'harness-worker'},
+                                  )	
 ```
 
-security group
 
 
-{% include youtubePlayer.html id="Cb2czfCV4Dg" %}
 
 ## <a name='ssh'></a>ssh to the instance
 
