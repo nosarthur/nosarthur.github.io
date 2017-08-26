@@ -139,7 +139,8 @@ However, automation is needed and in these cases
 
 There are two sets of APIs in boto3, the so-called resource and client.
 Client API provides more functionalities than the slightly more user-friendly resource API. 
-Low-level responses are python dictionaries. 
+
+To spin up an on-demand instance, run
 
 ```
 import boto3
@@ -147,18 +148,44 @@ import boto3
 s = boto3.Session(profile_name='dev', region_name='us-east-1')
 ec2 = s.resource('ec2')
 	
-        rc = ec2.create_instances(ImageId='ami-4fffc834',
-                                  InstanceType='t2.nano',
-                                  MinCount=1,
-                                  MaxCount=n_workers,
-                                  UserData=startup,
-                                  KeyName='harness',
-                                  IamInstanceProfile={'Name': 'harness-worker'},
-                                  )	
+rc = ec2.create_instances(ImageId='ami-4fffc834',
+                          InstanceType='t2.nano',
+                          MinCount=1,
+                          MaxCount=1,
+                          )	
 ```
 
+Here the `ImageId` is the disk image to load for the instance, the so-called [Amazon Machine Images (AMI)](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html).
+It contains the operating system and pre-installed libraries.
+The one I used here is provided by amazon and you can make your own to suit any special need.
 
+To spin up a spot instance, run
 
+```
+s = boto3.Session(profile_name='dev', region_name='us-east-1')
+client = s.client('ec2')
+rc = client.request_spot_instances(
+                DryRun=False,
+                SpotPrice=str(price),
+                Type='one-time',
+                LaunchSpecification={'ImageId': 'ami-4fffc834',
+                                     'InstanceType': 'm4.large',
+                                     },
+                InstanceCount=1,
+               )
+```
+
+where `price` is the bid price.
+
+To kill the instance, run
+
+```
+s = boto3.Session(profile_name='dev')
+ec2 = s.resource('ec2', region_name='us-east-1')
+ec2.Instance(instance_id).terminate()
+```
+
+where `instance_id` can be looked up either from the aws web console or using the awscli.
 
 ## <a name='ssh'></a>ssh to the instance
 
@@ -168,23 +195,25 @@ In order to ssh into EC2 instance, you need to assign to the instance
 * a [security group with ssh permission](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/authorizing-access-to-an-instance.html)
 
 To check whether these two conditions are met for your instance,
-go to the aws EC2 Management console, click on your instance at the instance tab, and check if there is a Key pair name associated with it,
+go to the EC2 Management page of the aws web console, 
+click on your instance at the instance tab, and check if there is a Key pair name associated with it,
 and whether the Security groups inbound rule contains port 22 tcp protocol.
 
 When both conditions are met, simply run
 
 ```python
-rc = ec2.create_instances(ImageId=ubuntu_64bit,                            
+rc = ec2.create_instances(ImageId='ami-4fffc834',                            
 			  InstanceType='t2.nano',                          
 			  MinCount=1,                                      
-			  MaxCount=n_workers,                              
+			  MaxCount=1,                              
 			  KeyName='my-key',                               
 			  )  
 ```
 
-to create the instance.
+to create the instance. Here I omit the `SecurityGroupIds` argument since it defaults to the one I set up.
 
-To ssh to the instance, first you shoul download the credential file and run
+To ssh to the instance, first you shoul download the credential file from the aws web console. 
+Then modify its access permission by
 
 ```
 chmod 400 /path/my-key-pair.pem
@@ -223,6 +252,16 @@ aws --profile=dev s3 ls s3://harness-bucket
 
 [bucket permission](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/set-bucket-permissions.html)
 
+```
+rc = ec2.create_instances(ImageId='ami-4fffc834',
+                          InstanceType='t2.nano',
+                          MinCount=1,
+                          MaxCount=1,
+                          UserData=startup,
+                          KeyName='my-key',
+                          IamInstanceProfile={'Name': 'harness-worker'},
+                          )	
+```
 
 ## learning resources
 
