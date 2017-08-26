@@ -12,7 +12,7 @@ tags: [aws]
 [Amazon web services (AWS)](https://en.wikipedia.org/wiki/Amazon_Web_Services)
 is a useful tool to alleviates the pain of maintaining infrastructure.
 It makes requesting cloud computing resources as easy as either clicking a few buttons or making an API call.
-Its main components are 
+Its main components include 
 
 * computing
 * storage
@@ -27,16 +27,35 @@ Currently AWS provides 1 year free trial to new users.
 See the [AWS free tier page](https://aws.amazon.com/free/) for details.
 
 So far I find the official AWS documentations not so user friendly:
-it is an encyclopedia that includes all kinds of topics but gets sketchy when it comes to details.
-In this post I will share my notes to do the following tasks, using [python boto3 library](http://boto3.readthedocs.io/en/latest/) for automation:
+it is like an encyclopedia that includes all kinds of topics but gets sketchy on details.
+In this post I will share my notes for the following tasks:
 
 * [basic account configurations](#config)
 * [spin up and down an on-demand or spot EC2 instance](#instances)
 * [ssh to EC2 instance](#ssh)
 * [access S3 from EC2 instance without credentials](#s3)
 
-[Aws web console](https://aws.amazon.com/console/) is also used in these tasks since it is easier to change configurations via the webpage. 
-I only jot down what needs to be done on web console and possibly include a link to the documentation but do not include screen shots.
+Both [AWS web console](https://aws.amazon.com/console/) and [python boto3 library](http://boto3.readthedocs.io/en/latest/) are used for them. The web console is convenient for configurations and the boto3 API is good for automation. 
+For the web console part, I only jot down what needs to be done and possibly include a link to the documentation.
+
+## <a name='config'></a>basic account configuration
+
+After signing up for AWS (free tier account for example),
+the first thing to do is to [set up a user account](http://docs.aws.amazon.com/lambda/latest/dg/setting-up.html).
+There are three steps to this process:
+
+* create individual IAM user, e.g., dev
+* create user group to assign permissions, e.g., dev-group
+* create local credential files
+
+The first two steps can be done via the aws web console.
+To start with, we can attach the following permission to the user group
+
+* AmazonS3FullAccess
+* AmazonEC2FullAccess
+* AmazonRDSFullAccess
+
+To set up the local credential file, you can use the awscli command line tool.
 
 To install the boto3 library, run 
 
@@ -59,24 +78,6 @@ And if there is no instance running, you will get some feedback like
 }
 ```
 
-## <a name='config'></a>basic account configuration
-
-After signing up for AWS (free tier account for example),
-the first thing to do is to [set up a user account](http://docs.aws.amazon.com/lambda/latest/dg/setting-up.html).
-There are three steps to this process:
-
-* create individual IAM user, e.g., dev
-* create user group to assign permissions, e.g., dev-group
-* create local credential files
-
-The first two steps can be done via the aws web console.
-To start with, we can attach the following permission to the user group
-
-* AmazonS3FullAccess
-* AmazonEC2FullAccess
-* AmazonRDSFullAccess
-
-To set up the local credential file, you can use the awscli command line tool.
 Simply run from your terminal 
 
 ```
@@ -113,6 +114,7 @@ aws_secret_access_key = your_key
 aws_access_key_id = admin_id
 aws_secret_access_key = admin_key
 ```
+
 
 ## <a name='instances'></a> spin up and down an EC2 instance
 
