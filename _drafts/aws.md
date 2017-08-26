@@ -10,7 +10,8 @@ tags: [aws]
 ## introduction
 
 [Amazon web services (AWS)](https://en.wikipedia.org/wiki/Amazon_Web_Services)
-provides cloud computing resources to users.
+is a useful tool to alleviates the pain of maintaining infrastructure.
+It makes requesting cloud computing resources as easy as either clicking a few buttons or making an API call.
 Its main components are 
 
 * computing
@@ -18,21 +19,24 @@ Its main components are
 * networking
 * database
 
-AWS alleviates the pain of maintaining infrastructure and is widely used nowadays especially by startups.
-Take a web application for example, the most essential resources would be [Elastic Compute Cloud (EC2)](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html),
+Take a web application for example, the most relevant resources would be [Elastic Compute Cloud (EC2)](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html),
 [Simple Storage Service (S3)](http://docs.aws.amazon.com/AmazonS3/latest/dev/Welcome.html),
 and [Relational Database Service (RDS)](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html).
 
-Currently AWS provides 1 year free trial to new users. See the [AWS free tier page](https://aws.amazon.com/free/) for details.
+Currently AWS provides 1 year free trial to new users. 
+See the [AWS free tier page](https://aws.amazon.com/free/) for details.
 
-So far I find the official AWS documentations not user friendly:
-it is an encyclopedia that includes all kinds of topics but gets sketchy when it comes to specific details.
+So far I find the official AWS documentations not so user friendly:
+it is an encyclopedia that includes all kinds of topics but gets sketchy when it comes to details.
 In this post I will share my notes to do the following tasks, using [python boto3 library](http://boto3.readthedocs.io/en/latest/) for automation:
 
 * [basic account configurations](#config)
 * [spin up and down an on-demand or spot EC2 instance](#instances)
 * [ssh to EC2 instance](#ssh)
 * [access S3 from EC2 instance without credentials](#s3)
+
+[Aws web console](https://aws.amazon.com/console/) is also used in these tasks since it is easier to change configurations via the webpage. 
+I only jot down what needs to be done on web console and possibly include a link to the documentation but do not include screen shots.
 
 To install the boto3 library, run 
 
