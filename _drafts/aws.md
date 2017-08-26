@@ -230,6 +230,8 @@ Possible ones include ec2-user, centos, ubuntu, root, etc.
 
 ## <a name='s3'></a> access S3 from EC2
 
+Accessing [AWS S3](http://docs.aws.amazon.com/AmazonS3/latest/dev/Welcome.html) is somewhat similar to accessing a FTP server.
+
 * S3
     * buckets
     * objects: 5TB data limit
@@ -243,14 +245,56 @@ Possible ones include ec2-user, centos, ubuntu, root, etc.
         * US West (N. California)
         * US West (Oregon)
 
+Data in S3 are organized by the so-called buckets.
+From the command line, you can list the content of a bucket by running 
+
 ```
-aws --profile=dev s3 ls s3://harness-bucket
+aws --profile=dev s3 ls s3://my-awesome-bucket
 ```
 
-* create IAM policy
-* grant [permission to pass IAM role to instances](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html#permission-to-pass-iam-roles)
+Here `my-awesome-bucket` is a made-up name.
 
-[bucket permission](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/set-bucket-permissions.html)
+To grant S3 access for the EC2 instance, there are two things to do
+
+* for the instance, create IAM role with the IAM policy to allow its access to a particular bucket
+* for the user, grant [permission to pass IAM role to instances](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html#permission-to-pass-iam-roles)
+
+For example, a simple policy to grant read/write/list permission to a bucket called `my-awesome-bucket` for the EC2 instance looks like this
+
+```
+{
+ "Version": "2012-10-17",
+ "Statement": [
+ {
+ "Effect": "Allow",
+ "Action": [
+ "s3:ListBucket"
+ ],
+ "Resource": [
+ "arn:aws:s3:::my-awesome-bucket"
+ ]
+ },
+ {
+ "Effect": "Allow",
+ "Action": [
+ "s3:PutObject",
+ "s3:GetObject",
+ "s3:DeleteObject",
+ "s3:ListObject"
+ ],
+ "Resource": [
+ "arn:aws:s3:::my-awesome-bucket/*"
+ ]
+ }
+ ]
+}
+```
+
+You can learn more about IAM role from this youtube video
+
+{% include youtubePlayer.html id="C4AyfV3Z3xs" %}
+
+After these two settings, the EC2 instance can be created using
 
 ```
 rc = ec2.create_instances(ImageId='ami-4fffc834',
@@ -259,9 +303,11 @@ rc = ec2.create_instances(ImageId='ami-4fffc834',
                           MaxCount=1,
                           UserData=startup,
                           KeyName='my-key',
-                          IamInstanceProfile={'Name': 'harness-worker'},
+                          IamInstanceProfile={'Name': 'my-role'},
                           )	
 ```
+
+Here `my-role` is the role I created.
 
 ## learning resources
 
