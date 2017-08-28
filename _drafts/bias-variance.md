@@ -27,7 +27,15 @@ And we got say $$0.7\pm 0.1$$, the variance indeed dropped but the mean got wors
 
 And this is the topic of this post.
 
-## variance tradeoff
+## bias-variance tradeoff
+
+[mean square error](https://en.wikipedia.org/wiki/Mean_squared_error)
+$$E(\hat X - X)^2 = E\hat X^2 - 2E\hat X X + X^2 = Var(X^2) +(E\hat X - X)^2$$
+
+where the first term is the [variance](https://en.wikipedia.org/wiki/Variance) of the estimator, 
+characterizing the random error, i.e., due to the variation in samples.
+And the second term is the bias of the estimator, characterizing systematic error.
+They are also known as [precision and accuracy](https://en.wikipedia.org/wiki/Accuracy_and_precision).
 
 $$ Y = f(X) +\epsilon$$
 
