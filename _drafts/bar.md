@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Bennett acceptance ratio (BAR) method
-date:   2017-12-14 23:43:08 -0500
-categories: [technology]
+date:   2017-09-14 23:43:08 -0500
+categories: [math and physics]
 comments: true
 tags: [free energy perturbation]
 ---
@@ -91,6 +91,8 @@ In fact, FEP with only one ensemble can be seen as limits of this identity: just
 
 Note also that for any **finite size ensemble**, the form of the weight function matters:
 you would get different values for different $$W$$ functions.
+It is then natural to find the optimal weighting function.
+Dr. Bennett used the [mean square error](https://en.wikipedia.org/wiki/Mean_squared_error) as the cost function
 
 
 
