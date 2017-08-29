@@ -23,7 +23,7 @@ Entropy is of less concern since it is difficult to measure experimentally as we
 The naive approach to calculate free energy from an ensemble is to take the ensemble average of the Boltzmann factor.
 Take Helmholtz free energy for example, we have
 
-$$ e^{-\beta A} \equiv \int d\mathbf q e^{-\beta H(\mathbf q) \simeq \left<e^{-\beta H}\right> $$
+$$ e^{-\beta A} \equiv \int d\mathbf q e^{-\beta H(\mathbf q)} \simeq \left<e^{-\beta H}\right> $$
 
 where $$\beta=1/k_B T$$ is the inverse temperature, $$\mathbf q$$ denotes the configuration space variables,
 $$H$$ is the Hamiltonian, and the brackets denotes ensemble average.
