@@ -11,7 +11,7 @@ tags: [free energy perturbation]
 
 Given an ensemble either generated from Monte Carlo or molecular dynamics simulation,
 the following thermodynamic quantities are difficult to calculate in the sense that they are not
-ensemble average of physical observables
+ensemble averages of physical observables
 
 * [Helmholtz free energy $$A$$](https://en.wikipedia.org/wiki/Helmholtz_free_energy)
 * [Gibbs free energy $$G$$](https://en.wikipedia.org/wiki/Gibbs_free_energy)
@@ -26,17 +26,17 @@ Take Helmholtz free energy for example, we have
 $$ e^{-\beta A} \equiv \int d\mathbf q e^{-\beta H(\mathbf q)} \simeq \left<e^{-\beta H}\right> $$
 
 where $$\beta=1/k_B T$$ is the inverse temperature, $$\mathbf q$$ denotes the configuration space variables,
-$$H$$ is the Hamiltonian, and the brackets denotes ensemble average.
+$$H$$ is the Hamiltonian, and the brackets denote ensemble average.
 
 This approach doesn't work very well for two reasons:
 
-1. It may be hard to sample the full configuration space, both for low energy regions and high energy regions.
+1. It may be hard to sample the full configuration space, both the low energy and high energy regions.
 1. This exponential estimator is of high variance even if the generated ensemble has reasonable coverage of the configuration space.
 
 Here high variance means if you generate the ensemble again,
-you probably get a very different number for the free energy form the first ensemble.
+you probably get a very different number for the free energy from the first ensemble.
 
-The first reason often puts a serious limitation to adopt this naive approach in chemistry applications since
+The first reason often puts a serious limitation to adopt this naive approach in chemistry applications because 
 
 * the process of interest may take too long to occur;
 * the density of states of the system may spread out in a wide range of energies, too wide for effective sampling
@@ -51,24 +51,26 @@ From the definition of Helmholtz free energy, we have
 $$\Delta A\equiv A_0 - A_1= -\frac{1}{\beta}\log \frac{Q_0}{Q_1}$$
 
 where $$Q$$ denotes [partition function](https://en.wikipedia.org/wiki/Partition_function_(statistical_mechanics)) 
-and the subscripts 0 and 1 labels the two systems.
-With a little bit of trick
+and the subscripts 0 and 1 label the two systems.
+With a little bit of trick, we get
 
 $$\frac{Q_0}{Q_1}=\frac{\int d\mathbf q e^{-\beta H_0} e^{\beta H_1}e^{-\beta H_1}}{Q_1} = \left<e^{-\beta\Delta H}\right>_1$$
 
 where $$\Delta H\equiv H_0 - H_1$$ and the ensemble average is done on system 1.
 Similarly, we can make the ensemble average to occur on system 0 as well.
 
-Often times the values we get from ensemble 0 differ from the ones from ensemble 1 because neither ensemble is perfect in practice.
-Then the question becomes which one is trust or how to combine these two numbers (besides averaging them).
+Often times the value we get from ensemble 0 differ from the one from ensemble 1 because neither ensemble is perfect in practice.
+Then the question becomes which one to trust or how to combine these two numbers (besides averaging them).
 [Charles H Bennett](https://en.wikipedia.org/wiki/Charles_H._Bennett_(computer_scientist)) provided a clean answer in 1976
-and his solution has been named as Bennett acceptance ratio (BAR) method.
+and his solution is commonly known as Bennett acceptance ratio (BAR) method.
 And this is the topic of this post.
+To demonstrate the ideas, I will use a classical two level system as example
+(here classical refers to classical mechanics).
 
 Interestingly, Dr. Bennett didn't spend much of his time on computational chemistry.
 Instead, he made many important contributions to quantum information theory, especially in communication and cryptography.
 The most famous one may be [quantum teleportation](https://en.wikipedia.org/wiki/Quantum_teleportation),
-which is a protocol to transport a quantum particle (or quantum state, to be more correctly) instantaneously between to spatial locations, somewhat similar to that machine in [the fly movie](https://en.wikipedia.org/wiki/The_Fly_(1958_film)).
+which is a protocol to transport a quantum particle (or quantum state, to be more correct) instantaneously between to spatial locations, somewhat similar to that machine in [the fly movie](https://en.wikipedia.org/wiki/The_Fly_(1958_film)).
 
 
 ## combining two ensembles
@@ -90,11 +92,41 @@ The interesting features of this identity are
 In fact, FEP with only one ensemble can be seen as limits of this identity: just make $$W=U_0$$ or $$W=U_1$$.
 
 Note also that for any **finite size ensemble**, the form of the weight function matters:
-you would get different values for different $$W$$ functions.
+you would get different values for different weighting functions.
 It is then natural to find the optimal weighting function.
 Dr. Bennett used the [mean square error](https://en.wikipedia.org/wiki/Mean_squared_error) as the cost function
 
+Dr. Bennett pointed out that this approach fails when both numerator and denominator are small.
 
+$$
+M(U_0-U_1)&\equiv e^{-U_0W}\\
+M(U_1-U_0)&\equiv e^{-U_1W}
+$$
+
+then we have 
+
+$$\frac{M(x)}{M(-x)} = e^{-x}$$
+
+In other words, $$M(x)$$ can be used as acceptance probability for Monte Carlo trial move of switching the potential function
+forms.
+
+```
+import random
+import math
+
+dU0 = random.random()
+dU1 = random.random()
+dUa = random.random()
+dUb = dUa + dU1 - dU0
+
+p1a = 1. / (1+ math.exp(dU1))
+p1b = 1. / (1+ math.exp(-dU1))
+p0a = 1. / (1+ math.exp(dU0))
+p0b = 1. / (1+ math.exp(-dU0))
+
+ratio0 = 1/ (p0a* math.exp(dUa) + p0b* math.exp(dUb))
+ratio1 = p1a* math.exp(-dUa) + p1b* math.exp(-dUb)
+```
 
 $$W(\mathbf q)=\exp{\min{U_0, U_1}}$$, both numerator and denorminator take the form of Metropolis function.
 
