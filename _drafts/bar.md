@@ -49,6 +49,7 @@ In certain applications we can get around this obstacle by calculating the free 
 In these cases, the free energy difference is caused by a limited region of the configuration space thus only effective sampling in that region is needed.
 There methods are commonly known as [free energy perturbation (FEP)](https://en.wikipedia.org/wiki/Free_energy_perturbation),
 initially introduced by [Robert Zwanzig](https://en.wikipedia.org/wiki/Robert_Zwanzig) in the 1950s.
+Two related methodologies are [thermodynamic integration](https://en.wikipedia.org/wiki/Thermodynamic_integration) and non-equlibrium work.
 
 From the definition of Helmholtz free energy, we have
 
@@ -130,6 +131,10 @@ For simulated data, the two ensemble averages will differ because neither ensemb
 solution to reconsile these two numbers in 1976,
 commonly known as the Bennett acceptance ratio (BAR) method.
 And this is the topic of this post.
+A link to the original paper is as follows.
+This paper is full of insights and intuitions. I highly recomment it if you have not read it.
+
+* [ Charles H. Bennett (1976) Efficient estimation of free energy differences from Monte Carlo data. Journal of Computational Physics 22 : 245–268](http://www2.stat.duke.edu/~scs/Courses/Stat376/Papers/NormConstants/FreeEnergy/BennettJCompPhys1976.pdf)
 
 Interestingly, Dr. Bennett didn't spend much of his time on computational chemistry.
 Instead, he made many important contributions to quantum information theory, especially in communication and cryptography.
@@ -155,16 +160,27 @@ The interesting features of this identity are
 In fact, FEP with only one ensemble can be seen as limits of this identity: just make $$W=U_0$$ or $$W=U_1$$.
 
 Note also that for any **finite size ensemble**, the form of the weight function matters:
-you would get different values for different weighting functions.
-It is then natural to find the optimal weighting function.
-Dr. Bennett used the [mean square error](https://en.wikipedia.org/wiki/Mean_squared_error) as the cost function
+you would get different values with different weight functions.
+It is then natural to find the optimal weight function.
+
+## optimal weight function
+
+Dr. Bennett used the  as the cost function
+
+The original paper was worded as if [mean square error](https://en.wikipedia.org/wiki/Mean_squared_error)
+is minimized.
+In my opinion, only the variance is minimized.
+Asymptotically the estimator is unbiased.
+For finite sized ensemble it is not clear to me how big the bias would be.
+
+## acceptance ratio
 
 Dr. Bennett pointed out that this approach fails when both numerator and denominator are small.
 
 $$
 \begin{align}
-M(U_0-U_1)&\equiv e^{-U_0W}\\
-M(U_1-U_0)&\equiv e^{-U_1W}
+M(U_0-U_1)&\equiv W e^{-U_0}\\
+M(U_1-U_0)&\equiv We^{-U_1}
 \end{align}
 $$
 
