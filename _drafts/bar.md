@@ -18,9 +18,9 @@ numerical simulations (analytical derivation is the other option but it is not f
 However, given an ensemble either generated from Monte Carlo or molecular dynamics simulation,
 the free energies are difficult to calculate in the sense that they are not
 ensemble averages of physical observables.
-([Entropy $$S$$](https://en.wikipedia.org/wiki/Entropy_in_thermodynamics_and_information_theory)
-also cannot be expressed as an ensemble average of physical observables.
-It is of less interest since it is difficult to measure experimentally as well.)
+([Entropy $$S$$](https://en.wikipedia.org/wiki/Entropy_in_thermodynamics_and_information_theory) is 
+also difficult in that sense.
+But it is often of less interest since it is difficult to measure experimentally as well.)
 
 The naive approach to calculate free energy is to take the ensemble average of the Boltzmann factor.
 Take Helmholtz free energy for example, we have
@@ -158,6 +158,42 @@ In fact, FEP with only one ensemble can be seen as limits of this identity: just
 Note also that for any **finite size ensemble**, the form of the weight function matters:
 you would get different values with different weight functions.
 It is then natural to look for the optimal weight function.
+
+## digression on bias, variance, and statistical expansion
+
+Before we proceed with the search of optimal weight function, it will be worthwhile to review some tricks for nonlinear estimators since free energies are nonlinear functions of the configuration space coordinates.
+
+For a random variable $$X$$ and a nonlinear function $$f$$, notice that in general
+
+$$ \left<f(X)\right> \neq f(\left<X\right>)$$
+
+The best we can do is [to approximate it using Taylor expansions](https://en.wikipedia.org/wiki/Taylor_expansions_for_the_moments_of_functions_of_random_variables).
+Up to second orders, we have
+
+$$ \begin{align}
+\left<f(X)\right> = & <f(x_0) + f(X) - f(x_0)\right> \\
+\simeq & f(x_0) + f'(x_0)\left<X - x_0\right> + \frac{f''(x_0)}{2}\left<(X-x_0)^2\right>
+\end{align} $$
+
+where $$x_0$$ could be any quantity that makes the expansion convergent. 
+
+The quality of an estimator can be measured by [mean square error](https://en.wikipedia.org/wiki/Mean_squared_error) (MSE), variance, and bias. 
+And it is well-known that [MSE can be decomposed into variance and bias in the absence of noise](https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff). 
+In the above approximation, if MSE is of interest, then we should take $$x_0$$ to be the ground truth ensemble average, which I will denote as $$\bar X$$. Then we have 
+
+$$\left<f(X)\right> \simeq & f(\bar X) + f'(\bar X)\left<X - \bar X\right> + \frac{f''(\bar X)}{2}\text{MSE}[X] $$
+
+If variance is of interest, then we should take $$x_0$$ to be the ensemble average from the data, which I will denote as $$\left<X\right>$$. Then we have 
+
+$$\left<f(X)\right> \simeq & f(\left< X\right>) + \frac{f''(\left< X\right>)}{2}\text{Var}[X] $$
+
+
+$$ \begin{align}
+\text{Var}[f(X)] = & \left<f(X)^2\right> - \left<f(X)\right>^2 \\
+= & f(\left< X\right>)^2 +\left(f'(\left<X\right>)^2 + f''(\left<X\right>)\right)\text{Var}[X] - \left(f(\left<X\right>) + \frac{f''(\left<X\right>)}{2} \text{Var}[X] \right)^2 \\
+= & 
+\end{align}$$
+
 
 ## optimal weight function
 
