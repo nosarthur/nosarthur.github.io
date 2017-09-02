@@ -11,7 +11,7 @@ tags: [free energy perturbation]
 
 [Helmholtz free energy $$A$$](https://en.wikipedia.org/wiki/Helmholtz_free_energy)
 and [Gibbs free energy $$G$$](https://en.wikipedia.org/wiki/Gibbs_free_energy)
-provide useful information on whether certain physical or chemical process could happen spontaneously.
+provide useful information on whether a physical or chemical process could happen spontaneously.
 They are somewhat easy to measure experimentally (maybe?) thus it will be nice if we can calculate them from
 numerical simulations (analytical derivation is the other option but it is not feasible in general).
 
@@ -152,20 +152,22 @@ $$
 
 where $$W(\mathbf q)$$ is any arbitrary weighting function on the configuration space as long as it makes the integration well defined.
 
-The interesting features of this identity are
-
-* both ensembles can be used
-* $$W$$ is arbitrary
-
+This identity is able to use both ensembles.
 In fact, FEP with only one ensemble can be seen as limits of this identity: just make $$W=U_0$$ or $$W=U_1$$.
 
 Note also that for any **finite size ensemble**, the form of the weight function matters:
 you would get different values with different weight functions.
-It is then natural to find the optimal weight function.
+It is then natural to look for the optimal weight function.
 
 ## optimal weight function
 
-Dr. Bennett used the  as the cost function
+The ensemble average of a nonlinear estimator can be approximated as
+
+$$ \left<g(\hat X)\right>_N \simeq \left<g()\right>_N$$
+
+$$\left<\hat X\right>$$
+
+the cost function
 
 The original paper was worded as if [mean square error](https://en.wikipedia.org/wiki/Mean_squared_error)
 is minimized.
