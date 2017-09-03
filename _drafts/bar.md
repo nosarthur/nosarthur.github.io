@@ -15,20 +15,20 @@ provide useful information on whether a physical or chemical process could happe
 They are somewhat easy to measure experimentally (maybe?) thus it will be nice if we can calculate them from
 numerical simulations (analytical derivation is the other option but it is not feasible in general).
 
-However, given an ensemble either generated from Monte Carlo or molecular dynamics simulation,
+However, given an ensemble generated either from Monte Carlo or molecular dynamics simulations,
 the free energies are difficult to calculate in the sense that they are not
 ensemble averages of physical observables.
 ([Entropy $$S$$](https://en.wikipedia.org/wiki/Entropy_in_thermodynamics_and_information_theory) is 
 also difficult in that sense.
-But it is often of less interest since it is difficult to measure experimentally as well.)
+But it is often of less interest since it is difficult to measure experimentally.)
 
 The naive approach to calculate free energy is to take the ensemble average of the Boltzmann factor.
 Take Helmholtz free energy for example, we have
 
-$$ e^{-\beta A} \equiv \int d\mathbf q e^{-\beta H(\mathbf q)} \simeq \left<e^{-\beta H}\right> $$
+$$ e^{-\beta A} \equiv \int d\mathbf q e^{-\beta H(\mathbf q)} \simeq \frac{1}{N}\sum_{i=1}^N e^{-\beta H(\mathbf q_i)} $$
 
 where $$\beta=1/k_B T$$ is the inverse temperature, $$\mathbf q$$ denotes the configuration space variables,
-$$H$$ is the Hamiltonian, and the brackets denote ensemble average.
+$$H$$ is the Hamiltonian, and $$N$$ is the number of sample points. 
 Note that if the ensemble average is carried out analytically or numerically integrated over all configuration space, the approximate equal sign becomes equal sign.
 
 In practice this naive approach doesn't work very well for two reasons:
@@ -43,11 +43,11 @@ you probably get a very different number for the free energy from the first ense
 The first reason often puts a serious limitation on adopting this naive approach for chemistry applications because 
 
 * the process of interest may take too long to occur;
-* the density of states of the system may spread out in a wide range of energies, too wide for effective sampling
+* the density of states of the system may spread out in a range of energies that is too wide for effective sampling
 
 In certain applications we can get around this obstacle by calculating the free energy difference between two similar systems with the same configuration space.
 In these cases, the free energy difference is caused by a limited region of the configuration space thus only effective sampling in that region is needed.
-There methods are commonly known as [free energy perturbation (FEP)](https://en.wikipedia.org/wiki/Free_energy_perturbation),
+These methods are commonly known as [free energy perturbation (FEP)](https://en.wikipedia.org/wiki/Free_energy_perturbation),
 initially introduced by [Robert Zwanzig](https://en.wikipedia.org/wiki/Robert_Zwanzig) in the 1950s.
 Two related methodologies are [thermodynamic integration](https://en.wikipedia.org/wiki/Thermodynamic_integration) and non-equlibrium work.
 
@@ -61,10 +61,13 @@ With a little trick, we get
 
 $$\frac{Q_0}{Q_1}=\frac{\int d\mathbf q e^{-\beta H_0} e^{\beta H_1}e^{-\beta H_1}}{Q_1} = \left<e^{-\beta\Delta H}\right>_1$$
 
-where $$\Delta H\equiv H_0 - H_1$$ and the ensemble average is done on system 1.
+where $$\Delta H\equiv H_0 - H_1$$ is the energy difference, the brackets denote ensemble average,
+and the ensemble average is done on system 1.
 Often times, the kinetic energies of the two systems are either equal or can be related by some simple relationship.
 For simplicity, I will assume their kinetic energies are equal in this post.
-Similarly, we can make the ensemble average to occur on system 0 as well.
+In that case, only potential energies are of concern.
+
+Similarly, we can make the ensemble average on system 0 as well.
 Thus we have
 
 $$\frac{Q_0}{Q_1}=\left<e^{-\Delta U}\right>_1=\frac{1}{\left<e^{\Delta U} \right>_0}$$
@@ -99,7 +102,7 @@ $$
 Note that the partition function ratio (thus the free energy difference) is a function of the potential energy differences only, which leaves the potential energy baseline arbitrary.
 Later we will see how this degree of freedom can be used to our advantage.
 
-Note also that the 4 potential energy differences are not indepenedent.
+Note also that the 4 potential energy differences are not all independent.
 It is easy to see that the following identity is true
 
 $$\Delta U_a + \Delta U_1 = \Delta U_b + \Delta U_0$$
@@ -171,49 +174,129 @@ The best we can do is [to approximate it using Taylor expansions](https://en.wik
 Up to second orders, we have
 
 $$ \begin{align}
-\left<f(X)\right> = & <f(x_0) + f(X) - f(x_0)\right> \\
-\simeq & f(x_0) + f'(x_0)\left<X - x_0\right> + \frac{f''(x_0)}{2}\left<(X-x_0)^2\right>
+\left< f(X)\right> = & \left<f(x_0) + f(X) - f(x_0)\right> \\
+ \simeq & f(x_0) + f'(x_0)\left<X - x_0\right> + \frac{f''(x_0)}{2}\left<(X-x_0)^2\right>
 \end{align} $$
 
 where $$x_0$$ could be any quantity that makes the expansion convergent. 
 
 The quality of an estimator can be measured by [mean square error](https://en.wikipedia.org/wiki/Mean_squared_error) (MSE), variance, and bias. 
-And it is well-known that [MSE can be decomposed into variance and bias in the absence of noise](https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff). 
-In the above approximation, if MSE is of interest, then we should take $$x_0$$ to be the ground truth ensemble average, which I will denote as $$\bar X$$. Then we have 
+In my opinion, it's best to use MSE if possible, since [it contains variance, bias, and possibly other noise contributions](https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff).
+In the above approximation, we can take $$x_0$$ to be the ground truth ensemble average,
+which I will denote as $$\bar X$$. Then we have 
 
-$$\left<f(X)\right> \simeq & f(\bar X) + f'(\bar X)\left<X - \bar X\right> + \frac{f''(\bar X)}{2}\text{MSE}[X] $$
+$$\left< f(X)\right> \simeq f(\bar X) + f'(\bar X)\left< X - \bar X\right> + \frac{f''(\bar X)}{2}\text{MSE}[X] $$
 
-If variance is of interest, then we should take $$x_0$$ to be the ensemble average from the data, which I will denote as $$\left<X\right>$$. Then we have 
+and the MSE of $$f(X)$$ is given by
 
-$$\left<f(X)\right> \simeq & f(\left< X\right>) + \frac{f''(\left< X\right>)}{2}\text{Var}[X] $$
+$$\text{MSE}[f(X)]\equiv \left<(f(X)-f(\bar X))^2\right> \simeq f'(\bar X)^2 \text{MSE}[X] $$
 
+Similarly, if variance is of interest, we can take $$x_0$$ to be the ensemble average from the data,
+which I denote as $$\left<X\right>$$. Then we have 
+
+$$\left<f(X)\right> \simeq f(\left< X\right>) + \frac{f''(\left< X\right>)}{2}\text{Var}[X] $$
+
+and the variance relationship 
+
+$$ 
+\text{Var}[f(X)] \equiv  \left<f(X)^2\right> - \left<f(X)\right>^2 \simeq f'(\left<X\right>)^2 \text{Var}[X]
+$$
+
+Note that it may look a little strange where $$f'(\left<X\right>)$$ comes from.
+I guarantee you that there is no typo here.
+Also, the derivation in the [wikipedia page](https://en.wikipedia.org/wiki/Taylor_expansions_for_the_moments_of_functions_of_random_variables) is wrong: the expansion should be done to the second order.
+
+Going back to our free energy estimation 
+
+$$\Delta A = \log\left<We^{-U_1}\right>_0 - \log\left<We^{-U_0}\right>_1$$
+
+if we assume the **two ensembles are independently generated**, then
 
 $$ \begin{align}
-\text{Var}[f(X)] = & \left<f(X)^2\right> - \left<f(X)\right>^2 \\
-= & f(\left< X\right>)^2 +\left(f'(\left<X\right>)^2 + f''(\left<X\right>)\right)\text{Var}[X] - \left(f(\left<X\right>) + \frac{f''(\left<X\right>)}{2} \text{Var}[X] \right)^2 \\
-= & 
+\text{Var}[\Delta A] =& \text{Var}[\log We^{-U_1}]_0 + \text{Var}[\log We^{-U_0}]_1\\
+\simeq & \frac{\text{Var}[We^{-U_1}]_0}{\left<We^{-U_1}\right>_0^2} + \frac{\text{Var}[We^{-U_0}]_1}{\left<We^{-U_0}\right>_1^2} 
 \end{align}$$
 
+Note that MSE can be decomposed in the same way.
+
+Now if we further assume **each configuration space point is sampled independently**,
+we can use [central limit theorem](https://en.wikipedia.org/wiki/Central_limit_theorem) to get
+
+$$
+\text{Var}[\Delta A] =\frac{\left< W^2e^{-2U_1}\right>_0}{N_0\left<We^{-U_1}\right>_0^2} + \frac{\left<W^2e^{-2U_0}\right>_1}{N_1\left<We^{-U_0}\right>_1^2} -\frac{1}{N_0} - \frac{1}{N_1}
+$$
+
+This is the cost function to be minimized in the next section.
+Note that in the original paper it was worded as if the [MSE](https://en.wikipedia.org/wiki/Mean_squared_error) was minimized, which is incorrect.
 
 ## optimal weight function
 
-The ensemble average of a nonlinear estimator can be approximated as
+We are now ready to optimize
+The first two terms in $$\text{Var}[\Delta A]$$ can be written out explictly as
 
-$$ \left<g(\hat X)\right>_N \simeq \left<g()\right>_N$$
+$$\frac{1}{\lambda}\equiv \frac{\left<W|A|W\right>}{\left<W|B\right>\left<B|W\right>}$$
 
-$$\left<\hat X\right>$$
+where I use the [Dirac notation](https://en.wikipedia.org/wiki/Bra%E2%80%93ket_notation) to represent infinite dimensional Hilbert space, and
 
-the cost function
+$$ \begin{align}
+A=& \frac{Q_0}{N_0} e^{-2U_1-U_0} + \frac{Q_1}{N_1}e^{-2U_0-U_1} \\
+\left|B\right>=& e^{-U_0-U_1}
+\end{align}$$
 
-The original paper was worded as if [mean square error](https://en.wikipedia.org/wiki/Mean_squared_error)
-is minimized.
-In my opinion, only the variance is minimized.
-Asymptotically the estimator is unbiased.
-For finite sized ensemble it is not clear to me how big the bias would be.
+I write it in this way because I have done something similar at least twice in the past.
+Once in optimizing quantum gate fidelity with respect to pulse shape, the other time in maximizing signal noise ratio (SNR) while combining magnetic resonance imaging coil data (see [the corresponding note here]({% post_url 2013-07-22-coil %})).
+
+To minimize the free energy variance is equivalent to maximize $$\lambda$$.
+Setting its [first variation](https://en.wikipedia.org/wiki/First_variation) to 0, we get
+an eigenvalue equation
+
+$$ A^{-1}|B\left>\right<B|W> = \lambda \left|W\right> $$
+
+Note that the 'matrix' $$A^{-1}|B\left>\right<B|$$ has only one degree of freedom due to the project operator.
+Thus we are guaranteed a unique solution.
+It is easy to see that the solution is given by
+
+$$\begin{align}
+\left|W\right> =& A^{-1}\left|B\right> = \frac{1}{\frac{Q_0}{N_0}e^{-U_1} + \frac{Q_1}{N_1}e^{-U_0} }\\
+\lambda_\max =& \left<B|A^{-1}|B\right>
+\end{align}$$
+
+Thus we have
+
+$$\frac{Q_0}{Q_1} = \frac{\left< f(\Delta U + C)\right>_1} {\left<f(-\Delta U - C)\right>_0} e^{C}$$
+
+where $$f(x) = 1/(1+\exp(x))$$ is the [Fermi function](https://en.wikipedia.org/wiki/Fermi%E2%80%93Dirac_statistics), and 
+
+$$C\equiv \log \frac{N_1Q_0}{N_0Q_1} $$
+
+This is the famous BAR result.
+Note that $$C$$ depends on the ratio of partition function as well.
+Thus an iterative procedure is needed to solve them self-consistently.
+
+The free energy variance is given by 
+
+$$\begin{align}
+\text{Var}[\Delta A]=& \frac{1}{\lambda_{\max}} - \frac{1}{N_0} - \frac{1}{N_1} \\
+=& \left(\int \frac{N_0N_1\rho_0\rho_1 d\mathbf q }{N_0\rho_0 + N_1\rho_1} \right)^{-1} - \frac{N_0 + N_1}{N_0N_1}
+\end{align}
+$$
+
+where $$\rho_i\equiv \exp(-U_i)/Q_i$$ is the probability of the configuration space point.
+Since $$\text{Var}[\Delta A]$$ is monotonically decreasing in both $$N_0$$ and $$N_1$$, there must be some
+$$\bar N$$ lying between them, making
+
+$$
+\text{Var}[\Delta A]= \frac{2}{\bar N}\left(\frac{1}{\int \frac{\rho_0\rho_1}{\rho_0 + \rho_1} d\mathbf q} -1\right)
+$$
+
+Note that the [harmonic mean](https://en.wikipedia.org/wiki/Harmonic_mean) in the integration is a measure of overlap between the two probability distributions.
+Thus this equation has the geometric meaning that **the variance in the free energy estimation is inversely related to the overlap between the two ensemble's probability distributions in configuration space**.
 
 ## acceptance ratio
 
-Dr. Bennett pointed out that this approach fails when both numerator and denominator are small.
+
+Finally I would like to explain why this method is called acceptance ration.
+If we define
 
 $$
 \begin{align}
@@ -226,8 +309,9 @@ then we have
 
 $$\frac{M(x)}{M(-x)} = e^{-x}$$
 
-In other words, $$M(x)$$ can be used as acceptance probability for Monte Carlo trial move of switching the potential function
-forms.
-
+In other words, $$M(x)$$ can be used as acceptance probability for Monte Carlo trial move of switching the potential function forms.
+For example, if we let
 $$W(\mathbf q)=\exp(\min\{U_0, U_1\})$$, both numerator and denorminator take the form of Metropolis function.
+
+Dr. Bennett pointed out that this approach fails when both numerator and denominator are small.
 
