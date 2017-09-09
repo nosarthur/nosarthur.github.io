@@ -2,7 +2,7 @@
 layout: post
 title: Torsion (dihedral) angle force
 date:   2017-02-01 10:00:00 -0500
-categories: [math and physics]
+categories: [free energy perturbation]
 comments: true
 tags: [molecular modeling]
 ---
