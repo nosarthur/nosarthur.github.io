@@ -23,7 +23,7 @@ permalink: /about/
         <li> One hundred years of solitude by Gabriel Garcia Marquez </li>
         </ul>
       </div>
-      <h3> word cloud generated from title words of my papers </h3>
+      <h4 style="color:black;"> word cloud generated from title words of my papers </h4>
       <img src='https://raw.githubusercontent.com/nosarthur/CV_resume/master/keywords/wordcloud.png'>
     </div>
   </div>
