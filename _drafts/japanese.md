@@ -14,6 +14,9 @@ interesting facts about Japanese:
 * Chinese characters (kanji) is 
 * 
 
+As a Chinese, learning Japanese is somewhat easy. .
+Learning English as a German.
+
 ## hiragana and katagana
 
 Roughly speaking, there are 50 phonetic alphabets in Japanese, which can be decomposed 5 vowels and 10 consonants.
