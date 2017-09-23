@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Quantum measurement
+title: Measurement and mutual information
 date:   2017-10-01 03:43:08 -0500
-categories: [quantum information]
+categories: [quantum information and computation]
 comments: true
 tags: [POVM]
 ---
