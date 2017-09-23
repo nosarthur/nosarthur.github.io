@@ -23,8 +23,8 @@ Specifically,
 Note that these properties hold for both entropy definitions.
 For simplicity, I will only demonstrate them in the microcanonical ensemble.
 The corresponding proofs are straightforward in the canonical ensemble as well and I will leave that to you.
-Since my plan is to write about quantum information in later posts, the letter $$S$$ will be saved for quantum systems,
-and the more conventional notation of [Shannon entropy](https://en.wiktionary.org/wiki/Shannon_entropy) $$H[x]$$ is used in this post.
+Since my plan is to write about quantum information in later posts, the letter $$S$$ will be saved for [von Neumann entropy](von neumann entropy) of quantum systems,
+and the more conventional notation of [Shannon entropy](https://en.wiktionary.org/wiki/Shannon_entropy) $$H[x]$$ is used in this post to quantity classical information.
 
 # property 1
 
@@ -58,6 +58,8 @@ The [conditional entropy](https://en.wikipedia.org/wiki/Conditional_entropy) is 
 $$H[x|y] \equiv \sum_j P(y_j) H[P(x|y_j)]$$
 
 It is the averaged entropy conditioned on a measurement outcome.
+In other words,
+it is the left-over uncertainty (information) after the measurement.
 
 The general statement of property 3 is 
 
@@ -101,11 +103,22 @@ H[y] & = H\left[\left\{\frac{M}{M+N+L}, \frac{N+L}{M+N+L} \right\}\right]
 \end{align}
 $$
 
-**mutual information**
+An important concept built upon conditional entropy is **[mutual information](https://en.wikipedia.org/wiki/Mutual_information)**, which is defined as
 
 $$I[x, y] \equiv H[x] - H[x|y] = H[y] - H[y|x]$$
 
+It is in some sense the information shared between two systems.
 Note that mutual information is symmetric in the two random variables.
+
+In a later post, I will show that for quantum systems, due to the superposition principle of quantum mechanics ([Schroedinger's cat](https://en.wikipedia.org/wiki/Schr%C3%B6dinger%27s_cat) for example),
+classical information theory becomes insufficient to capture the inter-relationships between quantum objects.
+In general, quantum information (i.e., information of quantum systems) 
+
+* classical information
+* [quantum entanglement](https://en.wikipedia.org/wiki/Quantum_entanglement)
+* other non-classical correlations, e.g., [quantum discord](https://en.wikipedia.org/wiki/Quantum_discord)
+
+Till today, quantifying either the entanglement and other non-classical correlations for arbitrary systems are still open problems.
 
 [von Neumann measurement](https://en.wikipedia.org/wiki/Measurement_in_quantum_mechanics#von_Neumann_measurement_scheme)
 
