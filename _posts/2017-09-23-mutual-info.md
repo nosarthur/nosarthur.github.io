@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Measurement and mutual information
-date:   2017-09-23 13:43:08 -0500
+date:   2017-09-23 09:00:00 -0500
 categories: [quantum information and computation]
 comments: true
 tags: [classical information]
