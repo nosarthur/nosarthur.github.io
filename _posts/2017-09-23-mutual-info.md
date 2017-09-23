@@ -89,9 +89,9 @@ A graphical representation of the grouping is as follows
   <rect x=5 width="200" height="90" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(255,255,255);fill-opacity:0.1" />
   <rect x=205 width="100" height="90" style="fill:rgb(255,0,255);stroke-width:3;stroke:rgb(255,255,255);fill-opacity:0.1" />
   <rect x=305 width="100" height="90" style="fill:rgb(255,0,0);stroke-width:3;stroke:rgb(255,255,255);fill-opacity:0.1" />
-  <text x='100' y='40' text-anchor='middle' font-size='18'> M < /text>
-  <text x='250' y='40' text-anchor='middle' font-size='18'> N < /text>
-  <text x='350' y='40' text-anchor='middle' font-size='18'> L < /text>
+  <text x='100' y='40' font-size='18'> M < /text>
+  <text x='250' y='40' font-size='18'> N < /text>
+  <text x='350' y='40' font-size='18'> L < /text>
 </svg>
 
 
