@@ -46,9 +46,9 @@ A concrete example is throwing a dice and reporting the result as being greater 
 
 With this setup, property 2 translate to 
 
-$$ \log(M+N) = H(\{\frac{M}{M+N}, \frac{N}{M+N}\}) + \frac{M}{M+N}\log M + \frac{N}{M+N}\log N$$
+$$ \log(M+N) = H\left[\left\{\frac{M}{M+N}, \frac{N}{M+N}\right\}\right] + \frac{M}{M+N}\log M + \frac{N}{M+N}\log N$$
 
-where $$H(\{p_i\}$$ denotes the Shannon entropy of a probability distribution $$\{p_i\}$$.
+where $$H[\{p_i\}]$$ denotes the Shannon entropy of a probability distribution $$\{p_i\}$$.
 
 # property 3
 
@@ -79,7 +79,17 @@ x \ y | False | True
 False | 0 | $$\frac{L}{M+N+L}$$
 True | $$\frac{M}{M+N+L}$$ | $$\frac{N}{M+N+L}$$
 
-and the three quantities in property 3 are given by
+A graphical representation of the grouping is as follows
+
+<svg width='410' height='100'>
+  <rect x=5 width="200" height="90" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(255,255,255);fill-opacity:0.1" />
+  <rect x=205 width="100" height="90" style="fill:rgb(255,0,255);stroke-width:3;stroke:rgb(255,255,255);fill-opacity:0.1" />
+  <rect x=305 width="100" height="90" style="fill:rgb(255,0,0);stroke-width:3;stroke:rgb(255,255,255);fill-opacity:0.1" />
+
+</svg>
+
+
+The three quantities in property 3 are given by
 
 $$\begin{align}
 H[x, y] & = H[\{\frac{M}{M+N+L}, \frac{N}{M+N+L}, \frac{L}{M+N+L} \}] \\
