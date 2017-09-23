@@ -7,7 +7,8 @@ comments: true
 tags: [classical information]
 ---
 
-In a [previous post](), I wrote about the ideas behind entropy. In a nutshell, there are two definitions for it
+In a [previous post]({% post_url 2016-12-30-entropy %}), I wrote about the ideas behind entropy.
+In a nutshell, there are two definitions for it
 
 * microcanonical ensemble entropy (information capacity)
 * canonical ensemble entropy (information content)
@@ -15,7 +16,7 @@ In a [previous post](), I wrote about the ideas behind entropy. In a nutshell, t
 both of which are **state counting** in essence. In this post, I will supplement a few interesting properties of entropy.
 Specifically, 
 
-1. With independent subsystems, the entropy of the total system is the sum of the subsystem entropies.
+1. With independent subsystems, the total system entropy is the sum of the subsystem entropies.
 1. When performing measurement on a coarse-grained system, the entropy of the fine-grained system (i.e., the original system) is the sum of the measurement entropy (i.e., the coarse-graining process) and the average entropy of the post-measurement coarse-grained systems.
 1. Total system entropy is the sum of conditional entropy and the entropy of the subsystem being conditioned on.
 
@@ -41,7 +42,7 @@ To demonstrate this property in microcanonical ensemble, let us assume there are
 $$ \{1, 2, \cdots, M\}, \{M+1, M+2, \cdots, M+N\}$$
 
 The outcome of the coarse-graining measurement is whether the sample is in the first or second group.
-In other words, it provides partial information to the system.
+In other words, it provides partial information of the system.
 A concrete example is throwing a dice and reporting the result as being greater than 2 or not.
 
 With this setup, property 2 translate to 
@@ -64,7 +65,7 @@ $$H[x, y] = H[x|y] + H[y] $$
 
 Note that property 2 can be viewed as a special case of property 3 when the measurement is a coarse-graining measurement.
 
-To see what property 3 means in the microcanonical ensemble, we have to make the two groups overlapping,
+To see the meaning of property 3 in the microcanonical ensemble, we have to make the two groups overlapping,
 otherwise the result would be trivial (i.e., we would end up with property 1).
 Going back to the dice example, $$x$$ could be a [Bernoulli distribution](https://en.wikipedia.org/wiki/Bernoulli_distribution) about whether the outcome is less than 4 and $$y$$ could be a Bernoulli distribution of whether the outcome is greater than 1.
 
@@ -85,22 +86,26 @@ A graphical representation of the grouping is as follows
   <rect x=5 width="200" height="90" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(255,255,255);fill-opacity:0.1" />
   <rect x=205 width="100" height="90" style="fill:rgb(255,0,255);stroke-width:3;stroke:rgb(255,255,255);fill-opacity:0.1" />
   <rect x=305 width="100" height="90" style="fill:rgb(255,0,0);stroke-width:3;stroke:rgb(255,255,255);fill-opacity:0.1" />
-
+  <text x='100' y='40' text-anchor='middle' font-size='18'> M < /text>
+  <text x='250' y='40' text-anchor='middle' font-size='18'> N < /text>
+  <text x='350' y='40' text-anchor='middle' font-size='18'> L < /text>
 </svg>
 
 
 The three quantities in property 3 are given by
 
 $$\begin{align}
-H[x, y] & = H[\{\frac{M}{M+N+L}, \frac{N}{M+N+L}, \frac{L}{M+N+L} \}] \\
-H[x|y] & = \frac{M}{M+N+L}\cdot 0 + \frac{N+L}{M+N+L}H[\{\frac{N}{N+L}, \frac{L}{N+L} \}] \\
-H[y] & = H[\{\frac{M}{M+N+L}, \frac{N+L}{M+N+L} \}]
+H[x, y] & = H\left[\left\{\frac{M}{M+N+L}, \frac{N}{M+N+L}, \frac{L}{M+N+L} \right\}\right] \\
+H[x|y] & = \frac{M}{M+N+L}\cdot 0 + \frac{N+L}{M+N+L}H\left[\left\{\frac{N}{N+L}, \frac{L}{N+L} \right\}\right] \\
+H[y] & = H\left[\left\{\frac{M}{M+N+L}, \frac{N+L}{M+N+L} \right\}\right]
 \end{align}
 $$
 
 **mutual information**
 
-$$I[x, y] = H[x] - H[x|y]$$
+$$I[x, y] \equiv H[x] - H[x|y] = H[y] - H[y|x]$$
+
+Note that mutual information is symmetric in the two random variables.
 
 [von Neumann measurement](https://en.wikipedia.org/wiki/Measurement_in_quantum_mechanics#von_Neumann_measurement_scheme)
 
