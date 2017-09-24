@@ -119,4 +119,4 @@ In general, quantum information (i.e., information of quantum systems) includes
 * [quantum entanglement](https://en.wikipedia.org/wiki/Quantum_entanglement)
 * other non-classical correlations, e.g., [quantum discord](https://en.wikipedia.org/wiki/Quantum_discord)
 
-Till today, the quantification of either the entanglement or other non-classical correlations for arbitrary systems is still an open problem.
+Till today, the quantification of both the entanglement and other non-classical correlations for arbitrary systems is still an open problem.
