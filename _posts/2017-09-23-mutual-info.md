@@ -111,7 +111,7 @@ $$I[x, y] \equiv H[x] - H[x|y] = H[y] - H[y|x]$$
 It is in some sense the information shared between two systems.
 Note that mutual information is symmetric in the two random variables.
 
-In later posts, I will show that for quantum systems, due to the superposition principle of quantum mechanics ([Schroedinger's cat](https://en.wikipedia.org/wiki/Schr%C3%B6dinger%27s_cat) for example),
+In later posts, I will show that for quantum systems, due to the superposition principle of quantum mechanics ([Schrödinger's cat](https://en.wikipedia.org/wiki/Schr%C3%B6dinger%27s_cat) for example),
 classical information theory becomes insufficient to capture the inter-relationships between quantum objects.
 In general, quantum information (i.e., information of quantum systems) includes
 
