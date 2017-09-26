@@ -17,3 +17,4 @@ According to [a 2017 survey of this company](https://www.globalknowledge.com/us-
 ## materials
 * [AWS S3 FAQs](https://aws.amazon.com/s3/faqs/)
 * [AWS EC2 FAQs](https://aws.amazon.com/ec2/faqs/)
+* [AWS ELB FAQs](https://aws.amazon.com/elasticloadbalancing/faqs/)
