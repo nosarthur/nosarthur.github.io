@@ -8,8 +8,17 @@ tags: [aws]
 ---
 
 
+## bootscripts
+
 [user-data](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html)
 
 ```
 /var/log/cloud-init-output.log
+```
+
+## awscli
+
+```
+aws ec2 describe-instances --instance-ids <id> --query Reservations[].Instances[].PrivateIpAddress
+aws ec2 describe-volumes --filters Name=attachment.instance-id,Values=<id> Name=attachment.device,Values=/dev/sdf --query Volumes[*].VolumeId
 ```
