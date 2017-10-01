@@ -18,10 +18,14 @@ is to go through the FAQ sections of the key AWS components.
 
 ## learning materials
 * [AWS whitepapers](https://aws.amazon.com/whitepapers/)
-* [AWS S3 FAQs](https://aws.amazon.com/s3/faqs/)
-* [AWS EC2 FAQs](https://aws.amazon.com/ec2/faqs/)
-* [AWS ELB FAQs](https://aws.amazon.com/elasticloadbalancing/faqs/)
-* [AWS Route 53 FAQs](https://aws.amazon.com/route53/faqs/)
-* [AWS RDS FAQs](https://aws.amazon.com/rds/faqs/)
-* [AWS VPC FAQs](https://aws.amazon.com/vpc/faqs/)
-* [AWS IAM FAQs](https://aws.amazon.com/iam/faqs/)
+* FAQs of common AWS services
+    * [S3 FAQs](https://aws.amazon.com/s3/faqs/)
+    * [EC2 FAQs](https://aws.amazon.com/ec2/faqs/)
+    * [ELB FAQs](https://aws.amazon.com/elasticloadbalancing/faqs/)
+    * [Route 53 FAQs](https://aws.amazon.com/route53/faqs/)
+    * [RDS FAQs](https://aws.amazon.com/rds/faqs/)
+    * [VPC FAQs](https://aws.amazon.com/vpc/faqs/)
+    * [IAM FAQs](https://aws.amazon.com/iam/faqs/)
+* topics
+    * [EBS volume types](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html)
+    * [Comparison of NAT instance and NAT gateway](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-nat-comparison.html)
