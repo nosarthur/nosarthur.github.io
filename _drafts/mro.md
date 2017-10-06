@@ -1,0 +1,118 @@
+
+
+
+
+Python method resolution order and super
+
+
+Recently, I hit into an interesting issue with python multiple inheritance.
+Initially, I have a linear inheritance hierarchy `A -> B -> C`
+
+
+```python
+class A(object):
+    def f(self):
+        print('A')
+                                                                                   
+class B(A):
+    def f(self):
+        super().f()                                                                
+        print('B')
+
+class C(B):
+    pass 
+```
+
+Execution of `C().f()` gives `A B`.
+
+This works well but what if we have multiple equivalent classes of `A`, each of them should give rise to a corresponding `C`?
+For example,
+
+```python
+class A1(object):                                                                  
+    def f(self):                                                                   
+        print('A1')                                                                
+                                                                                   
+class A2(object):                                                                  
+    def f(self):                                                                   
+        print('A2')
+```
+Execution of `C1().f()` should give `A1 B`, and execution of `C2().f()` should give `A2 B`.
+
+One straightforward implementation would be to apply the linear inheritance multiple times, i.e.,
+
+```
+A1 -> B1 -> C1
+A2 -> B2 -> C2
+```
+where `B1` and `B2` have basically the same code, only differing in their base class. 
+
+This is obviously not a good design since the logic of `B` is not reused. 
+A better solution would be multiple inheritance, something like
+
+```
+class C1(B0, A1)
+class C2(B0, A2)
+```
+where `B0` implements `B`'s functionality and is to be defined later.
+The class hierarchy looks like this
+
+<svg width='230' height='130'>
+  <defs>
+      <marker id="arrow" viewBox="0 -5 10 10" markerWidth="4" markerHeight="4" refx="5" refy="0" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,-5 L10,0 L0,5" />
+      </marker>
+  </defs>
+    <text x='10' y='10' text-anchor='middle' font-size='10'> A1 </text>
+    <line x1="19" y1="26" x2="60" y2="60" stroke="#000" stroke-width="3" marker-end="url(#arrow)" />
+    <text x='110' y='10' text-anchor='middle' font-size='10'> B0 </text>
+    <line x1="119" y1="26" x2="80" y2="60" stroke="#000" stroke-width="3" marker-end="url(#arrow)" />
+    <line x1="119" y1="26" x2="160" y2="60" stroke="#000" stroke-width="3" marker-end="url(#arrow)" />    
+    <text x='210' y='10' text-anchor='middle' font-size='10'> A2 </text>
+    <line x1="219" y1="26" x2="180" y2="60" stroke="#000" stroke-width="3" marker-end="url(#arrow)" />]
+    <text x='70' y='80' text-anchor='middle' font-size='10'> C1 </text>
+    <text x='170' y='80' text-anchor='middle' font-size='10'> C2 </text>
+</svg>
+
+```
+class B0(object):                                                                
+    def f(self):                                                                 
+        super().f()                                                              
+        print('B')
+                                                                                 
+class C1(B0, A1):                                                                
+    pass
+```
+Execution of `C1.f()` indeed gives the desired result `A1 B`. Treatment of other `C`s are the same.
+
+Although it works, note that `B0` does not inherite directly from any of the `A`s. It only knows about the `A`s via the `C`s!
+One natual question is then 
+
+* How does `B0.f()` access the corresponding `f()` of the `A`s?
+
+The core of this question is **the order of function override in a complicated inheritance hierarchy**,
+commonly known as Method Resolution Order (MRO).
+
+According to [python 3.6 doc](https://docs.python.org/3.6/library/functions.html#super), `super`
+
+> Return a proxy object that delegates method calls to a parent or sibling class of type. This is useful for accessing inherited methods that have been overridden in a class. The search order is same as that used by getattr() except that the type itself is skipped.
+
+> The __mro__ attribute of the type lists the method resolution search order used by both getattr() and super(). The attribute is dynamic and can change whenever the inheritance hierarchy is updated.
+
+In our case, `C1.mro()` or `C1.__mro__` is given by 
+
+```
+[<class '__main__.C1'>, <class '__main__.B0'>, <class '__main__.A1'>, <class 'object'>]
+```
+
+Thus `super().f()` from `B0.f()` is able to find the desired `A1.f()`.
+
+There is a very well written document on the python MRO written by [Dr. Michele Simionato](http://www.phyast.pitt.edu/~micheles/)
+
+* [The Python 2.3 Method Resolution Order](https://www.python.org/download/releases/2.3/mro/)
+
+with many examples.
+One thing to note is that new style classes (the ones inherit from `object`) and classic classes use different MRO 
+
+* new style classes MRO: [C3 linearization](https://en.wikipedia.org/wiki/C3_linearization)
+* classic classes MRO: depth first and then left to right
