@@ -7,13 +7,16 @@ comments: true
 tags: [buddhism]
 ---
 
-[Diamond sutra](https://en.wikipedia.org/wiki/Diamond_Sutra) is one of the most influential Buddhism canons in East Asia and the [Zen Buddhism](https://en.wikipedia.org/wiki/Zen) school. The Sixth and Last Patriarch of Zen Buddhism [Huineng (六祖慧能)](https://en.wikipedia.org/wiki/Huineng) (638-713 AD) reached his initial enlightenment by hearing one sentence in Diamond sutra (应无所住而生其心).
+[Diamond sutra](https://en.wikipedia.org/wiki/Diamond_Sutra) (金刚经) is one of the most influential Buddhism canons in East Asia and the [Zen Buddhism](https://en.wikipedia.org/wiki/Zen) school. The Sixth and Last Patriarch of Zen Buddhism [Huineng (六祖慧能)](https://en.wikipedia.org/wiki/Huineng) (638-713 AD) reached his initial enlightenment by hearing one sentence in Diamond sutra (应无所住而生其心).
+
+The British Library has a copy [a printed book of diamond sutra dated in 868 AD](https://www.bl.uk/collection-items/the-diamond-sutra).
+The whole script can be viewed there.
 
 Its most popular Chinese version was translated by the legendary Buddhist monk 
 [Kumarajiva](https://en.wikipedia.org/wiki/Kum%C4%81raj%C4%ABva) (344–413 AD). 
 And my translation is based on Kumarajiva's version.
-I will not give literal translations but only the main ideas.
-Famous sentences will be in bold font.
+I will not give literal translations and effort is made to make the translation simple and concise.
+Famous sentences will be in bold font and tranlated in full.
 
 There are two difficulties in the translation
 
@@ -28,6 +31,7 @@ eye (眼) | ear (耳) | nose (鼻) | tongue (舌) | body (身) | mind (意, [man
 --- | --- | --- | --- | --- | ---
 color (色, [rupa](https://en.wikipedia.org/wiki/R%C5%ABpa)) | sound (声) | smell (香) | taste (味) | touch (触) | thought (法, [dharma](https://en.wikipedia.org/wiki/Dharma)) 
 
+* [Arhat](https://en.wikipedia.org/wiki/Arhat) (阿罗汉, 罗汉)
 * [Bodhisattva](https://en.wikipedia.org/wiki/Bodhisattva) (菩萨)
 (佛)
 * [Tathagata](https://en.wikipedia.org/wiki/Tath%C4%81gata) (如来)
@@ -41,31 +45,37 @@ color (色, [rupa](https://en.wikipedia.org/wiki/R%C5%ABpa)) | sound (声) | sme
 
 2. 时，长老须菩提在大众中即从座起，偏袒右肩，右膝着地，合掌恭敬而白佛言：“希有！世尊！如来善护念诸菩萨，善付嘱诸菩萨。世尊！善男子、善女人，发阿耨多罗三藐三菩提心，云何应住，云何降伏其心？”佛言：“善哉，善哉。须菩提！如汝所说，如来善护念诸菩萨，善付嘱诸菩萨。汝今谛听！当为汝说：善男子、善女人，发阿耨多罗三藐三菩提心，应如是住，如是降伏其心。”“唯然，世尊！愿乐欲闻。”
 
+[Subhuti](https://en.wikipedia.org/wiki/Subhuti) asked the Gautama Buddha: "Lord, in order to achieve self-realization, how should one conquer the mind?" Gautama Buddha: "Good question. Listen carefully."
 
 3. 佛告须菩提：“诸菩萨摩诃萨应如是降伏其心！所有一切众生之类：若卵生、若胎生、若湿生、若化生；若有色、若无色；若有想、若无想、若非有想非无想，我皆令入无余涅盘而灭度之。如是灭度无量无数无边众生，实无众生得灭度者。何以故？须菩提！若菩萨有我相、人相、众生相、寿者相，即非菩萨。”
 
+"A bodhisattva should vow to bring all living beings to [nirvana](https://en.wikipedia.org/wiki/Nirvana). After bringing them into liberation, he also understands that no living beings are liberated. Why? If a bodhisattva does not see through reified concepts such as self, others, beings, and time, he is not a bodhisattva.
 
 4. “复次，须菩提！菩萨于法，应无所住，行于布施，所谓不住色布施，不住声香味触法布施。须菩提！菩萨应如是布施，不住于相。何以故？若菩萨不住相布施，其福德不可思量。须菩提！于意云何？东方虚空可思量不？”“不也，世尊！”“须菩提！南西北方四维上下虚空可思量不？”“不也，世尊！”“须菩提！菩萨无住相布施，福德亦复如是不可思量。须菩提！菩萨但应如所教住。”
 
+"Furthermore, a bodhisattva does not act conditioned on phenomena. For example, his almsgiving is not conditioned on the situation. Such almsgiving ([dana paramita](https://en.wikipedia.org/wiki/D%C4%81na)) has unimaginable benefits."
 
-5. “须菩提！于意云何？可以身相见如来不？”“不也，世尊！不可以身相得见如来。何以故？如来所说身相，即非身相。”佛告须菩提：“凡所有相，皆是虚妄。若见诸相非相，即见如来。”
+5. “须菩提！于意云何？可以身相见如来不？”“不也，世尊！不可以身相得见如来。何以故？如来所说身相，即非身相。”佛告须菩提：“**凡所有相，皆是虚妄。若见诸相非相，即见如来。**”
 
+"Similarly, a bodhisattva does not see tathagata based on the bodily features. **All phenomena are illusions. When one sees through the phenomena, he sees tathagata.**"
 
 6. 须菩提白佛言：“世尊！颇有众生，得闻如是言说章句，生实信不？”佛告须菩提：“莫作是说。如来灭后，后五百岁，有持戒修福者，于此章句能生信心，以此为实，当知是人不于一佛二佛三四五佛而种善根，已于无量千万佛所种诸善根，闻是章句，乃至一念生净信者，须菩提！如来悉知悉见，是诸众生得如是无量福德。何以故？是诸众生无复我相、人相、众生相、寿者相；无法相，亦无非法相。何以故？是诸众生若心取相，则为著我人众生寿者。若取法相，即著我人众生寿者。何以故？若取非法相，即著我人众生寿者，是故不应取法，不应取非法。以是义故，如来常说：‘汝等比丘，知我说法，如筏喻者；法尚应舍，何况非法。’”
 
-
+"Lord, can anyone understand what you just said?" "Yes, if he sees through reified concepts such as self, others, beings, and time."
 
 7. “须菩提！于意云何？如来得阿耨多罗三藐三菩提耶？如来有所说法耶？”须菩提言：“如我解佛所说义，无有定法名阿耨多罗三藐三菩提，亦无有定法，如来可说。何以故？如来所说法，皆不可取、不可说、非法、非非法。所以者何？一切圣贤，皆以无为法而有差别。”
 
+"Subhuti, am I enlightend? Did I teach anything?" "If I understand you correctly, there is no such thing called enlightenment. Also you did not teach anything. Phenomena (teachings) are not phenomena (teachings), they are also not non-phenomena (non-teachings). 
 
 8. “须菩提！于意云何？若人满三千大千世界七宝以用布施，是人所得福德，宁为多不？”须菩提言：“甚多，世尊！何以故？是福德即非福德性，是故如来说福德多。”“若复有人，于此经中受持，乃至四句偈等，为他人说，其福胜彼。何以故？须菩提！一切诸佛，及诸佛阿耨多罗三藐三菩提法，皆从此经出。须菩提！所谓佛法者，即非佛法。”
 
+"Subhuti,
 
 9. “须菩提！于意云何？须陀洹能作是念：‘我得须陀洹果’不？”须菩提言：“不也，世尊！何以故？须陀洹名为入流，而无所入，不入色声香味触法，是名须陀洹。”“须菩提！于意云何？斯陀含能作是念：‘我得斯陀含果’不？”须菩提言：不也，世尊！何以故？斯陀含名一往来，而实无往来，是名斯陀含。”“须菩提！于意云何？阿那含能作是念：‘我得阿那含果’不？”须菩提言：“不也，世尊！何以故？阿那含名为不来，而实无不来，是名阿那含。”“须菩提！于意云何？阿罗汉能作是念，‘我得阿罗汉道’不？”须菩提言：“不也，世尊！何以故？实无有法名阿罗汉。世尊！若阿罗汉作是念：‘我得阿罗汉道’，即著我人众生寿者。世尊！佛说我得无诤三昧，人中最为第一，是第一离欲阿罗汉。我不作是念：‘我是离欲阿罗汉’。世尊！我若作是念：‘我得阿罗汉道’，世尊则不说须菩提是乐阿兰那行者！以须菩提实无所行，而名须菩提是乐阿兰那行。
 
+"Subhuti, would an arhat think 'am I an arhat?'?" "No, Lord, 
 
-
-10. 佛告须菩提：“于意云何？如来昔在然灯佛所，于法有所得不？”“不也，世尊！如来在然灯佛所，于法实无所得。”“须菩提！于意云何？菩萨庄严佛土不？”“不也，世尊！何以故？庄严佛土者，即非庄严，是名庄严。”“是故须菩提！诸菩萨摩诃萨应如是生清净心，不应住色生心，不应住声香味触法生心，应无所住而生其心。须菩提！譬如有人，身如须弥山王，于意云何？是身为大不？”须菩提言：“甚大，世尊！何以故？佛说非身，是名大身。”
+10. 佛告须菩提：“于意云何？如来昔在然灯佛所，于法有所得不？”“不也，世尊！如来在然灯佛所，于法实无所得。”“须菩提！于意云何？菩萨庄严佛土不？”“不也，世尊！何以故？庄严佛土者，即非庄严，是名庄严。”“是故须菩提！**诸菩萨摩诃萨应如是生清净心，不应住色生心，不应住声香味触法生心，应无所住而生其心。**须菩提！譬如有人，身如须弥山王，于意云何？是身为大不？”须菩提言：“甚大，世尊！何以故？佛说非身，是名大身。”
 
 
 11. “须菩提！如恒河中所有沙数，如是沙等恒河，于意云何？是诸恒河沙宁为多不？”须菩提言：“甚多，世尊！但诸恒河尚多无数，何况其沙。”“须菩提！我今实言告汝：若有善男子、善女人，以七宝满尔所恒河沙数三千大千世界，以用布施，得福多不？”须菩提言：“甚多，世尊！”佛告须菩提：“若善男子、善女人，于此经中，乃至受持四句偈等，为他人说，而此福德胜前福德。”
@@ -158,3 +168,6 @@ color (色, [rupa](https://en.wikipedia.org/wiki/R%C5%ABpa)) | sound (声) | sme
 
 
 32. “须菩提！若有人以满无量阿僧祗世界七宝持用布施，若有善男子、善女人发菩提心者，持于此经，乃至四句偈等，受持读诵，为人演说，其福胜彼。云何为人演说，不取于相，如如不动。何以故？”“**一切有为法，如梦幻泡影，如露亦如电，应作如是观**”佛说是经已，长老须菩提及诸比丘、比丘尼、优婆塞、优婆夷，一切世间、天、人、阿修罗，闻佛所说，皆大欢喜，信受奉行。
+
+
+**All conditioned phenomena are like dreams and illusions, are like dew and lightening's flash. That is the proper way to perceive them.**
