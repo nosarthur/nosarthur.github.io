@@ -27,13 +27,16 @@ Thus I cannot guarantee my translation is correct.
 
 Before going to the main text, there are a few basic concepts worth explanation.
 
+* six senses (六入, [sadayatana](https://en.wikipedia.org/wiki/Ṣaḍāyatana))
+
 eye (眼) | ear (耳) | nose (鼻) | tongue (舌) | body (身) | mind (意, [manas](https://en.wikipedia.org/wiki/Manas_(early_Buddhism)))
 --- | --- | --- | --- | --- | ---
 color (色, [rupa](https://en.wikipedia.org/wiki/R%C5%ABpa)) | sound (声) | smell (香) | taste (味) | touch (触) | thought (法, [dharma](https://en.wikipedia.org/wiki/Dharma)) 
 
-* [Arhat](https://en.wikipedia.org/wiki/Arhat) (阿罗汉, 罗汉)
-* [Bodhisattva](https://en.wikipedia.org/wiki/Bodhisattva) (菩萨)
-(佛)
+* [Arhat](https://en.wikipedia.org/wiki/Arhat) (阿罗汉, 罗汉): Someone who has attained [nirvana](https://en.wikipedia.org/wiki/Nirvana_(Buddhism)) (涅槃). He has eliminated all [fetters](https://en.wikipedia.org/wiki/Fetter_(Buddhism)) and thus is freed from rebirth (轮回, [samsara](https://en.wikipedia.org/wiki/Sa%E1%B9%83s%C4%81ra_(Buddhism))). The Sanskrit word could mean "the one who has destroyed the foes of afflictions". It could also mean "the one who cannot be killed". 
+* [Bodhisattva](https://en.wikipedia.org/wiki/Bodhisattva) (菩萨): 
+> In Theravada Buddhism, a bodhisattva is one who is striving for full enlightenment (Arahantship in Pali), whereas in Mahayana Buddhism, a bodhisattva is one who has already reached a very advanced state of grace or enlightenment but holds back from entering nirvana so that he may help others.   --- from Wikipedia
+* [Buddha]() (佛)
 * [Tathagata](https://en.wikipedia.org/wiki/Tath%C4%81gata) (如来)
 
 [Gautama Buddha](https://en.wikipedia.org/wiki/Gautama_Buddha)
@@ -41,7 +44,7 @@ color (色, [rupa](https://en.wikipedia.org/wiki/R%C5%ABpa)) | sound (声) | sme
 
 1. 如是我闻，一时，佛在舍卫国祗树给孤独园，与大比丘众千二百五十人俱。尔时，世尊食时，著衣持钵，入舍卫大城乞食。于其城中，次第乞已，还至本处。饭食讫，收衣钵，洗足已，敷座而坐。
 
-(In Buddhism tests, the opening is usually the context of the event.)
+(In Buddhism tests, the opening is usually the context of the event, such as location, participants, and what the Gautama Budda did before the conversation occured.)
 
 2. 时，长老须菩提在大众中即从座起，偏袒右肩，右膝着地，合掌恭敬而白佛言：“希有！世尊！如来善护念诸菩萨，善付嘱诸菩萨。世尊！善男子、善女人，发阿耨多罗三藐三菩提心，云何应住，云何降伏其心？”佛言：“善哉，善哉。须菩提！如汝所说，如来善护念诸菩萨，善付嘱诸菩萨。汝今谛听！当为汝说：善男子、善女人，发阿耨多罗三藐三菩提心，应如是住，如是降伏其心。”“唯然，世尊！愿乐欲闻。”
 
@@ -57,26 +60,27 @@ color (色, [rupa](https://en.wikipedia.org/wiki/R%C5%ABpa)) | sound (声) | sme
 
 5. “须菩提！于意云何？可以身相见如来不？”“不也，世尊！不可以身相得见如来。何以故？如来所说身相，即非身相。”佛告须菩提：“**凡所有相，皆是虚妄。若见诸相非相，即见如来。**”
 
-"Similarly, a bodhisattva does not see tathagata based on the bodily features. **All phenomena are illusions. When one sees through the phenomena, he sees tathagata.**"
+"Similarly, a bodhisattva does not see tathagata based on bodily features. **All phenomena are illusions. When one sees through the phenomena, he sees tathagata.**"
 
 6. 须菩提白佛言：“世尊！颇有众生，得闻如是言说章句，生实信不？”佛告须菩提：“莫作是说。如来灭后，后五百岁，有持戒修福者，于此章句能生信心，以此为实，当知是人不于一佛二佛三四五佛而种善根，已于无量千万佛所种诸善根，闻是章句，乃至一念生净信者，须菩提！如来悉知悉见，是诸众生得如是无量福德。何以故？是诸众生无复我相、人相、众生相、寿者相；无法相，亦无非法相。何以故？是诸众生若心取相，则为著我人众生寿者。若取法相，即著我人众生寿者。何以故？若取非法相，即著我人众生寿者，是故不应取法，不应取非法。以是义故，如来常说：‘汝等比丘，知我说法，如筏喻者；法尚应舍，何况非法。’”
 
-"Lord, can anyone understand what you just said?" "Yes, if he sees through reified concepts such as self, others, beings, and time."
+"Lord, can anyone understand what you just said in the future?" "Yes, if he sees through reified concepts such as self, others, beings, and time. He does not cling on the phenomena, also does not abandon phenomena. "
 
 7. “须菩提！于意云何？如来得阿耨多罗三藐三菩提耶？如来有所说法耶？”须菩提言：“如我解佛所说义，无有定法名阿耨多罗三藐三菩提，亦无有定法，如来可说。何以故？如来所说法，皆不可取、不可说、非法、非非法。所以者何？一切圣贤，皆以无为法而有差别。”
 
-"Subhuti, am I enlightend? Did I teach anything?" "If I understand you correctly, there is no such thing called enlightenment. Also you did not teach anything. Phenomena (teachings) are not phenomena (teachings), they are also not non-phenomena (non-teachings). 
+"Subhuti, am I enlightend? Did I teach anything?" "If I understand you correctly, there is no such thing called enlightenment. Also you did not teach anything. Phenomena (teachings) are not phenomena (teachings), they are also not non-phenomena (non-teachings). All saintly beings are saintly because they act unconditionally."
 
 8. “须菩提！于意云何？若人满三千大千世界七宝以用布施，是人所得福德，宁为多不？”须菩提言：“甚多，世尊！何以故？是福德即非福德性，是故如来说福德多。”“若复有人，于此经中受持，乃至四句偈等，为他人说，其福胜彼。何以故？须菩提！一切诸佛，及诸佛阿耨多罗三藐三菩提法，皆从此经出。须菩提！所谓佛法者，即非佛法。”
 
-"Subhuti,
+"Subhuti, does a person gain great merit if he gives alms with great quantity?" "Yes, Lord. Merit has no self nature as being merit. That's why it can be described as great merit." "If a person practices this sutra, or explains this sutra, he gains even more merit because all Buddhism teachings come from this sutra. Subhuti, the so-called Buddhism teaching is not Buddhism teaching."
 
 9. “须菩提！于意云何？须陀洹能作是念：‘我得须陀洹果’不？”须菩提言：“不也，世尊！何以故？须陀洹名为入流，而无所入，不入色声香味触法，是名须陀洹。”“须菩提！于意云何？斯陀含能作是念：‘我得斯陀含果’不？”须菩提言：不也，世尊！何以故？斯陀含名一往来，而实无往来，是名斯陀含。”“须菩提！于意云何？阿那含能作是念：‘我得阿那含果’不？”须菩提言：“不也，世尊！何以故？阿那含名为不来，而实无不来，是名阿那含。”“须菩提！于意云何？阿罗汉能作是念，‘我得阿罗汉道’不？”须菩提言：“不也，世尊！何以故？实无有法名阿罗汉。世尊！若阿罗汉作是念：‘我得阿罗汉道’，即著我人众生寿者。世尊！佛说我得无诤三昧，人中最为第一，是第一离欲阿罗汉。我不作是念：‘我是离欲阿罗汉’。世尊！我若作是念：‘我得阿罗汉道’，世尊则不说须菩提是乐阿兰那行者！以须菩提实无所行，而名须菩提是乐阿兰那行。
 
-"Subhuti, would an arhat think 'am I an arhat?'?" "No, Lord, 
+"Subhuti, would an arhat think 'am I an arhat?'?" "No, Lord, if an arhat wonders about that, he is clinging on the reified concepts such as self, others, beings, and time. And he is thus not an arhat." 
 
 10. 佛告须菩提：“于意云何？如来昔在然灯佛所，于法有所得不？”“不也，世尊！如来在然灯佛所，于法实无所得。”“须菩提！于意云何？菩萨庄严佛土不？”“不也，世尊！何以故？庄严佛土者，即非庄严，是名庄严。”“是故须菩提！**诸菩萨摩诃萨应如是生清净心，不应住色生心，不应住声香味触法生心，应无所住而生其心。**须菩提！譬如有人，身如须弥山王，于意云何？是身为大不？”须菩提言：“甚大，世尊！何以故？佛说非身，是名大身。”
 
+"**A bodhisattva does not condition his mind on six senses. **"
 
 11. “须菩提！如恒河中所有沙数，如是沙等恒河，于意云何？是诸恒河沙宁为多不？”须菩提言：“甚多，世尊！但诸恒河尚多无数，何况其沙。”“须菩提！我今实言告汝：若有善男子、善女人，以七宝满尔所恒河沙数三千大千世界，以用布施，得福多不？”须菩提言：“甚多，世尊！”佛告须菩提：“若善男子、善女人，于此经中，乃至受持四句偈等，为他人说，而此福德胜前福德。”
 
@@ -87,6 +91,7 @@ color (色, [rupa](https://en.wikipedia.org/wiki/R%C5%ABpa)) | sound (声) | sme
 
 13. 尔时，须菩提白佛言：“世尊！当何名此经，我等云何奉持？”佛告须菩提：“是经名为《金刚般若波罗蜜》，以是名字，汝当奉持。所以者何？须菩提！佛说般若波罗蜜，即非般若波罗蜜。须菩提！于意云何？如来有所说法不？”须菩提白佛言：“世尊！如来无所说。”“须菩提！于意云何？三千大千世界所有微尘是为多不？”须菩提言：“甚多，世尊！”“须菩提！诸微尘，如来说非微尘，是名微尘。如来说：世界，非世界，是名世界。须菩提！于意云何？可以三十二相见如来不？”“不也，世尊！何以故？如来说：三十二相，即是非相，是名三十二相。”“须菩提！若有善男子、善女人，以恒河沙等身命布施；若复有人，于此经中，乃至受持四句偈等，为他人说，其福甚多。”
 
+Diamond sutra (Vajracchedikā Prajñāpāramitā Sūtra)
 
 14. 尔时，须菩提闻说是经，深解义趣，涕泪悲泣，而白佛言：“希有，世尊！佛说如是甚深经典，我从昔来所得慧眼，未曾得闻如是之经。世尊！若复有人得闻是经，信心清净，则生实相，当知是人，成就第一希有功德。世尊！是实相者，即是非相，是故如来说名实相。世尊！我今得闻如是经典，信解受持不足为难，若当来世，后五百岁，其有众生，得闻是经，信解受持，是人则为第一希有。何以故？此人无我相、人相、众生相、寿者相。所以者何？我相即是非相、人相、众生相、寿者相，即是非相。何以故？离一切诸相，则名诸佛。”佛告须菩提：“如是！如是！若复有人得闻是经，不惊、不怖、不畏，当知是人甚为希有。何以故？须菩提！如来说第一波罗蜜，非第一波罗蜜，是名第一波罗蜜。须菩提！忍辱波罗蜜，如来说非忍辱波罗蜜，是名忍辱波罗蜜。何以故？须菩提！如我昔为歌利王割截身体，我于尔时，无我相、无人相、无众生相、无寿者相。何以故？我于往昔节节支解时，若有我相、人相、众生相、寿者相，应生嗔恨。须菩提！又念过去于五百世作忍辱仙人，于尔所世，无我相、无人相、无众生相、无寿者相。是故须菩提！菩萨应离一切相，发阿耨多罗三藐三菩提心，不应住色生心，不应住声香味触法生心，应生无所住心。若心有住，即为非住。是故佛说：‘菩萨心不应住色布施。’须菩提！菩萨为利益一切众生，应如是布施。如来说：一切诸相，即是非相。又说：一切众生，即非众生。须菩提！如来是真语者、实语者、如语者、不诳语者、不异语者。须菩提！如来所得法，此法无实无虚。须菩提，若菩萨心住于法而行布施，如人入暗，即无所见。若菩萨心不住法而行布施，如人有目，日光明照，见种种色。须菩提！当来之世，若有善男子、善女人，能于此经受持读诵，则为如来以佛智慧，悉知是人，悉见是人，皆得成就无量无边功德。”
 
