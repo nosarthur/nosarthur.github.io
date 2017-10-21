@@ -14,7 +14,7 @@ tags: [buddhism]
 In this post, I will provide an English translation of the sutra from the most popular Chinese version 
  by the legendary Buddhist monk 
 [Kumarajiva](https://en.wikipedia.org/wiki/Kum%C4%81raj%C4%ABva) (鸠摩罗什, 344–413 AD). 
-I will keep the text simple and concise thus it is not a literal translations.
+I will keep the text simple and concise thus it is not a literal translation.
 Famous sentences will be in bold and tranlated in full though.
 
 There are two difficulties in the translation
