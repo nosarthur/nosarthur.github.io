@@ -7,40 +7,48 @@ comments: true
 tags: [buddhism]
 ---
 
-[Diamond sutra](https://en.wikipedia.org/wiki/Diamond_Sutra) (金刚经) is one of the most influential Buddhism canons in East Asia and the [Zen Buddhism](https://en.wikipedia.org/wiki/Zen) school. The Sixth and Last Patriarch of Zen Buddhism [Huineng (六祖慧能)](https://en.wikipedia.org/wiki/Huineng) (638-713 AD) reached his initial enlightenment by hearing one sentence in Diamond sutra (应无所住而生其心).
+## introduction
 
-The British Library has a copy [a printed book of diamond sutra dated in 868 AD](https://www.bl.uk/collection-items/the-diamond-sutra).
-The whole script can be viewed there.
+[Diamond sutra](https://en.wikipedia.org/wiki/Diamond_Sutra) (金刚经) is one of the most influential Buddhism canons in East Asia and the [Zen Buddhism](https://en.wikipedia.org/wiki/Zen) school (禅宗). The Sixth and Last Patriarch of Zen Buddhism [Huineng (六祖慧能)](https://en.wikipedia.org/wiki/Huineng) (638-713 AD) reached his initial enlightenment by hearing one sentence in Diamond sutra: "thoughts should not be conditioned on situations (应无所住而生其心)".
 
-Its most popular Chinese version was translated by the legendary Buddhist monk 
-[Kumarajiva](https://en.wikipedia.org/wiki/Kum%C4%81raj%C4%ABva) (344–413 AD). 
-And my translation is based on Kumarajiva's version.
-I will not give literal translations and effort is made to make the translation simple and concise.
-Famous sentences will be in bold font and tranlated in full.
+In this post, I will provide an English translation of the sutra from the most popular Chinese version 
+ by the legendary Buddhist monk 
+[Kumarajiva](https://en.wikipedia.org/wiki/Kum%C4%81raj%C4%ABva) (鸠摩罗什, 344–413 AD). 
+I will keep the text simple and concise thus it is not a literal translations.
+Famous sentences will be in bold font and tranlated in full though.
 
 There are two difficulties in the translation
 
-* Antient Chinese is different from modern Chinese
+* Antient Chinese differs from modern Chinese
 * The same Chinese character / Sanskrit word could refer to different concepts 
 
 Thus I cannot guarantee my translation is correct.
+When in doubt, I also consult the Chinese version by [Xuanzang](https://en.wikipedia.org/wiki/Xuanzang) (玄奘, 602-664 AD),
+whose translation is more literal.
 
 Before going to the main text, there are a few basic concepts worth explanation.
 
-* six senses (六入, [sadayatana](https://en.wikipedia.org/wiki/Ṣaḍāyatana))
+* six senses (六入, [sadayatana](https://en.wikipedia.org/wiki/Ṣaḍāyatana)): They are also called six thieves (六贼). Clinging to sense pleasures causes problems.
 
 eye (眼) | ear (耳) | nose (鼻) | tongue (舌) | body (身) | mind (意, [manas](https://en.wikipedia.org/wiki/Manas_(early_Buddhism)))
 --- | --- | --- | --- | --- | ---
 color (色, [rupa](https://en.wikipedia.org/wiki/R%C5%ABpa)) | sound (声) | smell (香) | taste (味) | touch (触) | thought (法, [dharma](https://en.wikipedia.org/wiki/Dharma)) 
 
 * [Arhat](https://en.wikipedia.org/wiki/Arhat) (阿罗汉, 罗汉): Someone who has attained [nirvana](https://en.wikipedia.org/wiki/Nirvana_(Buddhism)) (涅槃). He has eliminated all [fetters](https://en.wikipedia.org/wiki/Fetter_(Buddhism)) and thus is freed from rebirth (轮回, [samsara](https://en.wikipedia.org/wiki/Sa%E1%B9%83s%C4%81ra_(Buddhism))). The Sanskrit word could mean "the one who has destroyed the foes of afflictions". It could also mean "the one who cannot be killed". 
-* [Bodhisattva](https://en.wikipedia.org/wiki/Bodhisattva) (菩萨): 
-> In Theravada Buddhism, a bodhisattva is one who is striving for full enlightenment (Arahantship in Pali), whereas in Mahayana Buddhism, a bodhisattva is one who has already reached a very advanced state of grace or enlightenment but holds back from entering nirvana so that he may help others.   --- from Wikipedia
-* [Buddha]() (佛)
-* [Tathagata](https://en.wikipedia.org/wiki/Tath%C4%81gata) (如来)
 
-[Gautama Buddha](https://en.wikipedia.org/wiki/Gautama_Buddha)
+* [Buddha](https://en.wikipedia.org/wiki/Buddha_(title)) (佛): The fully enlightened teacher, the "awakened one". He is more knowledgeable than arhats. [Gautama Buddha](https://en.wikipedia.org/wiki/Gautama_Buddha) is one of them.
 
+* [Bodhisattva](https://en.wikipedia.org/wiki/Bodhisattva) (菩萨): There are two possible usage of this word
+> In Theravada Buddhism, a bodhisattva is one who is striving for full enlightenment (arhat), whereas in Mahayana Buddhism, a bodhisattva is one who has already reached a very advanced state of grace or enlightenment but holds back from entering nirvana so that he may help others.   --- from Wikipedia
+
+* [Tathagata](https://en.wikipedia.org/wiki/Tath%C4%81gata) (如来): In Buddhist texts, Gautama Buddha often refers to himself (or maybe all Buddhas) as tathagata. 
+
+
+The British Library has [a copy of diamond sutra in Chinese dated in 868 AD](https://www.bl.uk/collection-items/the-diamond-sutra), 
+possibly the oldest printed book.
+The whole script can be viewed online.
+
+## sutra
 
 1. 如是我闻，一时，佛在舍卫国祗树给孤独园，与大比丘众千二百五十人俱。尔时，世尊食时，著衣持钵，入舍卫大城乞食。于其城中，次第乞已，还至本处。饭食讫，收衣钵，洗足已，敷座而坐。
 
