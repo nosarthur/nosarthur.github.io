@@ -2,7 +2,7 @@
 layout: post
 title: Diamond Sutra
 date:   2017-10-21 13:43:08 -0500
-categories: [readings]
+categories: [ancient texts]
 comments: true
 tags: [buddhism]
 ---
@@ -13,7 +13,7 @@ tags: [buddhism]
 especially in the [Zen Buddhism](https://en.wikipedia.org/wiki/Zen) school (禅宗). The Sixth and Last Patriarch of Zen Buddhism [Huineng (六祖慧能)](https://en.wikipedia.org/wiki/Huineng) (638-713 AD) reached his initial enlightenment by hearing one sentence in Diamond sutra: "thoughts should not be conditioned on situations (应无所住而生其心)".
 
 This sutra has been translated to Chinese multiple times in history.
-The most popular version is done by the legendary Buddhist monk
+The most popular version is done by the legendary monk
 [Kumarajiva](https://en.wikipedia.org/wiki/Kum%C4%81raj%C4%ABva) (鸠摩罗什, 344–413 AD).
 Another legendary monk [Xuanzang](https://en.wikipedia.org/wiki/Xuanzang) (玄奘, 602-664 AD) has translated it too.
 
@@ -41,7 +41,7 @@ color (色, [rupa](https://en.wikipedia.org/wiki/R%C5%ABpa)) | sound (声) | sme
 
 * [Buddha](https://en.wikipedia.org/wiki/Buddha_(title)) (佛): The fully enlightened teacher, the "awakened one". He is more knowledgeable than arhats. [Gautama Buddha](https://en.wikipedia.org/wiki/Gautama_Buddha) is one of them.
 
-* [Bodhisattva](https://en.wikipedia.org/wiki/Bodhisattva) (菩萨): There are two possible usage of this word
+* [Bodhisattva](https://en.wikipedia.org/wiki/Bodhisattva) (菩萨): There are two possible usage of this word, nicely summarized on Wikipedia
 > In Theravada Buddhism, a bodhisattva is one who is striving for full enlightenment (arhat), whereas in Mahayana Buddhism, a bodhisattva is one who has already reached a very advanced state of grace or enlightenment but holds back from entering nirvana so that he may help others.   --- from Wikipedia
 
 * [Tathagata](https://en.wikipedia.org/wiki/Tath%C4%81gata) (如来): In Buddhist sutras, Gautama Buddha often refers to himself (or maybe all Buddhas) as tathagata. 
@@ -75,7 +75,7 @@ The whole script can be viewed online.
 
 6. 须菩提白佛言：“世尊！颇有众生，得闻如是言说章句，生实信不？”佛告须菩提：“莫作是说。如来灭后，后五百岁，有持戒修福者，于此章句能生信心，以此为实，当知是人不于一佛二佛三四五佛而种善根，已于无量千万佛所种诸善根，闻是章句，乃至一念生净信者，须菩提！如来悉知悉见，是诸众生得如是无量福德。何以故？是诸众生无复我相、人相、众生相、寿者相；无法相，亦无非法相。何以故？是诸众生若心取相，则为著我人众生寿者。若取法相，即著我人众生寿者。何以故？若取非法相，即著我人众生寿者，是故不应取法，不应取非法。以是义故，如来常说：‘汝等比丘，知我说法，如筏喻者；法尚应舍，何况非法。’”
 
-"Lord, can anyone understand what you just said in the future?" "Yes, these beings see through reified concepts such as self, others, beings, and time. They neither cling to phenomena, nor abandon phenomena."
+"Lord, can anyone understand what you just said in the future?" "Yes, these beings see through concepts such as self, others, beings, and time. They neither cling to phenomena, nor abandon phenomena. If one clings to any phenomenon, he clings to self, others, beings, and time."
 
 7. “须菩提！于意云何？如来得阿耨多罗三藐三菩提耶？如来有所说法耶？”须菩提言：“如我解佛所说义，无有定法名阿耨多罗三藐三菩提，亦无有定法，如来可说。何以故？如来所说法，皆不可取、不可说、非法、非非法。所以者何？一切圣贤，皆以无为法而有差别。”
 
@@ -89,7 +89,7 @@ All saintly beings are saintly because they act unconditionally."
 
 9. “须菩提！于意云何？须陀洹能作是念：‘我得须陀洹果’不？”须菩提言：“不也，世尊！何以故？须陀洹名为入流，而无所入，不入色声香味触法，是名须陀洹。”“须菩提！于意云何？斯陀含能作是念：‘我得斯陀含果’不？”须菩提言：不也，世尊！何以故？斯陀含名一往来，而实无往来，是名斯陀含。”“须菩提！于意云何？阿那含能作是念：‘我得阿那含果’不？”须菩提言：“不也，世尊！何以故？阿那含名为不来，而实无不来，是名阿那含。”“须菩提！于意云何？阿罗汉能作是念，‘我得阿罗汉道’不？”须菩提言：“不也，世尊！何以故？实无有法名阿罗汉。世尊！若阿罗汉作是念：‘我得阿罗汉道’，即著我人众生寿者。世尊！佛说我得无诤三昧，人中最为第一，是第一离欲阿罗汉。我不作是念：‘我是离欲阿罗汉’。世尊！我若作是念：‘我得阿罗汉道’，世尊则不说须菩提是乐阿兰那行者！以须菩提实无所行，而名须菩提是乐阿兰那行。
 
-"Subhuti, would an arhat think 'am I an arhat?'?" "No, Lord, if an arhat wonders about that, he is clinging to concepts such as self, others, beings, and time. And he is thus not an arhat. An arhat has no self nature as being an arhat, that's why he can be called arhat." 
+"Subhuti, would an arhat think 'I am an arhat.'?" "No, Lord, if an arhat wonders about that, he is clinging to concepts such as self, others, beings, and time. And he is thus not an arhat. An arhat has no self nature as being an arhat, that's why he can be called arhat."
 
 10. 佛告须菩提：“于意云何？如来昔在然灯佛所，于法有所得不？”“不也，世尊！如来在然灯佛所，于法实无所得。”“须菩提！于意云何？菩萨庄严佛土不？”“不也，世尊！何以故？庄严佛土者，即非庄严，是名庄严。”“是故须菩提！**诸菩萨摩诃萨应如是生清净心，不应住色生心，不应住声香味触法生心，应无所住而生其心。**须菩提！譬如有人，身如须弥山王，于意云何？是身为大不？”须菩提言：“甚大，世尊！何以故？佛说非身，是名大身。”
 
@@ -105,7 +105,7 @@ All saintly beings are saintly because they act unconditionally."
 
 13. 尔时，须菩提白佛言：“世尊！当何名此经，我等云何奉持？”佛告须菩提：“是经名为《金刚般若波罗蜜》，以是名字，汝当奉持。所以者何？须菩提！佛说般若波罗蜜，即非般若波罗蜜。须菩提！于意云何？如来有所说法不？”须菩提白佛言：“世尊！如来无所说。”“须菩提！于意云何？三千大千世界所有微尘是为多不？”须菩提言：“甚多，世尊！”“须菩提！诸微尘，如来说非微尘，是名微尘。如来说：世界，非世界，是名世界。须菩提！于意云何？可以三十二相见如来不？”“不也，世尊！何以故？如来说：三十二相，即是非相，是名三十二相。”“须菩提！若有善男子、善女人，以恒河沙等身命布施；若复有人，于此经中，乃至受持四句偈等，为他人说，其福甚多。”
 
-"Lord, what is the name of this sutra?" "Diamond sutra (Vajracchedikā Prajñāpāramitā Sūtra). (And further repetitions of 'A is not A, thus can be called A'.)" 
+"Lord, what is the name of this sutra?" "Diamond sutra (Vajracchedikā Prajñāpāramitā Sūtra). (And further repetitions of 'A is not A, thus can be called A'.)"
 
 14. 尔时，须菩提闻说是经，深解义趣，涕泪悲泣，而白佛言：“希有，世尊！佛说如是甚深经典，我从昔来所得慧眼，未曾得闻如是之经。世尊！若复有人得闻是经，信心清净，则生实相，当知是人，成就第一希有功德。世尊！是实相者，即是非相，是故如来说名实相。世尊！我今得闻如是经典，信解受持不足为难，若当来世，后五百岁，其有众生，得闻是经，信解受持，是人则为第一希有。何以故？此人无我相、人相、众生相、寿者相。所以者何？我相即是非相、人相、众生相、寿者相，即是非相。何以故？**离一切诸相，则名诸佛。**”佛告须菩提：“如是！如是！若复有人得闻是经，不惊、不怖、不畏，当知是人甚为希有。何以故？须菩提！如来说第一波罗蜜，非第一波罗蜜，是名第一波罗蜜。须菩提！忍辱波罗蜜，如来说非忍辱波罗蜜，是名忍辱波罗蜜。何以故？须菩提！如我昔为歌利王割截身体，我于尔时，无我相、无人相、无众生相、无寿者相。何以故？我于往昔节节支解时，若有我相、人相、众生相、寿者相，应生嗔恨。须菩提！又念过去于五百世作忍辱仙人，于尔所世，无我相、无人相、无众生相、无寿者相。是故须菩提！菩萨应离一切相，发阿耨多罗三藐三菩提心，不应住色生心，不应住声香味触法生心，应生无所住心。若心有住，即为非住。是故佛说：‘菩萨心不应住色布施。’须菩提！菩萨为利益一切众生，应如是布施。如来说：**一切诸相，即是非相。**又说：**一切众生，即非众生。**须菩提！如来是真语者、实语者、如语者、不诳语者、不异语者。须菩提！如来所得法，此法无实无虚。须菩提，若菩萨心住于法而行布施，如人入暗，即无所见。若菩萨心不住法而行布施，如人有目，日光明照，见种种色。须菩提！当来之世，若有善男子、善女人，能于此经受持读诵，则为如来以佛智慧，悉知是人，悉见是人，皆得成就无量无边功德。”
 
@@ -113,7 +113,7 @@ At that moment, Subhuti burst in tears and said: "Lord, I have never heard such 
 I have never had such an open view.
 Right now you are here to explain this sutra to me, thus it is not hard to understand.
 In the future it will be hard for people to understand. If someone can understand, then he has seen through concepts such as self, others, beings, and time.
-**All buddhas penetrate through all phenomena**." "Yes. If someone hears about this sutra and is not scared, paranoid, or shocked, then he is a rare. (Repetitions of 'A is not A, thus is called A') **All phenomena are non-phenomena. All beings are non-beings.** This teaching is neither true nor untrue. Subhuti, if a bodhisattva gives elms based on the situation, it is like seeing things in the darkness. Unconditioned almsgiving is like seeing things in bright light."
+**If one penetrates through all phenomena, he is a buddha.**" "Yes. If someone hears about this sutra and is not scared, paranoid, or shocked, then he is a rare. (Repetitions of 'A is not A, thus is called A') **All phenomena are non-phenomena. All beings are non-beings.** This teaching is neither true nor untrue. Subhuti, if a bodhisattva gives alms based on the situation, it is like seeing things in the darkness. Unconditioned almsgiving is like seeing things in bright sunlight."
 
 15. “须菩提！若有善男子、善女人，初日分以恒河沙等身布施，中日分复以恒河沙等身布施，后日分亦以恒河沙等身布施，如是无量百千万亿劫以身布施；若复有人，闻此经典，信心不逆，其福胜彼，何况书写、受持、读诵、为人解说。须菩提！以要言之，是经有不可思议、不可称量、无边功德。如来为发大乘者说，为发最上乘者说。若有人能受持读诵，广为人说，如来悉知是人，悉见是人，皆得成就不可量、不可称、无有边、不可思议功德。如是人等，即为荷担如来阿耨多罗三藐三菩提。何以故？须菩提！若乐小法者，著我见、人见、众生见、寿者见，则于此经，不能听受读诵、为人解说。须菩提！在在处处，若有此经，一切世间、天、人、阿修罗，所应供养；当知此处则为是塔，皆应恭敬，作礼围绕，以诸华香而散其处。”
 
