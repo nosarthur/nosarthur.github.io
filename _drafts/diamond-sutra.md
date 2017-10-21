@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Diamond Sutra
-date:   2017-09-18 13:43:08 -0500
+date:   2017-10-21 13:43:08 -0500
 categories: [readings]
 comments: true
 tags: [buddhism]
@@ -15,7 +15,7 @@ In this post, I will provide an English translation of the sutra from the most p
  by the legendary Buddhist monk 
 [Kumarajiva](https://en.wikipedia.org/wiki/Kum%C4%81raj%C4%ABva) (鸠摩罗什, 344–413 AD). 
 I will keep the text simple and concise thus it is not a literal translations.
-Famous sentences will be in bold font and tranlated in full though.
+Famous sentences will be in bold and tranlated in full though.
 
 There are two difficulties in the translation
 
