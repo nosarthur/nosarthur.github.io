@@ -15,7 +15,7 @@ In this post, I will provide an English translation of the sutra from the most p
  by the legendary Buddhist monk 
 [Kumarajiva](https://en.wikipedia.org/wiki/Kum%C4%81raj%C4%ABva) (鸠摩罗什, 344–413 AD). 
 I will keep the text simple and concise thus it is not a literal translation.
-Famous sentences will be in bold and tranlated in full though.
+Famous sentences will be in bold and translated in full though.
 
 There are two difficulties in the translation
 
@@ -26,7 +26,7 @@ Thus I cannot guarantee my translation is correct.
 When in doubt, I also consult the Chinese version by [Xuanzang](https://en.wikipedia.org/wiki/Xuanzang) (玄奘, 602-664 AD),
 whose translation is more literal.
 
-Before going to the main text, there are a few basic concepts worth explanation.
+Before going to the main text, let us first introduce a few terminologies:
 
 * six senses (六入, [sadayatana](https://en.wikipedia.org/wiki/Ṣaḍāyatana)): They are also called six thieves (六贼). Clinging to sense pleasures causes problems.
 
