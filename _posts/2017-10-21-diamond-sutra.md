@@ -12,13 +12,13 @@ tags: [buddhism]
 [Diamond sutra](https://en.wikipedia.org/wiki/Diamond_Sutra) (金刚经) is one of the most influential Buddhism canons in East Asia,
 especially in the [Zen Buddhism](https://en.wikipedia.org/wiki/Zen) school (禅宗). The Sixth and Last Patriarch of Zen Buddhism [Huineng (六祖慧能)](https://en.wikipedia.org/wiki/Huineng) (638-713 AD) reached his initial enlightenment by hearing one sentence in Diamond sutra: "thoughts should not be conditioned on situations (应无所住而生其心)".
 
-This sutra has been translated to Chinese multiple times in history.
+This sutra has been translated from Sanskrit to Chinese multiple times in history.
 The most popular version is done by the legendary monk
 [Kumarajiva](https://en.wikipedia.org/wiki/Kum%C4%81raj%C4%ABva) (鸠摩罗什, 344–413 AD).
 Another legendary monk [Xuanzang](https://en.wikipedia.org/wiki/Xuanzang) (玄奘, 602-664 AD) has translated it too.
 
 In this post, I will provide an English translation of the sutra based on Kumarajiva's version.
-I will keep the text simple and concise thus it is not a literal translation.
+I will keep the translation simple and concise thus it is not a literal translation.
 Famous sentences will be in bold and translated in full though.
 
 There are two difficulties in the translation
@@ -42,9 +42,9 @@ color (色, [rupa](https://en.wikipedia.org/wiki/R%C5%ABpa)) | sound (声) | sme
 * [Buddha](https://en.wikipedia.org/wiki/Buddha_(title)) (佛): The fully enlightened teacher, the "awakened one". He is more knowledgeable than arhats. [Gautama Buddha](https://en.wikipedia.org/wiki/Gautama_Buddha) is one of them.
 
 * [Bodhisattva](https://en.wikipedia.org/wiki/Bodhisattva) (菩萨): There are two possible usage of this word, nicely summarized on Wikipedia
-> In Theravada Buddhism, a bodhisattva is one who is striving for full enlightenment (arhat), whereas in Mahayana Buddhism, a bodhisattva is one who has already reached a very advanced state of grace or enlightenment but holds back from entering nirvana so that he may help others.   --- from Wikipedia
+> In Theravada Buddhism, a bodhisattva is one who is striving for full enlightenment (arhat), whereas in Mahayana Buddhism, a bodhisattva is one who has already reached a very advanced state of grace or enlightenment but holds back from entering nirvana so that he may help others.
 
-* [Tathagata](https://en.wikipedia.org/wiki/Tath%C4%81gata) (如来): In Buddhist sutras, Gautama Buddha often refers to himself (or maybe all Buddhas) as tathagata. 
+* [Tathagata](https://en.wikipedia.org/wiki/Tath%C4%81gata) (如来): In Buddhism sutras, Gautama Buddha often refers to himself (or maybe all Buddhas) as tathagata. 
 
 
 The British Library has [a copy of diamond sutra in Chinese dated in 868 AD](https://www.bl.uk/collection-items/the-diamond-sutra), 
@@ -71,7 +71,7 @@ The whole script can be viewed online.
 
 5. “须菩提！于意云何？可以身相见如来不？”“不也，世尊！不可以身相得见如来。何以故？如来所说身相，即非身相。”佛告须菩提：“**凡所有相，皆是虚妄。若见诸相非相，即见如来。**”
 
-"Similarly, a bodhisattva does not see tathagata based on bodily features. **All phenomena are illusions. When one sees through the phenomena, one sees tathagata.**"
+"Similarly, a bodhisattva does not see tathagata based on bodily features. **All phenomena and perceptions are illusions. When one sees through them, one sees tathagata.**"
 
 6. 须菩提白佛言：“世尊！颇有众生，得闻如是言说章句，生实信不？”佛告须菩提：“莫作是说。如来灭后，后五百岁，有持戒修福者，于此章句能生信心，以此为实，当知是人不于一佛二佛三四五佛而种善根，已于无量千万佛所种诸善根，闻是章句，乃至一念生净信者，须菩提！如来悉知悉见，是诸众生得如是无量福德。何以故？是诸众生无复我相、人相、众生相、寿者相；无法相，亦无非法相。何以故？是诸众生若心取相，则为著我人众生寿者。若取法相，即著我人众生寿者。何以故？若取非法相，即著我人众生寿者，是故不应取法，不应取非法。以是义故，如来常说：‘汝等比丘，知我说法，如筏喻者；法尚应舍，何况非法。’”
 
