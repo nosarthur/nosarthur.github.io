@@ -7,13 +7,17 @@ comments: true
 tags: [life]
 ---
 
+
+
 1. git
 2. testing (pytest in particular)
 3. design patterns
 1. aws
 1. a little bit of docker
-1. golang
-2. free energy perturbation
+1. a little bit of golang (web services in particular)
+2. a little bit of free energy perturbation
+
+> The unexamined life is not worth living --- Socrates (470BC - 399 BC)
 
 
 
