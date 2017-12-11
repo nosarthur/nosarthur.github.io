@@ -49,7 +49,7 @@ These two questions are basically the same question. The short answer is:
 * perpetual machine of the second kind is defined as the negation of Lord Kevin's formulation
 * Clausius' formulation is equivalent to Lord Kevin's formulation.
 
-To show their equivalence, let's first show some useful facts using Lord Kevin's formulation. 
+To show their equivalence, let's first show some useful facts using Clausius' formulation. 
 Suppose we have two engines, both working between two heat sources 1 and 2, and both are not refrigerators, i.e., $$W>0$$ and $$W'>0$$.
 Here we use primed and un-primed letters to distinguish the two. Then
 
