@@ -9,7 +9,7 @@ tags: [thermodynamics]
 
 For some reason, the second law of thermodynamics is commonly known as "**entropy does not decrease**".
 In my opinion, it is a bad way to understand what's going on because entropy is a somewhat abstract concept and it's not immediately clear why it tends to increase even after equating entropy to complexity
-(my messy room does become tidy after I clean it and I am part of the universe). 
+(my messy room does become tidy after I clean it and it's not clear how much entropy increase happens in me). 
 Also see [this post for an explanation of entropy]({% post_url 2016-12-30-entropy %}) if interested. 
 
 On the other hand, historically the second law has very clean physical meanings: **perpetual engine (of the second kind) is not possible**.
