@@ -7,7 +7,14 @@ comments: true
 tags: [taoism]
 ---
 
-[Dao de jing](https://en.wikipedia.org/wiki/Tao_Te_Ching) is the [Taoism](https://en.wikipedia.org/wiki/Taoism) canon written by its founder [Lao zi](https://en.wikipedia.org/wiki/Laozi)(around 500 BC). It is commonly divided into two parts, the Dao (this character could mean path, spiritual practice, etc), and the De (this character could mean virtue, in antient Chinese, it could also mean gain), totaling 81 paragraphs. 
+[Dao de jing](https://en.wikipedia.org/wiki/Tao_Te_Ching) is the [Taoism](https://en.wikipedia.org/wiki/Taoism) canon written by its founder [Lao zi](https://en.wikipedia.org/wiki/Laozi) (around 500 BC).
+There are three common versions available nowadays
+
+* The common version (about 5000 characters)
+* The [Mawangdui](https://en.wikipedia.org/wiki/Mawangdui) version (discovered in 1973 in a tomb, written on silk, dated around 190 BC, about 1000)
+* The Guodian version (discovered in 1993, written on bamboo tablets, dated prior to 300 BC, about 1000 characters)
+
+It is commonly divided into two parts, the Dao (this character could mean path, spiritual practice, etc), and the De (this character could mean virtue, in antient Chinese, it could also mean gain), totaling 81 paragraphs. 
 
 In early 1970s, two antient copies of Dao de jing were discovered in a tomb dated back to the [Han dynasty](https://en.wikipedia.org/wiki/Han_dynasty) (206 BC – 9 AD) called [Mawangdui](https://en.wikipedia.org/wiki/Mawangdui). 
 They are called copy A and copy B. From analyzing the characters they try to avoid to use, we can see that copy A must be written before the beginning of Han dynasty. 
