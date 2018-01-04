@@ -138,8 +138,8 @@ a, b = 'abc', 4 ** 0.5
 a, b = b, a
 ```
 * The same variable can be dynamically linked to different types, although it is bad practice to do so.
-* The second expression assigns `'abc'` to `a` and `4**0.5` to `b`
 * `**` is the exponential operator, e.g., `4**0.5=2.0`
+* The second expression assigns `'abc'` to `a` and `4**0.5` to `b`
 * The last expression swaps the values of `a` and `b`
 * Tuples are used under the hood.
 
@@ -403,7 +403,7 @@ d = {'x':3, 'y':4}
 mul(**d)
 ```
 * `lambda` function can take multiple input parameters, even default parameters 
-* `*` unpacks tuple and `**` unpacks dictionary. One standard usage is `*args, **argc`.
+* `*` unpacks tuple and `**` unpacks dictionary. One standard usage is `*args, **kwargs`.
 * When using `**`, make sure the variable names match with the dictionary keys.
 
 ```python
