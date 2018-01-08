@@ -8,7 +8,7 @@ tags: [QFT]
 ---
 
 [Quantum Fourier transform](https://en.wikipedia.org/wiki/Quantum_Fourier_transform) is a key concept in quantum computing and quantum algorithm.
-For example, it is the essential ingredient of [Shor's algorithm](https://en.wikipedia.org/wiki/Shor%27s_algorithm) for factoring and the quantum phase estimation.
+For example, it is the essential ingredient of [Shor's algorithm](https://en.wikipedia.org/wiki/Shor%27s_algorithm) for factoring and the [quantum phase estimation algorithm]() for solving eigenvalues and eigenvectors of unitary matrices.
 
 In this post, I will explain how it works and why it is useful.
 
@@ -67,7 +67,7 @@ As for why DFT is useful,
 * In signal processing, often times the signals are band-limited. Then the Fourier spectrum provides a more succinct representation of the signals.
 * For physics problem, often times the symmetry in the problem can be more easily utilized in the Fourier domain.
 
-Shannon sampling theorem
+[Shannon sampling theorem]()
 
 
 There are many subtleties 
