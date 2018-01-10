@@ -17,6 +17,7 @@ In this post, I will review the maximum common subgraph problem in the context o
 * subgraph isomorphism (whether one molecule contains another molecule)
 * maximal common subgraph (what is the common structure between two molecules)
 
+Note that [subgraph isomorphism problem]() is [NP-complete]().
 
 maximum common subgraph (MCS)
 

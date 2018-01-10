@@ -45,7 +45,14 @@ This is quite different from classical computing where the control bit remains
 intact and the bit being controlled changes.
 And this is why this interpretation is called phase kickback.
 
+So far the phase kickback may appear somewhat trivial, somewhat strange,
+and not particularly useful.
+Note that most problems are not equally easy comparing to the inverse problems.
+For example, calculating the product of two prime numbers is easy whereas
+[prime factoring]() is hard (in fact it is [NP-intermediate]()).
 
+
+----
 [control-NOT (CNOT) gate](https://en.wikipedia.org/wiki/Controlled_NOT_gate)
 
 $$CNOT= \being{bmatrix}
