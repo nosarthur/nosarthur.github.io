@@ -78,3 +78,6 @@ t, ok := i.(T)
 If i does not hold a T, the statement will trigger a panic.
 with `ok`, no panic and zero value of `T` is assigned
 
+## concurrency
+
+https://www.youtube.com/watch?v=cN_DpYBzKso
