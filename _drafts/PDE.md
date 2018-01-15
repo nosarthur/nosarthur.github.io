@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Partial differential equations
-date:   2017-10-01 03:43:08 -0500
+date:   2018-05-01 03:43:08 -0500
 categories: [math and physics]
 comments: true
 tags: [PDE]

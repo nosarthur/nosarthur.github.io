@@ -67,7 +67,7 @@ As for why DFT is useful,
 * In signal processing, often times the signals are band-limited. Then the Fourier spectrum provides a more succinct representation of the signals.
 * For physics problem, often times the symmetry in the problem can be more easily utilized in the Fourier domain.
 
-[Shannon sampling theorem]()
+[Shannon sampling theorem](https://en.wikipedia.org/wiki/Nyquist%E2%80%93Shannon_sampling_theorem)
 
 
 There are many subtleties 

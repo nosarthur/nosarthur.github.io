@@ -59,7 +59,9 @@ func name (parameter-list) (result-list) {
 }
 ```
 
-## polymorphism (method and interface)
+## encapsulation and polymorphism 
+
+(method and interface)
 
 implicit type matching 
 
