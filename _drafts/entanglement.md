@@ -1,5 +1,12 @@
-
-There are two things in quantum mechanics that I always find weird
+---
+layout: post
+title: Quantum entanglement measure
+date:   2018-01-31 03:43:08 -0500
+categories: [quantum information and computation]
+comments: true
+tags: [entanglement]
+---
+There are two things in quantum mechanics that I always find weird:
 
 * the superposition principle
 * the measurement of von Neumann type

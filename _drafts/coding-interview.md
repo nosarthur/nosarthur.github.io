@@ -39,7 +39,7 @@ There are essentially only two strategies for solution finding
 
 * brutal force
 * divide and conquer
-    * decrease and conquer
+    * greedy
     * dynamic programming
 
 The brutal force way clarifies the size of the search space.
@@ -47,6 +47,10 @@ By divide and conquer, product of complexity becomes summation of complexity.
 For example, if the solution contains 3 consecutive steps with complexity $$O(n^{\alpha_i})$$ respectively. 
 The brutal force way would require $$O(n^{\alpha_1 + \alpha_2+\alpha_3})$$ complexity whereas divide and conquer
 would only require $$O(n^{\alpha_1})+ O(n^{\alpha_2})+ O(n^{\alpha_3})$$ complexity.
+
+
+* bottom up: for example, start from $$f({a_1})$$
+* top down: for example, start from $$f({a_1, a_2, \ldots, a_N})$$
 
 As for common tricks, 
 
