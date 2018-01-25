@@ -83,3 +83,21 @@ $$N = 2^n$$
 $$O(n^2)$$
 
 constructive interference
+
+
+
+
+
+[control-NOT (CNOT) gate](https://en.wikipedia.org/wiki/Controlled_NOT_gate)
+
+$$CNOT= \being{bmatrix}
+1& 0 & 0 & 0\\
+0& 1 & 0 & 0\\
+0& 0 & 0 & 1\\
+0& 0 & 1 & 0
+\end{bmatrix}$$
+
+$$ CNOT\left|x\right>\left|y\right> = \left|x\right>\left|y\oplus x\right>$$
+
+## reference
+* [R. Cleve, et al, Quantum algorithms revisited, Proc. Roy. Soc. Lond. 454, 339 (1998)](https://arxiv.org/pdf/quant-ph/9708016.pdf)
