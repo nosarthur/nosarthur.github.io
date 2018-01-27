@@ -17,13 +17,8 @@ permalink: /about/
 
       <div class="footer-col footer-col-4">
         <p style="color:black;">{{ site.description }}</p>
-        Current reading list:
-        <ul>
-        <li> Wisdom of the West by Bertrand Russell </li>
-        <li> One hundred years of solitude by Gabriel Garcia Marquez </li>
-        </ul>
+        <p style="color:black;"> &darr; Word cloud from title words of my papers </p>
       </div>
-      <h4 style="color:black;"> word cloud generated from title words of my papers </h4>
       <img src='https://raw.githubusercontent.com/nosarthur/CV_resume/master/keywords/wordcloud.png'>
     </div>
   </div>
