@@ -45,3 +45,4 @@ or delivering a software.
 In terms of fun, I find kendo and BJJ the best.
 They are both extremely realistic in the training and practical in real situations.
 
+<img src='/assets/bruce_lee.jpeg'>

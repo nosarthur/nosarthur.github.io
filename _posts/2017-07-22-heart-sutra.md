@@ -68,3 +68,5 @@ Thus wisdom practice is the ultimate practice. It can eliminate all suffering.
 
 (This is a sentence for chanting. Historically, it is not translated.
 The literal meaning is something like "come together to the other shore".)
+
+<img src='/assets/ava.jpeg'>
