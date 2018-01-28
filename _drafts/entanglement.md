@@ -1,22 +1,25 @@
 ---
 layout: post
 title: Quantum entanglement measure
-date:   2018-01-31 03:43:08 -0500
+date:   2018-03-31 09:00:00 -0500
 categories: [quantum information and computation]
 comments: true
 tags: [entanglement]
 ---
-There are two things in quantum mechanics that I always find weird:
+There are two things in quantum mechanics that I find very weird:
 
 * the superposition principle
-* the measurement of von Neumann type
+* the von Neumann type measurement
 
-There are famous paradoxes for the superposition principle
+In this post, I will talk about the weirdness of the first one.
+There are already famous paradoxes related to the superposition principle, for example
 
-* the Schrodinger's cat
-* the Einstein-P-R (EPR) paradox
+* [the Schrodinger's cat](https://en.wikipedia.org/wiki/Schr%C3%B6dinger%27s_cat) (1935)
+* [Einstein-Podolsky-Rosen (EPR) paradox](https://en.wikipedia.org/wiki/EPR_paradox) (1935)
 
-hidden variable interpretation, parallel universe interpretation of quantum mechanics
+I won't focus on them here. Instead, I will focus on a practical thing: quantifying information.
+In the classical information theory, entropy is used for this task.
+For a quick review of entropy, check out [this blog post]({% post_url 2016-12-30-entropy %}).
 
 Let $$p(HT)$$ denote the probability of the outcome being one head (H) and one tail (T).
 
