@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Segmentation using graph cuts 
+title: Segmentation using graph cuts
 date:   2018-02-28 09:00:00 -0500
 categories: [image processing]
 comments: true
@@ -42,8 +42,9 @@ There are endless variations of it.
 Even today there are many physicists working on the variants of it, particularly for [frustrated systems](https://en.wikipedia.org/wiki/Geometrical_frustration).
 
 
-In 1989, D.M. Greig 
+In 1989, D.M. Greig
 
+* D. Greig, B. Porteous, and A. Seheult, Exact Maximum A Posteriori Estimation for Binary Images, J. Royal Statistical Soc., Series B, vol. 51, no. 2, pp. 271-279, 1989.
 
 submodularity
 
@@ -55,3 +56,4 @@ http://www.csd.uwo.ca/~yuri/Papers/pami04.pdf)
 http://pub.ist.ac.at/~vnk/software.html)
 
 Vladimir Kolmogorov and Ramin Zabih, What energy functions can be minimized via graph cuts, IEEE transactions on pattern analysis and machine intelligence, vol. 26, no. 2, pp. 147, Feb. 2004.
+

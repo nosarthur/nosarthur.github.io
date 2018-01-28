@@ -1,3 +1,11 @@
+---
+layout: post
+title:  Quantum computing
+date:   2018-04-24 23:00:00 -0500
+categories: [technology]
+comments: true
+tags: [quantum computer]
+---
 
 
 In recent years, more and more tech companies start to invest in quantum computers.
