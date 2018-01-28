@@ -1,3 +1,12 @@
+---
+layout: post
+title: Profiling
+date:   2018-10-18 13:00:00 -0500
+categories: [coding]
+comments: true
+tags: [go]
+---
+
 
 
 

@@ -21,6 +21,8 @@ I won't focus on them here. Instead, I will focus on a practical thing: quantify
 In the classical information theory, entropy is used for this task.
 For a quick review of entropy, check out [this blog post]({% post_url 2016-12-30-entropy %}).
 
+
+
 Let $$p(HT)$$ denote the probability of the outcome being one head (H) and one tail (T).
 
 $$
