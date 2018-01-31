@@ -1,7 +1,7 @@
 ---
 layout: post
 title: My early retirement plan
-date:   2026-09-12 23:43:08 -0500
+date:   2026-09-12 23:00:00 -0500
 categories: [life]
 comments: true
 tags: [retirement]
