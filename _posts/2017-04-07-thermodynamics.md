@@ -12,15 +12,14 @@ Based on the interactions so far, I have the impression that the chemists have a
 better grasp on thermodynamics and statistical mechanics than me
 because to me,
 
-* thermodynamics is multi-variable calculus 
+* thermodynamics is multi-variable calculus
 * statistical mechanics is information theory,
 
-but to them the thermodynamic quantities are experimental measurable thus
-they have intuitions.
+but to them the thermodynamic quantities are experimental measurable thus they have intuitions.
 
 In this post, I will try to summarize the basics of thermodynamics.
 Due to my limited experience, I find there is not much content in it.
-However, there are two very interesting topics 
+However, there are two very interesting topics
 
 * phase transition
 * nonequilibrium thermodynamics

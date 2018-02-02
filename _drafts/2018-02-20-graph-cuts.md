@@ -53,6 +53,12 @@ Even today there are many physicists working on the variants of it, particularly
 Statisticians and computer scientists usually call these variations of Ising model [Markov random field](https://en.wikipedia.org/wiki/Markov_random_field).
 Note here Markovian refers to the spatial dimension instead of the temporal dimension, as the name 'field' indicates.
 
+
+
+[max flow min cut theorem](https://en.wikipedia.org/wiki/Max-flow_min-cut_theorem)
+Ford-Fulkerson algorithm in 1956
+
+
 * J. Besag, Spatial Interaction and the Statistical Analysis of Lattice Systems, J. Royal Statistical Soc., Series B, vol. 36, pp. 192-236, 1974.
 
 In 1989, D.M. Greig
@@ -73,5 +79,5 @@ submodularity
 http://www.csd.uwo.ca/~yuri/Papers/pami04.pdf)
 http://pub.ist.ac.at/~vnk/software.html)
 
-Vladimir Kolmogorov and Ramin Zabih, What energy functions can be minimized via graph cuts, IEEE transactions on pattern analysis and machine intelligence, vol. 26, no. 2, pp. 147, Feb. 2004.
-
+* Vladimir Kolmogorov and Ramin Zabih, What energy functions can be minimized via graph cuts, IEEE transactions on pattern analysis and machine intelligence, vol. 26, no. 2, pp. 147, Feb. 2004.
+* Kindermann, Ross; Snell, J. Laurie (1980). Markov Random Fields and Their Applications (PDF). American Mathematical Society.

@@ -51,9 +51,18 @@ Note also that a protein can easily have more than 100 thousand atoms.
 It also did not take long for the idea of [universal quantum computer](https://en.wikipedia.org/wiki/Quantum_Turing_machine) to pop up.
 It is a direct analogy of the classical computer, the Church-Turing machine.
 
+ \ | classical computer | quantum computer
+ --- | --- | ---
+ unit | bit <ul><li>two states: 0 or 1</li><li>hardware: <ul><li>transistor (cpu)</li><li>transistor/capacitor (memory)</li><li>ferromagnetic material (hard drive)</li></ul> </li> </ul> | qubit <ul><li>two basis states: 0 and 1</li><li>hardware: macroscopic quantum systems <ul><li>superconducting circuit (many companies) </li> <li>trapped ion (Amazon)</li> <li>quantum dot (Intel)</li><li>photon (NTT) </li> <li>topological (Microsoft) </li> <li>NV diamond</li><li>neutral atom</li></ul> </li> </ul>
+ universal gate set| 1-bit gate NOT + 2-bit gate AND and OR (NAND and NOR) | 1-qubit gate + some 2-qubit gate such as [CNOT](https://en.wikipedia.org/wiki/Controlled_NOT_gate)
+
+
 There are other implementations of universal quantum computer other than the [circuit model](https://en.wikipedia.org/wiki/Quantum_circuit),
 such as [one way quantum computing](https://en.wikipedia.org/wiki/One-way_quantum_computer).
 I will not discuss them further here.
+
+In classical computer, the bit is both a computational unit and storage unit.
+I am not aware of the storage device for qubits yet.
 
 There is the vague notion of [quantum supremacy at 50 qubits](https://en.wikipedia.org/wiki/Quantum_supremacy)
 
@@ -96,41 +105,15 @@ Back in my graduate school years (around 2010), there were few industry opportun
 
 A more comprehensive list of [public/private companies invested in quantum computing can be found here](https://quantumcomputingreport.com/players/).
 
-* [IBM](https://www.research.ibm.com/ibm-q/)
-    * 5 qubit @May.2016 free for public access
-    * 16 qubit @May.2017 free for public use
-    * 20 qubit @Nov.2017 for clients
-    * 50 qubit prototype
-* [D-Wave](https://www.dwavesys.com)
-    * 2000 qubits
-* [Rigetti](https://www.rigetti.com/)
-    * 19 superconduting qubit @Dec.2017
-* [Google]()
-    * [OpenFermion]()
-    * 9 superconduting qubit @Sep.2017
-# [Intel]()
-    * 49 superconducting qubit @Jan.2018
-    * spin-qubit in silicon (single electron transistor)
-
-[news](https://edgylabs.com/11-companies-set-for-a-quantum-computing-leap)
-drug discovery companies
-
-* [Amgen](http://www.amgen.com/)
-* [Biogen](https://www.biogen.com/)
-
-
-two start ups
-
-* [1qbit](https://1qbit.com/)
-* [post-quantum](https://www.post-quantum.com)
-
-company | product | software |hardware | note
---- | --- | --- | --- | ---
-IBM | | QISKit, OpenQASM | 50 qubits prototype |
-Microsoft | "", "Q#" | "LIQUi|>" | |
-Google | | [quantum playground](http://www.quantumplayground.net/) | |
-Rigetti | Forest: API to up to 26-qubit simulator | Quil instruction set | 19 superconduting qubits
-D-Wave | 2000Q | API | > 2000 superconduting qubits
+company | type | qubit count | next goal
+--- | --- | --- | ---
+IBM | superconducting | 50 | ?
+Intel |superconducting | 49 | ?
+Google | superconducting | 22 | 49
+Rigetti | superconducting | 19 | ?
+IonQ (Amazon) | trapped ion | 7 | 20-50
+D-Wave | superconducting | 2048 | 5000
+NTT | photon | 2048 | 100,000
 
 
 [IBM quantum experience](https://en.wikipedia.org/wiki/IBM_Quantum_Experience)
@@ -139,7 +122,14 @@ D-Wave | 2000Q | API | > 2000 superconduting qubits
 * N.M. Linke, et.al., [Experimental comparison of two quantum computing architectures, PNAS 114(13) 3305, 2017](http://www.pnas.org/content/114/13/3305)
 
 
-## experimental papers on quantum chemisty simulations
+## papers on quantum chemisty simulations
+
+[news](https://edgylabs.com/11-companies-set-for-a-quantum-computing-leap)
+drug discovery companies
+
+* [Amgen](http://www.amgen.com/)
+* [Biogen](https://www.biogen.com/)
+
 
 * Aspuru-Guzik et al, Simulated Quantum Computation of Molecular Energies, Science (2005)
     * simulating quantum computer using classical computer, 4 qubits
