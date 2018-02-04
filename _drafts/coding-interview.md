@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Preparation for coding interviews
-date:   2017-12-12 13:43:08 -0500
+date:   2018-12-12 13:43:08 -0500
 categories: [coding]
 comments: true
 tags: [coding interview]

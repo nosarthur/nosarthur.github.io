@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Quantum Fourier transform
-date:   2018-01-31 03:43:08 -0500
+date:   2018-02-01 08:00:00 -0500
 categories: [quantum information and computation]
 comments: true
 tags: [QFT]

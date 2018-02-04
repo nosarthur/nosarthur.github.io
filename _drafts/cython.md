@@ -1,5 +1,11 @@
-
-
+---
+layout: post
+title: Cython
+date: 2018-10-15 10:00:00 -0500
+categories: [coding]
+comments: true
+tags: [python]
+---
 
 Back in the school days, I usually follow two steps for my projects
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Kirchhoff's laws
-date:   2018-01-20 01:00:00 -0500
+date:   2018-08-20 01:00:00 -0500
 categories: [math and physics]
 comments: true
 tags: [graph theory, circuit analysis]

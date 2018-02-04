@@ -1,3 +1,12 @@
+---
+layout: post
+title: "Kirchhoff's law"
+date:   2018-11-07 10:00:00 -0500
+categories: [math and physics]
+comments: true
+tags: [circuit theory, graph theory]
+---
+
 
 
 Hamming bound

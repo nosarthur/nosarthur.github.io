@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Quantum computing
-date:   2018-02-24 23:00:00 -0500
+date:   2018-02-03 23:00:00 -0500
 categories: [technology]
 comments: true
 tags: [quantum computer]

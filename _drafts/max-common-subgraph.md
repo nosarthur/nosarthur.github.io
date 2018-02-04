@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Maximum common subgraph 
-date:   2017-11-21 13:43:08 -0500
+title: Maximum common subgraph
+date:   2018-02-01 13:00:00 -0500
 categories: [math and physics]
 comments: true
 tags: [algorithm, graph theory]
@@ -17,7 +17,9 @@ In this post, I will review the maximum common subgraph problem in the context o
 * subgraph isomorphism (whether one molecule contains another molecule)
 * maximal common subgraph (what is the common structure between two molecules)
 
-Note that [subgraph isomorphism problem]() is [NP-complete]().
+Note that [subgraph isomorphism problem](https://en.wikipedia.org/wiki/Subgraph_isomorphism_problem) is [NP-complete](https://en.wikipedia.org/wiki/NP-completeness).
+
+[graph isomorphism](https://en.wikipedia.org/wiki/Graph_isomorphism_problem) is [NP-intermediate](https://en.wikipedia.org/wiki/NP-intermediate)
 
 maximum common subgraph (MCS)
 
@@ -31,9 +33,9 @@ As a result, the MCS created using these two ways are different.
 * maximum common induced subgraph (MCIS): vertex deletion
 * maximum common edge subgraph (MCES): edge deletion
 
-As an example, 
+As an example,
 
-<svg width='430' height='180'> 
+<svg width='430' height='180'>
 <circle cx='400' cy='30' r='20' fill='white' stroke-width='3' stroke='black' /> 
 <circle cx='300' cy='30' r='20' fill='white' stroke-width='3' stroke='black' /> 
 <circle cx='300' cy='130' r='20' fill='white' stroke-width='3' stroke='black' /> 

@@ -17,7 +17,7 @@ Autonomous mean
 
 * yoga
 * martial art
-    1. Brazilian Jiu-Jitsu 
+    1. Brazilian Jiu-Jitsu
     2. Kendo
     3. Karate
 * rock climbing

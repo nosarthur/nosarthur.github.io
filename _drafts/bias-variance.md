@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bias-Variance tradeoff
-date:   2017-09-01 03:43:08 -0500
+date:   2019-09-01 03:43:08 -0500
 categories: [math and physics]
 comments: true
 tags: [variance, bias]

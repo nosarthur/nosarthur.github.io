@@ -1,7 +1,7 @@
 ---
 layout: post
 title: design patterns
-date:   2017-11-21 13:43:08 -0500
+date:   2018-11-21 13:43:08 -0500
 categories: [coding]
 comments: true
 tags: [design pattern]

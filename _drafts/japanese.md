@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Learning Japanese
-date:   2017-11-21 08:00:00 -0500
+date:   2019-11-21 08:00:00 -0500
 categories: [side project]
 comments: true
 tags: [language]

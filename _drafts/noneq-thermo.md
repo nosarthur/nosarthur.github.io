@@ -1,7 +1,7 @@
 ---
 layout: post
 title: non-equilibrium thermodynamics
-date:   2017-12-12 10:00:00 -0500
+date:   2019-12-12 10:00:00 -0500
 categories: [math and physics]
 comments: true
 tags: [thermodynamics]

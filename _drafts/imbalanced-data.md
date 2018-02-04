@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to deal with imbalaned data in classification problems
-date: 2017-10-01 03:43:08 -0500
+date: 2018-10-01 03:43:08 -0500
 categories: [machine learning]
 comments: true
 tags: [PDE]

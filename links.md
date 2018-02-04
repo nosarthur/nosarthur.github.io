@@ -10,6 +10,7 @@ permalink: /links/
     * [Michael Nielsen][nielsen] 
     * [Allen Downey](http://allendowney.blogspot.com/)
     * [Derek Lowe](http://blogs.sciencemag.org/pipeline/)
+    * [Miguel Grinberg](https://blog.miguelgrinberg.com/index)
     * [Gavin E. Crooks](http://threeplusone.com/gec/)
 * early retirement
     * [Mr Money Mustache](http://www.mrmoneymustache.com)
