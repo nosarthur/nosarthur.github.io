@@ -31,7 +31,9 @@ where $$x_i =\pm1$$ is the state label at each site, and the summation $$<i,j>$$
 In this model, the state labels represents the direction of spins (think of small magnets) either along the external field or opposite to the external field,
 $$h$$ represents external magnetic field, and $$J$$ describes the spin-spin interaction strength.
 
-At the time, there was interest to model 'spontaneous magnetization', i.e., without an external magnetic field
+At the time, there was interest to model 'spontaneous magnetization', i.e., without an external magnetic field,
+magnetization just appears as a result of lowering temperature.
+In the case of $$h=0, J<0$$, having all $$x_i$$ being the same value (either all 1 or all -1) would be the ground state.
 
 Many famous physicists have contributed to the development of are associated with Ising model.
 The most well-known one may be [Lars Onsager](https://en.wikipedia.org/wiki/Lars_Onsager), who solved the exact analytical
@@ -40,7 +42,7 @@ Others include [Rudolf Peierls](https://en.wikipedia.org/wiki/Rudolf_Peierls) (a
 [Hans Bethe](https://en.wikipedia.org/wiki/Hans_Bethe) (aged 98),
 [C.N. Yang](https://en.wikipedia.org/wiki/Chen-Ning_Yang) (age 95 now), [T.D. Lee](https://en.wikipedia.org/wiki/Tsung-Dao_Lee) (age 91 now), and many more.
 
-There are endless variations of it.
+There are endless variations of Ising model.
 
 * increase the number of possible states at each lattice site
 [Potts model](https://en.wikipedia.org/wiki/Potts_model).
@@ -58,6 +60,10 @@ Note here Markovian refers to the spatial dimension instead of the temporal dime
 [max flow min cut theorem](https://en.wikipedia.org/wiki/Max-flow_min-cut_theorem)
 Ford-Fulkerson algorithm in 1956
 
+from MIT OCW
+
+{% include youtubePlayer.html id="VYZGlgzr_As" %}
+
 
 * J. Besag, Spatial Interaction and the Statistical Analysis of Lattice Systems, J. Royal Statistical Soc., Series B, vol. 36, pp. 192-236, 1974.
 
@@ -66,9 +72,12 @@ In 1989, D.M. Greig
 * D. Greig, B. Porteous, and A. Seheult, Exact Maximum A Posteriori Estimation for Binary Images, J. Royal Statistical Soc., Series B, vol. 51, no. 2, pp. 271-279, 1989.
 
 
-binary values 0 and 1.
+Now we are going to switch gears for the image processing.
+Here binary values 0 and 1 are preferred.
 
 $$x_i\in \{0, 1, \O\}$$
+
+minimizing quadratic function of 0-1 variables
 
 submodularity
 

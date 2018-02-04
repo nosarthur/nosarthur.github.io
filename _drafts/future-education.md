@@ -24,12 +24,15 @@ Education should be
 * personalized
 * free
 
+* community-based Q&A
+
 Difficulties
 
 * feedback mechanism
 * credential
 
 ## What do we need to do?
+
 
 [c]: https://www.coursera.org/
 [ocw]: https://www.coursera.org/
