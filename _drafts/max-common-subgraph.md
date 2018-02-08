@@ -1,25 +1,15 @@
 ---
 layout: post
 title: Maximum common subgraph
-date:   2018-02-01 13:00:00 -0500
+date:   2019-02-01 13:00:00 -0500
 categories: [math and physics]
 comments: true
 tags: [algorithm, graph theory]
 ---
+
 ## introduction
 
-I have always been interested in graph theory and group theory.
-In graduate school, I had a lot of fun [applying quantum random walk to the graph isomorphism problem](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.81.052313) with my collegues.
-In my current company, I help out with some graph theory related [cheminformatics](https://en.wikipedia.org/wiki/Cheminformatics).
 In this post, I will review the maximum common subgraph problem in the context of mapping atoms between two molecules.
-
-* graph isomorphism (whether two molecules are the same)
-* subgraph isomorphism (whether one molecule contains another molecule)
-* maximal common subgraph (what is the common structure between two molecules)
-
-Note that [subgraph isomorphism problem](https://en.wikipedia.org/wiki/Subgraph_isomorphism_problem) is [NP-complete](https://en.wikipedia.org/wiki/NP-completeness).
-
-[graph isomorphism](https://en.wikipedia.org/wiki/Graph_isomorphism_problem) is [NP-intermediate](https://en.wikipedia.org/wiki/NP-intermediate)
 
 maximum common subgraph (MCS)
 
@@ -32,23 +22,6 @@ As a result, the MCS created using these two ways are different.
 
 * maximum common induced subgraph (MCIS): vertex deletion
 * maximum common edge subgraph (MCES): edge deletion
-
-As an example,
-
-<svg width='430' height='180'>
-<circle cx='400' cy='30' r='20' fill='white' stroke-width='3' stroke='black' /> 
-<circle cx='300' cy='30' r='20' fill='white' stroke-width='3' stroke='black' /> 
-<circle cx='300' cy='130' r='20' fill='white' stroke-width='3' stroke='black' /> 
-
-<circle cx='135' cy='30' r='20' fill='white' stroke-width='3' stroke='black' /> 
-<circle cx='35' cy='30' r='20' fill='white' stroke-width='3' stroke='black' /> 
-<circle cx='35' cy='130' r='20' fill='white' stroke-width='3' stroke='black' /> 
-<line x1="300" y1="49" x2="300" y2="111" stroke="#000" stroke-width="3" />
-<line x1="390" y1="47" x2="317" y2="122" stroke="#000" stroke-width="3" />
-<line x1="35" y1="49" x2="35" y2="111" stroke="#000" stroke-width="3" />
-<line x1="125" y1="47" x2="52" y2="122" stroke="#000" stroke-width="3" />
-<line x1="54" y1="30" x2="115" y2="30" stroke="#000" stroke-width="3" />
-</svg>
 
 * vertex product graph
 * edge product graph
@@ -87,7 +60,7 @@ The classic papers include
 
 strategies to speed up the tree search
 
-* branch and bound 
+* branch and bound
 * pruning
     * best found, current + potential
     * consider only connected subgraphs
