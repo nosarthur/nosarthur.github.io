@@ -7,9 +7,13 @@ comments: true
 tags: [algorithm, graph theory]
 ---
 
-I have always been very interested in graph theory because of its relevance to real-life problems,
-deceiving simplicity, and the ingenuity in existing results.
-Back in graduate school, I had a lot of fun [attacking the graph isomorphism problem using quantum random walk](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.81.052313) with my collegues.
+I have always been very interested in graph theory for many reasons.
+
+* intuitive 
+* Due to its high-level of abstraction, it is relevant to all kinds of real-life problems.
+
+Many of the graph theory problems can be deceiving simplicity, and the ingenuity in existing results.
+Back in graduate school, I had a lot of fun [attacking the graph isomorphism problem of strongly regular graphs using quantum random walk](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.81.052313) with my colleagues.
 In my current company invested in computational chemistry,
 graph theory is also used everywhere since atoms and chemical bonds are natrually modeled by nodes and edges.
 It is an important component of the field called [cheminformatics](https://en.wikipedia.org/wiki/Cheminformatics).
@@ -17,6 +21,10 @@ It is an important component of the field called [cheminformatics](https://en.wi
 * graph isomorphism: are two molecules the same?
 * subgraph isomorphism: does a molecule contrain some specific fragment?
 * maximal common subgraph: what is the common structure between two molecules?
+
+Note that [subgraph isomorphism problem](https://en.wikipedia.org/wiki/Subgraph_isomorphism_problem) is [NP-complete](https://en.wikipedia.org/wiki/NP-completeness).
+
+[graph isomorphism](https://en.wikipedia.org/wiki/Graph_isomorphism_problem) is [NP-intermediate](https://en.wikipedia.org/wiki/NP-intermediate)
 
 
 [Stirling's approximation](https://en.wikipedia.org/wiki/Stirling%27s_approximation) is used.
@@ -30,14 +38,7 @@ It is an important component of the field called [cheminformatics](https://en.wi
 
 In this post, I will review the maximum common subgraph problem in the context of mapping atoms between two molecules.
 
-The [python networkx module](https://networkx.github.io/) already impleted the VF2 algorithm for subgraph isomorphism.
-
-## introduction
-
-Note that [subgraph isomorphism problem](https://en.wikipedia.org/wiki/Subgraph_isomorphism_problem) is [NP-complete](https://en.wikipedia.org/wiki/NP-completeness).
-
-[graph isomorphism](https://en.wikipedia.org/wiki/Graph_isomorphism_problem) is [NP-intermediate](https://en.wikipedia.org/wiki/NP-intermediate)
-
+The [python networkx module](https://networkx.github.io/) already implemented the VF2 algorithm for subgraph isomorphism.
 
 ## introduction
 

@@ -17,7 +17,7 @@ There has been quite some news on quantum computers from the leading tech compan
 * Nov.2017: [IBM announced 20-qubit processor for clients and 50-qubit prototype](https://www-03.ibm.com/press/us/en/pressrelease/53374.wss)
 * Jan.2018: [Intel announced 49-qubit processor](https://newsroom.intel.com/news/intel-advances-quantum-neuromorphic-computing-research/)
 
-It seems they have more or less agreed on the [cloud-based quantum computing architecture](https://en.wikipedia.org/wiki/Cloud-based_quantum_computing) and anticipate quantum computing to bring breakthroughs to the following fields soon
+They have agreed on the [cloud-based quantum computing architecture](https://en.wikipedia.org/wiki/Cloud-based_quantum_computing) and it is anticipated that quantum computing will bring breakthroughs to the following fields soon
 
 * drug development
 * material science
@@ -30,10 +30,11 @@ Specifically, there are papers demonstrate ideas in the following two areas
 * machine learning / artificial intelligence
 
 In this post, I will give a gentle introduction to this technology.
-Due to my limited exposure with this huge field, I will only touch the very superficial surface of it here.
-Some sub-fields like quantum communication, algorithm design, will be fully omitted.
-I also wouldn't talk much about the fusion of quantum computing and neural network.
-You can checkout [this article](https://www.quantamagazine.org/job-one-for-quantum-computers-boost-artificial-intelligence-20180129/) if you are interested.
+The ideal reader would have some acquaintance with science and technology, but not necessary an expert of quantum mechanics.
+Emphasis will be placed on chemistry simulation,
+and other sub-fields such as quantum communication, algorithm design, etc, will be fully omitted.
+If you are interested in the fusion of quantum computing and neural network,
+checkout [this article](https://www.quantamagazine.org/job-one-for-quantum-computers-boost-artificial-intelligence-20180129/).
 
 Doug Finke maintains a website with lots of useful information on quantum computing,
 including up-to-date qubit count/characteristics, industry/academic players, job opportunities, etc
@@ -45,10 +46,12 @@ including up-to-date qubit count/characteristics, industry/academic players, job
 In the early 80s, people started to think about simulating quantum systems using some universal quantum simulator whose Hamiltonian can be easily tuned.
 This is a very natural idea because simulating a quantum system on a classical computer is very expensive:
 in the most straightforward implementation, the number of bits needed grows exponentially with the number of atoms.
-For example, if 10 energy levels are needed to describe each atom, then a 100-atom system would require a vector of size $$10^{100}$$ components.
-Note also that a protein can easily have more than 100 thousand atoms.
+For example, if 10 energy levels (states) are needed to describe each atom, then a 100-atom system would require a vector of size $$10^{100}$$ components.
+Thus in practice, such straightforward implementation (so-called [full configuration interaction](https://en.wikipedia.org/wiki/Full_configuration_interaction)) can only be used to study very small molecules.
+Various approximated methods have been developed to deal with intermediate sized molecules with less computational burden.
+For large molecules such as proteins which can easily have more than 100,000 atoms, it is still extremely challenging if not impossible to simulate quantum mechanically.
 
-It also did not take long for the idea of [universal quantum computer](https://en.wikipedia.org/wiki/Quantum_Turing_machine) to pop up.
+It did not take long for the idea of [universal quantum computer](https://en.wikipedia.org/wiki/Quantum_Turing_machine) to pop up.
 It is a direct analogy of the classical computer, the Church-Turing machine.
 
  \ | classical computer | quantum computer
@@ -56,7 +59,7 @@ It is a direct analogy of the classical computer, the Church-Turing machine.
  unit | bit <ul><li>two states: 0 or 1</li><li>hardware: <ul><li>transistor (cpu)</li><li>transistor/capacitor (memory)</li><li>ferromagnetic material (hard drive)</li></ul> </li> </ul> | qubit <ul><li>two basis states: 0 and 1</li><li>hardware: macroscopic quantum systems <ul><li>superconducting circuit (many companies) </li> <li>trapped ion (Amazon)</li> <li>quantum dot (Intel)</li><li>photon (NTT) </li> <li>topological (Microsoft) </li> <li>NV diamond</li><li>neutral atom</li></ul> </li> </ul>
  universal gate set| 1-bit gate NOT + 2-bit gate AND and OR (NAND and NOR) | 1-qubit gate + some 2-qubit gate such as [CNOT](https://en.wikipedia.org/wiki/Controlled_NOT_gate)
 
-
+This analogy to the classical computer is known as [quantum circuit model](https://en.wikipedia.org/wiki/Quantum_circuit).
 There are other implementations of universal quantum computer other than the [circuit model](https://en.wikipedia.org/wiki/Quantum_circuit),
 such as [one way quantum computing](https://en.wikipedia.org/wiki/One-way_quantum_computer).
 I will not discuss them further here.
@@ -80,11 +83,7 @@ Here is a list of the seminal theory papers before year 2000. It is not meant to
 
 In year 2000, [Michael Nielsen](https://en.wikipedia.org/wiki/Michael_Nielsen) and [Isaac Chuang](https://en.wikipedia.org/wiki/Isaac_Chuang) published a book on quantum computing which becomes the standard textbook in this field
 
-<a target="_blank"  
-href="https://www.amazon.com/gp/product/1107002176/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1107002176&linkCode=as2&tag=nosarthur2016-20&linkId=1c89937daa1c6beab7b2f06bdb66724e"><img border="0" 
-src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=1107002176&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=nosarthur2016-20" 
-></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=nosarthur2016-20&l=am2&o=1&a=1107002176" width="1" height="1" border="0" 
-alt="" style="border:none !important; margin:0px !important;" />
+<a target="_blank" href="https://www.amazon.com/gp/product/1107002176/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1107002176&linkCode=as2&tag=nosarthur2016-20&linkId=1c89937daa1c6beab7b2f06bdb66724e"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=1107002176&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=nosarthur2016-20"></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=nosarthur2016-20&l=am2&o=1&a=1107002176" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 
 Michael Nielsen also writes [a blog with many interesting articles](http://michaelnielsen.org/).
 

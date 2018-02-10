@@ -10,7 +10,7 @@ title: mental exercise
 email: zhou.dong@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   A scientist and programmer. Familiar with magnetic resonance imaging, quantum computing, and biophysics. <br>
-  A reader and writer. Interested in martial arts, yoga, and other ancient teachings. 
+  A reader and writer. Interested in martial arts, yoga, and other ancient teachings.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://nosarthur.github.io" # the base hostname & protocol for your site
 twitter_username:
@@ -20,3 +20,9 @@ github_username:  nosarthur
 markdown: kramdown
 highlighter: rouge
 
+encoding: UTF-8
+kramdown:
+  input: GFM
+  hard_wrap: false
+future: true
+jailed: false
