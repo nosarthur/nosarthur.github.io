@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Quantum computing
-date:   2018-02-10 10:00:00 -0500
+date:   2018-02-10 18:00:00 -0500
 categories: [technology]
 comments: true
 tags: [quantum computer]
@@ -190,4 +190,9 @@ This interest may be traced to the following 4 papers (I might miss other import
     * superconducting qubits (fluxon circuit QED), 6 qubits
     * calculate H2, LiH, BeH2 ground state energies
 
+There are two essential components in these energy calculations
 
+* encode molecular states into qubit states
+* eigenvalue and eigenvector calculation using [quantum phase estimation algorithm](https://en.wikipedia.org/wiki/Quantum_phase_estimation_algorithm)
+
+I will explain them in more detail in another post.
