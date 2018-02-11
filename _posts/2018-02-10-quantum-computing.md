@@ -92,7 +92,7 @@ This line of thought is a direct analogy of the classical computer, the [Church-
 
  \ | classical computer | quantum computer
  --- | --- | ---
- unit | bit <ul><li>two states: 0 or 1</li><li>hardware: <ul><li>transistor (cpu)</li><li>transistor/capacitor (memory)</li><li>ferromagnetic material (hard drive)</li></ul> </li> </ul> | qubit <ul><li>two basis states: 0 and 1</li><li>hardware: macroscopic quantum systems <ul><li>superconducting circuit (many companies) </li> <li>trapped ion (Amazon)</li> <li>quantum dot (Intel)</li><li>photon (NTT) </li> <li>topological (Microsoft) </li> <li>NV diamond</li><li>neutral atom</li></ul> </li> </ul>
+ unit | {::nomarkdown} bit <ul><li>two states: 0 or 1</li><li>hardware: <ul><li>transistor (cpu)</li><li>transistor/capacitor (memory)</li><li>ferromagnetic material (hard drive)</li></ul> </li> </ul> {:/} | {::nomarkdown}qubit <ul><li>two basis states: 0 and 1</li><li>hardware: macroscopic quantum systems <ul><li>superconducting circuit (many companies) </li> <li>trapped ion (Amazon)</li> <li>quantum dot (Intel)</li><li>photon (NTT) </li> <li>topological (Microsoft) </li> <li>NV diamond</li><li>neutral atom</li></ul> </li> </ul> {:/}
  universal gate set| 1-bit gate NOT + 2-bit gate AND and OR | 1-qubit gate + some 2-qubit gate such as [CNOT](https://en.wikipedia.org/wiki/Controlled_NOT_gate)
  rationale| break arbitrary boolean functions into basic building blocks, for example, two-bit NAND and NOR gates | break arbitrary unitary evolutions to basic building blocks
 

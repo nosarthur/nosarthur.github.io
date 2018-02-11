@@ -24,5 +24,6 @@ encoding: UTF-8
 kramdown:
   input: GFM
   hard_wrap: false
-future: true
+future: false
+show_drafts: true
 jailed: false
