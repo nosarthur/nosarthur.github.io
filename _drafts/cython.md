@@ -9,8 +9,9 @@ tags: [python]
 
 Back in the school days, I usually follow two steps for my projects
 
-* prototype with Matlab/octave
-* if speed is of concern, rewrite with C/C++, possibly calling out the Fortran LAPACK library
+1. prototype with Matlab/octave
+2. if speed is of concern, rewrite with C/C++, possibly calling out the Fortran LAPACK library
+
 
 At that time (~2007), Numpy was quite buggy comparing to Matlab so it wasn't my choice.
 
@@ -32,6 +33,8 @@ pip3 install Cython
 ```
 
 The version I installed is 0.27.3
+
+https://www.youtube.com/watch?v=_1MSX7V28Po
 
 
 * [Cython tutorial](http://docs.cython.org/en/latest/src/tutorial/cython_tutorial.html)

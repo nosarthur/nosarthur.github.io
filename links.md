@@ -6,8 +6,9 @@ permalink: /links/
 
 ### blogs
 
-* interesting people
-    * [Michael Nielsen][nielsen] 
+* science and technology
+    * [Michael Nielsen][nielsen]
+    * [Dave Bacon](http://dabacon.org/)
     * [Allen Downey](http://allendowney.blogspot.com/)
     * [Derek Lowe](http://blogs.sciencemag.org/pipeline/)
     * [Miguel Grinberg](https://blog.miguelgrinberg.com/index)
@@ -23,8 +24,4 @@ permalink: /links/
 
 
 [buddhist]: http://www.buddhanet.net/
-[off]: http://www.offconvex.org
 [nielsen]: http://michaelnielsen.org/
-[colah]: http://colah.github.io
-[karthy]: http://karpathy.github.io
-[rare]: http://rare-technologies.com/blog/
