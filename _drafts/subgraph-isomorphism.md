@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Subgraph isomorphism
-date:   2018-02-02 13:00:00 -0500
+date:   2018-03-02 13:00:00 -0500
 categories: [math and physics]
 comments: true
 tags: [algorithm, graph theory]

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Quantum measurement
-date:   2017-12-01 03:43:08 -0500
+date:   2018-12-01 03:43:08 -0500
 categories: [quantum information and computation]
 comments: true
 tags: [POVM]

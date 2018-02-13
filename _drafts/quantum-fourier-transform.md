@@ -8,18 +8,17 @@ tags: [QFT]
 ---
 
 [Quantum Fourier transform (QFT)](https://en.wikipedia.org/wiki/Quantum_Fourier_transform) is a key concept in quantum algorithm design.
-For example, it is the essential ingredient of [Shor's algorithm](https://en.wikipedia.org/wiki/Shor%27s_algorithm) for factoring and the [quantum phase estimation algorithm](https://en.wikipedia.org/wiki/Quantum_phase_estimation_algorithm) for solving eigenvalues and eigenvectors of unitary matrices.
-In this post, I will explain how it works.
+For example, it is the essential ingredient of [Shor's algorithm](https://en.wikipedia.org/wiki/Shor%27s_algorithm) for factoring and the [quantum phase estimation algorithm](https://en.wikipedia.org/wiki/Quantum_phase_estimation_algorithm) for solving eigenvalues and eigenvectors. In this post, I will explain how it works.
 
 QFT is closely related to [discrete Fourier transform (DFT)](https://en.wikipedia.org/wiki/Discrete_Fourier_transform),
-an essential tool in digital signal processing.
+a tool of essential importance in [digital signal processing](https://en.wikipedia.org/wiki/Digital_signal_processing).
 And we will start from there.
 
 ## discrete Fourier transform (DFT)
 
-As the name indicates, DFT is the discrete version of [Fourier transform](https://en.wikipedia.org/wiki/Fourier_transform), thus it is of great importance to [digital signal processing](https://en.wikipedia.org/wiki/Digital_signal_processing). It is
+As the name indicates, DFT is the discrete version of [Fourier transform](https://en.wikipedia.org/wiki/Fourier_transform). It is
 
-* a linear map between a finite sequence of complex numbers to another sequence of complex numbers;
+* a linear map between two sequences of complex numbers;
 * nondegenerate thus an inverse discrete Fourier transform (IDFT) exists;
 * so special that its action (and inverse action) can be computed efficiently with complexity $$O(N\log N)$$, instead of $$O(N^2)$$, using the famous [fast Fourier transform (FFT) algorithm](https://en.wikipedia.org/wiki/Fast_Fourier_transform).
 
@@ -44,9 +43,8 @@ For QFT, $$1/\sqrt{N}$$ is preferred as it normalizes the wave functions correct
 There is also arbitrariness in the range of the summation index $$j$$:
 any $$N$$ consecutive integers will do.
 Sometimes it is more convenient to include both positive and negative values.
-To complicate things further, some authors swap the definitions of DFT and IDFT.
-Thus one needs to be cautious when applying other people's formulas.
-I will stick to the fore-mentioned choice here.
+To complicate things even more, some authors swap the definitions of DFT and IDFT.
+Thus one needs to be very cautious when applying other people's formulas.
 
 The DFT transformation has explicit matrix form. For example,
 
@@ -78,6 +76,8 @@ If you visualize the $$\omega_N^j$$ in the complex plane, then each row can be s
 And the action of each row is to extract the component of a specific angular velocity.
 
 As a physicist by training, I tend to think in [Dirac bra-ket notation](https://en.wikipedia.org/wiki/Bra%E2%80%93ket_notation), i.e.,
+the original data point is $$x_j = \left<x=j|\Psi\right>$$,
+the frequency domain point is $$X_j = \left<k=j|\Psi\right>$$, and
 
 $$ DFT_N = \sum_{k=0}^{N-1} \left|k\right>\left<k\right| $$
 
@@ -132,3 +132,4 @@ As one application of QFT, let's look at [quantum phase estimation algorithm (PE
 
 ## reference
 * [R. Cleve, et al, Quantum algorithms revisited, Proc. Roy. Soc. Lond. 454, 339 (1998)](https://arxiv.org/pdf/quant-ph/9708016.pdf)
+* [A. Yu. Kitaev, Quantum measurements and the Abelian Stabilizer Problem, (1995)](https://arxiv.org/abs/quant-ph/9511026)
