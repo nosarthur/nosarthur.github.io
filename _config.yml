@@ -19,10 +19,3 @@ github_username:  nosarthur
 # Build settings
 markdown: kramdown
 highlighter: rouge
-
-encoding: UTF-8
-kramdown:
-  input: GFM
-  hard_wrap: false
-future: false
-jailed: false

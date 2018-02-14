@@ -102,9 +102,8 @@ such as [one way quantum computing](https://en.wikipedia.org/wiki/One-way_quantu
 
 There are two further points I would mention too
 
-* In classical computer, the bit is both a computational unit and storage unit.  I am not aware of any storage device for qubits yet.
+* In classical computer, the bit is conceptually both a computational unit and storage unit. However in practice, the computation bits ([CPU register](https://en.wikipedia.org/wiki/Processor_register)) are different from the storage bits (say memory, hard disk). I am not aware of any storage device for qubits yet. In other words, the current 'quantum computers' are quantum CPUs.
 * I am also not aware of high-level [programming languages for quantum computer](https://en.wikipedia.org/wiki/Quantum_programming) yet. Right now one needs to plan out sequence of quantum gates on the qubits, which can be likened to programming with [assembly language on classical computer](https://en.wikipedia.org/wiki/Assembly_language). All kinds of tricks have been developed to use as few qubits as possible since there are not many available nowadays.
-
 
 Here is a list of the seminal theory papers before year 2000. It is not meant to be a complete list.
 
