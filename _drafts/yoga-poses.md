@@ -13,11 +13,19 @@ tags: [yoga]
 * recipes
 * dishes
 
+https://en.wikipedia.org/wiki/List_of_asanas
 
-* shoulders: circle pose (mandalasana)
+* shoulders: circle pose ([Mandalasana](https://en.wikipedia.org/wiki/Mandalasana))
 * spine:
-    * cervical section: shoulder stand (Sarvangasana)
-    * thoracic and lumbar sections: full wheel (Urdhva Dhanurasana) and headstand (Sirsasana)
-	* sacral section: full lotus (Padmasana)
+    * cervical section: shoulder stand ([Sarvangasana](https://en.wikipedia.org/wiki/Sarvangasana))
+    * thoracic and lumbar sections: full wheel ([Urdhva Dhanurasana][wheel]) and headstand (Sirsasana)
+	* sacral section: full lotus ([Padmasana](https://en.wikipedia.org/wiki/Lotus_position))
 * pelvis:
     * monkey pose (Harumanasana)
+
+strength
+
+* walking in crow pose (Kakasana) or crane pose ([Bakasana](https://en.wikipedia.org/wiki/Bakasana))
+* walking in wheel pose ([Dhanurasana][wheel])
+
+[wheel]: https://en.wikipedia.org/wiki/Chakrasana

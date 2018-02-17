@@ -100,6 +100,9 @@ This analogy with quantum gates and quantum circuits to the classical computer i
 There are also other implementations of universal quantum computer as well,
 such as [one way quantum computing](https://en.wikipedia.org/wiki/One-way_quantum_computer) where computation is done by performing single-qubit measurements sequentially on special initial states.
 
+With some familiarity with quantum mechanics, it is also easy to see that all computation doable on classical computer can be done on quantum computer.
+See [this post for details]({% post_url 2018-02-17-boolean-gates %}).
+
 There are two further points I would mention too
 
 * In classical computer, the bit is conceptually both a computational unit and storage unit. However in practice, the computation bits ([CPU register](https://en.wikipedia.org/wiki/Processor_register)) are different from the storage bits (say memory, hard disk). I am not aware of any storage device for qubits yet. In other words, the current 'quantum computers' are quantum CPUs.
