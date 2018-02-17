@@ -13,7 +13,7 @@ tags: [yoga]
 * recipes
 * dishes
 
-https://en.wikipedia.org/wiki/List_of_asanas
+[yoga poses](https://en.wikipedia.org/wiki/List_of_asanas)
 
 * shoulders: circle pose ([Mandalasana](https://en.wikipedia.org/wiki/Mandalasana))
 * spine:
