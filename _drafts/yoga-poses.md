@@ -7,7 +7,7 @@ comments: true
 tags: [yoga]
 ---
 
-
+If we use cooking as an analogy
 
 * ingredients
 * recipes
