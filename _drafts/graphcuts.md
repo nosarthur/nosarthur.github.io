@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Segmentation using graph cuts
-date:   2018-02-28 09:00:00 -0500
+date:   2019-02-28 09:00:00 -0500
 categories: [image processing]
 comments: true
 tags: [computer vision]

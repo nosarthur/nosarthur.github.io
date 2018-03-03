@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Dao De Jing
-date:   2018-02-28 13:00:00 -0500
+date:   2018-04-28 13:00:00 -0500
 categories: [ancient texts]
 comments: true
 tags: [taoism]

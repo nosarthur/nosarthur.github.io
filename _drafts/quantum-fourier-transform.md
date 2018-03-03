@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Quantum Fourier transform
-date:   2018-02-17 08:00:00 -0500
+date:   2018-03-02 08:00:00 -0500
 categories: [quantum information and computation]
 comments: true
-tags: [QFT]
+tags: [quantum computing, phase estimation algorithm (PEA)]
 ---
 
 [Quantum Fourier transform (QFT)](https://en.wikipedia.org/wiki/Quantum_Fourier_transform) is a key concept in quantum algorithm design.
-For example, it is the essential ingredient of [Shor's algorithm](https://en.wikipedia.org/wiki/Shor%27s_algorithm) for factoring and the [quantum phase estimation algorithm](https://en.wikipedia.org/wiki/Quantum_phase_estimation_algorithm) for solving eigenvalues and eigenvectors. In this post, I will explain how it works.
+For example, it is an important ingredient of [Shor's algorithm](https://en.wikipedia.org/wiki/Shor%27s_algorithm) for factoring and the [quantum phase estimation algorithm](https://en.wikipedia.org/wiki/Quantum_phase_estimation_algorithm) for solving eigenvalues and eigenvectors. In this post, I will explain how it works.
 
 QFT is closely related to [discrete Fourier transform (DFT)](https://en.wikipedia.org/wiki/Discrete_Fourier_transform),
 a tool of essential importance in [digital signal processing](https://en.wikipedia.org/wiki/Digital_signal_processing).
@@ -16,29 +16,38 @@ And we will start from there.
 
 ## discrete Fourier transform (DFT)
 
-As the name indicates, DFT is the discrete version of [Fourier transform](https://en.wikipedia.org/wiki/Fourier_transform). It is
+As the name indicates, DFT is the discrete version of [Fourier transform](https://en.wikipedia.org/wiki/Fourier_transform).
+Most commonly, the input sequence is either time series data or some equal-distance spatial samples,
+and the output sequence corresponds to frequency data, i.e., the Fourier spectrum.
+Overall, it is
 
 * a linear map between two sequences of complex numbers;
-* nondegenerate thus an inverse discrete Fourier transform (IDFT) exists;
-* so special that its action (and inverse action) can be computed efficiently with complexity $$O(N\log N)$$, instead of $$O(N^2)$$, using the famous [fast Fourier transform (FFT) algorithm](https://en.wikipedia.org/wiki/Fast_Fourier_transform).
+* a non-degenerate map with an inverse, i.e., the inverse discrete Fourier transform (IDFT);
+* a particularly efficient linear map with computational complexity $$O(N\log N)$$ using the [fast Fourier transform (FFT) algorithm](https://en.wikipedia.org/wiki/Fast_Fourier_transform) (instead of $$O(N^2)$$ as for a general linear map)
 
-The third bullet point is the reason why it is so widely used.
+In practice, DFT is widely used because
+
+* In signal processing, often times the signals are band-limited. Then the Fourier spectrum provides a more succinct representation of the signals;
+* In physics problem, often times the symmetry can be more easily utilized in the Fourier domain;
+* It is useful for [convolution](https://en.wikipedia.org/wiki/Convolution) calculations;
+* It is efficient to calculate;
+* ...
 
 In 1D, DFT can be defined as
 
-$$ X_k = \frac{1}{\sqrt{N}} \sum_{j=0}^{N-1} x_j \omega_N ^{-jk} $$
+$$ X_k = \frac{1}{\sqrt{N}} \sum_{j=0}^{N-1} \omega_N ^{-jk} x_j $$
 
 where $$\omega_N\equiv\exp(2\pi i/N)$$ is the $$N$$'th root of unity and $$i=\sqrt{-1}$$.
 And the IDFT is given by
 
-$$ x_j = \frac{1}{\sqrt N} \sum_{j=0}^{N-1} X_k \omega_N ^{jk} $$
+$$ x_j = \frac{1}{\sqrt N} \sum_{j=0}^{N-1} \omega_N ^{jk} X_k $$
 
 Generalization to higher dimensions is straightforward.
 
 Different authors may use different normalization conventions for DFT and IDFT.
 I have the impression that physicists and engineers prefer to have $$1$$ in DFT and $$1/N$$ in IDFT,
 whereas mathematicians prefer this $$1/\sqrt{N}$$ normalization.
-For QFT, $$1/\sqrt{N}$$ is preferred as it normalizes the wave functions correctly.
+For QFT, $$1/\sqrt{N}$$ is better as it normalizes the wave functions correctly.
 
 There is also arbitrariness in the range of the summation index $$j$$:
 any $$N$$ consecutive integers will do.
@@ -79,16 +88,9 @@ As a physicist by training, I tend to think in [Dirac bra-ket notation](https://
 the original data point is $$x_j = \left<x=j|\Psi\right>$$,
 the frequency domain point is $$X_j = \left<k=j|\Psi\right>$$, and
 
-$$ DFT_N = \sum_{k=0}^{N-1} \left|k\right>\left<k\right| $$
+$$ DFT_N = \sum_{j,k=0}^{N-1} \omega_N^{-jk} \left|k\right>\left<j\right| $$
 
 which reveals the component-wise projections explicitly.
-
-As for why DFT is useful,
-
-* It is convenient to calculate [convolution](https://en.wikipedia.org/wiki/Convolution).
-* In signal processing, often times the signals are band-limited. Then the Fourier spectrum provides a more succinct representation of the signals.
-* For physics problem, often times the symmetry in the problem can be more easily utilized in the Fourier domain.
-* many other reasons
 
 There are a lot of subtleties related to DFT, especially when one want to convert [analog signals](https://en.wikipedia.org/wiki/Analog_signal) to digital signals.
 For example, given a continuous function (analog signal), should I do Fourier transform first, then sample points on the frequency domain function?
@@ -104,31 +106,39 @@ To learn more about DFT, check out this textbook on Signals and Systems by [Prof
 
 ## quantum Fourier transform (QFT)
 
+In fact, QFT is exactly DFT, except that the input/output vectors are probability amplitudes of quantum states.
+Thus it is a mathematical device to transform quantum states.
+You can think of it as a quantum gate since it is unitary and it can be efficiently implemented on a quantum computer.
 
-$$N = 2^n$$
+As for why it is useful, my current understanding is that it helps solve the measurement problem, i.e., [the wave-function collapse](https://en.wikipedia.org/wiki/Wave_function_collapse).
+Take 1-qubit for example, suppose we know the qubit is in one of the two states:
 
-$$O(n^2)$$
+$$\begin{align}
+\left|+\right> \equiv& \frac{1}{\sqrt 2}(\left|0\right> + \left|1\right>) = \frac{1}{\sqrt 2}\begin{bmatrix}1\\
+1\end{bmatrix} \\
+\left|-\right> \equiv& \frac{1}{\sqrt 2}(\left|0\right> - \left|1\right>) = \frac{1}{\sqrt 2}\begin{bmatrix}1\\
+-1\end{bmatrix}
+\end{align}$$
 
-constructive interference
+Straightforward measurements on both the states result in either state 0 or state 1 half of the time,
+not helpful in distinguishing $$\left|+\right>$$ from $$\left|-\right>$$.
+In this case, applying QFT (or IQFT) before measurement helps since
 
+$$\begin{align}IQFT_2 \left|+\right> =& \left|0\right>\\ \quad IQFT_2\left|-\right> =& \left|1\right>\end{align}$$
 
+which gives us a definite answer with one copy of the quantum state.
 
+Similarly, if we have prior information that the multi-qubit probability amplitudes take the form of one column of DFT matrix,
+we can apply IQFT gate to concentrate these amplitudes into one state.
+And one measurement on one copy of this quantum state will tell us which column it was.
 
-
-[control-NOT (CNOT) gate](https://en.wikipedia.org/wiki/Controlled_NOT_gate)
-
-$$CNOT= \begin{bmatrix}
-1& 0 & 0 & 0\\
-0& 1 & 0 & 0\\
-0& 0 & 0 & 1\\
-0& 0 & 1 & 0
-\end{bmatrix}$$
-
-$$ CNOT\left|x\right>\left|y\right> = \left|x\right>\left|y\oplus x\right>$$
+Furthermore, if the prior information is that the state vector is close to one of the columns of DFT matrix,
+then measurements on a few copies of this quantum state will tell us which column it was.
+This turns out to be quite useful: **as long as we can encode the answer to some computation problem to one of the column states, QFT provides a way to read out the answer!**
 
 ## quantum phase estimation algorithm
 
-As one application of QFT, let's look at [quantum phase estimation algorithm (PEA)](https://en.wikipedia.org/wiki/Quantum_phase_estimation_algorithm), a quantum algorithm to calculate eigenvalues and eigenvectors of unitary matrices.
+As we will see in this section, the [phase estimation algorithm (PEA)](https://en.wikipedia.org/wiki/Quantum_phase_estimation_algorithm), a quantum algorithm for eigenvalues and eigenvectors, uses QFT as a helper to read out the answer.
 
 ## reference
 * [R. Cleve, et al, Quantum algorithms revisited, Proc. Roy. Soc. Lond. 454, 339 (1998)](https://arxiv.org/pdf/quant-ph/9708016.pdf)
