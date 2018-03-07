@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Education and the social order by Bertrand Russell 
+title: Education and the social order by Bertrand Russell
 date:   2016-07-11 13:43:08 -0500
 categories: [readings]
 comments: true

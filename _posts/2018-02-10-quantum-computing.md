@@ -197,4 +197,4 @@ There are two essential components in these energy calculations
 * encode molecular states into qubit states
 * eigenvalue and eigenvector calculation using [quantum phase estimation algorithm](https://en.wikipedia.org/wiki/Quantum_phase_estimation_algorithm)
 
-I will explain them in more detail in another post.
+I will explain them in more detail in future posts.

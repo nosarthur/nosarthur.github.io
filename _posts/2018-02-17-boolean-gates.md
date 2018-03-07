@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Represent classical logic gates on quantum computer
+title:  Emulate classical logic gates on quantum computer
 date:   2018-02-17 0:00:01 -0500
 categories: [quantum information and computation]
 comments: true

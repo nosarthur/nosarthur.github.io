@@ -15,13 +15,15 @@ If we use cooking as an analogy
 
 [yoga poses](https://en.wikipedia.org/wiki/List_of_asanas)
 
-* shoulders: circle pose ([Mandalasana](https://en.wikipedia.org/wiki/Mandalasana))
+* shoulders:
+    * circle pose ([Mandalasana](https://en.wikipedia.org/wiki/Mandalasana))
+    * Capiasana
 * spine:
     * cervical section: shoulder stand ([Sarvangasana](https://en.wikipedia.org/wiki/Sarvangasana))
     * thoracic and lumbar sections: full wheel ([Urdhva Dhanurasana][wheel]) and headstand (Sirsasana)
 	* sacral section: full lotus ([Padmasana](https://en.wikipedia.org/wiki/Lotus_position))
 * pelvis:
-    * monkey pose (Harumanasana)
+    * Capiasana
 
 strength
 
