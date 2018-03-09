@@ -18,3 +18,11 @@ Soon it becomes obvious that this book bears no resemblance to The Elements of S
 it is fun to read and has little help to writing skills.
 
 
+* avoid passive tense
+* The adverb is not your friend.
+
+He also made an observation that "fear is at the root of most bad writings".
+
+and his ultimate advice is to read a lot and write a lot.
+
+> 2nd draft = 1st draft - 10%

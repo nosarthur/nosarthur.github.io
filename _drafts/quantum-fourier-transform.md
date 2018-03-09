@@ -14,6 +14,10 @@ QFT is closely related to [discrete Fourier transform (DFT)](https://en.wikipedi
 a tool of essential importance in [digital signal processing](https://en.wikipedia.org/wiki/Digital_signal_processing).
 And we will start from there.
 
+If you prefer to learn QFT without equations, you may like the following blog post by [Scott Aaronson](https://en.wikipedia.org/wiki/Scott_Aaronson):
+
+* [Shor, I'll do it](https://www.scottaaronson.com/blog/?p=208)
+
 ## discrete Fourier transform (DFT)
 
 As the name indicates, DFT is the discrete version of [Fourier transform](https://en.wikipedia.org/wiki/Fourier_transform).
@@ -108,7 +112,7 @@ To learn more about DFT, check out this textbook on Signals and Systems by [Prof
 
 In fact, QFT is exactly DFT, except that the input/output vectors are probability amplitudes of quantum states.
 Thus it is a mathematical device to transform quantum states.
-You can think of it as a quantum gate since it is unitary and it can be efficiently implemented on a quantum computer.
+You can think of it as a quantum gate since it is unitary. In addition, it can be efficiently implemented on a quantum computer.
 
 As for why it is useful, my current understanding is that it helps solve the measurement problem, i.e., [the wave-function collapse](https://en.wikipedia.org/wiki/Wave_function_collapse).
 Take 1-qubit for example, suppose we know the qubit is in one of the two states:

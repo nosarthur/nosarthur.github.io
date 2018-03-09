@@ -8,6 +8,7 @@ permalink: /links/
 
 * science and technology
     * [Michael Nielsen][nielsen]
+    * [Scott Aaronson](https://www.scottaaronson.com/blog/)
     * [Dave Bacon](http://dabacon.org/)
     * [Allen Downey](http://allendowney.blogspot.com/)
     * [Derek Lowe](http://blogs.sciencemag.org/pipeline/)

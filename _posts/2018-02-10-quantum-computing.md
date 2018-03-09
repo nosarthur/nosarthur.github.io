@@ -17,14 +17,7 @@ There has been quite some news on [quantum computing](https://en.wikipedia.org/w
 * Nov.2017: [IBM announced 20-qubit processor for clients and 50-qubit prototype](https://www-03.ibm.com/press/us/en/pressrelease/53374.wss)
 * Jan.2018: [Intel announced 49-qubit processor](https://newsroom.intel.com/news/intel-advances-quantum-neuromorphic-computing-research/)
 
-They have agreed on the [cloud-based quantum computing architecture](https://en.wikipedia.org/wiki/Cloud-based_quantum_computing) and it is anticipated that soon quantum computing will bring breakthroughs to the following fields
-
-* drug development
-* material science
-* financial modeling
-* climate forecasting
-
-all of which are notoriously difficult problems in high performance computing.
+They have agreed on the [cloud-based quantum computing architecture](https://en.wikipedia.org/wiki/Cloud-based_quantum_computing) and it is anticipated that in the foreseeable future quantum computing will bring breakthroughs to drug development, material science, financial modeling, climate forecasting, etc.
 In particular, a lot of enthusiasm in the following two areas
 
 * chemistry simulation
@@ -36,10 +29,11 @@ If you are interested in the fusion of quantum computing and neural network,
 checkout [this article](https://www.quantamagazine.org/job-one-for-quantum-computers-boost-artificial-intelligence-20180129/).
 Other sub-fields such as quantum communication, [quantum cryptography](https://en.wikipedia.org/wiki/Quantum_cryptography), [quantum algorithm design](https://en.wikipedia.org/wiki/Quantum_algorithm), [quantum complexity theory](https://en.wikipedia.org/wiki/Quantum_complexity_theory) etc, will be fully omitted here.
 
-Doug Finke maintains a website with lots of useful information,
-including up-to-date qubit count/characteristics, industry/academic players, job opportunities, etc:
+As for general references, [Professor John Preskill](https://en.wikipedia.org/wiki/John_Preskill) gave a very nice keynote talk recently in the [Quantum Computing for Business conference](https://www.q2b.us/) on the perspectives of Noisy Intermediate-Scale Quantum (NISQ) technology, i.e., quantum computers with 50-100 qubits.
+The paper version of the talk can be found [on arxiv](https://arxiv.org/abs/1801.00862).
 
-* [quantum computing report](https://quantumcomputingreport.com/)
+In addition, Doug Finke maintains a website with lots of useful information,
+including up-to-date qubit count/characteristics, industry/academic players, job opportunities, etc: [quantum computing report](https://quantumcomputingreport.com/).
 
 ## introduction
 
