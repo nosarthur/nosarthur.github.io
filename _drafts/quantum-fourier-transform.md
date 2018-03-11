@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Quantum Fourier transform
-date:   2018-03-02 08:00:00 -0500
+date:   2018-03-12 08:00:00 -0500
 categories: [quantum information and computation]
 comments: true
 tags: [quantum computing, phase estimation algorithm (PEA)]

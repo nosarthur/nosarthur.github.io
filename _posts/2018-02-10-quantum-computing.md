@@ -17,29 +17,30 @@ There has been quite some news on [quantum computing](https://en.wikipedia.org/w
 * Nov.2017: [IBM announced 20-qubit processor for clients and 50-qubit prototype](https://www-03.ibm.com/press/us/en/pressrelease/53374.wss)
 * Jan.2018: [Intel announced 49-qubit processor](https://newsroom.intel.com/news/intel-advances-quantum-neuromorphic-computing-research/)
 
-They have agreed on the [cloud-based quantum computing architecture](https://en.wikipedia.org/wiki/Cloud-based_quantum_computing) and it is anticipated that in the foreseeable future quantum computing will bring breakthroughs to drug development, material science, financial modeling, climate forecasting, etc.
-In particular, a lot of enthusiasm in the following two areas
+They all adopt the [cloud-based quantum computing architecture](https://en.wikipedia.org/wiki/Cloud-based_quantum_computing).
+In general, quantum computing is expected to bring breakthroughs to drug development, material science, financial modeling, climate forecasting, etc.
+In particular, the following two areas have attracted a lot of attention:
 
 * chemistry simulation
 * machine learning / artificial intelligence
 
-In this post, I will give a gentle introduction to this technology, with some emphasis on chemistry simulation,
-The ideal reader would have some acquaintance with science and technology, but not necessary an expert of quantum mechanics.
+In this post, I will give a gentle introduction to this technology, with emphasis on chemistry simulations.
+The ideal reader would be acquainted with science and technology, but not necessarily an expert of quantum mechanics.
+Most sub-fields of quantum computing are fully omitted here, including quantum communication, [quantum cryptography](https://en.wikipedia.org/wiki/Quantum_cryptography), [quantum algorithm design](https://en.wikipedia.org/wiki/Quantum_algorithm), [quantum complexity theory](https://en.wikipedia.org/wiki/Quantum_complexity_theory) etc.
 If you are interested in the fusion of quantum computing and neural network,
 checkout [this article](https://www.quantamagazine.org/job-one-for-quantum-computers-boost-artificial-intelligence-20180129/).
-Other sub-fields such as quantum communication, [quantum cryptography](https://en.wikipedia.org/wiki/Quantum_cryptography), [quantum algorithm design](https://en.wikipedia.org/wiki/Quantum_algorithm), [quantum complexity theory](https://en.wikipedia.org/wiki/Quantum_complexity_theory) etc, will be fully omitted here.
 
-As for general references, [Professor John Preskill](https://en.wikipedia.org/wiki/John_Preskill) gave a very nice keynote talk recently in the [Quantum Computing for Business conference](https://www.q2b.us/) on the perspectives of Noisy Intermediate-Scale Quantum (NISQ) technology, i.e., quantum computers with 50-100 qubits.
-The paper version of the talk can be found [on arxiv](https://arxiv.org/abs/1801.00862).
+For general references, [Professor John Preskill](https://en.wikipedia.org/wiki/John_Preskill) gave a keynote talk recently in the [Quantum Computing for Business conference](https://www.q2b.us/) on the perspectives of Noisy Intermediate-Scale Quantum (NISQ) technology, i.e., quantum computers with 50-100 qubits.
+The paper version of the talk is [on arxiv](https://arxiv.org/abs/1801.00862).
 
 In addition, Doug Finke maintains a website with lots of useful information,
 including up-to-date qubit count/characteristics, industry/academic players, job opportunities, etc: [quantum computing report](https://quantumcomputingreport.com/).
 
 ## introduction
 
-In the early 80s, people started to think about simulating quantum systems using other quantum systems whose Hamiltonian can be tuned.
-This is a very natural idea because simulating a quantum system on a classical computer is very expensive.
-There are two aspects to this difficulty
+In the early 80s, people started to think about simulating quantum systems using other quantum systems.
+This is a very natural idea because simulating a quantum system on a classical computer is expensive.
+There are two aspects to this expense:
 
 * the amount of **space** to store the quantum state, either in memory or in disk
 * the effort to calculate the time evolution, i.e., the **time** complexity
@@ -50,12 +51,12 @@ Note that the [number of atoms in the whole universe](https://en.wikipedia.org/w
 
 If you are not familiar with quantum mechanics, you can think of an analogy of throwing $$N$$ unfair dice.
 Here each die represents an atom and the goal is to describe the probability of all possible outcomes.
-Throwing the first die has 6 possible outcomes, throwing two dice has $$6^2=36$$ outcomes, etc.
+Throwing one die has 6 possible outcomes, throwing two dice has $$6^2=36$$ outcomes, etc.
 Suppose the probability of the outcomes are fixed and independent for each die,
 then we only need to store $$6N$$ numbers to figure out the probabilities of all $$6^N$$ outcomes,
 thanks to the [product rule of probability]([200~https://www.khanacademy.org/science/biology/classical-genetics/mendelian--genetics/a/probabilities-in-genetics).
-However, if the dice can interact with each other during the throwing, then the outcome depends on the details of their dynamics,
-and we will need a vector of $$6^N$$ components to describe the probability of all possible outcomes of throwing $$N$$ dice.
+However, if the dice interact with each other during the throwing, then the outcome depends on the details of their dynamics,
+and we will need a vector of $$6^N$$ components to describe the probability of all possible outcomes (and dynamics) of throwing $$N$$ dice.
 
 In order to calculate the time evolution of quantum systems, [matrix manipulations](https://en.wikipedia.org/wiki/Matrix_(mathematics)) are needed.
 On classical computers, straightforward implementation of [matrix multiplication](https://en.wikipedia.org/wiki/Matrix_multiplication) has time complexity $$O(n^3)$$, where $$n$$ is the size of the input.
@@ -64,25 +65,26 @@ Going back to our unfair dice example, calculating the dynamics of $$N$$ dice wo
 in the worst case.
 
 Thus in practice, such straightforward implementation on classical computers, the so-called [full configuration interaction](https://en.wikipedia.org/wiki/Full_configuration_interaction) approach, can only be used to study very small molecules.
-Various approximated methods have been developed to deal with medium sized molecules with less computational burden.
+Many approximated methods have been developed to deal with medium sized molecules with less computational burden.
 For large molecules such as proteins which can easily have more than 100,000 atoms, it is still extremely challenging if not impossible to simulate them quantum mechanically.
 
-On the other hand, if we have a simulator which is itself a quantum mechanical object, the time evolution calculation is taken care of by nature.
-There is no need to explicitly calculate matrix multiplications anymore.
-All we need to do is to set up the [Hamiltonian](https://en.wikipedia.org/wiki/Hamiltonian_(quantum_mechanics)) of the system (i.e., give a description of how atoms interact) at the beginning, and then just wait for the desired end time of the simulation.
+On the other hand, if we have a simulator which is itself quantum mechanical,
+Nature will take care of the time evolution calculation:
+no more matrix multiplications.
+All we need to do is to set up the [Hamiltonian](https://en.wikipedia.org/wiki/Hamiltonian_(quantum_mechanics)) of the system (i.e., describe how atoms interact), and then wait for the desired end time of the simulation.
 For example, if we use the quantum system of interest to 'simulate' itself and we are interested in the result at 1 second, then we just wait for 1 second and look at the system.
 
-Nowadays there is the vague notion of [quantum supremacy at 50 qubits](https://en.wikipedia.org/wiki/Quantum_supremacy).
-It basically claims that a quantum computer with 50 qubits could beat any classical computer in computational power.
+Nowadays there is a vague notion of [quantum supremacy at 50 qubits](https://en.wikipedia.org/wiki/Quantum_supremacy).
+It basically says that a quantum computer with 50 qubits has more computational power than any classical computer.
 If we just count the size of the state space, 50 qubit amounts to a state vector with size $$2^{50}\simeq 10^6 G$$.
-Matrix multiplications of such vectors is indeed daunting.
+Matrix multiplications on such vectors is indeed daunting.
 There are still controversies on whether this supremacy happens at 50 qubits.
 But it definitely gives strong incentives for the tech companies to make 50-qubit devices.
 
 It did not take long for the idea of [universal quantum computer](https://en.wikipedia.org/wiki/Quantum_Turing_machine) to appear.
 The goal here is to build a universal machine that can do all possible calculations, instead of building a specialized machine for each computational task.
 In terms of quantum simulators, it means that one would have a device that can simulate all possible quantum systems at least with some approximations.
-This line of thought is a direct analogy of the classical computer, the [Church-Turing machine](https://en.wikipedia.org/wiki/Church%E2%80%93Turing_thesis).
+This line of thought is a direct analogy of the classical [Church-Turing machine](https://en.wikipedia.org/wiki/Church%E2%80%93Turing_thesis).
 
  \ | classical computer | quantum computer
  --- | --- | ---
@@ -94,15 +96,15 @@ This analogy with quantum gates and quantum circuits to the classical computer i
 There are also other implementations of universal quantum computer as well,
 such as [one way quantum computing](https://en.wikipedia.org/wiki/One-way_quantum_computer) where computation is done by performing single-qubit measurements sequentially on special initial states.
 
-With some familiarity with quantum mechanics, it is also easy to see that all computation doable on classical computer can be done on quantum computer.
+With some familiarity with quantum mechanics, it is also easy to see that classical computing can be emulated on quantum computer.
 See [this post for details]({% post_url 2018-02-17-boolean-gates %}).
 
 There are two further points I would mention too
 
-* In classical computer, the bit is conceptually both a computational unit and storage unit. However in practice, the computation bits ([CPU register](https://en.wikipedia.org/wiki/Processor_register)) are different from the storage bits (say memory, hard disk). I am not aware of any storage device for qubits yet. In other words, the current 'quantum computers' are quantum CPUs.
-* I am also not aware of high-level [programming languages for quantum computer](https://en.wikipedia.org/wiki/Quantum_programming) yet. Right now one needs to plan out sequence of quantum gates on the qubits, which can be likened to programming with [assembly language on classical computer](https://en.wikipedia.org/wiki/Assembly_language). All kinds of tricks have been developed to use as few qubits as possible since there are not many available nowadays.
+* In classical computer, the bit is conceptually both a computation unit and a storage unit. In practice, the computation bits ([CPU register](https://en.wikipedia.org/wiki/Processor_register)) are different from the storage bits (say memory, hard disk). I am not aware of any storage device for qubits yet. In other words, the current 'quantum computers' are quantum CPUs.
+* I am also not aware of high-level [programming languages for quantum computer](https://en.wikipedia.org/wiki/Quantum_programming) yet. Right now one needs to plan out sequence of quantum gates on the qubits, which can be likened to programming with [assembly language on classical computer](https://en.wikipedia.org/wiki/Assembly_language). All kinds of tricks are being developed to use as few qubits as possible since not many are available yet.
 
-Here is a list of the seminal theory papers before year 2000. It is not meant to be a complete list.
+Here is a list of the seminal theory papers before year 2000 (not meant to be a complete list):
 
 * R. Feynman, Simulating Physics with Computers, IJTP 21, 467 (1982)
 * P. Benioff, Quantum Mechanical Models of Turing Machines That Dissipate No Energy, PRL 48, 1581 (1982)
@@ -114,11 +116,10 @@ Here is a list of the seminal theory papers before year 2000. It is not meant to
 * P.W. Shor, Scheme for reducing decoherence in quantum computer memory, PRA 52, 2493 (1995)
 * P.W. Shor, Fault-tolerant quantum computation,  Proc. 37th Symp. Foundations of Comp. Sci., IEEE Computer Society Press 56 (1996)
 
-In year 2000, [Michael Nielsen](https://en.wikipedia.org/wiki/Michael_Nielsen) and [Isaac Chuang](https://en.wikipedia.org/wiki/Isaac_Chuang) published a book on quantum computing which becomes the standard textbook in this field
+In 2000, [Michael Nielsen](https://en.wikipedia.org/wiki/Michael_Nielsen) and [Isaac Chuang](https://en.wikipedia.org/wiki/Isaac_Chuang) published a book on quantum computing which becomes the standard textbook in this field.
+Michael Nielsen also maintains [a blog with many interesting articles](http://michaelnielsen.org/), and published [a free online book on deep learning](http://neuralnetworksanddeeplearning.com/).
 
 <a target="_blank" href="https://www.amazon.com/gp/product/1107002176/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1107002176&linkCode=as2&tag=nosarthur2016-20&linkId=1c89937daa1c6beab7b2f06bdb66724e"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=1107002176&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=nosarthur2016-20"></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=nosarthur2016-20&l=am2&o=1&a=1107002176" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
-
-Michael Nielsen also maintains [a blog with many interesting articles](http://michaelnielsen.org/), and published [a free online book on deep learning](http://neuralnetworksanddeeplearning.com/).
 
 ## industry opportunities
 
@@ -129,12 +130,12 @@ The ones I knew were
 * [Microsoft station-Q](https://www.microsoft.com/en-us/research/group/microsoft-quantum-santa-barbara-station-q/): [topological quantum computing](https://en.wikipedia.org/wiki/Topological_quantum_computer) (theory only)
 * [D-Wave](https://www.dwavesys.com): superconductor based [adiabatic quantum computing](https://en.wikipedia.org/wiki/Adiabatic_quantum_computation)
 
-To make things worse, they all specialize in some specific quantum computing architecture and there are not many openings.
-Thus in order to be hired, one basically needs to graduate from a handful academic labs with flying colors.
+To make things worse, they all specialize in some specific architecture and openings are scarce.
+Thus to be hired, one needs to graduate from a handful academic labs with flying colors.
 As a result, most quantum computing graduates (not so many to start with) went to finance companies or software companies,
 just like most other physics and math PhDs.
 
-Fortunately, more and more companies start to invest in quantum computing nowadays.
+Fortunately, more companies start to invest in quantum computing now.
 A comprehensive list of such public and private companies can be found on the [quantum computing report website](https://quantumcomputingreport.com/players/).
 
 The current status of the major players are as follows
@@ -151,7 +152,7 @@ NTT | photon | 2048 | 100,000
 
 Note that the device of D-Wave and NTT are not general-purpose quantum computers.
 
-As you can see, there is some favor over superconductor based architectures.
+As you can see, superconductor based architecture is preferred.
 If you are interested in the comparison between different architectures, take a look at the following paper as well
 
 * N.M. Linke, et.al., [Experimental comparison of two quantum computing architectures, PNAS 114(13) 3305, 2017](http://www.pnas.org/content/114/13/3305)
@@ -161,9 +162,9 @@ Many companies give public access to cloud based simulator of quantum computers,
 [Google quantum playground](http://www.quantumplayground.net/#/home),
 [NTT QNN cloud](https://qnncloud.com/), etc.
 IBM even allows public access to their real devices since 2016 (it was a 5-qubit device back then and it may be a 16-qubit device now):
-a real quantum computer is thus only a few keyboard strokes from you.
+a real quantum computer is thus only a few keyboard strokes away.
 
-## more on quantum chemistry simulations
+## quantum chemistry simulations
 
 Recently there is [news that drug discovery companies start to invest in quantum computer](https://edgylabs.com/11-companies-set-for-a-quantum-computing-leap) as well, for example
 
@@ -191,4 +192,4 @@ There are two essential components in these energy calculations
 * encode molecular states into qubit states
 * eigenvalue and eigenvector calculation using [quantum phase estimation algorithm](https://en.wikipedia.org/wiki/Quantum_phase_estimation_algorithm)
 
-I will explain them in more detail in future posts.
+I will explain them in more detail in technical posts.

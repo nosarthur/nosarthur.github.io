@@ -8,8 +8,8 @@ tags: [quantum computing]
 ---
 
 In [a previous post]({% post_url 2018-02-10-quantum-computing %}),
-I explained at high level how quantum computers can be more efficient in simulating quantum systems than classical computers.
-In this post, I will show that the classical logic gates can be represented as unitary operators (matrices) acting on qubit states.
+I explained at high level how quantum computers are more efficient in simulating quantum systems than classical computers are.
+In this post, I will show that classical logic gates can be represented as unitary operators (matrices) acting on qubit states.
 Given such unitary evolutions can be implemented on some hardware without crazy overhead, quantum computers are then at least as powerful as classical computers.
 
 Recall that there are two ingredients in a quantum computer
@@ -41,11 +41,11 @@ $$\sigma_x = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$$
 When it comes to two-bit logic gates, the situation is a little different: there are two input bits and only one output bit.
 Thus we can take two approaches
 
-1. overwrite one input bit by the output whereas keep the other input bit intact
-1. involve three bits in the computation: keep the input bits intact and write the output to the third bit.
+1. overwrite one input bit by the output and keep the other input bit intact
+1. involve three bits in the computation: keep the input bits intact and write the output to a third bit.
 
-For the XOR gate, the first approach is already sufficient to construct a unitary matrix.
-Suppose we order the input and output as 00, 01, 10, 11 (they can be viewed as binary strings for 0, 1, 2, 3), and overwrite the second bit, then we have
+For the XOR gate, the first approach is sufficient to construct a unitary matrix.
+Suppose we order the input and output as 00, 01, 10, 11 (you can view them as binary strings for 0, 1, 2, 3), and overwrite the second bit, then we have
 
 $$\begin{bmatrix}
 1& 0 & 0 & 0\\
@@ -66,7 +66,7 @@ Thus we can always set it to 0 initially in real computations.
 This convention will fix 4 rows of the unitary matrix, corresponding to input states 000, 010, 100, and 110.
 Here the first two bits are input and the last one is output.
 
-Note that since 110 is turned to 111, 111 has to be turned to 110.
+Note that since 110 is turned to 111, [unitarity](https://en.wikipedia.org/wiki/Unitarity_(physics)) requires 111 to be turned to 110.
 The remaining 3 rows are undetermined.
 Since they are not used in real computation, any choice will do as long as it makes the matrix unitary.
 The simplest choice is to have these input states map to themselves, i.e.,
@@ -82,22 +82,23 @@ $$\begin{bmatrix}
 0& 0 & 0 & 0& 0 & 0 & 1 & 0 \\
 \end{bmatrix}$$
 
-In fact, this is an important gate in both classical and [quantum computing](https://en.wikipedia.org/wiki/Quantum_computing) called [Controlled-Controlled NOT (CCNOT) or Toffoli gate](https://en.wikipedia.org/wiki/Toffoli_gate), proposed by [Dr. Tommaso Toffoli](https://en.wikipedia.org/wiki/Tommaso_Toffoli) in 1980.
-It is known that Toffoli gate is universal for classical computing: any boolean function can be decomposed into Toffoli gates with ancilla bits.
+In fact, this is an important gate in both classical and [quantum computing](https://en.wikipedia.org/wiki/Quantum_computing): the so-called [Controlled-Controlled NOT (CCNOT) or Toffoli gate](https://en.wikipedia.org/wiki/Toffoli_gate), proposed by [Dr. Tommaso Toffoli](https://en.wikipedia.org/wiki/Tommaso_Toffoli) in 1980.
+**Toffoli gate is universal for classical computing**: any boolean function can be decomposed into Toffoli gates with ancilla bits.
 However, to achieve universal quantum computing, extra single-qubit gates are needed.
 
 I will leave the construction of OR gate as an exercise for you.
 
 ## arbitrary boolean functions
 
-Actually, there is a recipe to make arbitrary boolean functions reversible and the corresponding matrix is unitary.
+Actually, there is a recipe to make arbitrary boolean functions reversible and the corresponding matrix unitary.
 Without loss of generality, we can consider functions of the form
 
 $$ f: \{0, 1\}^n \longrightarrow \{0, 1\}$$
 
 where $$n$$ is the length of the input bit string. Boolean functions with multiple bits as output can be broken down into such 1-bit output functions.
 
-The recipe is essentially our second approach, i.e.,:
+The recipe is essentially our second approach, i.e., enlarge the state space and embed the result into it.
+Specifically, it takes the form:
 
 $$ (x, y) \longrightarrow (x, f(x)\oplus y)$$
 
