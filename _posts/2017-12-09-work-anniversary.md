@@ -20,7 +20,8 @@ Compared to my previous academia experience, industry job has two differences
 * more coordination with coworkers
 
 The root of these differences is that industry products need to work in most situations whereas research papers only demonstrate feasibility in certain situations.
-As a result, a lot of effort is spent on making the workflow robust and the interface user friendly, even if the underlying idea is straightforward. It requires expertise of many people and collaboration from different teams to make things happen.
+As a result, a lot of effort is spent on making the workflow robust and the interface user friendly.
+Even if the underlying idea is straightforward, expertise of many people and collaboration from different teams are required to make it happen.
 
 Two skills thus become important
 
@@ -41,9 +42,9 @@ In terms of tools and domain knowledges, I have learned in the past year
 * a little bit of golang (web services in particular)
 * a little bit of free energy perturbation
 
-In particular, git and automated testing provide great help to keep sanity in face of changes.
-Design patterns help to organize and maintain large size of code.
-And AWS alleviates the burden of hardware.
+In particular, git and automated testing help keep sanity in face of changes,
+design patterns help maintain large size of code,
+and AWS helps alleviate the burden of hardware.
 
 Sometimes I also think about how to get better in general.
 For example, I see intellectual capacity to have two components
@@ -51,15 +52,15 @@ For example, I see intellectual capacity to have two components
 * memory: keep track of things
 * judgement: prioritize options
 
-Memory is easy to quantify, and can be facilitated by bookkeeping tools.
-On the other hand, judgement is hard to develop, it is even hard to justify due to the lack of information.
-Currently my strategy is to learn the principles in ancient teachings,
-and downplay detailed calculations.
+Memory is easy to quantify, and can be helped by bookkeeping tools.
+Judgement, however, is hard to develop, even hard to justify due to the lack of information.
+My current strategy is to learn the principles from ancient teachings,
+and downplay calculations.
 
 > I examine myself daily on three aspects: Do I represent someone without putting his interest first? Do I interact with friends without sincerity? Do I advocate behavior that I do not practice? (吾日三省吾身：爲人謀而不忠乎？與朋友交而不信乎？傳不習乎？) --- Zengzi (505 – 435 BC)
 
-Recently I came across a lecture delivered by [Richard Hamming](https://en.wikipedia.org/wiki/Richard_Hamming) (1915 - 1998) in 1995 called "You and Your Research" (it could also be named "You and Your career").
+Recently I came across a lecture delivered by [Richard Hamming](https://en.wikipedia.org/wiki/Richard_Hamming) (1915 - 1998) in 1995 called "You and Your Research" (it could also be named "You and Your career" or "You and Your Life").
 Dr. Hamming had major contribution to [coding theory](https://en.wikipedia.org/wiki/Coding_theory), and lived a very interesting life.
-Like many other thinkers who lived long interesting lives, he has many interesting things to say.
+Like other thinkers who lived long interesting lives, he has many interesting things to say.
 
 {% include youtubePlayer.html id="a1zDuOPkMSw" %}
