@@ -8,8 +8,7 @@ tags: [job hunting]
 ---
 
 Recently I left my postdoc job and became a software developer.
-In this post I will share my experience and some random thoughts 
-looking back.
+In this post I will share my experience and some thoughts looking back.
 
 ## background
 
@@ -19,18 +18,19 @@ As time progresses, industry appears more and more appealing, for two reasons
 * lack of vision in research
 * lack of financial freedom
 
-Although I have been in school for many years 
-(a full zodiac cycle after college), I didn't reach the point to have clear long term research plans.
-In my opinion, this lack of vision is fatal to academic career. After all, destination (professorship) is hard to reach by random walk.
+Although I have been in school for many years (a full zodiac cycle after college),
+I didn't reach the point to have clear long term research plans.
+In my opinion, this lack of vision is fatal to academic career.
+After all, destination (professorship) is hard to reach by random walk.
 
 In term of daily life, the postdoc experience is pleasant:
-flexible hours, helpful coworkers/supervisors, etc. I was lucky enough that 
-all my supervisors since college are quite hands-off 
-and are willing to let me pick my own pace and (side) projects.
+flexible hours, helpful coworkers/supervisors, etc. I am lucky that
+all my supervisors since college are quite hands-off and allow me pick my own
+pace and (side) projects.
 Unfortunately postdoc is not a real job in terms of compensation and stability,
-and New York city is really expensive ([bjj][bjj] $250/month, [yoga][yoga] $239/month, [climbing][climb] $150/month, [karate][karate] $130/month, etc).
+and New York city is really expensive (one room in a shared two-bedroom apartment $1200/month, [bjj][bjj] $250/month, [yoga][yoga] $239/month, [climbing][climb] $150/month, [karate][karate] $130/month, etc).
 
-For these reasons, I decided to quit postdoc and give a try in industry.
+For these reasons, I decided to quit postdoc and try industry.
 
 ## industry options
 
@@ -41,54 +41,59 @@ there are essentially three options in industry
 2. data science
 1. finance
 
-The difficulty increases by the ordering. The required skills overlap to some 
-degree. So it doesn't hurt to prepare for two or even all three of them.
+Their required skills overlap but the difficulty increases by the ordering.
+It doesn't hurt to prepare for two or even all three of them.
 Basically, there are three sets of skills
 
 * coding
     * algorithms
-    * database 
-* statistics/probability theory/stochastic processes
-* machine learning
+    * database
+    * language
+* math
+    * statistics/probability theory/stochastic processes
+    * machine learning
+* domain-specific stuff
 
 Honestly I am not well prepared in any of them at the time of my application.
 But from talking to friends in industry and going through interviews,
-I have got some idea of how to prepare and to what degree they should be prepared. This topic will be covered in a future post (or maybe posts).
+I got some idea of how to prepare and to what degree they should be prepared.
+This topic will be covered in a future post (or maybe posts).
+If you have questions, please feel free to email me.
 
 ## mental preparations
 
-In my observation, doing something new is usually relatively easy whereas putting the mind to it could be hard.
-For good biological reasons the mind seeks for consistency (see [this book]({% post_url 2016-07-31-influence %}) for example) and fears for change.
+In my experience, committing to a change is much easier than initializing the change.
+For good biological reasons the mind seeks for consistency and fears for change.
 In my case, making up the mind to quit postdoc is the hard part whereas looking 
 for jobs is actually quite fun.
 
-If you are debating between options, it may help to reflect on the 
-question of "who am I". It's usually not fun to copy someone else's life and a lot
-of fun to find your own answer.
-
-Meanwhile it may help to overcome some physical challenges to gain extra mental
-strength, for example, run a marathon or finish a [P90X](https://en.wikipedia.org/wiki/P90X) session.
+If you are debating between options, it may help to reflect on the question of
+"who am I". It's usually not fun to copy someone else's life and a lot of fun
+to find your own answer.
+Meanwhile it may help to complete some physical challenges to gain extra mental
+strength. For example, run a [marathon](https://en.wikipedia.org/wiki/Marathon)
+or finish a [P90X](https://en.wikipedia.org/wiki/P90X) session.
 
 {% include youtubePlayer.html id="SbSM02_1k34" %}
 
-## my timeline 
+## my timeline
 
 * Left postdoc job in May 2016
-* Started application in July 
-* Went on interviews in August 
-* Accepted offer in September 
+* Started application in July
+* Went on interviews in August
+* Accepted offer in September
 * Started working in October
 
-## my job applications 
+## my job applications
 
-For the companies I applied, 
+Below I list all the companies I applied.
 
-* The highlighted ones gave me interview 
+* The highlighted ones gave me interview
 * The crossed-out ones gave me rejection
 * The rest gave no response
 
 1. insight data science program
-    * ~~<mark>NYC May 2016</mark>~~ 
+    * ~~<mark>NYC May 2016</mark>~~
     * ~~<mark>NYC Sep 2016</mark>~~
     * ~~<mark>Boston healthcare Sep 2016</mark>~~
 2. Bit.ly data science intern  7.8
@@ -98,7 +103,7 @@ For the companies I applied,
     * IBM Social Good Fellow 7.22
     * Postdoctoral Researcher - Healthcare Informatics 7.22
     * Research Staff Member - Cognitive Computing 7.22
-11. Mount Sinai School of Medicine: 
+11. Mount Sinai School of Medicine:
     * Image Data Scientist 7.22
     * Senior Data Analyst 8.31
 12. Interactions LLC Machine Learning Scientists & Engineers 7.22
@@ -108,7 +113,7 @@ For the companies I applied,
     * Scientist, Staff 7.22
     * Senior MR Scientist 7.22
 18. ~~GE Medical Image Analysis Scientist 7.22~~
-13. Schroedinger 
+13. Schroedinger
     * ~~Scientific Software Developer 7.22~~
     * <mark>Senior Scientific Software Developer 7.22</mark>
 1. Google 
@@ -122,7 +127,7 @@ For the companies I applied,
     * Associate Research Scientist – Division of Learning Analytics 8.31
     * Senior Research Scientist 8.31
 
-[karate]: http://www.jkany.org 
+[karate]: http://www.jkany.org
 [yoga]: http://www.dharmayogacenter.com/
 [bjj]: http://www.alliancebjjnyc.com
 [climb]: http://lic.thecliffsclimbing.com
