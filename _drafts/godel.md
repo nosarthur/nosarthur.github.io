@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Gödel, Escher, Bach: An Eternal Golden Braid by Douglas R. Hofstadter"
-date:   2018-03-16 13:43:08 -0500
+date:   2018-10-16 13:00:00 -0500
 categories: [readings]
 comments: true
 tags: [logic]

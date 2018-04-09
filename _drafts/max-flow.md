@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Max flow min cut
-date:   2018-03-20 01:00:00 -0500
+date:   2018-09-20 01:00:00 -0500
 categories: [math and physics]
 comments: true
 tags: [graph theory]

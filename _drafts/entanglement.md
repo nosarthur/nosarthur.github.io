@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Quantum entanglement measure
-date:   2018-03-31 09:00:00 -0500
+date:   2018-09-31 09:00:00 -0500
 categories: [quantum information and computation]
 comments: true
 tags: [entanglement]
