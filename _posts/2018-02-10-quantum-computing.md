@@ -102,7 +102,7 @@ See [this post for details]({% post_url 2018-02-17-boolean-gates %}).
 There are two further points I would mention too
 
 * In classical computer, the bit is conceptually both a computation unit and a storage unit. In practice, the computation bits ([CPU register](https://en.wikipedia.org/wiki/Processor_register)) are different from the storage bits (say memory, hard disk). I am not aware of any storage device for qubits yet. In other words, the current 'quantum computers' are quantum CPUs.
-* I am also not aware of high-level [programming languages for quantum computer](https://en.wikipedia.org/wiki/Quantum_programming) yet. Right now one needs to plan out sequence of quantum gates on the qubits, which can be likened to programming with [assembly language on classical computer](https://en.wikipedia.org/wiki/Assembly_language). All kinds of tricks are being developed to use as few qubits as possible since not many are available yet.
+* I am also not aware of high-level [programming languages for quantum computer](https://en.wikipedia.org/wiki/Quantum_programming) yet. Right now one needs to plan out sequence of quantum gates on the qubits, which is even lower level than programming with [assembly language on a classical computer](https://en.wikipedia.org/wiki/Assembly_language). All kinds of tricks are being developed to use as few qubits as possible since not many are available yet.
 
 Here is a list of the seminal theory papers before year 2000 (not meant to be a complete list):
 
