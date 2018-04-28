@@ -111,9 +111,12 @@ To learn more about DFT, check out this nice textbook on Signals and Systems by 
 In fact, QFT is exactly DFT,  with the input/output vectors being probability amplitudes of quantum states.
 Thus it is a mathematical device to transform quantum states.
 You can think of it as a quantum gate since it is unitary.
-In addition, it can be efficiently implemented on a quantum computer.
+In addition, it can be efficiently implemented on a quantum computer (more details later).
 
-As for why it is useful, my current understanding is that it helps solve the measurement problem, i.e., [the wave-function collapse](https://en.wikipedia.org/wiki/Wave_function_collapse).
+As for why it is useful, my understanding is that it helps reading out the quantum computation result in special situations.
+
+solve the measurement problem,
+i.e., [the wave-function collapse](https://en.wikipedia.org/wiki/Wave_function_collapse).
 Take 1-qubit for example, suppose we know the qubit is in one of the two states:
 
 $$\begin{align}

@@ -6,13 +6,13 @@ categories: [quantum information and computation]
 comments: true
 tags: [entanglement]
 ---
-There are two things in quantum mechanics that I find very weird:
+There are two things in quantum mechanics that I find weird:
 
 * the superposition principle
 * the von Neumann type measurement
 
 In this post, I will talk about the weirdness of the first one.
-There are already famous paradoxes related to the superposition principle, for example
+There are already famous paradoxes about it, for example
 
 * [the Schrodinger's cat](https://en.wikipedia.org/wiki/Schr%C3%B6dinger%27s_cat) (1935)
 * [Einstein-Podolsky-Rosen (EPR) paradox](https://en.wikipedia.org/wiki/EPR_paradox) (1935)
