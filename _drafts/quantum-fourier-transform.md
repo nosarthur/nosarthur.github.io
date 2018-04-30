@@ -106,18 +106,45 @@ To learn more about DFT, check out this nice textbook on Signals and Systems by 
 
 <a target="_blank"  href="https://www.amazon.com/gp/product/0138147574/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0138147574&linkCode=as2&tag=nosarthur2016-20&linkId=e129946e8d88aa21c0078670b39abce5"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=0138147574&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=nosarthur2016-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=nosarthur2016-20&l=am2&o=1&a=0138147574" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 
-## quantum Fourier transform (QFT)
+## measurement/readout problem
 
-In fact, QFT is exactly DFT,  with the input/output vectors being probability amplitudes of quantum states.
-Thus it is a mathematical device to transform quantum states.
-You can think of it as a quantum gate since it is unitary.
-In addition, it can be efficiently implemented on a quantum computer (more details later).
+Suppose we do not have any prior information about a quantum state, it is impossible to know what it is.
+Take 1-qubit for example, an arbitrary state takes the form
 
-As for why it is useful, my understanding is that it helps reading out the quantum computation result in special situations.
+$$\left|\psi\right> = \alpha\left|0\right> + \beta\left|1\right>,$$
 
-solve the measurement problem,
-i.e., [the wave-function collapse](https://en.wikipedia.org/wiki/Wave_function_collapse).
-Take 1-qubit for example, suppose we know the qubit is in one of the two states:
+where $$\|\alpha\|^2 + \|\beta\|^2=1$$.
+
+A measurement with respect to the computational basis (0 and 1) causes [its wave-function to collapse](https://en.wikipedia.org/wiki/Wave_function_collapse).
+Thus if we only have one copy of the quantum state,
+no information of the probability amplitudes $$\alpha$$ or $$\beta$$ can be retrieved.
+The situation is slightly better if we have many copies of the same state.
+In that case, $$\alpha$$ and $$\beta$$ can be estimated at the cost of repeated measurements.
+This task is known as [quantum state tomography](https://en.wikipedia.org/wiki/Quantum_tomography) and is not easy in general.
+In the 1-qubit case, there are 3 observables to be estimated: the 3 [Pauli spin operators](https://en.wikipedia.org/wiki/Pauli_matrices).
+For $$n$$ qubits, there are $$2^{2n} - 1$$ observables (the number of generators of $$SU(2^n)$$),
+a daunting task.
+
+Thus to have an efficient readout of any quantum computation result,
+we need to have prior information of the output state.
+In other words, **an efficient quantum algorithm has to encode its answer in special quantum states**.
+For example, an algorithm with boolean answer could ensure the output to be one of two known states.
+This is indeed the strategy of many quantum algorithms, such as
+[Deutsch Jozsa algorithm](https://en.wikipedia.org/wiki/Deutsch%E2%80%93Jozsa_algorithm),
+[Simon's algorithm](https://en.wikipedia.org/wiki/Simon%27s_problem),
+[Bernstein-Vazirani algorithm](https://dl.acm.org/citation.cfm?id=167097),
+and [Shor's algorithm](https://en.wikipedia.org/wiki/Shor%27s_algorithm).
+
+Since measurement has to be in the computational basis,
+these known states can be seen as intermediate results.
+Obviously, it's more convenient to have these states to form an orthonormal bases.
+It helps even more if these states are all separable states (i.e., not entangled states).
+Then the transformation to the computational basis states can be done independently,
+potentially in parallel.
+From the hardware perspective,
+single qubit gates are usually much easier to implement and faster than multi-qubit gates.
+
+As a concrete example, let's assume a boolean answer is encoded in the two 1-qubit states
 
 $$\begin{align}
 \left|+\right> \equiv& \frac{1}{\sqrt 2}(\left|0\right> + \left|1\right>) = \frac{1}{\sqrt 2}\begin{bmatrix}1\\
@@ -126,13 +153,44 @@ $$\begin{align}
 -1\end{bmatrix}
 \end{align}$$
 
-Straightforward measurements on both the states result in either state 0 or state 1 half of the time,
-not helpful in distinguishing $$\left|+\right>$$ from $$\left|-\right>$$.
-In this case, applying QFT before measurement helps since
+In this case, applying [Hadamard gate $$H_1$$](https://en.wikipedia.org/wiki/Hadamard_transform) before measurement helps
+to get a definite answer with one copy of the quantum state since
 
-$$\begin{align}QFT_2 \left|+\right> =& \left|0\right>\\ QFT_2\left|-\right> =& \left|1\right>\end{align}$$
+$$\begin{align}
+H_1 \left|+\right> =& \left|0\right>\\
+H_1 \left|-\right> =& \left|1\right>\end{align}$$
 
-which gives us a definite answer with one copy of the quantum state.
+where 
+
+$$H_1 = \frac{1}{\sqrt 2}\begin{bmatrix}
+1& 1 \\
+1& -1
+\end{bmatrix}.$$
+
+As you may have guessed,
+QFT is a gate whose role is similar to $$H_1$$ in this example.
+
+## quantum Fourier transform (QFT)
+
+In fact, QFT is exactly DFT,  with the input/output vectors being probability amplitudes of quantum states.
+Thus it is a transformation between quantum states, i.e., a quantum gate.
+In addition, it can be efficiently implemented on a quantum computer (more details later).
+
+In the context of quantum computing, the state vector is of dimension $$N=2^n$$ where $$n$$ is the number of qubits.
+As continuation of the previous section,
+let's look at two sets of special states:
+
+* states corresponds to the rows of the [Walsh-Hadamard matrix](https://en.wikipedia.org/wiki/Hadamard_transform):
+  $$\prod_{j=0}^{n-1}\otimes\left(\left|0\right>+(-1)^{r_j}\left|1\right>\right)$$
+* states corresponds to the rows of the [IQFT/IDFT matrix](https://en.wikipedia.org/wiki/Quantum_Fourier_transform):
+  $$\prod_{j=0}^{n-1}\otimes\left(\left|0\right>+\omega_{2^n}^{jr}\left|1\right>\right)$$
+
+where $$r=0,1,..,2^n-1$$ are the row index for the $$n$$-qubit transform matrix,
+$$r_j$$ is the $$j$$'th digit of $$r$$'s binary representation,
+and $$\otimes$$ denotes tensor product.
+
+Note that the Walsh-Hadamard gate is particularly easy to implement since it can be decomposed as 1-qubit Hadamard gates,
+i.e., $$H_n = H_1^{\otimes n} $$.
 
 Similarly, if we have prior information that the multi-qubit probability amplitudes take the form of one column of DFT matrix,
 we can apply IQFT gate to concentrate these amplitudes into one state.
