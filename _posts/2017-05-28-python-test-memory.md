@@ -1,6 +1,6 @@
 ---
 layout: post
-title: python test memory issues
+title: Python test memory issues
 date:   2017-05-28 10:00:08 -0500
 categories: [coding]
 comments: true

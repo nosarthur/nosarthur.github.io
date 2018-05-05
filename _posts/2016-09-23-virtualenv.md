@@ -1,10 +1,10 @@
 ---
 layout: post
-title: python virtualenv
+title: Python virtualenv
 date:   2016-09-23 10:00:00 -0500
 categories: [coding]
 comments: true
-tags: [packages]
+tags: [python]
 ---
 
 Have you ever upgraded one python package for one project and then find out it
