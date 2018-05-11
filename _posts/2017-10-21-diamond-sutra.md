@@ -2,7 +2,7 @@
 layout: post
 title: Diamond Sutra
 date:   2017-10-21 13:43:08 -0500
-categories: [ancient texts]
+categories: [ancient teachings]
 comments: true
 tags: [buddhism]
 ---

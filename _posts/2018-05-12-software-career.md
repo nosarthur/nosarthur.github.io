@@ -26,7 +26,7 @@ and the chapters are categorized into five sections:
 * Working as a developer
 * Advancing your career
 
-The chapters are almost independent, thus you can pick the relevant part to read.
+The chapters are more-or-less independent, thus you can pick the relevant part to read.
 (I read it from cover to cover and it took 6 days.)
 
 It contains a lot of useful information and I highly recommend it,
