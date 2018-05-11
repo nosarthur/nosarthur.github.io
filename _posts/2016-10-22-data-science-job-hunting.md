@@ -15,6 +15,8 @@ In this post I will share them anyways.
 
 You can also read [my transition to industry job]({% post_url 2016-10-16-job-transition %}) if interested.
 
+> If you fail to plan, you are planning to fail. --- Benjamin Fraklin (1706-1790)
+
 ## The job
 
 According to [the O'Reilly's 2015 survey](https://www.oreilly.com/ideas/2015-data-science-salary-survey/), data scientist jobs pay a median base salary $104k in US (add 13k if you have a PhD). Of course there are other perks such as stocks and bonus.
