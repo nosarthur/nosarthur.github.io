@@ -2,7 +2,7 @@
 layout: post
 title: A random walk down Wall street by Burton Malkiel
 date:   2017-02-04 07:00:00 -0500
-categories: [readings]
+categories: [finance]
 comments: true
 tags: [investment]
 ---

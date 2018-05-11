@@ -2,7 +2,7 @@
 layout: post
 title: Heart Sutra
 date:   2017-07-22 13:43:08 -0500
-categories: [ancient texts]
+categories: [ancient teachings]
 comments: true
 tags: [buddhism]
 ---
