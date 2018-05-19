@@ -15,7 +15,8 @@ permalink: /links/
     * [Miguel Grinberg](https://blog.miguelgrinberg.com/index)
     * [Gavin E. Crooks](http://threeplusone.com/gec/)
     * [free code camp](https://medium.freecodecamp.org/)
-* early retirement
+* financial independence
+    * [Mad FIentist](https://www.madfientist.com/)
     * [Mr Money Mustache](http://www.mrmoneymustache.com)
     * [Frugal Woods](http://www.frugalwoods.com)
 

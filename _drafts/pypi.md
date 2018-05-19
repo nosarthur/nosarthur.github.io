@@ -11,11 +11,11 @@ tags: [python, PyPI]
 
 [The Python Package Index (PyPI)](https://pypi.org/) is the repository that hosts the python software packages.
 By registering your package with PyPI,
-other users can download your package using `pip install <your-awesome-package>`.
-I recently published one of my Github projects there (see [its PyPI page here](https://pypi.org/project/gita/)).
-Along the process, I notice that some online helps are out of date due to the following changes
+other users can download it using `pip install <your-awesome-package>`.
+I recently published one of my GitHub projects there (see [its PyPI page here](https://pypi.org/project/gita/)).
+Along the process, I notice that some online tutorials are out of date due to the following changes
 
-* [As of April 2018 PyPI supports Github-flavored Markdown](http://blog.jonparrott.com/github-flavored-markdown-on-pypi/).
+* [As of April 2018 PyPI supports GitHub-flavored Markdown](http://blog.jonparrott.com/github-flavored-markdown-on-pypi/).
 * [On July 3, 2017, uploads through pypi.python.org were switched off](https://packaging.python.org/guides/migrating-to-pypi-org/).
 
 In this post I will share the latest procedures.
