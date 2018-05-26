@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Publishing package to PyPI
-date: 2018-05-16 10:00:00 -0500
+date: 2018-06-16 10:00:00 -0500
 categories: [coding]
 comments: true
 tags: [python, PyPI]

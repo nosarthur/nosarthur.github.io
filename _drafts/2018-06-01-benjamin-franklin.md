@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Autobiography of Benjamin Franklin
-date:   2018-05-16 13:00:00 -0500
+date:   2018-06-01 08:00:00 -0500
 categories: [readings]
 comments: true
 tags: [autobiography]
