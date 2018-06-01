@@ -61,8 +61,7 @@ and we will need a vector of $$6^N$$ components to describe the probability of a
 In order to calculate the time evolution of quantum systems, [matrix manipulations](https://en.wikipedia.org/wiki/Matrix_(mathematics)) are needed.
 On classical computers, straightforward implementation of [matrix multiplication](https://en.wikipedia.org/wiki/Matrix_multiplication) has time complexity $$O(n^3)$$, where $$n$$ is the size of the input.
 It is possible to make it slightly more efficient but not much: definitely not $$O(n^2)$$.
-Going back to our unfair dice example, calculating the dynamics of $$N$$ dice would then have time complexity $$O(6^{3N})$$,
-in the worst case.
+Going back to our unfair dice example, calculating the dynamics of $$N$$ dice would then have time complexity $$O(6^{3N})$$ in the worst case.
 
 Thus in practice, such straightforward implementation on classical computers, the so-called [full configuration interaction](https://en.wikipedia.org/wiki/Full_configuration_interaction) approach, can only be used to study very small molecules.
 Many approximated methods have been developed to deal with medium sized molecules with less computational burden.
