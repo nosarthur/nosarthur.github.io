@@ -2,9 +2,9 @@
 layout: post
 title: Head First Design Patterns by Eric Freeman, Bert Bates, Kathy Sierra, and Elisabeth Robson
 date:   2017-04-02 09:00:00 -0500
-categories: [readings]
+categories: [coding]
 comments: true
-tags: [coding]
+tags: [design patterns]
 ---
 
 This is the best design pattern book I have read so far. 
