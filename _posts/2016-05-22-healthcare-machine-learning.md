@@ -17,7 +17,7 @@ tags: [healthcare, machine learning]
 * [wellframe][wellframe]: Connecting People. Amplifying Care.
     * infrastructure for mobile-enabled care management platform
 * [medaware][medaware]: Eliminating prescription errors.
-    * rist management based on Electronic Medical Records (EMRs)
+    * risk management based on Electronic Medical Records (EMRs)
 * [lumiata][lumiata]: AI-powered Analytics for Risk-Bearing Organizations
     * predictive analytics 
 
