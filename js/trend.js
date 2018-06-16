@@ -13,7 +13,7 @@ var y = d3.scale.linear()
 
 var xAxis = d3.svg.axis()
     .scale(x)
-    .tickFormat(d3.time.format("%Y"))
+    .tickFormat(d3.time.format("%Y-%m-%d"))
     .ticks(4)
     .orient("bottom");
 
@@ -23,8 +23,8 @@ var yAxis = d3.svg.axis()
     .orient("left");
 
 var line = d3.svg.line()
-    .x(function(d) { return x(d.year); })
-    .y(function(d) { return y(d.count); });
+    .x(function(d) { return x(d.date); })
+    .y(function(d) { return y(d.rate); });
 
 var svg = d3.select("#trend").append("svg")
     .attr("width", width + margin.left + margin.right)
@@ -35,12 +35,12 @@ var svg = d3.select("#trend").append("svg")
 d3.csv("/assets/trend.csv", function(error, data) {
   if (error) throw error;
   data.forEach(function(d) {
-        d.year = parseDate(d.year);
-        d.count = +d.count;
+        d.date = parseDate(d.date);
+        d.rate = +d.rate;
   });
 //console.log(data);
-  x.domain(d3.extent(data, function(d) { return d.year; }));
-  y.domain([0, d3.max(data, function(d) { return d.count; })]);
+  x.domain(d3.extent(data, function(d) { return d.date; }));
+  y.domain([0, d3.max(data, function(d) { return d.rate; })]);
   svg.append("path")
       .attr("class", "line")
       .attr("d", line(data))

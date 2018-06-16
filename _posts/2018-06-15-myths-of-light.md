@@ -17,7 +17,7 @@ Some topics are list as follows
 
 * How in Levantine traditions ([Judaism](https://en.wikipedia.org/wiki/Judaism),
   [Christianity](https://en.wikipedia.org/wiki/Christianity),
-  and [Islam](https://en.wikipedia.org/wiki/Islam)), men is in exile way from god,
+  and [Islam](https://en.wikipedia.org/wiki/Islam)), man is in exile way from god,
   whereas in Eastern traditions ([Hinduism](https://en.wikipedia.org/wiki/Hinduism),
   [Taoism](https://en.wikipedia.org/wiki/Taoism), and [Buddhism](https://en.wikipedia.org/wiki/Buddhism)), god is within.
 * The similarities and differences concerning the relationship between god and

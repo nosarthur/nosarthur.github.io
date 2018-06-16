@@ -11,6 +11,24 @@ I started trading stocks on May 7, 2018 using an app called [Robinhood](https://
 After 3 months, my profit is 27%.
 In this post, I will summarize what I have learned so far.
 
+<style> /* set the CSS */
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+</style>
+<div id='trend'> </div>
+
+<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src='/js/trend.js'> </script>
+
+> Return rate from stock trading.
+
+
 ## basics
 
 For an absolute beginner, the market opens at 9:30am and closes at 4pm Eastern time.
@@ -87,6 +105,12 @@ If you find the information useful and willing to start stock trading with Robin
 you can do me a favor to sign up with [this referral link](https://share.robinhood.com/dongz15).
 Both of us can get a free stock.
 I signed up with my friend's referral link and got a share of ZNGA at the price of $3.77.
+
+## todo
+
+* automation
+* more analysis
+    * correlation between stocks
 
 ## reference
 
