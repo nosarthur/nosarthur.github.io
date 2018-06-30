@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Art of Power by Thich Nhat Hanh
-date:   2018-06-10 13:00:00 -0500
+date:   2019-06-10 13:00:00 -0500
 categories: [readings]
 comments: true
 tags: [power]

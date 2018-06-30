@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Publish package on PyPI
-date: 2018-06-16 10:00:00 -0500
+date: 2018-07-01 10:00:00 -0500
 categories: [coding]
 comments: true
 tags: [python, PyPI]
@@ -9,18 +9,39 @@ tags: [python, PyPI]
 
 ## introduction
 
-[The Python Package Index (PyPI)](https://pypi.org/) is the repository that hosts the python software packages.
-By registering your package with PyPI,
-other users can download it using `pip install <your-awesome-package>`.
-I recently published a package there (see [its PyPI page here](https://pypi.org/project/gita/)).
+[The Python Package Index (PyPI)](https://pypi.org/) is the official repository for python packages.
+It is the magic behind `pip install <your-awesome-package>`.
+Recently I published a package there (see [its PyPI page here](https://pypi.org/project/gita/))
+and I will share the procedures in this post.
+
 In that the process, I noticed that some online tutorials were outdated due to the following changes
 
 * [On July 3, 2017, uploads through pypi.python.org were switched off](https://packaging.python.org/guides/migrating-to-pypi-org/).
-* [As of April 2018 PyPI supports GitHub-flavored Markdown](http://blog.jonparrott.com/github-flavored-markdown-on-pypi/).
 
-In this post I will share the latest procedures.
 
-## preliminaries
+
+## prerequisites
+
+* create user account on [PyPI](https://pypi.org/account/register/)
+* prepare distribution information for your repo 
+
+To facilitate the packaging and distribution, we can install the following tools
+
+```bash
+pip3 install twine setuptools wheel
+```
+
+You can see [my setup.py example here](https://github.com/nosarthur/gita/blob/master/setup.py)
+
+```bash
+python3 setup.py sdist
+```
+
+It will create a folder called `dist` with the tarball file in it.
+
+```
+twine upload dist/*
+```
 
 
 `~/.pypirc` file
@@ -37,17 +58,9 @@ You can also put your password there as `password=yourpassword` and change its p
 
 
 
-```
-pip install twine, setuptools, wheel
-```
-
-You can see [my setup.py example here](https://github.com/nosarthur/gita/blob/master/setup.py)
-
-```
-twine upload dist/*
-```
-
 ## using README.md as PyPI project description
+
+* [As of April 2018 PyPI supports GitHub-flavored Markdown](http://blog.jonparrott.com/github-flavored-markdown-on-pypi/).
 
 Since Apr 2018, GitHub style markdown file can be used directly as PyPI project
 description page.

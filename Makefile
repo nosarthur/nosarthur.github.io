@@ -1,9 +1,6 @@
 default:
-	jekyll serve --draft -H 0.0.0.0
+	jekyll serve --draft
 future:
-	jekyll serve --draft --future -H 0.0.0.0
+	jekyll serve --draft --future
 prod:
-	jekyll serve -H 0.0.0.0
-build:
-	jekyll build
-	cp -r _site/ ~/storage/downloads/
+	jekyll serve
