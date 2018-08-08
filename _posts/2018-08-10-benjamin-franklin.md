@@ -1,27 +1,26 @@
 ---
 layout: post
 title: The Autobiography of Benjamin Franklin
-date:   2018-08-05 08:00:00 -0500
+date:   2018-08-10 08:00:00 -0500
 categories: [readings]
 comments: true
 tags: [autobiography]
 ---
 
 [Benjamin Franklin (1706-1788, aged 84)](https://en.wikipedia.org/wiki/Benjamin_Franklin)
-is one of the founding fathers of the United States
-(his portrait is on the 100 dollar bill).
-This book is an unfinished autobiography covering two spans of his life:
-one from his childhood to as a business owner, and the other.
-From the writing, it appears the original intension of this writing is to share
-life experiences to his offsprings.
+is one of the founding fathers of the United States.
+He grew up in poverty and became a successful businessman, writer, politician,
+diplomat, inventor, scientist, and educator.
+His portrait is on the 100 dollar bill.
 
-This book is currently in the [public domain](https://en.wikipedia.org/wiki/Public_domain)
+This book is an unfinished autobiography covering two spans of his life.
+It is in the [public domain](https://en.wikipedia.org/wiki/Public_domain)
 and can be downloaded for free.
 For example, I read it from Amazon Kindle Classics.
 
 <a target="_blank"  href="https://www.amazon.com/gp/product/0486290735/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0486290735&linkCode=as2&tag=nosarthur2016-20&linkId=db623e01ed88802dd882a36ebce5e366"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=0486290735&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=nosarthur2016-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=nosarthur2016-20&l=am2&o=1&a=0486290735" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 
-Besides the anecdotes, Benjamin Franklin also 
+Besides the anecdotes, Benjamin Franklin also proposed thirteen virtues to practice:
 
 1. Temperance. Eat not to dullness; drink not to elevation.
 1. Silence. Speak not but what may benefit others or yourself; avoid trifling conversation.
