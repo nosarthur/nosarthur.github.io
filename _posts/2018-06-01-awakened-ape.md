@@ -2,7 +2,7 @@
 layout: post
 title: The Awakened Ape by Jevan Pradas
 date: 2018-06-02 06:00:00 -0500
-categories: [readings]
+categories: [ancient teachings]
 comments: true
 tags: [happiness]
 ---

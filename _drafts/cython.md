@@ -12,8 +12,7 @@ Back in the school days, I usually follow two steps for my projects
 1. prototype with Matlab/octave
 2. if speed is of concern, rewrite with C/C++, possibly calling out the Fortran LAPACK library
 
-
-At that time (~2007), Numpy was quite buggy comparing to Matlab so it wasn't my choice.
+At that time (~2007), Numpy was buggy compared to Matlab so it wasn't my choice.
 
 For example, there is a nice quantum optics library called [QuTiP](http://qutip.org).
 

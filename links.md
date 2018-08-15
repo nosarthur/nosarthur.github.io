@@ -13,6 +13,7 @@ permalink: /links/
     * [Allen Downey](http://allendowney.blogspot.com/)
     * [Derek Lowe](http://blogs.sciencemag.org/pipeline/)
     * [Miguel Grinberg](https://blog.miguelgrinberg.com/index)
+    * [Soham Kamani](https://www.sohamkamani.com/blog)
     * [free code camp](https://medium.freecodecamp.org/)
 * financial independence
     * [Mad FIentist](https://www.madfientist.com/)
