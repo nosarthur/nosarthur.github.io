@@ -58,8 +58,9 @@ More information about the profiler can be found in the page of
 
 ## pytest
 
-The pytest library uses fixture
-
+The pytest library uses fixtures manage test resources and dependency injection.
+For example, if several tests use the some data without changing it, we can
+load it once and share among them:
 
 ```python
 import pytest
@@ -69,11 +70,11 @@ def data1():
     return load_data('some file name')
 ```
 
-This code can be placed in a file called `conftest.py`, and pytest will load it
+This code can be placed in a file called `conftest.py`, which pytest will load
 automatically. 
 
 In the test code, one can pass `data1` as argument to the test function directly.
-The scope could be `session`, `function`, `class`.
+The scope could be `session`, `module`, `class`, and `function`.
 
 [pytest fixture page](https://docs.pytest.org/en/latest/fixture.html).
 
