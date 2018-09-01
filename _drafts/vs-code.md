@@ -9,6 +9,9 @@ tags: [editor]
 
 I have been using vim since 2003 and 
 
+my vimrc setting can be seen [here](https://github.com/nosarthur/vim).
+
+http://www.synergy.com/wordpress_650164087/kaleidagraph/
 
 * [why neovim is better than vim](https://geoff.greer.fm/2015/01/15/why-neovim-is-better-than-vim/)
 

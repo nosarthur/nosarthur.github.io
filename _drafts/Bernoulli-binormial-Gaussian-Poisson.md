@@ -7,7 +7,7 @@ comments: true
 tags: [probabilities, random processes]
 ---
 
-Probability theory, statistics, and stochastic processes are studies of undeterminstic
+Probability theory, statistics, and stochastic processes all study undeterminstic
 events. Roughly speaking, they can be seen as theories of signal source,
 results counting, and dynamics.
 Many neat results can be constructed from simple things. Here I will start from
