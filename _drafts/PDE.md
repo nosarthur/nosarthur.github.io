@@ -1,33 +1,41 @@
 ---
 layout: post
 title: Partial differential equations
-date:   2018-05-01 03:43:08 -0500
+date:   2018-10-01 01:00:00 -0500
 categories: [math and physics]
 comments: true
 tags: [PDE]
 ---
 
-In scientific and engineering fields, often times the problems boil down to solving partial differential equations (PDEs).
+Solving partial differential equations (PDEs) is common practice for scientific
+and engineering problems.
 Major applications include
 
-* electro-magnetism 
-* material properties 
+* electro-magnetism
+* material properties: mechanical, thermal, etc
 * dynamics ([diffusion](https://en.wikipedia.org/wiki/Diffusion) for example)
 
 More interestingly, the same types of equations appear in different fields.
 The most common ones are
 
-* elli
+* elliptic equations
+* parabolic equations
 * hyperbolic equations
-* wave
+* wave equations
 
-In this post, I will give brief overview on the two most important numerical solvers for PDEs: the finite difference method (FD) and the finite element method (FE).
+In this post, I will give brief overview on the two most important numerical
+solvers for PDEs: the finite difference method (FD) and the finite element method (FE).
 In case this post is too long to read, there are a few key points:
 
 * Not all PDEs have meaningful (numerical) solutions
-* FD is not as straightforward as replacing differentiation with finite difference: the choice of the [finite difference scheme](https://en.wikipedia.org/wiki/Finite_difference) (forward, backward, central, etc) could affect the convergence (right, convergence, stability, not accuracy!)
+* FD is not as straightforward as replacing differentiation with finite difference:
+  the choice of the [finite difference scheme](https://en.wikipedia.org/wiki/Finite_difference)
+  (forward, backward, central, etc) could affect the convergence (right, convergence, stability, not accuracy!)
 * For applications with complicated geometric shapes / boundary conditions, FE is better suited than FD
-* One might write in-house FD solvers for the problem at hand, but may rarely write in-house FE due to its complexity and the handiness of commertial softwares such as [COMSOL multiphysics](https://en.wikipedia.org/wiki/COMSOL_Multiphysics), [HFSS](https://en.wikipedia.org/wiki/HFSS), [Sonnet](https://www.sonnetsoftware.com), etc.
+* One might write in-house FD solvers for the problem at hand, but may rarely
+  write in-house FE due to its complexity and the handiness of commercial softwares
+  such as [COMSOL multiphysics](https://en.wikipedia.org/wiki/COMSOL_Multiphysics),
+  [HFSS](https://en.wikipedia.org/wiki/HFSS), [Sonnet](https://www.sonnetsoftware.com), etc.
 
 ## introduction
 
@@ -35,7 +43,7 @@ In case this post is too long to read, there are a few key points:
 * numerical methods
     * finite difference method (FD)
     * finite element method (FE)
-    
+
 * chaos
 * nonlinear dynamics
 
