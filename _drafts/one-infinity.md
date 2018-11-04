@@ -14,3 +14,6 @@ tags: [number theory]
 * [Prime number theorem](https://en.wikipedia.org/wiki/Prime_number_theorem)
 * [Great theorem of Fermat](https://en.wikipedia.org/wiki/Fermat%27s_Last_Theorem)
 * [Euler characteristic](https://en.wikipedia.org/wiki/Euler_characteristic)
+* There are only five [regular polyhedrons](https://en.wikipedia.org/wiki/Regular_polyhedron).
+  (It is also related to the classical elements: earth, fire, water, air, ether)
+* [Problem of four colors](https://en.wikipedia.org/wiki/Four_color_theorem)
