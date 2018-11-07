@@ -7,7 +7,7 @@ comments: true
 tags: [parenting]
 ---
 
-With a newborn baby, evenings seem like dead loops of
+No one and nothing can prepare you for the tremendous effort of raising a child. Sure you might have glimpses here and there from friends and family already with little ones, but until you have your own, you truly cannot anticipate what lies ahead. Gone are the lazy afternoons of mindless internet surfing, last minute weekend getaways, leisurely strolls at whim. With a newborn baby, evenings seem like dead loops of
 
 * is the baby hungry?
 * is the diaper dirty?
@@ -49,8 +49,8 @@ Please let me know if you have other good tools to recommend.
 
 ## <a name='diaper'></a> diapers
 
-* Huggies economy plus: It has a line to indicate wet diaper, like the Pampers diaper. The economy plus version is cheaper then the regular version and is more light weight. It seems to work equally well. <a target="_blank"  href="https://www.amazon.com/gp/product/B0089VO4VS/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B0089VO4VS&linkCode=as2&tag=nosarthur2016-20&linkId=002ee05cab0a5d3ab0082da656efc699"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=B0089VO4VS&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=nosarthur2016-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=nosarthur2016-20&l=am2&o=1&a=B0089VO4VS" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
-* Aquaphor baby healing ointment: Good to remove diaper rashes. <a target="_blank"  href="https://www.amazon.com/gp/product/B005UEB96K/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B005UEB96K&linkCode=as2&tag=nosarthur2016-20&linkId=d5d744ef510961093813157d39a434e8"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=B005UEB96K&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=nosarthur2016-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=nosarthur2016-20&l=am2&o=1&a=B005UEB96K" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+* Huggies economy plus: Soft, absorbent, and comes with a wetness indicator for pee, Huggies Economy Plus has it all, as well as being the most cost effective, which is definitely a plus when your little one goes through more than 10 diapers a day. <a target="_blank"  href="https://www.amazon.com/gp/product/B0089VO4VS/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B0089VO4VS&linkCode=as2&tag=nosarthur2016-20&linkId=002ee05cab0a5d3ab0082da656efc699"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=B0089VO4VS&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=nosarthur2016-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=nosarthur2016-20&l=am2&o=1&a=B0089VO4VS" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+* Aquaphor baby healing ointment: After trying out a few other brands, Aquaphor was the best in removing diaper rashes quickly. It's also recommended by our pediatrician. <a target="_blank"  href="https://www.amazon.com/gp/product/B005UEB96K/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B005UEB96K&linkCode=as2&tag=nosarthur2016-20&linkId=d5d744ef510961093813157d39a434e8"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=B005UEB96K&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=nosarthur2016-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=nosarthur2016-20&l=am2&o=1&a=B005UEB96K" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 
 ## <a name='baby-comfort'></a> baby comfort
 
