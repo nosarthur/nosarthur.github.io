@@ -7,7 +7,9 @@ comments: true
 tags: [parenting]
 ---
 
-No one and nothing can prepare you for the tremendous effort of raising a child. Sure you might have glimpses here and there from friends and family already with little ones, but until you have your own, you truly cannot anticipate what lies ahead. Gone are the lazy afternoons of mindless internet surfing, last minute weekend getaways, leisurely strolls at whim. With a newborn baby, evenings seem like dead loops of
+No one and nothing can prepare you for the tremendous effort of raising a child. Sure you might have glimpses here and there from friends and family already with little ones, but until you have your own, you truly cannot anticipate what lies ahead. Gone are the lazy afternoons of mindless internet surfing, last minute weekend getaways, leisurely strolls at whim. You will surely lose your mind every night trying to fight sleep while aimlessly attempting to decipher your baby's cries and general fussiness, and yet when they flash you that first genuine toothless little smile, it all seems worth it (kind of). 
+
+With a newborn baby, evenings seem like dead loops of
 
 * is the baby hungry?
 * is the diaper dirty?
