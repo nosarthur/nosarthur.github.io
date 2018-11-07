@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The second machine age by Erik Brynjolfsson and Andrew McAfee
-date:   2018-10-29 18:00:00 -0500
+date:   2018-11-07 18:00:00 -0500
 categories: [readings]
 comments: true
 tags: [logic]
