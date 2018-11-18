@@ -212,6 +212,7 @@ For unbuffered channel, both sending and receiving blocks until the other operat
 
 * [Go books](https://github.com/dariubs/GoBooks)
 * [Official Go wiki](https://github.com/golang/go/wiki)
+* [Practical Go](https://dave.cheney.net/practical-go/presentations/qcon-china.html)
 * Rob Pike - 'Concurrency Is Not Parallelism'
 
   {% include youtubePlayer.html id="cN_DpYBzKso" %}
