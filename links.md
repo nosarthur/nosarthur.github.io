@@ -14,6 +14,7 @@ permalink: /links/
     * [Derek Lowe](http://blogs.sciencemag.org/pipeline/)
     * [Miguel Grinberg](https://blog.miguelgrinberg.com/index)
     * [Soham Kamani](https://www.sohamkamani.com/blog)
+    * [Dave Cheney](https://dave.cheney.net)
     * [free code camp](https://medium.freecodecamp.org/)
 * financial independence
     * [Mad FIentist](https://www.madfientist.com/)

@@ -7,6 +7,8 @@ comments: true
 tags: [javascript]
 ---
 
+* [vue-router](https://router.vuejs.org/)
+* [vuex](https://vuex.vuejs.org/)
 
 ## one-way and two-way binding
 
@@ -34,7 +36,7 @@ Shortcut
 ## more complicated situation
 
 ```javascript
-<tag> {{ myStr }} </tag>
+<b-tab :title="`Search: ${name}`" active>
 ```
 
 [detection caveats](https://vuejs.org/v2/guide/list.html#Caveats)
