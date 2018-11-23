@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A crash course on Golang
-date:   2018-08-21 13:00:00 -0500
+date:   2018-11-21 13:00:00 -0500
 categories: [coding]
 comments: true
 tags: [golang]
@@ -9,8 +9,9 @@ tags: [golang]
 
 The [Go programming language](https://en.wikipedia.org/wiki/Go_(programming_language))
 is created by Google in 2009.
-It is in the C language family, and its syntax is close to C, C++, and Python.
-To me, it is like C with enhancements.
+It is in the C language family, with a syntax close to C/C++ and Python.
+To me, it feels like C with enhancements in native data types, support for
+structures with methods, interface-based programming, and concurrency programming.
 
 * It does not have class and inheritance.
 * It does not have implicit type conversion (with the exception of `interface`).
@@ -18,12 +19,12 @@ To me, it is like C with enhancements.
 * It does not have asserts.
 * It supports `struct` with data and methods.
 * It supports polymorphism from composition.
-* It supports concurrency.
+* It supports concurrency programming.
 * It supports implicit `interface` matching.
 * It has pointer but not reference.
 * It has garbage collection.
 * Its function arguments are passed by value.
-* Its `import` is like Python and there is no implicit lookup.
+* Its `import` is like Python and unlike C/C++.
 
 This is a quick-and-dirty tutorial with the goal to get the programmer
 into Golang coding.
@@ -52,6 +53,9 @@ A useful place to try snippet out is [Go playground](https://play.golang.org/).
     * function
     * channel
 * interface types
+
+Note that `string`, `array`/`slice`, `map` are implemented as `struct` and their
+zero value is `nil` pointer.
 
 The data types can also be categorized by comparability. Comparable types can be
 used as hash keys, e.g., keys of the `map` type.
@@ -170,6 +174,19 @@ fmt.Println(s[4], reflect.TypeOf(s[4]))
   7 界
   ```
 
+## access control
+
+capitalized variables and functions are public, whereas uncapitalized ones
+are private.
+
+This rule applies to both `struct` and packages.
+
+## zero values
+
+https://golang.org/ref/spec#The_zero_value
+
+`map` and channel
+
 ## encapsulation and polymorphism
 
 (method and interface)
@@ -193,6 +210,9 @@ with `ok`, no panic and zero value of `T` is assigned
 
 ## concurrency
 
+> When we cannot confidently say that one event happens before the other, then
+  the events x and y are concurrent.
+
 channel
 
 * communication
@@ -208,7 +228,14 @@ There are three types of channels: `nil`, unbuffered, and buffered.
 
 For unbuffered channel, both sending and receiving blocks until the other operation happens.
 
+> A data race occurs whenever two goroutines access the same variable
+  concurrently and at least one of the accesses is a write.
+
 ## references
+
+<a target="_blank"  href="https://www.amazon.com/gp/product/0134190440/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0134190440&linkCode=as2&tag=nosarthur2016-20&linkId=877bc40d43e96f29e88a72fce2b42d1c"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=0134190440&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=nosarthur2016-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=nosarthur2016-20&l=am2&o=1&a=0134190440" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+
+<a target="_blank"  href="https://www.amazon.com/gp/product/0131103628/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0131103628&linkCode=as2&tag=nosarthur2016-20&linkId=10408d97f586150cb5e2b22c09b3e8ff"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=0131103628&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=nosarthur2016-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=nosarthur2016-20&l=am2&o=1&a=0131103628" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 
 * [Go books](https://github.com/dariubs/GoBooks)
 * [Official Go wiki](https://github.com/golang/go/wiki)
