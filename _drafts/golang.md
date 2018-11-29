@@ -210,8 +210,14 @@ with `ok`, no panic and zero value of `T` is assigned
 
 ## concurrency
 
+2 KB
+
+8MB
+
 > When we cannot confidently say that one event happens before the other, then
   the events x and y are concurrent.
+
+> Don't communicate by sharing memory, share memory by communicating.
 
 channel
 

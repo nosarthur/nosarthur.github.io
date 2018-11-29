@@ -7,8 +7,15 @@ comments: true
 tags: [javascript]
 ---
 
+Recently I was working on a side project which forces me to learn a little more
+on javascript.
+
+[vue](https://vuejs.org/)
+
 * [vue-router](https://router.vuejs.org/)
 * [vuex](https://vuex.vuejs.org/)
+
+[vue mastery](https://www.vuemastery.com/)
 
 ## data binding
 
