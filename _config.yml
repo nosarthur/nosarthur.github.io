@@ -19,3 +19,4 @@ github_username:  nosarthur
 # Build settings
 markdown: kramdown
 highlighter: rouge
+future: False
