@@ -7,7 +7,7 @@ comments: true
 tags: [coding interview]
 ---
 
-## introduction 
+## introduction
 
 Nowadays it is standard procedure to have the job candidate to do coding problems either on white board or against an online judge system for tech interviews.
 This post is a guide for its preparation.
@@ -24,15 +24,18 @@ Usually the interview is 30-45 minutes, it is thus not a good sign if only two p
 
 Interview problems usually can be solved with
 
-* less than 30 lines (if you use python) 
+* less than 30 lines (if you use python)
 * a solution with complexity less than $$O(n^3)$$
 
 Also a solution with $$O(1)$$ or $$O(\log n)$$ complexity is somewhat unlikely.
 
-Finally,  you can check out
-[LeetCode](https://leetcode.com) and [LeetCode solutions](https://lefttree.gitbooks.io/leetcode-categories/content/index.html)
+Finally,  you can check out [LeetCode](https://leetcode.com) and
+[LeetCode solutions](https://lefttree.gitbooks.io/leetcode-categories/content/index.html)
 for real life interview problems.
-    
+There is also a site called [daily coding problem](https://www.dailycodingproblem.com/).
+After signing up, they send you one problem each day.
+The solution is only available is you have the premium subscription.
+
 ## common strategies and tricks
 
 There are essentially only two strategies for solution finding
@@ -52,7 +55,7 @@ would only require $$O(n^{\alpha_1})+ O(n^{\alpha_2})+ O(n^{\alpha_3})$$ complex
 * bottom up: for example, start from $$f({a_1})$$
 * top down: for example, start from $$f({a_1, a_2, \ldots, a_N})$$
 
-As for common tricks, 
+As for common tricks,
 
 * array
     * two pointers
@@ -74,22 +77,22 @@ As for common tricks,
 [Shor's algorithm](https://en.wikipedia.org/wiki/Shor%27s_algorithm)
 
 
-The structure of an algorithm is 
+The structure of an algorithm is
 
 * iterative
-* recursive 
+* recursive
 
 The complexity of iterative algorithm is trivial. For recursive algorithms, their complexity can be computed with the [master theorem](https://en.wikipedia.org/wiki/Master_theorem):
 
-Given the recursion relation 
+Given the recursion relation
 
 $$ T(n) = a T\left(\frac{n}{b}\right) + f(n) $$
 
-where $$a\ge1$$, $$b>1$$, and $$f(n)\in O(n^d)$$ with $$d\ge0$$. The complexity is given by 
+where $$a\ge1$$, $$b>1$$, and $$f(n)\in O(n^d)$$ with $$d\ge0$$. The complexity is given by
 
 $$T(n) \in \begin{cases} O(n^d) \quad \text{if } a<b^d \\
 O(n^d\log n) \quad \text{if } a = b^d \\
-O(n^{\log_b a}) \quad \text{if }a>b^d \end{cases} $$ 
+O(n^{\log_b a}) \quad \text{if }a>b^d \end{cases} $$
 
 ## survey of common algorithms
 
@@ -127,7 +130,8 @@ O(n^{\log_b a}) \quad \text{if }a>b^d \end{cases} $$
 
 ### dynamic programming
 
-Dynamic programming (DP) has always been somewhat mysterious to me until I watched [Erik Demaine](http://erikdemaine.org)'s lectures on it.
+Dynamic programming (DP) has always been somewhat mysterious to me until I watched
+[Erik Demaine](http://erikdemaine.org)'s lectures on it.
 There are four lectures and the first one is shown below.
 
 {% include youtubePlayer.html id="OQ5jsbhAv_M" %}
@@ -135,10 +139,10 @@ There are four lectures and the first one is shown below.
 * recursion + memoization
 * DP(problem) = min or max or combine over DP(sub-problem) + extra cost
 
-    This recursive setup looks similar to the master theorem case. 
+    This recursive setup looks similar to the master theorem case.
 * complexity = number of sub-problems * cost per sub-problem
 
-To break down the problem into sub-problems, 
+To break down the problem into sub-problems,
 
 * suffix s[i, :]
 * prefix s[:, i]
@@ -146,9 +150,9 @@ To break down the problem into sub-problems,
 
 ### longest common subsequence
 
-### knapsack 
+### knapsack
 
 
 ## resources
 * [MIT 6.006 Fall 2011](http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/)
-
+* [50+ data structure and algorithm interview questions](https://hackernoon.com/50-data-structure-and-algorithms-interview-questions-for-programmers-b4b1ac61f5b0)

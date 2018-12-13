@@ -9,18 +9,21 @@ tags: [golang]
 
 The [Go programming language](https://en.wikipedia.org/wiki/Go_(programming_language))
 is created by Google in 2009.
-It is in the C language family, with a syntax close to C/C++ and Python.
-To me, it feels like C with enhancements in native data types, support for
-structures with methods, interface-based programming, and concurrency programming.
+Its syntax is similar to C/C++ and Python.
+To me, it feels like C with enhancements in native data types (dynamic array and hashmap),
+interface-based programming, and concurrency programming.
 
 * It does not have class and inheritance.
 * It does not have implicit type conversion (with the exception of `interface`).
 * It does not have exceptions.
 * It does not have asserts.
+* It does not have default parameters.
+* It does not have macros.
 * It supports `struct` with data and methods.
 * It supports polymorphism from composition.
-* It supports concurrency programming.
+* It supports concurrency programming based on the [communicating sequential processes (CSP)](https://en.wikipedia.org/wiki/Communicating_sequential_processes) model.
 * It supports implicit `interface` matching.
+* It has lightweight threads with variable-size stack called *goroutines*.
 * It has pointer but not reference.
 * It has garbage collection.
 * Its function arguments are passed by value.
@@ -57,8 +60,8 @@ A useful place to try snippet out is [Go playground](https://play.golang.org/).
 Note that `string`, `array`/`slice`, `map` are implemented as `struct` and their
 zero value is `nil` pointer.
 
-The data types can also be categorized by comparability. Comparable types can be
-used as hash keys, e.g., keys of the `map` type.
+The data types can also be categorized by comparability.
+Comparable types can be used as hash keys, e.g., keys of the `map` type.
 
 * comparable
     * basic types
@@ -89,6 +92,24 @@ append      cap     close   complex     copy    delete
 imag        len     make    new         panic   print
 println     real    recover
 ```
+
+### custom types
+
+* type aliasing
+* embedding
+
+Aliasing only inherits the data fields whereas embedding inherits both data and
+methods.
+
+## data structures
+
+Any comparable type can be `map` key.
+
+Somewhat peculiar situations include channel, and composite types such as
+`interface`, `struct` and array.
+
+slice
+
 
 ## function
 
@@ -183,9 +204,17 @@ This rule applies to both `struct` and packages.
 
 ## zero values
 
-https://golang.org/ref/spec#The_zero_value
+At variable declaration, if no explicit initialization is provided, a default
+value is set.
+According to the [language spec](https://golang.org/ref/spec#The_zero_value),
+this zero value is
 
-`map` and channel
+* `0` for all numeric types
+* `false` for booleans
+* `""` for strings
+* `nil` for pointers, functions, interfaces, slices, channels, and maps
+
+For composite types, the initialization is recursive.
 
 ## encapsulation and polymorphism
 
