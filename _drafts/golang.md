@@ -14,7 +14,8 @@ To me, it feels like C with enhancements in native data types (dynamic array and
 interface-based programming, and concurrency programming.
 
 * It does not have class and inheritance.
-* It does not have implicit type conversion (with the exception of `interface`).
+* It does not have implicit type conversion, with the exception of `interface`,
+  unidirectional channel, and untyped `constant`.
 * It does not have exceptions.
 * It does not have asserts.
 * It does not have default parameters.
@@ -85,7 +86,15 @@ const        fallthrough  if           range        type
 continue     for          import       return       var
 ```
 
-and the built-in functions are
+There are kinds of declarations
+
+* `package`
+* `var`
+* `const`
+* `type`
+* `func`
+
+there are built-in functions are
 
 ```go
 append      cap     close   complex     copy    delete
@@ -265,6 +274,12 @@ For unbuffered channel, both sending and receiving blocks until the other operat
 
 > A data race occurs whenever two goroutines access the same variable
   concurrently and at least one of the accesses is a write.
+
+(map lookup, type assertion) The third operator that supports an `ok` is channel receive
+
+```go
+v, ok = <- ch
+```
 
 ## references
 
