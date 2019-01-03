@@ -11,6 +11,7 @@ permalink: /about/
         <li><a href="mailto:{{ site.email }}">Email</a></li>
         <li><a href='https://rawgit.com/nosarthur/CV_resume/master/DongZHOU_resume.pdf'>Resume</a> </li>
         <li><a href="https://www.linkedin.com/in/dong-zhou-84252914">LinkedIn</a></li>
+        <li><a href="https://www.goodreads.com/nosarthur">Goodreads</a></li>
         <li><a href="http://scholar.google.com/citations?hl=en&user=9RcAQTUAAAAJ">Google Scholar</a></li>
         </ul>
       </div>

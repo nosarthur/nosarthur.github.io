@@ -293,3 +293,7 @@ v, ok = <- ch
 * Rob Pike - 'Concurrency Is Not Parallelism'
 
   {% include youtubePlayer.html id="cN_DpYBzKso" %}
+
+  {% include youtubePlayer.html id="2h_NFBFrciI" %}
+
+
