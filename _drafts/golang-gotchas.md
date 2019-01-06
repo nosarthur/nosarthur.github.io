@@ -33,3 +33,10 @@ ints.([]interface{})
 ```
 
 ## panic inside goroutine
+
+
+## loop through unicode string
+
+`range`
+
+## declared pointer type cannot be receiver

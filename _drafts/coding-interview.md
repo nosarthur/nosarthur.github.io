@@ -82,7 +82,9 @@ The structure of an algorithm is
 * iterative
 * recursive
 
-The complexity of iterative algorithm is trivial. For recursive algorithms, their complexity can be computed with the [master theorem](https://en.wikipedia.org/wiki/Master_theorem):
+The complexity of iterative algorithm is trivial.
+For recursive algorithms, their complexity can be computed with the
+[master theorem](https://en.wikipedia.org/wiki/Master_theorem):
 
 Given the recursion relation
 
@@ -92,7 +94,7 @@ where $$a\ge1$$, $$b>1$$, and $$f(n)\in O(n^d)$$ with $$d\ge0$$. The complexity 
 
 $$T(n) \in \begin{cases} O(n^d) \quad \text{if } a<b^d \\
 O(n^d\log n) \quad \text{if } a = b^d \\
-O(n^{\log_b a}) \quad \text{if }a>b^d \end{cases} $$
+O(n^{\log_b a}) \quad \text{if }a> b ^ d \end{cases} $$
 
 ## survey of common algorithms
 
@@ -155,4 +157,5 @@ To break down the problem into sub-problems,
 
 ## resources
 * [MIT 6.006 Fall 2011](http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/)
+* [Professor Jeff Erickson's algorithm book](https://github.com/jeffgerickson/algorithms)
 * [50+ data structure and algorithm interview questions](https://hackernoon.com/50-data-structure-and-algorithms-interview-questions-for-programmers-b4b1ac61f5b0)

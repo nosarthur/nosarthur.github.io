@@ -24,8 +24,8 @@ interface-based programming, and concurrency programming.
 * It supports polymorphism from composition.
 * It supports concurrency programming based on the [communicating sequential processes (CSP)](https://en.wikipedia.org/wiki/Communicating_sequential_processes) model.
 * It supports implicit `interface` matching.
+* It supports call-by-value but not call-by-reference (with the exception of reference types such as slice and `map`).
 * It has lightweight threads with variable-size stack called *goroutines*.
-* It has pointer but not reference.
 * It has garbage collection.
 * Its function arguments are passed by value.
 * Its `import` is like Python and unlike C/C++.
@@ -101,6 +101,10 @@ append      cap     close   complex     copy    delete
 imag        len     make    new         panic   print
 println     real    recover
 ```
+
+`new` is not commonly used because one can initialize with literal
+
+`make` is only for slice, `chan`, and `map`.
 
 ### custom types
 
