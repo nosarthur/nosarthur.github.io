@@ -38,6 +38,8 @@ A useful place to try snippet out is [Go playground](https://play.golang.org/).
 
 ## data types
 
+There are four kinds of data types in golang:
+
 * basic types
     * number
         * `int` and variants
@@ -45,21 +47,22 @@ A useful place to try snippet out is [Go playground](https://play.golang.org/).
         * `complex` and variants
         * `byte`: alias for `uint8`
         * `rune`: alias for `int32`
-    * string
-    * boolean
+    * `string`
+    * `bool`
 * aggregate types
     * array
-    * struct
+    * `struct`
 * reference types
     * pointer
     * slice
-    * map
-    * function
-    * channel
-* interface types
+    * `map`
+    * function `func`
+    * channel `chan`
+    * `interface`
+* `reflect.Invalid`
 
-Note that `string`, `array`/`slice`, `map` are implemented as `struct` and their
-zero value is `nil` pointer.
+
+`reflect.Kind()`
 
 The data types can also be categorized by comparability.
 Comparable types can be used as hash keys, e.g., keys of the `map` type.
@@ -225,7 +228,7 @@ this zero value is
 * `0` for all numeric types
 * `false` for booleans
 * `""` for strings
-* `nil` for pointers, functions, interfaces, slices, channels, and maps
+* `nil` for reference types, i.e., pointers, functions, interfaces, slices, channels, and maps
 
 For composite types, the initialization is recursive.
 
