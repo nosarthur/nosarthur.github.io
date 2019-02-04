@@ -16,3 +16,5 @@ tags: [career]
 
 > The difference between successful people and very successful people is that
   very successful people say no to almost everything.  --- Warren Buffett
+
+> The greatest of all weaknesses is the fear of appearing weak. --- J.B. Bossuet

@@ -17,6 +17,7 @@ permalink: /links/
     * [Dave Bacon](http://dabacon.org/)
     * [Derek Lowe](http://blogs.sciencemag.org/pipeline/)
     * [Constantine Shulyupin](http://makelinux.net/)
+    * [Erik Bernhardsson](https://erikbern.com/)
     * [free code camp](https://medium.freecodecamp.org/)
 * financial independence
     * [Mad FIentist](https://www.madfientist.com/)

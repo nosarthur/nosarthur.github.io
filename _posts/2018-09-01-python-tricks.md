@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Some Python tricks
-date:   2018-09-01 08:00:00 -0500
+date: 2018-09-01 08:00:00 -0500
 categories: [coding]
 comments: true
 tags: [python]
@@ -26,6 +26,7 @@ python3 -m pip
 python3 -m venv
 python3 -m IPython
 ```
+
 It is more convenient to `alias` them in the `.bashrc`.
 
 The `-O` option removes `assert` statements.
@@ -87,7 +88,7 @@ In the following example, I combine several tricks together
 
 ```python
 import pytest
-from unittest.mock import patch
+from unittest.mock import patch, mock_open
 
 @patch("import/path/to/a/function")
 @pytest.mark.parametrize('input, expected', [
@@ -100,13 +101,19 @@ def test_something(mock_f, input, expected, data1, data2, tmpdir):
     with tmpdir.as_cwd():
         result = some_func(input,  data1)
         assert expected == result
+    with patch('builtins.open',
+               mock_open(read_data='some data')) as mock_file:
+        result = another_func()
+    assert result == 'some result'
+    mock_file.assert_called_once_with('/expected/file/path/to/open')
 ```
 
-* `patch` mocks a function
-* `parametrize` generates multiple tests with the same structure
-* `param` and `xfail` denotes failing test
-* `tmpdir` is a fixture defined by pytest to simplify the use of temporary directory
-* `data1` and `data2` are fixtures defined elsewhere
+- `patch` mocks a function
+- `parametrize` generates multiple tests with the same structure
+- `param` and `xfail` denotes failing test
+- `tmpdir` is a fixture defined by pytest to simplify the use of temporary directory
+- `data1` and `data2` are fixtures defined elsewhere
+- `mock_open` patches the file `open` function and `read_data` is the content of the file
 
 It's easy to get test coverage and parallelization too. To install
 
