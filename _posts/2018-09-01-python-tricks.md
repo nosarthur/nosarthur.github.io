@@ -62,7 +62,7 @@ More information about the profiler can be found on the page of
 ## pytest
 
 The pytest library uses fixtures to manage resources and dependency injection.
-For example, if several tests use the some data without changing it, we can
+For example, if several tests use the same resource, we can
 load it once and share among them:
 
 ```python
@@ -129,3 +129,9 @@ pytest tests/ --cov=./gita -n=auto
 
 Here `tests/` is the directory containing the test files, `./gita` is the package
 being tested, and `-n` specified the number of processes for parallelization.
+
+Pytest also has some useful options
+
+* `-k <name>`: only do tests that (partially) match `name`
+* `-x`: fail fast
+* `--lf`: only run the last failed tests

@@ -50,12 +50,14 @@ Before posting on Show HN, there were 5 stars: 3 from my coworkers,
 
 I also tried other means to promo it, but doesn't have much response
 
-* http://gank.io/
+* [gank.io](http://gank.io/)
 * ProductHunt ?
-* post on redit/programming ?
-* post on redit/python
-* post on redit/git
-* answer stackoverflow on multiple repo management
+* reddit
+    * post on redit/programming ?
+    * post on redit/python
+    * post on redit/git
+* mention gita in my stackoverflow answers about multiple repo management,
+  and asyncio usage
 
 
 ## further readings
