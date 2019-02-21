@@ -14,10 +14,11 @@ permalink: /links/
     * [Miguel Grinberg](https://blog.miguelgrinberg.com/index)
     * [Soham Kamani](https://www.sohamkamani.com/blog)
     * [Dave Cheney](https://dave.cheney.net)
-    * [Dave Bacon](http://dabacon.org/)
     * [Derek Lowe](http://blogs.sciencemag.org/pipeline/)
     * [Constantine Shulyupin](http://makelinux.net/)
     * [Erik Bernhardsson](https://erikbern.com/)
+    * [Bradley Worley](http://geekysuavo.github.io/about.html)
+    * [Dave Bacon](http://dabacon.org/)
     * [free code camp](https://medium.freecodecamp.org/)
 * financial independence
     * [Mad FIentist](https://www.madfientist.com/)

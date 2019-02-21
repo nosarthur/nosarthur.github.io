@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Coding experience on Chromebook
-date:   2019-01-25 17:00:00 -0500
+date: 2019-01-25 17:00:00 -0500
 categories: [coding]
 comments: true
 tags: [chromebook]
@@ -9,25 +9,24 @@ tags: [chromebook]
 
 **TL;DR** To use the chromebook productively as a programmer
 
-* enable developer mode
-* install [chromebrew](https://github.com/skycocker/chromebrew)
-* stay on the stable channel
+- enable developer mode
+- install [chromebrew](https://github.com/skycocker/chromebrew)
+- stay on the stable channel
 
 in chronicle order
 
-* ssh to gcloud to do coding
-* 
+- ssh to gcloud to do coding
+-
 
-
-Redhat, Fedora, 
+Redhat, Fedora,
 
 The channel
 
 Settings -> About Chrome OS -> Detailed build information
 
-* Stable
-* Beta
-* Developer - unstable
+- Stable
+- Beta
+- Developer - unstable
 
 There is an even more **Canary** channel. Type the following command in crosh:
 
@@ -39,7 +38,19 @@ chromebrew only supports stable channel
 
 vs code has
 
+https://github.com/Microsoft/vscode/issues/2647#issuecomment-269403183
+
+/usr/local/share/code/resources/app/product.json
+
+```
+"extensionsGallery": {
+  "serviceUrl": "https://marketplace.visualstudio.com/_apis/public/gallery",
+  "cacheUrl": "https://vscode.blob.core.windows.net/gallery/index",
+  "itemUrl": "https://marketplace.visualstudio.com/items"
+}
+```
+
 ## complaints
 
-* With developer mode, `ctrl+d` to proceed with the boot process.
-* There is no way to show date on the task bar, only time.
+- With developer mode, `ctrl+d` to proceed with the boot process.
+- There is no way to show date on the task bar, only time.
