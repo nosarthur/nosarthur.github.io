@@ -43,14 +43,18 @@ Before posting on Show HN, there were 5 stars: 3 from my coworkers,
 
 ![two blobs](/assets/gita_spike.png){:width="400px"}
 
-I also tried other means to promo it, but doesn't have much response
+I also tried other means to promo it. Here is a list of the ones I tried and
+they are ranked by the effectiveness in bringing in traffic.
 
+- [hacker news](https://news.ycombinator.com/item?id=19074170)
 - [gank.io](http://gank.io/)
-- ProductHunt ?
+- [Hello github](https://hellogithub.com/)
 - reddit
-  - post on redit/programming ?
-  - post on redit/python
-  - post on redit/git
+  - /programming
+  - /python
+  - /git
+- [Product Hunt](https://www.producthunt.com/posts/gita-2)
+- [open hub](https://www.openhub.net/p/gita0)
 - mention gita in my stackoverflow answers about multiple repo management,
   and asyncio usage
 

@@ -19,17 +19,18 @@ permalink: /links/
     * [Erik Bernhardsson](https://erikbern.com/)
     * [Bradley Worley](http://geekysuavo.github.io/about.html)
     * [Dave Bacon](http://dabacon.org/)
+    * [Stephen Wolfram](https://blog.stephenwolfram.com/)
     * [free code camp](https://medium.freecodecamp.org/)
 * financial independence
     * [Mad FIentist](https://www.madfientist.com/)
     * [Mr Money Mustache](http://www.mrmoneymustache.com)
     * [Frugal Woods](http://www.frugalwoods.com)
+* others
+    * [Leo Babauta (zen habits)](https://zenhabits.net/)
 
 ### ancient texts
 
 * [Chinese Text Project](http://ctext.org/)
-* [Buddhist Education and Information][buddhist]
 
 
-[buddhist]: http://www.buddhanet.net/
 [nielsen]: http://michaelnielsen.org/
