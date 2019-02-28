@@ -18,3 +18,7 @@ tags: [career]
   very successful people say no to almost everything.  --- Warren Buffett
 
 > The greatest of all weaknesses is the fear of appearing weak. --- J.B. Bossuet
+
+> Our life is frittered away by detail ... Simplify, simplify. Instead of three
+  meals a day, if it be necessary eat but one; instead of a hundred dishes, five;
+  and reduce other things in proportion.   --- Henrry David Thoreau

@@ -7,24 +7,24 @@ permalink: /links/
 ### blogs
 
 * science and technology
-    * [Michael Nielsen][nielsen]
-    * [Scott Aaronson](https://www.scottaaronson.com/blog/)
     * [Allen Downey](http://allendowney.blogspot.com/)
+    * [Bradley Worley](http://geekysuavo.github.io/about.html)
+    * [Constantine Shulyupin](http://makelinux.net/)
+    * [Dave Bacon](http://dabacon.org/)
     * [David Beazley](https://www.dabeaz.com/index.html)
-    * [Miguel Grinberg](https://blog.miguelgrinberg.com/index)
-    * [Soham Kamani](https://www.sohamkamani.com/blog)
     * [Dave Cheney](https://dave.cheney.net)
     * [Derek Lowe](http://blogs.sciencemag.org/pipeline/)
-    * [Constantine Shulyupin](http://makelinux.net/)
     * [Erik Bernhardsson](https://erikbern.com/)
-    * [Bradley Worley](http://geekysuavo.github.io/about.html)
-    * [Dave Bacon](http://dabacon.org/)
+    * [Michael Nielsen][nielsen]
+    * [Miguel Grinberg](https://blog.miguelgrinberg.com/index)
+    * [Scott Aaronson](https://www.scottaaronson.com/blog/)
+    * [Sebastian Raschka](https://sebastianraschka.com/blog/index.html)
+    * [Soham Kamani](https://www.sohamkamani.com/blog)
     * [Stephen Wolfram](https://blog.stephenwolfram.com/)
-    * [free code camp](https://medium.freecodecamp.org/)
 * financial independence
+    * [Frugal Woods](http://www.frugalwoods.com)
     * [Mad FIentist](https://www.madfientist.com/)
     * [Mr Money Mustache](http://www.mrmoneymustache.com)
-    * [Frugal Woods](http://www.frugalwoods.com)
 * others
     * [Leo Babauta (zen habits)](https://zenhabits.net/)
 

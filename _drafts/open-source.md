@@ -49,6 +49,7 @@ they are ranked by the effectiveness in bringing in traffic.
 - [hacker news](https://news.ycombinator.com/item?id=19074170)
 - [gank.io](http://gank.io/)
 - [Hello github](https://hellogithub.com/)
+- [awesome python applications](https://github.com/mahmoud/awesome-python-applications)
 - reddit
   - /programming
   - /python
