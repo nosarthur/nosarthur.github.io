@@ -7,7 +7,12 @@ permalink: /category/
 {% assign tags_list = site.categories %}  
   {% if tags_list.first[0] == null %}
     {% for tag in tags_list %} 
-      <li><a href="#{{ tag }}">{{ tag | capitalize }} <span>{{ site.tags[tag].size }}</span></a></li>
+      <li>
+        <a href="#{{ tag }}">
+            {{ tag | capitalize }}
+            <span>{{ site.tags[tag].size }}</span>
+        </a>
+      </li>
     {% endfor %}
   {% else %}
     {% for tag in tags_list %} 
