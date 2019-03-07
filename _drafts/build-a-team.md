@@ -26,3 +26,8 @@ better than (level 3) average.
 
 The difference between level 3 and level 4 is that the person enjoys and find it
 instinctive to do perform at level 3.
+
+## motivation
+
+A good way to motivate team member is to give credit. A even better way is to
+give ownership.

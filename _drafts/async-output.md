@@ -43,24 +43,28 @@ or file IO block (IO block is a fancy word for waiting response), the single
 'working' core is idle.
 
 The immediate improvement is to start the next task while waiting for the current one.
-Even if only one core is used, there will be less idling as long as more
-than 1 tasks are unfinished. This idea can be implemented as a thread pool with
-more threads than the number of cores. When blocking happens on one thread, the
-operating system will schedule work on other threads to utilize the CPU cores.
+This leads to less CPU idling as long as more than 1 tasks are unfinished,
+even if only one core is used. This idea can be implemented as a thread pool.
+When blocking happens on one thread, the operating system will schedule work on
+other threads to utilize the CPU resource.
 
 The next obvious improvement is to let all cores work, i.e., parallelism.
+For example, each core can work on one task.
 When one core is done with an assigned task, it grabs a new one, say, from a task queue.
-This model is commonly implemented as process pool, where the number of workers
+This model is commonly implemented as a process pool, where the number of workers
 equal to the number of CPU cores.
 
-There is another less obvious improvement related to the task switching idea.
-For simplicity, let's assume only 1 core is used.
-Suppose the tasks all contain long periods of blocking, e.g., making requests to
-web servers, retrieving information from database, etc. Even though we have a
-switching mechanism, there is no guarantee that we don't switch to another blocking
-task. So we could be wasting time making useless switches.
+Note that the two ideas of context switch at IO blocks and parallelization are
+independent, thus can be used together.
 
-The solution to this problem is a contract such that every switch is effective.
+There is another less obvious improvement related to the task switching idea.
+With thread pool, we rely on the operating system to make context switches,
+and have little control over when switch occurs and what task to switch to.
+Suppose the tasks all contain long periods of blocking, e.g., making requests to
+web servers, retrieving information from database, etc.
+In these cases, we could be wasting time making useless switches.
+
+The solution is to take over the context switch.
 In python, this contract is implemented using coroutines.
 The magic keyword `yield` can be used both to give back control to the function
 caller and receive control from the caller.
@@ -76,16 +80,22 @@ To further improve the efficiency, we can combine parallelism and asynchrony.
 and the slides are available here:
 [Concurrency is not Parallelism by Rob Pike](https://talks.golang.org/2012/waza.slide#1)
 
+ type | CPU intensive | IO blocking
+--- | --- | ---
+ thread | | ✔
+ subprocess | ✔ |
+ asynchrony | | ✔✔
+
 ## python specifics
 
-thread doesn't run 
+The python thread libraries don't run across different cores due to the GIL.
 
 thread pool and run subprocess in each thread
 
-* threading
-* subprocess
-* multiprocessing.pool.ThreadPool
-* multiprocessing.Pool
+* [threading]()
+* [subprocess]()
+* [multiprocessing.pool.ThreadPool]()
+* [multiprocessing.Pool]()
 * [concurrent.futures.ThreadPoolExecutor](https://docs.python.org/3.6/library/concurrent.futures.html?highlight=concurrent%20futures#threadpoolexecutor)
 * [concurrent.futures.ProcessPoolExecutor](https://docs.python.org/3.6/library/concurrent.futures.html?highlight=concurrent%20futures#processpoolexecutor)
 

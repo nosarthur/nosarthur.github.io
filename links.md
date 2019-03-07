@@ -21,6 +21,8 @@ permalink: /links/
     * [Sebastian Raschka](https://sebastianraschka.com/blog/index.html)
     * [Soham Kamani](https://www.sohamkamani.com/blog)
     * [Stephen Wolfram](https://blog.stephenwolfram.com/)
+    * [Max Lapan](https://medium.com/@shmuma)
+    * [Jake VanderPlas](https://jakevdp.github.io/)
 * financial independence
     * [Frugal Woods](http://www.frugalwoods.com)
     * [Mad FIentist](https://www.madfientist.com/)

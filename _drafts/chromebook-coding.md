@@ -50,6 +50,12 @@ https://github.com/Microsoft/vscode/issues/2647#issuecomment-269403183
 }
 ```
 
+## golang
+
+```
+go get -v golang.org/x/tools/cmd/godoc
+go get -v golang.org/x/tools/cmd/goimports
+```
 ## complaints
 
 - With developer mode, `ctrl+d` to proceed with the boot process.
