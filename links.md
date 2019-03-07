@@ -27,8 +27,6 @@ permalink: /links/
     * [Frugal Woods](http://www.frugalwoods.com)
     * [Mad FIentist](https://www.madfientist.com/)
     * [Mr Money Mustache](http://www.mrmoneymustache.com)
-* others
-    * [Leo Babauta (zen habits)](https://zenhabits.net/)
 
 ### ancient texts
 
