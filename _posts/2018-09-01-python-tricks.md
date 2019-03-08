@@ -135,3 +135,31 @@ Pytest also has some useful options
 * `-k <name>`: only do tests that (partially) match `name`
 * `-x`: fail fast
 * `--lf`: only run the last failed tests
+
+## logging
+
+In some cases we need to log the python traceback.
+
+```python
+import sys
+import traceback
+import logging
+
+logger = logging.getLogger('nos')
+logger.setLevel(logging.DEBUG)
+
+handler = logging.StreamHandler(sys.stdout)
+handler.setLevel(logging.DEBUG)
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+handler.setFormatter(formatter)
+logger.addHandler(handler)
+
+
+if __name__ == '__main__':
+    try:
+        1/0
+    except Exception as e:
+        logger.exception('Got exception on main handler')
+    #    logger.error(e, exc_info=True)
+    #    print(''.join(traceback.format_tb(e.__traceback__)))
+```
