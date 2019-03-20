@@ -60,3 +60,7 @@ go get -v golang.org/x/tools/cmd/goimports
 
 - With developer mode, `ctrl+d` to proceed with the boot process.
 - There is no way to show date on the task bar, only time.
+
+samsung chromebook pro: Nov 2022
+
+https://support.google.com/chrome/a/answer/6220366?hl=en

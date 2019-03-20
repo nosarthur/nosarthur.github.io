@@ -142,6 +142,12 @@ The star/visit ratio is about 1:10, which holds to this day.
 And the star/download ratio is about 1:2.
 So I still need to increase the exposure of it.
 
+over 300 views in one day, due to [Ruan Yifeng's blog](ruanyifeng.com)
+
+[](https://github.com/ruanyf/weekly)
+
+[GitHubDaily](https://github.com/GitHubDaily/GitHubDaily)
+
 ## further readings
 
 - [Open Source Guides](https://opensource.guide/)

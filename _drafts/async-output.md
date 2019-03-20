@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Handle python asyncio output
-date: 2019-02-25 17:00:00 -0500
+date: 2019-03-25 17:00:00 -0500
 categories: [coding]
 comments: true
 tags: [python, asyncio]
@@ -170,4 +170,8 @@ async def run_async(path: str, cmds: List[str]):
 3
 ```
 
+
+## further readings
+
+- [A gentle introduction to multithreading](https://www.internalpointers.com/post/gentle-introduction-multithreading)
 
