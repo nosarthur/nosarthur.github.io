@@ -108,6 +108,22 @@ To improve the project, I try to
   - issues/pull requests
   - contributors
 
+This is what happened with
+[Hacker News Show](https://news.ycombinator.com/show).
+
+- @1am posted on HN Show
+- @6:30am got up with 115 stars and 3 issues
+- @1am second day: 274 stars, 1 more issue, and 3 pull requests
+
+![two blobs](/assets/gita_spike.png){:width="400px"}
+
+It went on the HN front page and also the github trending page for that week.
+The star/visit ratio is about 1:10, which holds to this day.
+And the star/download ratio is about 1:2.
+So I still need to increase the exposure of it.
+
+Other users
+
 To promote it, I posted the project to many platforms.
 Here is an incomplete list of them, and
 they are roughly ranked by the effectiveness in bringing in traffic.
@@ -127,26 +143,12 @@ they are roughly ranked by the effectiveness in bringing in traffic.
 - [Hello github](https://hellogithub.com/)
 - [Terminals Are Sexy](https://github.com/k4m4/terminals-are-sexy)
 - [awesome python applications](https://github.com/mahmoud/awesome-python-applications)
+- [github daily](https://github.com/GitHubDaily/GitHubDaily)
 
-This is what happened with
-[Hacker News Show](https://news.ycombinator.com/show).
 
-- @1am posted on HN Show
-- @6:30am got up with 115 stars and 3 issues
-- @1am second day: 274 stars, 1 more issue, and 3 pull requests
+over 300 views in one day, due to [Ruan Yifeng's blog](https://github.com/ruanyf/weekly)
+[Nixpkgs for NixOS](https://github.com/NixOS/nixpkgs)
 
-![two blobs](/assets/gita_spike.png){:width="400px"}
-
-It went on the HN front page and also the github trending page for that week.
-The star/visit ratio is about 1:10, which holds to this day.
-And the star/download ratio is about 1:2.
-So I still need to increase the exposure of it.
-
-over 300 views in one day, due to [Ruan Yifeng's blog](ruanyifeng.com)
-
-[](https://github.com/ruanyf/weekly)
-
-[GitHubDaily](https://github.com/GitHubDaily/GitHubDaily)
 
 ## further readings
 
