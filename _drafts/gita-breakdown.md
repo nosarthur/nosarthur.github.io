@@ -47,7 +47,8 @@ $ gita rm xxx
 ### 2. enhance `add` subcommand
 
 If the `add` argument is a valid directory, e.g., `/a/b/c`,
-save it in the file `~/.gita/repo_path` where `~` denotes user home directory.
+save it in the file `~/.gita/repo_path` where `~` denotes user home directory
+(these are Linux system conventions).
 
 ```
 $ gita add /a/b/c
@@ -63,6 +64,8 @@ $ gita add /a/b/c /d/e
 > c is added
 > e is added
 ```
+
+If you are new to the Python `os` module, take a look at [this link](https://automatetheboringstuff.com/chapter8/).
 
 ### 3. add `ls` subcommand
 
@@ -86,17 +89,38 @@ There are a few things to check
 - adding the same path multiple times should not result in redundant repos
 - removing a non-existent repo should not cause traceback
 
-## milestone 2: add git functionalities
+## milestone 2: git integration
 
 1. modify `add` such that only git repo paths are considered as valid path
 
 2. refactor subcommands
 
-3.
+link argparse example
 
-## milestone 3: minor tunings
+3. add `ll` subcommand
+
+```
+$ gita ll
+> repo1 master     This is a commit message
+> repo2 fix-a-bug  This is also a commit message
+```
+
+4. enhance `ll` subcommand with edit status symbols
+
+## milestone 3: git delegation
+
+1. delegate `fetch`, `pull`, `push`
+
+2. use yaml file
+
+3. add `super` subcommand
+
+
+## milestone 4: minor tunings
 
 2. If environment variable `XDG_CONFIG_HOME` exists, save `repo_path` in `$XDG_CONFIG_HOME/gita/`
+
+4. use `asyncio`
 
 ## version 0.3
 
