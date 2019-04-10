@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Step by step break down of the gita project
-date: 2019-04-06 01:00:00 -0500
+title: Break down of the gita project
+date: 2019-04-16 01:00:00 -0500
 categories: [side project]
 comments: true
 tags: [python, git]
@@ -31,63 +31,15 @@ I will use `$` to denote command line input and `>` as output.
 
 ## milestone 1: basic CLI
 
-- command-line interface with subcommand
+This milestone enables the following features
 
-### 1. add `add` and `rm` subcommands
-
-Use argparse to implement a CLI with the following behavior
-
-```
-$ gita add xxx
-> xxx is added
-$ gita rm xxx
-> xxx is removed
-```
-
-### 2. enhance `add` subcommand
-
-If the `add` argument is a valid directory, e.g., `/a/b/c`,
-save it in the file `~/.gita/repo_path` where `~` denotes user home directory
-(these are Linux system conventions).
+- add, remove repos
+- display path of registered repo
 
 ```
-$ gita add /a/b/c
-> c is added
+$ gita add /a/b/c /a/d/f
+> 2 repos are added
 ```
-
-Here the rationale is that `c` is the repo name.
-
-With multiple input, save all valid paths and separate them with `:`.
-
-```
-$ gita add /a/b/c /d/e
-> c is added
-> e is added
-```
-
-If you are new to the Python `os` module, take a look at [this link](https://automatetheboringstuff.com/chapter8/).
-
-### 3. add `ls` subcommand
-
-List all repo names saved in `repo_path` file.
-
-```
-$ gita ls
-> c e
-```
-
-### 4. enhance `rm` subcommand
-
-If the folder names exist, delete them from the `repo_path` file.
-
-### 5. add tests
-
-Test the behavior of `add`, `rm`, `ls`, and any other utility function.
-There are a few things to check
-
-- adding invalid path should not succeed
-- adding the same path multiple times should not result in redundant repos
-- removing a non-existent repo should not cause traceback
 
 ## milestone 2: git integration
 
@@ -116,7 +68,7 @@ $ gita ll
 3. add `super` subcommand
 
 
-## milestone 4: minor tunings
+## milestone 4: miscelaneous enhancements
 
 2. If environment variable `XDG_CONFIG_HOME` exists, save `repo_path` in `$XDG_CONFIG_HOME/gita/`
 
