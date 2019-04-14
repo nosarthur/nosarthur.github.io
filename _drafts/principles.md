@@ -1,3 +1,3 @@
-
+- think big
 - pay yourself first
 - fail fast
