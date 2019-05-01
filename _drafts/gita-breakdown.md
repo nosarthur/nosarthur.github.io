@@ -7,17 +7,14 @@ comments: true
 tags: [python, git]
 ---
 
-In this post, I will break down one of my python side project
-[gita](https://github.com/nosarthur/gita) into incremental commits, so that
-one can reproduce it from scratch.
-The ideal audience is someone who is familiar with the Python basics, but not
-familiar with the [Python standard libraries](https://docs.python.org/3/library/).
+This series of posts are written for beginner Python developers who are looking
+for small practice projects.
+Here I will break down a command line tool into incremental commits.
 
-This [gita](https://github.com/nosarthur/gita) project is a command-line tool
-to manage multiple git repos. Specifically, it delegates git commands for any
-number of repos from any directory. It also displays all repos' information
-side by side such as branch, edit status, commit messages, etc.
-It is about 200 lines of code and has close to 600 stars on Github.
+In this post, I will break down one of my python side project
+[gita](https://github.com/nosarthur/gita) into incremental commits
+The ideal audience is a beginner python developer who is not
+familiar with the [Python standard libraries](https://docs.python.org/3/library/).
 
 By following this guide, you will learn the following modules
 
@@ -42,6 +39,16 @@ milestones
 
 In the terminal examples, I will use `$` to denote command line input and `>`
 to denote output.
+
+## the end product
+
+This [gita](https://github.com/nosarthur/gita) project is a command-line tool
+to manage multiple git repos. Specifically, it delegates git commands for any
+number of repos from any directory. It also displays all repos' information
+side by side such as branch, edit status, commit messages, etc.
+It is about 200 lines of code and has close to 600 stars on Github.
+
+![gita](https://github.com/nosarthur/gita)
 
 ## milestone 1: basic CLI
 
@@ -92,3 +99,10 @@ For example, run `git fetch` for all repos.
 ## milestone 4: miscelaneous enhancements
 
 
+## references
+
+The documents of the python standard library can sometimes be scarse.
+
+python3 module of the week
+
+which is full of examples.
