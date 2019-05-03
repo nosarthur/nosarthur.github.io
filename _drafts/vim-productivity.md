@@ -89,3 +89,21 @@ key combo | meaning
 `r` | reload tab
 `j`, `k`, `h`, and `l` | move page up/down/left/right
 `f` | display key combo for links
+
+## mechanical keyboard
+
+anne pro2 red switch
+
+smart tap
+
+old | new
+--- | ---
+caplock | esc
+esc | `/~
+left alt | ctrl
+left ctrl | fn2
+fn2 | ctrl
+right ctrl | caplock
+
+so that changing tty is easier: ctrl + fn + alt + <number>
+
