@@ -4,45 +4,56 @@ Avoid using mouse
 
 ## vim
 
-key combo | meaning
+[vim-plug](https://github.com/junegunn/vim-plug)
+
+navigation keys | meaning
 --- | ---
-`esc`, `v`, and `i`, `a`, `o` | enter normal/visual/edit mode
 `j`, `k`, `h`, and `l` | move cursor up/down/left/right
+`gg` and `G` | go to the first/last line of the file
+`g,` and `g;` | go to the last/previous change
 `%` | go to first matching parenthesis/bracket
 `+` | go to first non-blank character in the next line
 `0` and `$` | go to beginning/end of line
 `H`, `L`, and `M`  | go to the top/bottom/middle of screen
 `gd` | go to the local definition of the word under cursor
-`g,` or `g;` | go to the previous change
-`gg` and `G` | go to the first/last line of the file
 `ctrl + y` and `ctrl + e` | move the screen upward/downward one line while keeping the cursor location
 `ctrl + f` and `ctrl + b`| move the cursor forward/backward one screen
 `ctrl + u` and `ctrl + d` | move the cursor upward/downward half screen
-`ctrl + p` | auto completion (I remapped it to tab)
+`ctrl + p` | auto completion (I use a plugin called [supertab](https://github.com/ervandew/supertab) so I seldom use this combo)
 `ctrl + o` | go to the previous cursor position in jump list (I use it mostly for go to the previous file)
 `zt`, `zb`, and `zz` | move the screen such that the cursor is at the top/bottom/middle of the screen
-`*` and `#`| search forward/backward for the word under cursor
-`~` | switch upper/lower case
 `]m` and  `[m` | next/previous method
+`*` and `#`| search forward/backward for the word under cursor
 `/` and `?` | search forward/backward
-`ctrl+g` | display some basic information of the file
 
 
-file manipulation | meaning
-`:e <fname>` | edit <fname>
-`vim -O <fname1> <fname2>` | open two files in vertical split windows
+text edit keys | meaning
+--- | ---
+`esc`, `v`, and `i`, `a`, `o` | enter normal/visual/edit mode
+`c`, `d`, `y` | change, delete, yank
 `x` | delete
+`~` | switch upper/lower case
+`gu` | change to lower case
+`gU` | change to upper case
 `u` | undo
 `ctrl+r` | redo
 
-window manipulation | meaning
+file keys | meaning
+--- | ---
+`:e <fname>` | edit <fname>
+`vim -O <fname1> <fname2>` | open two files in vertical split windows
+`ctrl+g` | display some basic information of the file (I use a plugin called [lightline](https://github.com/itchyny/lightline.vim) which displays such information by default)
+
+window keys | meaning
+--- | ---
 `ctrl+w+v` | split window vertically
 `ctrl+w+ctrl+w` | cycle through the windows
 `:vert sf <fname>` and `:vert new` | open <fname>/a new buffer in a new vertical split window
 `on` | close all other windows
 `:wincmd` | equivalent of `ctrl+w`
 
-`c`, `d`, `y` | change, delete, yank
+other keys | meaning
+--- | ---
 `:term`| create a terminal buffer (requires vim 8.1)
 `:h <keywords>` | get help on <keywords>, for example, `:h navigation`
 
