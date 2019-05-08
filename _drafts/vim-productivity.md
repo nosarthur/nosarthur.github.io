@@ -1,6 +1,20 @@
+---
+layout: post
+title: How to be productive with keyboard (and avoid mouse)
+date: 2019-05-05 17:00:00 -0500
+categories: [coding]
+comments: true
+tags: [vim]
+---
 
+I started using Linux in 2002. Thanks to my geeky roommate, I soon learned to
+compile Linux kernels (for no good reasons, only to break the hardware
+supports, and to learn the latest fix for various drivers).
 
-Avoid using mouse
+I somehow stumbled upon vim and latex, and then never felt the need to install
+windows anymore.
+
+I probably only used less than 10% of the vim's capacity.
 
 ## vim
 
@@ -23,6 +37,7 @@ navigation keys | meaning
 `ctrl + o` | go to the previous cursor position in jump list (I use it mostly for go to the previous file)
 `zt`, `zb`, and `zz` | move the screen such that the cursor is at the top/bottom/middle of the screen
 `]m` and  `[m` | next/previous method
+`]c` and `[c` | next/previous change
 `*` and `#`| search forward/backward for the word under cursor
 `/` and `?` | search forward/backward
 
@@ -83,12 +98,18 @@ key combo | meaning
 
 different colors for  
 
+mouseless copy
+
+`apple + shift + c`
+
 ## browser
 
 I used [vimium](https://vimium.github.io/) for a while and then found out
 [surfingkeys](https://brookhong.github.io/#).
 
 Many of their key bindings are the same.
+Both of them are somewhat buggy. I notice both of them have problems with `/`,
+which is search.
 
 - [surfingkeys for chrome](https://chrome.google.com/webstore/detail/surfingkeys/gfbliohnnapiefjpjlpjnehglfpaknnc)
 - [surfingkeys for firefox](https://addons.mozilla.org/en-US/firefox/addon/surfingkeys_ff/)
@@ -100,6 +121,7 @@ key combo | meaning
 `r` | reload tab
 `j`, `k`, `h`, and `l` | move page up/down/left/right
 `f` | display key combo for links
+`/` | search
 
 ## mechanical keyboard
 
