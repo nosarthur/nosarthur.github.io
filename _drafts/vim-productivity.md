@@ -18,7 +18,6 @@ I probably only used less than 10% of the vim's capacity.
 
 ## vim
 
-[vim-plug](https://github.com/junegunn/vim-plug)
 
 navigation keys | meaning
 --- | ---
@@ -72,9 +71,20 @@ other keys | meaning
 `:term`| create a terminal buffer (requires vim 8.1)
 `:h <keywords>` | get help on <keywords>, for example, `:h navigation`
 
+To manage vim plugins, I use [vim-plug](https://github.com/junegunn/vim-plug).
+It is a newer tool than vundle and pathogen.
+
+in `.vimrc` .
+
+`:PlugInstall`
+
+This automated plugin installation is similar to vundle, but vim-plug allows
+finer control on the installation and plugin loading.
+
 ## bash
 
-By default, the bash input mode is Emacs
+By default, the bash input mode is Emacs. So in order to modify the current
+command using vim
 
 `ctrl+x ctrl+e`
 
