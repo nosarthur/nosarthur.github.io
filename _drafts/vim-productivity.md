@@ -1,27 +1,39 @@
 ---
 layout: post
-title: How to be productive with keyboard (and avoid mouse)
+title: How to be productive with vim environment (and stay mouseless)
 date: 2019-05-05 17:00:00 -0500
 categories: [coding]
 comments: true
 tags: [vim]
 ---
 
-I started using Linux in 2002. Thanks to my geeky roommate, I soon learned to
-compile Linux kernels (for no good reasons, only to break the hardware
-supports, and to learn the latest fix for various drivers).
+I started using Linux in 2002 and soon got fascinated by the terminal environment.
+The command-line tools have clean interfaces and are incredibly powerful and robust.
+In comparison, the graphical tools in either Windows or Linux are too
+complicated and inefficient to use.
 
-I somehow stumbled upon vim and latex, and then never felt the need to install
-windows anymore.
+Thus I try to stay away any graphical programs, except the web browser (I have
+tried a few terminal based web browsers and they are of no comparison).
+As a result, I use chromebook.
+
+
+One major task in Linux terminal is to edit files. I somehow picked the vim.
+
+
+
+- vim usage
+- bash in vim mode
+- browser with vim key bindings
+- programmable keyboard
 
 I probably only used less than 10% of the vim's capacity.
 
 ## vim
 
-
 navigation keys | meaning
 --- | ---
 `j`, `k`, `h`, and `l` | move cursor up/down/left/right
+`gj`, and `gk` | move cursor up/down a wrapped line
 `gg` and `G` | go to the first/last line of the file
 `g,` and `g;` | go to the last/previous change
 `%` | go to first matching parenthesis/bracket
@@ -62,6 +74,7 @@ window keys | meaning
 --- | ---
 `ctrl+w+v` | split window vertically
 `ctrl+w+ctrl+w` | cycle through the windows
+`ctrl+w` then `H` or `J` or `K` or `L` | move the current window to other locations (I only use this to turn horizontally split windows to vertically split windows)
 `:vert sf <fname>` and `:vert new` | open <fname>/a new buffer in a new vertical split window
 `on` | close all other windows
 `:wincmd` | equivalent of `ctrl+w`
@@ -112,6 +125,11 @@ mouseless copy
 
 `apple + shift + c`
 
+key combo | meaning
+--- | ---
+`apple + tab` | switch app
+``apple + ` `` | switch window for the same app
+
 ## browser
 
 I used [vimium](https://vimium.github.io/) for a while and then found out
@@ -141,8 +159,7 @@ smart tap
 
 old | new
 --- | ---
-caplock | esc
-esc | `/~
+caplock | `/~
 left alt | ctrl
 left ctrl | fn2
 fn2 | ctrl

@@ -1,17 +1,13 @@
 ---
 layout: post
 title: Milestone yoga poses
-date:   2018-09-12 00:00:00 -0500
+date:   2020-09-12 00:00:00 -0500
 categories: [life]
 comments: true
 tags: [yoga]
 ---
 
 If we use cooking as an analogy
-
-* ingredients: milestone poses
-* recipes: sequence to enter the pose
-* dishes: poses
 
 [yoga poses](https://en.wikipedia.org/wiki/List_of_asanas)
 

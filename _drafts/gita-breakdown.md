@@ -1,18 +1,32 @@
 ---
 layout: post
-title: Break down of the gita project
-date: 2019-04-16 01:00:00 -0500
-categories: [side project]
+title: Break down a Python side project
+date: 2019-05-06 01:00:00 -0500
+categories: [coding]
 comments: true
 tags: [python, git]
 ---
+
+**TL;DR: This is a step-by-step guide to reproduce [this Python project][gita].**
+
+[gita]: https://github.com/nosarthur/gita
+
+When learning a new programming language, I wonder what practice projects to do.
+A common advice is to re-build an existing wheel. For example, implement your
+version of the Linux shell commands.
+Another advice is to build something useful to yourself.
+
+The [gita][gita] project comes out of my daily work where I need to compile
+multiple git repos together and it is vital that each of them is on the right
+branch. I also find it annoying to switch directories to execute git commands.
+
 
 This series of posts are written for beginner Python developers who are looking
 for small practice projects.
 Here I will break down a command line tool into incremental commits.
 
 In this post, I will break down one of my python side project
-[gita](https://github.com/nosarthur/gita) into incremental commits
+[gita][gita] into incremental commits
 The ideal audience is a beginner python developer who is not
 familiar with the [Python standard libraries](https://docs.python.org/3/library/).
 
@@ -30,25 +44,25 @@ By following this guide, you will learn the following modules
   [concurrent](https://docs.python.org/3/library/concurrent.html)):
   speed up execution on multiple repos
 
-milestones
+Milestones
 
 1. basic CLI
 2. git integration
 3. git delegation
-4. miscelaneous enhancements
+4. miscellaneous enhancements
 
 In the terminal examples, I will use `$` to denote command line input and `>`
 to denote output.
 
 ## the end product
 
-This [gita](https://github.com/nosarthur/gita) project is a command-line tool
+This [gita][gita] project is a command-line tool
 to manage multiple git repos. Specifically, it delegates git commands for any
 number of repos from any directory. It also displays all repos' information
 side by side such as branch, edit status, commit messages, etc.
-It is about 200 lines of code and has close to 600 stars on Github.
+It is about 200 lines of code and has over 600 stars on Github.
 
-![gita](https://github.com/nosarthur/gita)
+![gita](https://github.com/nosarthur/gita/raw/master/doc/screenshot.png)
 
 ## milestone 1: basic CLI
 
@@ -96,12 +110,12 @@ The features in this milestone are
 The purpose of delegation is that git command can be executed from any directory.
 For example, run `git fetch` for all repos.
 
-## milestone 4: miscelaneous enhancements
+## milestone 4: miscellaneous enhancements
 
 
 ## references
 
-The documents of the python standard library can sometimes be scarse.
+The documents of the python standard library can sometimes be scarce.
 
 python3 module of the week
 
