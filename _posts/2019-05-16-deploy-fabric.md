@@ -59,7 +59,7 @@ from fabric.api import env, sudo, run, local, lcd, cd
 ```
 
 Here `env` is a global dictionary. All of the command-line `options` are saved
-in it. You can also put custom content in it too.
+in it. You can put custom content in it too.
 `lcd` and `cd` specifies the local and remote location for the command execution.
 `local` runs command locally, whereas `sudo` and `run` run command on remote server.
 `run` runs the command as `env.user`. If not specified, the default user is used.
