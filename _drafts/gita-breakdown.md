@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Break down a Python side project
-date: 2019-05-06 01:00:00 -0500
+title: How to make a Python command line tool running git commands
+date: 2019-05-16 01:00:00 -0500
 categories: [coding]
 comments: true
 tags: [python, git]
@@ -11,58 +11,44 @@ tags: [python, git]
 
 [gita]: https://github.com/nosarthur/gita
 
-When learning a new programming language, I wonder what practice projects to do.
-A common advice is to re-build an existing wheel. For example, implement your
-version of the Linux shell commands.
-Another advice is to build something useful to yourself.
-
-The [gita][gita] project comes out of my daily work where I need to compile
-multiple git repos together and it is vital that each of them is on the right
-branch. I also find it annoying to switch directories to execute git commands.
-
-
-This series of posts are written for beginner Python developers who are looking
-for small practice projects.
-Here I will break down a command line tool into incremental commits.
-
-In this post, I will break down one of my python side project
-[gita][gita] into incremental commits
-The ideal audience is a beginner python developer who is not
-familiar with the [Python standard libraries](https://docs.python.org/3/library/).
-
-By following this guide, you will learn the following modules
+This series of posts are written for Python beginners who already know the
+grammar and are seeking ideas for small practice projects.
+By following this guide, you will learn the following
+[Python standard library](https://docs.python.org/3/library/) modules.
 
 - [argparse](https://docs.python.org/3/library/argparse.html):
   define command line interface (CLI) with subcommands
-- [subprocess](https://docs.python.org/3/library/subprocess.html): delegate git commands
+- [subprocess](https://docs.python.org/3/library/subprocess.html): delegate shell commands
 - [os](https://docs.python.org/3/library/os.html):
   path name manipulations, file checks, etc
-- yaml: configure delegated git commands
+- [yaml](): parse configuration files
 - [asyncio](https://docs.python.org/3/library/asyncio.html)
   (or [threading](https://docs.python.org/3/library/threading.html),
   [multiprocessing](https://docs.python.org/3/library/multiprocessing.html),
   [concurrent](https://docs.python.org/3/library/concurrent.html)):
-  speed up execution on multiple repos
+  speedup execution of multiple tasks
 
+This [side project][gita] is a command line tool to manage multiple git repos.
+It has two functionalities:
+
+1. display information of all the registered repos side by side;
+1. delegate git commands for variable number of repos from any directory.
+
+It comes out of my daily work where I need to compile
+multiple git repos together thus it is vital to have them on the right branch.
+
+![gita](https://github.com/nosarthur/gita/raw/master/doc/screenshot.png)
+
+It is about 200 lines of code and has over 600 stars on [Github][gita].
+
+ And the 
 Milestones
-
 1. basic CLI
 2. git integration
 3. git delegation
-4. miscellaneous enhancements
+4. speedup
 
-In the terminal examples, I will use `$` to denote command line input and `>`
-to denote output.
-
-## the end product
-
-This [gita][gita] project is a command-line tool
-to manage multiple git repos. Specifically, it delegates git commands for any
-number of repos from any directory. It also displays all repos' information
-side by side such as branch, edit status, commit messages, etc.
-It is about 200 lines of code and has over 600 stars on Github.
-
-![gita](https://github.com/nosarthur/gita/raw/master/doc/screenshot.png)
+This post is only an introduction.
 
 ## milestone 1: basic CLI
 
@@ -71,6 +57,11 @@ and `ls`, which allows us to
 
 - add, remove repos
 - display path of registered repo
+
+
+
+In the terminal examples, I will denote command line input using `$` and output
+using `>`.
 
 Concretely,
 
@@ -88,16 +79,19 @@ $ gita ls
 > repo2
 ```
 
+The library of focus   is argparse.
+
 ## milestone 2: git integration
 
 Concretely,
 
 ```
 $ gita ll
-> repo1 master *    A nice feature
+> repo1 master *_    A nice new feature
 > repo2 hot-fix *   Fix some bug
 ```
 
+The main library is subprocess.
 
 ## milestone 3: git delegation
 
@@ -110,7 +104,10 @@ The features in this milestone are
 The purpose of delegation is that git command can be executed from any directory.
 For example, run `git fetch` for all repos.
 
-## milestone 4: miscellaneous enhancements
+The focus 
+`subprocess` and `yaml`.
+
+## milestone 4: miscellaneous improvements
 
 
 ## references

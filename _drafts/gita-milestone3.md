@@ -7,6 +7,15 @@ comments: true
 tags: [python, git]
 ---
 
+
+The `yaml` library is not in the Python standard library, and needs to be
+installed using
+
+```
+pip3 install pyyaml
+```
+
+
 The subcommand formats are
 
 ```

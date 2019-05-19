@@ -7,7 +7,10 @@ comments: true
 tags: [2019]
 ---
 
-Here is a list of the books I read in 2019. The recommended ones are in bold.
+Here is a list of the books I read in 2019.
+[Goodreads]()
+
+The recommended ones are in bold.
 
 ## life
 
