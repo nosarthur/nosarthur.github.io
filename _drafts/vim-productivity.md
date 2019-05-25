@@ -46,6 +46,7 @@ navigation keys | meaning
 `ctrl + u` and `ctrl + d` | move the cursor upward/downward half screen
 `ctrl + p` | auto completion (I use a plugin called [supertab](https://github.com/ervandew/supertab) so I seldom use this combo)
 `ctrl + o` | go to the previous cursor position in jump list (I use it mostly for go to the previous file)
+`ctrl + ^` | go to the alternative file (mostly likely the previous file)
 `zt`, `zb`, and `zz` | move the screen such that the cursor is at the top/bottom/middle of the screen
 `]m` and  `[m` | next/previous method
 `]c` and `[c` | next/previous change
