@@ -7,7 +7,6 @@ comments: true
 tags: [yoga]
 ---
 
-If we use cooking as an analogy
 
 [yoga poses](https://en.wikipedia.org/wiki/List_of_asanas)
 

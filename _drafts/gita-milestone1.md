@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Milestone 1 of the gita project: basic CLI"
-date: 2019-04-26 01:00:00 -0500
+date: 2019-05-24 10:00:00 -0500
 categories: [side project]
 comments: true
 tags: [python, git]
@@ -16,17 +16,37 @@ with subcommands.
 3. milestone 3: git delegation
 4. milestone 4: speedup
 
-Before we start, 
-
+Before we start, let's first look at the folder structure of a typical python
+project.
 
 ```
-- gita
-  gita
-  test
-  .gitignore
+gita
+├── gita
+│   ├── __init__.py
+│   └── ...
+├── requirements.txt
+├── setup.py
+└── tests
+    └── ...
 ```
 
-## v0.0.1. add `add` and `rm` subcommands
+Here the project root folder `gita` contains the source code `gita` folder,
+the `tests`folder, and a few configuration files.
+The source code folder has an `__init__.py` to make it importable.
+The `requirements.txt` defines the project's dependencies on other Python packages.
+The `setup.py` file is used to package and publish the project.
+
+Additional files for the project
+
+- `LICENSE`: A must-have for any serious open-source project.
+- `Makefile`: defines shortcuts for commands
+- `MANIFEST.in`: It specifies non-Python files to publish
+- `README.md`: It provides basic information about the project
+- `conftest.py`: It defines [test fixtures](https://docs.pytest.org/en/latest/fixture.html#fixtures-a-prime-example-of-dependency-injection)
+  and [per-directory plugins](https://docs.pytest.org/en/latest/writing_plugins.html#conftest-py-plugins)
+  for `pytest`.
+
+## v0.0.1. implement `add` and `rm` subcommands
 
 Use argparse to implement a CLI with the following behavior
 
@@ -37,7 +57,24 @@ $ gita rm xxx
 > xxx is removed
 ```
 
-## 2. enhance `add` subcommand
+parser could have sub-parsers
+
+[sub-commands](https://docs.python.org/3/library/argparse.html#sub-commands)
+
+```
+import argparse
+
+parser = argparse.ArgumentParser(description='Process some integers.')
+parser.add_argument('integers', metavar='N', type=int, nargs='+',
+                    help='an integer for the accumulator')
+parser.add_argument('--sum', dest='accumulate', action='store_const',
+                    const=sum, default=max,
+                    help='sum the integers (default: find the max)')
+
+args = parser.parse_args()
+print(args.accumulate(args.integers))
+```
+## v0.0.2. enhance `add` subcommand
 
 If the `add` argument is a valid directory, e.g., `/a/b/c`,
 save it in the file `~/.gita/repo_path` where `~` denotes user home directory
