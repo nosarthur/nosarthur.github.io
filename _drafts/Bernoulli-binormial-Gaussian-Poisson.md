@@ -75,6 +75,10 @@ $$ \sum_{k=0}^n P(S = k ) = 1$$
 
 ## Gaussian distribution
 
+With $$p=q=0.5$$, the binomial distribution is symmetric. With increasing $$n$$,
+the distribution becomes more smooth.
+It's natrual to wonder what happens when $$n\rightarrow\infty$$.
+
 [Gaussian distribution](https://en.wikipedia.org/wiki/Normal_distribution)
 
 ## Poisson distribution

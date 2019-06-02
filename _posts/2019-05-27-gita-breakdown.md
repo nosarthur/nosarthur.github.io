@@ -42,7 +42,7 @@ It has about 200 lines of code and over 600 stars on [Github][gita].
 In this post I will give an overview of the milestones.
 Detailed instructions will be published in later posts.
 
-- [milestone 1: basic CLI]({% post_url 2019-06-xx-gita-milestone1 %})
+- [milestone 1: basic CLI]({% post_url 2019-06-02-gita-milestone1 %})
 - milestone 2: git integration
 - milestone 3: git delegation
 - milestone 4: speedup

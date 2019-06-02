@@ -1,24 +1,24 @@
 ---
 layout: post
 title: "Milestone 1 of the gita project: basic CLI"
-date: 2019-06-01 10:00:00 -0500
+date: 2019-06-02 00:00:01 -0500
 categories: [side project]
 comments: true
 tags: [python, git]
 ---
 
 This is the first milestone where we implement command-line interface (CLI)
-with subcommands.
+with subcommands. The other posts in this series are linked below.
 
-0. [overview]({% post_url 2019-05-19-gita-breakdown %})
-1. **milestone 1: basic CLI**
-2. milestone 2: git integration
-3. milestone 3: git delegation
-4. milestone 4: speedup
+- [overview]({% post_url 2019-05-27-gita-breakdown %})
+- **milestone 1: basic CLI**
+- milestone 2: git integration
+- milestone 3: git delegation
+- milestone 4: speedup
 
 In general, I will not provide complete code for each step, but only hints,
-references, or snippets for core functionalities.
-This is more like a real working situation, where one only gets instructions
+references, or snippets.
+This mimics a real working situation, where one only gets instructions
 from the senior members.
 If you are really stuck, please take a look at the [source code of gita][gita].
 
@@ -122,7 +122,8 @@ In Python, this file location can be retrieved as
 ```python
 import os
 
-path_file = os.path.join(os.path.expanduser('~'), '.config', 'gita', 'repo_path')
+path_file = os.path.join(os.path.expanduser('~'),
+                         '.config', 'gita', 'repo_path')
 ```
 
 The desired behavior is
@@ -145,7 +146,7 @@ In the file `repo_path`, the paths can be separated with `:` (Linux convention).
 If you are new to the Python `os` module, take a look at
 [this link](https://automatetheboringstuff.com/chapter8/).
 
-## 3. add `ls` sub-command
+## v0.0.3: add `ls` sub-command
 
 In application programming interface (API) design, there is a jargon "**CRUD**",
 which stands for create, read, update, and deletion.
@@ -179,9 +180,9 @@ and only display the valid ones. We should further remove the invalid ones
 since they are unlikely to become valid again.
 This is the design choice to drop **U** in CRUD API.
 
-## 4. enhance `rm` sub-command
+## v0.0.4: enhance `rm` sub-command
 
-This is the **D** in CRUD API design. 
+This is the **D** in CRUD API design.
 It deletes them from the `repo_path` file.
 
 ```
@@ -193,14 +194,14 @@ back here if `c` is deleted successfully.
 But what if `c` doesn't exist in `repo_path`? For now, it doesn't really matter.
 We will revisit this issue in milestone 2.
 
-## 5. add tests
+## v0.0.5: add tests
 
-Any serious project needs tests with high test coverage.
+Any serious project needs tests with high test coverage (I am thinking of >90%).
 To write Python unit test, we have two major choices.
-the [`unittest` module]() in the Python standard library and the 
-[`pytest` module]().
+the [`unittest` module](https://docs.python.org/3/library/unittest.html) in the
+Python standard library and the [`pytest` module](https://docs.pytest.org/en/latest/).
 I prefer `pytest` mostly because it's less verbose.
-Here I just copy some code from  the `unittest` front pages
+See this example from  the `unittest` front page
 
 ```python
 import unittest
@@ -228,13 +229,24 @@ class TestStringMethods:
         assert not 'Foo'.is_upper()
 ```
 
+More high-level comparison between them can be found in
+[this page](https://www.slant.co/versus/9148/9149/~unittest_vs_pytest)
 
+As a bare minimum, we should test the behavior of `add`, `rm`, `ls` with valid
+inputs. As for edge cases, check that
 
-Test the behavior of `add`, `rm`, `ls`, and any other utility function.
-There are a few things to check
+- invalid path cannot be added
+- the same path cannot added multiple times in `repo_path`
 
-- adding invalid path should not succeed
-- adding the same path multiple times should not result in redundant repos
-- removing a non-existent repo should not cause traceback
+In general, invalid inputs should be detected, and should not cause traceback.
+Check the following situations for example,
 
+- removing a non-existing repo
+- `ls` a non-existing repo
 
+This completes the first milestone. At this point, you can optionally tag the
+code base using
+
+```
+git tag v0.1
+```
