@@ -7,7 +7,7 @@ comments: true
 tags: [python, git]
 ---
 
-> TL;DR: This is a step-by-step guide to reproduce [this Python project called gita][gita].
+> TL;DR: This is the first post of a step-by-step guide to reproduce [this Python project called gita][gita].
 
 [gita]: https://github.com/nosarthur/gita
 
@@ -42,10 +42,10 @@ It has about 200 lines of code and over 600 stars on [Github][gita].
 In this post I will give an overview of the milestones.
 Detailed instructions will be published in later posts.
 
-1. milestone 1: basic CLI
-2. milestone 2: git integration
-3. milestone 3: git delegation
-4. milestone 4: speedup
+- [milestone 1: basic CLI]({% post_url 2019-06-xx-gita-milestone1 %})
+- milestone 2: git integration
+- milestone 3: git delegation
+- milestone 4: speedup
 
 ## milestone 1: basic CLI
 

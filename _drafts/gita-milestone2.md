@@ -8,13 +8,16 @@ tags: [python, git]
 ---
 
 0. [overview]({% post_url 2019-05-19-gita-breakdown %})
-1. milestone 1: basic CLI
+1. [milestone 1: basic CLI]({% post_url %})
 2. **milestone 2: git integration**
 3. milestone 3: git delegation
 4. milestone 4: speedup
 
 
-1. modify `add` such that only git repo paths are considered as valid path
+## 1. modify `add` such that only git repo paths are considered as valid path
+
+In the first milestone, we consider any existing folder as valid path.
+The real requirement is to add only git repo folders.
 
 2. refactor subcommands
 
