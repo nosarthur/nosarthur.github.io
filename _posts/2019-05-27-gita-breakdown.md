@@ -119,3 +119,5 @@ Two general references are
 - [python3 module of the week](https://pymotw.com/3/)
 
 I particularly like the second one since it is full of examples.
+
+Another useful document to read is the [Google engineering practices](https://arxiv.org/abs/1702.01715).
