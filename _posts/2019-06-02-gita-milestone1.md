@@ -23,6 +23,7 @@ from the senior members.
 If you are really stuck, please take a look at the [source code of gita][gita].
 
 [gita]: https://github.com/nosarthur/gita
+[pytest]: https://docs.pytest.org/en/latest/
 
 Before we start, let's first look at the folder structure of a typical python
 project.
@@ -52,8 +53,7 @@ Other common files include
   to define shortcuts.
 - `MANIFEST.in`: It specifies the non-Python files for packaging and release.
 - `README.md`: General information about the project.
-- `conftest.py`: This file is specific to [pytest]().
-  It defines
+- `conftest.py`: This file is specific to [pytest][pytest]. It defines
   [test fixtures](https://docs.pytest.org/en/latest/fixture.html#fixtures-a-prime-example-of-dependency-injection)
   and [per-directory plugins](https://docs.pytest.org/en/latest/writing_plugins.html#conftest-py-plugins).
 
@@ -63,7 +63,7 @@ git repo. In case you have created a repo on Github first, you can run
 
 ## v0.0.1: implement `add` and `rm` subcommands
 
-The command-line interface (CLI) is like the skeleton of the project. 
+The command-line interface (CLI) is like the skeleton of the project.
 For the first commit, we will use `argparse` to implement the following behavior
 
 ```
@@ -199,7 +199,7 @@ We will revisit this issue in milestone 2.
 Any serious project needs tests with high test coverage (I am thinking of >90%).
 To write Python unit test, we have two major choices.
 the [`unittest` module](https://docs.python.org/3/library/unittest.html) in the
-Python standard library and the [`pytest` module](https://docs.pytest.org/en/latest/).
+Python standard library and the [`pytest` module][pytest].
 I prefer `pytest` mostly because it's less verbose.
 See this example from  the `unittest` front page
 
