@@ -1,14 +1,42 @@
+---
+layout: post
+title: Kbdfans 40% ortholinear Niu mini keyboard
+date:   2019-01-21 13:00:00 -0500
+categories: [coding]
+comments: true
+tags: [golang]
+---
+
+Recently I ordered my first 40% ortholinear keyboard from
 
 [kbdfans niu mini 40% keyboard](https://kbdfans.cn/collections/fully-assembled-keyboard/products/fully-assembled-niu40-mechanical-keyboard)
 
+The keyboard (without key caps) costs $115 and it took 11 days to arrive.
 
-https://github.com/qmk/qmk_firmware/tree/master/keyboards/niu_mini
+## rationale
+
+4 x 12 layout
+
+8 fingers are on the keyboard by default
+
+Each hand is in charge of 6 keys on the horizontal direction
+
+## use case
+
+- work for Mac, Linux, and ChromeOS
+- Python and Golang
+- Vim
+
+## custom keymap
+
+## flash firmware
+
+There are two ways to flash firmware onto the keyboard.
+[](https://github.com/qmk/qmk_firmware/tree/master/keyboards/niu_mini)
 
 ```
 make niu_mini:default:avrdude
 ```
-
-`abhixec`
 
 
 `atmega32u4`
