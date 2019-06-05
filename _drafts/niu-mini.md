@@ -59,3 +59,29 @@ make niu_mini:default:avrdude
 
 *** DFU device disconnected
 ```
+
+
+## rationale
+
+The resting state
+```
+............
+.xxxx..xxxx.
+............
+x...x..x...x
+```
+
+
+I thought about the principles
+
+- The most commonly used keys should be at the easily accessible keys
+
+For me, the easy-to-get-to locations are
+```
+o..........o
+.xxxx..xxxx.
+............
+x..oxooxo..x
+```
+
+
