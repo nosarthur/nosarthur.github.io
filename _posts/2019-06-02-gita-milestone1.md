@@ -8,7 +8,7 @@ tags: [python, git]
 ---
 
 This is the first milestone where we implement command-line interface (CLI)
-with subcommands. The other posts in this series are linked below.
+with sub-commands. Other posts in this series are
 
 - [overview]({% post_url 2019-05-27-gita-breakdown %})
 - **milestone 1: basic CLI**
@@ -16,67 +16,78 @@ with subcommands. The other posts in this series are linked below.
 - milestone 3: git delegation
 - milestone 4: speedup
 
-In general, I will not provide complete code for each step, but only hints,
-references, or snippets.
-This mimics a real working situation, where one only gets instructions
-from the senior members.
-If you are really stuck, please take a look at the [source code of gita][gita].
+In general, I won't provide complete code for each commit, but only hints,
+references, and snippets.
+This mimics the working situation where the programmer only receives
+requirements and partial instructions.
+You can also install gita to see the expected behavior, but try not to read the
+[source code][gita] unless you are really stuck.
 
 [gita]: https://github.com/nosarthur/gita
 [pytest]: https://docs.pytest.org/en/latest/
 
-Before we start, let's first look at the folder structure of a typical python
-project.
+Before diving into the nitty-gritty of coding, let's first review project
+organization and basic setup for a git repo.
+
+A typical python project has the following structure
 
 ```
 gita
 ├── gita
 │   ├── __init__.py
 │   └── ...
+├── tests
+│   └── ...
 ├── requirements.txt
 ├── setup.py
-└── tests
-    └── ...
+└── ...
 ```
 
-Here the project root folder `gita` contains the source code `gita` folder,
-the `tests`folder, and a few configuration files.
-The source code folder has an `__init__.py` to make it importable.
-The `requirements.txt` defines the project's dependencies on other third-party
-Python packages.
-The `setup.py` specifies the details about how to package the project.
+Here I follow the convention to use the same name for the project, the project
+root folder, and the source code folder. This is not a strict requirement, but
+rather a convenience. The source code folder has an `__init__.py` to make it
+importable. The `tests` folder contains test files.
+The `requirements.txt` specifies the project's dependency on other third-party
+Python packages. And the `setup.py` defines the packaging details.
 
-Other common files include
+In addition, a project may contain
 
+- `README.md`: General information.
 - `LICENSE`: A must-have for any serious open-source project.
-- `Makefile`: Although Python code doesn't require compilation, it's convenient
-  to define shortcuts.
-- `MANIFEST.in`: It specifies the non-Python files for packaging and release.
-- `README.md`: General information about the project.
+- `Makefile`: Although Python code don't need compilation, it's convenient to define shortcuts.
+- `MANIFEST.in`: A list of non-Python files for packaging.
 - `conftest.py`: This file is specific to [pytest][pytest]. It defines
   [test fixtures](https://docs.pytest.org/en/latest/fixture.html#fixtures-a-prime-example-of-dependency-injection)
   and [per-directory plugins](https://docs.pytest.org/en/latest/writing_plugins.html#conftest-py-plugins).
 
-After creating the root `gita` folder, you can run `git init` to initialize a
-git repo. In case you have created a repo on Github first, you can run
-`git clone <remote path>` to generate a local copy.
+As for the git repo setup, I recommend [creating a repo on Github](https://help.github.com/en/articles/create-a-repo).
+This remote repo serves as an online backup, as well as the 'official' copy for
+continuous integration (CI).
+Make sure to set your project public. Otherwise the CI tools used later in this
+milestone are not free.
+
+After that, run `git clone <remote address>` locally to create a copy.
+We are now ready to code.
 
 ## v0.0.1: implement `add` and `rm` subcommands
 
-The command-line interface (CLI) is like the skeleton of the project.
-For the first commit, we will use `argparse` to implement the following behavior
+In the first commit, we will implement the following behavior
 
 ```
 $ gita add xxx
 > xxx is added
-$ gita rm xxx
-> xxx is removed
+$ gita rm yyy
+> yyy is removed
 ```
 
-Nothing is added or removed from anywhere. We only print out some texts for now.
-The real functionalities will be added later.
+Nothing is added or removed from anywhere. We only print out some text for
+visual inspection.
+You can view the command-line interface (CLI) as the skeleton of the project.
+The 'meat' will be added in later commits.
 
-To get you started, I give a simple implementation for `add` below.
+To get you started, I give a simple implementation of `add` here.
+You can put it in `main.py` inside the source code folder.
+
 ```python
 import argparse
 
@@ -100,24 +111,41 @@ if __name__ == '__main__':
         p.print_help()
 ```
 
-Here we attach sub-parsers to the root parser. By calling the root parser `p`'s
-`parse_args()` method, we retrieve all the command-line input from user in a
-dictionary-like object `args`. The action of the sub-parser is defined in a
-separate function `add()`, which becomes the value of `args['func']` by
+Assuming you are in the source code folder, it can be run with 
+
+```
+python3 main.py add hello
+```
+
+In this snippet, we attach sub-parsers to the root parser `p`.
+By calling the `parse_args()` method, we retrieve all the user input in a
+dictionary-like object `args`. The sub-parser's action is defined in the
+function `add()`, which becomes the value of `args['func']` by
 calling the method `set_defaults()`.
 
 Now please implement the `rm` sub-command. You should also read
-[the argparse official document](https://docs.python.org/3/library/argparse.html#sub-commands).
+[the official document of argparse module](https://docs.python.org/3/library/argparse.html#sub-commands)
+if you are new to it.
 
-After that, you can run `git commit -am <commit message>`.
-One good message is this section's name.
+When it's all working, run `git commit -am <commit message>` to commit
+the code change. A good commit message starts with an action verb.
+See the section title for example.
+
+In general, it's good practice to keep each commit small and self-contained.
+For example, a commit may
+
+- add a feature
+- fix a bug
+- refactor some logic for better performance
+
+But not a complicated combination of them.
 
 ## v0.0.2: enhance `add` sub-command
 
 To make `add` and `rm` more meaningful, we will save the repo paths in
-`~/.config/gita/repo_path` where `~` denotes user home directory (the Linux
-system conventions).
-In Python, this file location can be retrieved as
+`~/.config/gita/repo_path`, where `~` is the user home directory.
+
+This location can be retrieved as
 
 ```python
 import os
@@ -126,43 +154,45 @@ path_file = os.path.join(os.path.expanduser('~'),
                          '.config', 'gita', 'repo_path')
 ```
 
-The desired behavior is
+Another improvement is to allow the addition of multiple paths, i.e,
+
 ```
 $ gita add /a/b/c d/e
 > c is added
 > e is added
 ```
 
-Besides saving the paths to file, there are a few more requirements
+Check out`nargs='+'` in the `argparse` module for this feature.
 
-- allow multiple paths input, which can be achieved using `nargs='+'` in
-  `add_argument()`
-- add path only if it exists, which can be checked using `os.path.isdir()`
+In addition, make sure you get the following details right
+
+- add path only if it exists, see `os.path.isdir()`
 - add path only if it hasn't been added before
 - add absolute path even if the user input is a relative path
 
-In the file `repo_path`, the paths can be separated with `:` (Linux convention).
+As for the file format, each path can be on its own line in `repo_path`, 
 
-If you are new to the Python `os` module, take a look at
+If you are new to the `os` module, take a look at
 [this link](https://automatetheboringstuff.com/chapter8/).
 
 ## v0.0.3: add `ls` sub-command
 
-In application programming interface (API) design, there is a jargon "**CRUD**",
-which stands for create, read, update, and deletion.
-They form a complete set of actions on a persistent data. In this`gita` project,
-`add` is the **C**, and `ls` is the **R**.
-We will use the `ls` sub-command to list all repo names saved in `repo_path` file.
-For example,
+In application programming interface (API) design, there is a jargon called
+"**CRUD**". It stands for create, read, update, and deletion, which form the
+complete set of actions on persistent data. In this `gita` project,
+`add` is the **C**, `rm` is the **D**, `ls` and `ll` (see next milestone)
+are the **R**. I also made the design choice to drop **U**.
+
+An example output from `ls` sub-command is
 
 ```
 $ gita ls
 > c e
 ```
 
-Note that we are not showing the full paths but only the repo names, e.g., the
-path `/a/b/c` has repo name `c`.
-We can use `os.path.basename()` for this purpose.
+Here it shows the repo names instead of the repo paths, e.g., the path
+`/a/b/c` has repo name `c`.
+Check out `os.path.basename()` for this purpose.
 
 To display the full path, we can implement the following behavior
 
@@ -171,37 +201,73 @@ $ gita ls c
 > /a/b/c
 ```
 
-This means the `ls` sub-command should take optional argument.
+This means the `ls` sub-command takes optional argument.
 Check out `nargs='?'` in the `argparse` module.
 
-A naive implementation could simply display the content in `repo_path`. But
-what if the user moves / deletes the repo? It is thus better to check the paths
-and only display the valid ones. We should further remove the invalid ones
-since they are unlikely to become valid again.
-This is the design choice to drop **U** in CRUD API.
+A naive implementation would simply display the content in `repo_path`. What if
+the user moves or deletes the folder? It is better to show only the valid ones.
+We should also remove the invalid ones since they are unlikely to become valid
+again. Think about where it should be done. Probably not here since `ls` is the
+**R** which should not have side effects.
 
-## v0.0.4: enhance `rm` sub-command
+## v0.0.4: implement `rm` sub-command
 
 This is the **D** in CRUD API design.
-It deletes them from the `repo_path` file.
+It deletes repo(s) from the `repo_path` file. For example,
 
 ```
 $ gita rm c
 ```
 
-The Linux philosophy is "no news is good news". Thus we opt to have no feed
-back here if `c` is deleted successfully.
-But what if `c` doesn't exist in `repo_path`? For now, it doesn't really matter.
-We will revisit this issue in milestone 2.
+One of the Unix philosophy is "no news is good news". Thus we won't give
+feedback if `c` is deleted successfully. (Previously we printed some text just
+for debugging purposes.)
 
-## v0.0.5: add tests
+But what if `c` doesn't exist in `repo_path`? At the bare minimum, the program
+should exit with a non-zero error code without any traceback.
+Optionally you can print out some error messages to explain the situation.
+
+## v0.0.5: refactor repo parsing logic
+
+Note that two sub-commands share a common argument
+
+```
+gita ls <repo-name>
+gita rm [repo-name]
+```
+
+Here the angular brackets indicate mandatory argument, and the square brackets
+optional argument.
+
+Both cases need validity check, i.e., whether the user input is a registered
+repo in `repo_path`. Hopefully you don't have two pieces of code doing this.
+Redundant code cause either extra work or bugs when requirement changes.
+This is the "don't repeat yourself" (DRY) principle of software design.
+
+To kill the redundancy, we can define a helper function to parse the `repo_path` file.
+
+```python
+def get_repos() -> Dict[str, str]:
+```
+
+Here I use [type hints](https://docs.python.org/3/library/typing.html) to
+annotate the return value.
+The returned dictionary has repo names as keys and repo paths as values.
+Any user input that's not in it is invalid.
+
+There is another `argparse` trick to apply here. The parser's `add_argument`
+has a [`choices` keyword argument](https://docs.python.org/3/library/argparse.html#choices).
+It takes care of the membership check.
+
+## v0.0.6: add tests
 
 Any serious project needs tests with high test coverage (I am thinking of >90%).
-To write Python unit test, we have two major choices.
-the [`unittest` module](https://docs.python.org/3/library/unittest.html) in the
-Python standard library and the [`pytest` module][pytest].
-I prefer `pytest` mostly because it's less verbose.
-See this example from  the `unittest` front page
+To write Python tests, we have two choices: the
+[`unittest` module](https://docs.python.org/3/library/unittest.html) in the
+standard library and the [`pytest` module][pytest].
+I prefer the latter for its concision.
+
+See this example from the [`unittest` documentation](https://docs.python.org/3/library/unittest.html)
 
 ```python
 import unittest
@@ -216,7 +282,7 @@ class TestStringMethods(unittest.TestCase):
         self.assertFalse('Foo'.is_upper())
 ```
 
-The same tests in `pytest` is
+The equivalent test in `pytest` is
 
 ```python
 class TestStringMethods:
@@ -229,20 +295,166 @@ class TestStringMethods:
         assert not 'Foo'.is_upper()
 ```
 
-More high-level comparison between them can be found in
+More high-level comparison between them is in
 [this page](https://www.slant.co/versus/9148/9149/~unittest_vs_pytest)
+Since `pytest` is not in the Python standard library, we need to specify it in
+the `requirement.txt` so that other programmers can easily install it using
 
-As a bare minimum, we should test the behavior of `add`, `rm`, `ls` with valid
-inputs. As for edge cases, check that
+```
+pip3 install -r requirement.txt
+```
+
+There are many types of tests. The most common ones are
+
+- unit test: check a single function
+- integration test: check a business logic
+
+For the gita project, an integration test checks the behavior of a sub-command.
+We can refactor `main.py` to facilitate that
+
+```python
+def main(argv=None):
+    p = argparse.ArgumentParser(prog='gita')
+    ...
+
+if __name__ == '__main__':
+    main()
+```
+
+This change allows us to pass command-line arguments to the `main()` function.
+Then we can check the output using `pytest`'s `capfd` fixture.
+
+At a bare minimum, you should test the behavior of `add`, `rm`, `ls` with valid
+inputs. As for edge cases, make sure that 
 
 - invalid path cannot be added
-- the same path cannot added multiple times in `repo_path`
+- the same path cannot be added multiple times in `repo_path`
+- the CLI does not generate traceback when
+    - `rm` a non-existing repo
+    - `ls` a non-existing repo
 
-In general, invalid inputs should be detected, and should not cause traceback.
-Check the following situations for example,
+To collect test coverage data, check out the `pytest-cov` package.
 
-- removing a non-existing repo
-- `ls` a non-existing repo
+## v0.0.7: add continuous integration
+
+A software project could have many components, possibly many repos too.
+Making sure that all the components can work together is called integration.
+Usually it takes the form of building the full software,
+performing unit tests, integration tests, performance tests, etc.
+All these processes should be automated.
+
+Continuous integration (CI) means integrating as often as possible.
+It helps to catch bugs early and prevent catastrophes. For a small project like
+gita, we can afford to integrate for every commit, and CI only includes automated test.
+
+There are many CI tools on Github. The one I use is [Travis CI](https://travis-ci.org/).
+Another popular one is [Circle CI](https://circleci.com/).
+Both of them are free for open source projects.
+
+To it setup, register with your Github account and grant it access to your repo.
+Then you need to include a `.travis.yml` file in the project root folder. It
+specifies the commands to set up, run, and clean up the test.
+These commands will be triggered after every commit into the remote master
+branch, as well as the pull requests.
+
+## v0.0.8: package and release
+
+So far we have been accessing the CLI using `python3 main.py`.
+If you are not inside the source code folder, explicit path of `main.py` is
+also needed.
+
+To eliminate this inconvenience, we can install our gita module. Installation
+copies the source code to system folders so that `python3` can find it.
+You will also be able to execute the CLI as `gita` too. For example, my
+gita command points to `/usr/local/bin/gita`, which has the following content
+
+```python
+#!/usr/local/bin/python3.6
+# EASY-INSTALL-ENTRY-SCRIPT: 'gita==0.10.2','console_scripts','gita'
+__requires__ = 'gita==0.10.2'
+import re
+import sys
+from pkg_resources import load_entry_point
+
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
+    sys.exit(
+        load_entry_point('gita==0.9.7', 'console_scripts', 'gita')()
+    )
+```
+
+The first line says that this file is to be run with a specific python command.
+The main part of the script passes the user input to the entry point of the
+installed gita package.
+
+The third-party tools for this session are included here
+
+```bash
+pip3 install twine setuptools wheel
+```
+
+Remember to add them to `requirements.txt`.
+
+Setting up the packaging is as easy as adding a `setup.py` file in the project
+root folder.
+A minimum example is
+
+```
+from setuptools import setup
+
+setup(
+    name='gita',
+    packages=['gita'],
+    version='0.0.8',
+    entry_points={'console_scripts': ['gita = gita.main:main']},
+    python_requires='~=3.6',
+)
+```
+
+To avoid name clashes, you should rename your project to something else,
+say "gita1". Note that the entry point points to the `main` function.
+
+With `setup.py` in place, you can already install locally
+
+```
+pip3 install .
+```
+
+Here I assume you are at the project root folder.
+
+If you want your code change to take effect immediately for the command,
+install with the developer mode
+
+```
+pip3 install -e .
+```
+which creates a symbolic link to the source code in the system folder.
+
+To make your gita package installable via `pip3`, you need to create distribution
+files and upload them to [the Python Package Index (PyPI)](https://pypi.org/),
+which is the official repository for python packages.
+You need to create an account on [PyPI](https://pypi.org/account/register/) first.
+
+To make the distribution files, run
+
+```bash
+python3 setup.py sdist bdist_wheel
+```
+
+It will create a folder called `dist` with the source tarball file and wheel file in it.
+
+Uploading to PyPI is simply one command
+
+```bash
+twine upload dist/*
+```
+
+If no error occurs, you should be able to see the release at
+`https://pypi.org/project/<your-package-name>/`.
+Note that overwriting an existing release is disallowed on PyPI.
+Thus you need to bump up the version number in `setup.py` for each upload.
+
+## v0.1: clean up and tag
 
 This completes the first milestone. At this point, you can optionally tag the
 code base using
@@ -250,3 +462,4 @@ code base using
 ```
 git tag v0.1
 ```
+

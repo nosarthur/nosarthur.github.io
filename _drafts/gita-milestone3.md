@@ -22,7 +22,7 @@ pip3 install pyyaml
 ```
 
 
-The subcommand formats are
+The sub-command formats are
 
 ```
 gita <sub-command> [repo-name(s)]
@@ -36,10 +36,10 @@ gita super [repo-names(s)] <any-git-command-with-or-without-options>
 
 
 
-1. delegate `fetch`, `pull`, `push`
+## v0.2.1: delegate `fetch`, `pull`, `push`
 
-2. use yaml file
+## v0.2.2: use yaml file
 
-3. add `super` subcommand
+## v0.2.3: add `super` sub-command
 
 

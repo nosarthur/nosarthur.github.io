@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Kbdfans 40% ortholinear Niu mini keyboard
-date:   2019-01-21 13:00:00 -0500
+date:   2019-10-21 13:00:00 -0500
 categories: [coding]
 comments: true
 tags: [golang]
@@ -21,15 +21,31 @@ The keyboard (without key caps) costs $115 and it took 11 days to arrive.
 
 Each hand is in charge of 6 keys on the horizontal direction
 
-## use case
+## custom keymap
 
 - work for Mac, Linux, and ChromeOS
 - Python and Golang
 - Vim
 
-## custom keymap
 
 ## flash firmware
+
+In order to change the key mapping, we need to flash the keyboard firmware.
+There are two steps
+
+
+- generate the keymap .hex file
+- flash it
+
+Both step can be done either using command line or GUI / web interface.
+
+For beginners, it's easier to use the [qmk configurator]()
+But it also has its cons
+
+- The waiting could be long if many people are using it.
+- It cannot enable features like mouse keys if the board doesn't have it on by default.
+
+[How to flash firmware]()
 
 There are two ways to flash firmware onto the keyboard.
 [](https://github.com/qmk/qmk_firmware/tree/master/keyboards/niu_mini)

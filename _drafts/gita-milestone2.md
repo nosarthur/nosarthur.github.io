@@ -14,17 +14,20 @@ tags: [python, git]
 - milestone 4: speedup
 
 
-## 1. modify `add` such that only git repo paths are considered as valid path
+## v0.1.1: modify `add` such that only git repo paths are considered as valid path
 
 In the first milestone, we consider any existing folder as valid path.
 The real requirement is to add only git repo folders.
 
-2. refactor subcommands
+## v0.1.2: refactor sub-commands
 
 link argparse example
 
-3. add `ll` subcommand
+## v0.1.3: add `ll` sub-command
 
+If you are a Linux user, you will know `ll` is an alias for `ls -l`.
 
-4. enhance `ll` subcommand with edit status symbols
+This is the second part of the **R** of our CRUD API.
+
+## v0.1.4: enhance `ll` sub-command with edit status symbols
 

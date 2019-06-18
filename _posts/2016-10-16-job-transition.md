@@ -8,27 +8,28 @@ tags: [job hunting]
 ---
 
 Recently I left my postdoc job and became a software developer.
-In this post I will share my experience and some thoughts looking back.
+In this post I will share my experience and some thoughts.
 
 ## background
 
 I received PhD in physics in 2011 and remained in postdoc positions until 2016.
-As time progresses, industry appears more and more appealing, for two reasons
+As time progresses, industry appears more appealing to me, for two reasons
 
 * lack of vision in research
 * lack of financial freedom
 
-Although I have been in school for many years (a full zodiac cycle after college),
-I didn't reach the point to have clear long term research plans.
-In my opinion, this lack of vision is fatal to academic career.
+After the many years in school, I didn't have a long term research plan.
+In my opinion, this is fatal to academic career.
 After all, destination (professorship) is hard to reach by random walk.
 
-In term of daily life, the postdoc experience is pleasant:
-flexible hours, helpful coworkers/supervisors, etc. I am lucky that
-all my supervisors since college are quite hands-off and allow me pick my own
-pace and (side) projects.
+In term of daily life, the postdoc experience is pleasant: flexible hours,
+helpful coworkers and supervisors, etc. I am particularly lucky that
+all my supervisors since college are quite hands-off and allow me to pick my
+own pace and (side) projects.
 Unfortunately postdoc is not a real job in terms of compensation and stability,
-and New York city is really expensive (one room in a shared two-bedroom apartment $1200/month, [bjj][bjj] $250/month, [yoga][yoga] $239/month, [climbing][climb] $150/month, [karate][karate] $130/month, etc).
+and New York city is really expensive (one room in a shared two-bedroom apartment
+$1200/month, [bjj][bjj] $250/month, [yoga][yoga] $239/month,
+[climbing][climb] $150/month, [karate][karate] $130/month, etc).
 
 For these reasons, I decided to quit postdoc and try industry.
 
@@ -38,25 +39,25 @@ For a physics PhD (probably other STEM PhD too),
 there are essentially three options in industry
 
 1. software development
-2. data science
+1. data science
 1. finance
 
-Their required skills overlap but the difficulty increases by the ordering.
-It doesn't hurt to prepare for two or even all three of them.
+Their required skills overlap but in general the difficulty level increases by
+the ordering. It doesn't hurt to prepare for two or even all three of them.
 Basically, there are three sets of skills
 
 * coding
     * algorithms
     * database
-    * language
+    * languages
 * math
-    * statistics/probability theory/stochastic processes
+    * statistics, probability theory, stochastic processes
     * machine learning
 * domain-specific stuff
 
 Honestly I am not well prepared in any of them at the time of my application.
 But from talking to friends in industry and going through interviews,
-I got some idea of how to prepare and to what degree they should be prepared.
+I got some idea of how to prepare and to what degree to prepare.
 This topic will be covered in a future post (or maybe posts).
 If you have questions, please feel free to email me.
 
@@ -64,11 +65,11 @@ If you have questions, please feel free to email me.
 
 In my experience, committing to a change is much easier than initializing the change.
 For good biological reasons the mind seeks for consistency and fears for change.
-In my case, making up the mind to quit postdoc is the hard part whereas looking 
+In my case, making up the mind to quit postdoc is painful whereas looking
 for jobs is actually quite fun.
 
 If you are debating between options, it may help to reflect on the question of
-"who am I". It's usually not fun to copy someone else's life and a lot of fun
+"who am I". It's not fun to copy someone else's life and a lot of fun
 to find your own answer.
 Meanwhile it may help to complete some physical challenges to gain extra mental
 strength. For example, run a [marathon](https://en.wikipedia.org/wiki/Marathon)
@@ -107,7 +108,7 @@ Below I list all the companies I applied.
     * Image Data Scientist 7.22
     * Senior Data Analyst 8.31
 12. Interactions LLC Machine Learning Scientists & Engineers 7.22
-10. Siemens 
+10. Siemens
     * Research Scientist, Medical Imaging and Analysis 7.22
     * Research Scientist in Image-Guided Interventions Technologies 7.22
     * Scientist, Staff 7.22
@@ -116,7 +117,7 @@ Below I list all the companies I applied.
 13. Schroedinger
     * ~~Scientific Software Developer 7.22~~
     * <mark>Senior Scientific Software Developer 7.22</mark>
-1. Google 
+1. Google
     * DeepMind 7.25
     * ~~data analyst, google app for work 8.10 (referral)~~
     * ~~Data Scientist / Quantitative Analyst, Engineering 8.10 (referral)~~

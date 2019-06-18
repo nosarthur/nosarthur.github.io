@@ -27,31 +27,33 @@ git repos, and learn the following modules:
   [multiprocessing](https://docs.python.org/3/library/multiprocessing.html),
   [concurrent](https://docs.python.org/3/library/concurrent.html)):
   speedup execution of multiple tasks
-- [pytest](https://docs.pytest.org/en/latest/)
+- [pytest](https://docs.pytest.org/en/latest/): write tests
 
-[This command-line tool][gita] has two functionalities:
+In addition, I will cover engineering practices such as packaging, continuous
+integration, etc.
+
+As for the [command-line tool][gita], it has two functionalities:
 
 1. display information of all the registered repos side by side;
 1. delegate git commands for any number of repos from any working directory.
 
 ![gita](https://github.com/nosarthur/gita/raw/master/doc/screenshot.png)
 
-It comes out of my daily work where I need to compile
-multiple git repos together thus it is vital to have them on the right branch.
 It has about **200 lines of code and over 600 stars** on [Github][gita].
 
-This post provides an overview.
-Detailed instructions will be given in the following posts.
+I break up the project into 4 milestones
 
 - [milestone 1: basic CLI]({% post_url 2019-06-02-gita-milestone1 %})
 - milestone 2: git integration
 - milestone 3: git delegation
 - milestone 4: speedup
 
+In the rest of this post, I will describe the expected behaviors.
+
 ## milestone 1: basic CLI
 
-Here the goal is to build a CLI using the `argparse` module. Specifically, we
-will implement three sub-commands `add`, `rm`, and `ls`, to
+Here the goal is to build a command-line interface (CLI) using the `argparse`
+module. Specifically, we will implement three sub-commands `add`, `rm`, and `ls`, to
 
 - add / remove repos
 - display path of registered repo
@@ -93,7 +95,7 @@ command using the `subprocess` module.
 In this milestone, we are going to
 
 - delegate git commands for repos
-- define custom git command delegation with YAML file
+- define custom git command delegation with a YAML file
 - add a `super` sub-command to delegate any git commands
 
 The purpose of delegation is to run git commands
@@ -113,15 +115,16 @@ multiple repos.
 You are free to use the alternative libraries to achieve the same goal.
 
 To make it more accessible to beginners, I will also include the basics of
-parallel / asynchronous execution there.
+parallel / asynchronous execution.
 
 ## references
 
-Two general Python3 references are
+Two general Python references are
 
-- [python standard library](https://docs.python.org/3/library/)
 - [python3 module of the week](https://pymotw.com/3/)
+- [python standard library](https://docs.python.org/3/library/)
 
-I particularly like the second one since it is full of examples.
+The first one is basically a compilation of examples.
 
-Another useful document to read is the [Google engineering practices](https://arxiv.org/abs/1702.01715).
+Another fun reading material is the
+[Google engineering practices](https://arxiv.org/abs/1702.01715).

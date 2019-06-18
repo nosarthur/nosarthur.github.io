@@ -16,7 +16,6 @@ Thus I try to stay away any graphical programs, except the web browser (I have
 tried a few terminal based web browsers and they are of no comparison).
 As a result, I use chromebook.
 
-
 One major task in Linux terminal is to edit files. I somehow picked the vim.
 
 
@@ -26,44 +25,50 @@ One major task in Linux terminal is to edit files. I somehow picked the vim.
 - browser with vim key bindings
 - programmable keyboard
 
-I probably only used less than 10% of the vim's capacity.
 
 ## vim
+
+Here I only list the most common ones I use daily.
+I probably only used less than 10% of the vim's capacity.
 
 navigation keys | meaning
 --- | ---
 `j`, `k`, `h`, and `l` | move cursor up/down/left/right
-`gj`, and `gk` | move cursor up/down a wrapped line
 `gg` and `G` | go to the first/last line of the file
+`nG` or `:n` | go to line `n` where `n` is a number
 `g,` and `g;` | go to the last/previous change
 `%` | go to first matching parenthesis/bracket
-`+` | go to first non-blank character in the next line
+`+`, `-`, and `^` (or `_`) | go to first non-blank character in the next/previous/current line
 `0` and `$` | go to beginning/end of line
-`H`, `L`, and `M`  | go to the top/bottom/middle of screen
 `gd` | go to the local definition of the word under cursor
 `ctrl + y` and `ctrl + e` | move the screen upward/downward one line while keeping the cursor location
 `ctrl + f` and `ctrl + b`| move the cursor forward/backward one screen
 `ctrl + u` and `ctrl + d` | move the cursor upward/downward half screen
-`ctrl + p` | auto completion (I use a plugin called [supertab](https://github.com/ervandew/supertab) so I seldom use this combo)
 `ctrl + o` | go to the previous cursor position in jump list (I use it mostly for go to the previous file)
 `ctrl + ^` | go to the alternative file (mostly likely the previous file)
 `zt`, `zb`, and `zz` | move the screen such that the cursor is at the top/bottom/middle of the screen
+`H`, `L`, and `M`  | go to the top/bottom/middle of screen
 `]m` and  `[m` | next/previous method
 `]c` and `[c` | next/previous change
-`*` and `#`| search forward/backward for the word under cursor
+`*` and `#`| search forward/backward for the current word
 `/` and `?` | search forward/backward
+`fx` | find the next occurrence of `x`
 
+Another useful key combo is `ctrl + p` for auto completion. But I use a plugin called
+[supertab](https://github.com/ervandew/supertab) so I seldom it.
 
 text edit keys | meaning
 --- | ---
 `esc`, `v`, and `i`, `a`, `o` | enter normal/visual/edit mode
 `c`, `d`, `y` | change, delete, yank
 `x` | delete
-`~` | switch upper/lower case
+`~` | switch upper/lower case for the current letter
 `gu` | change to lower case
 `gU` | change to upper case
 `u` | undo
 `ctrl+r` | redo
+`.` | repeat the previous edit
+`@:` | repeat the previous vim command, `@@` works if it has been repeated at least once
 
 file keys | meaning
 --- | ---
@@ -95,14 +100,27 @@ in `.vimrc` .
 This automated plugin installation is similar to vundle, but vim-plug allows
 finer control on the installation and plugin loading.
 
-## bash
+## bash command-line editing
+
+In my `.bashrc` file, I have
+
+```
+export EDITOR=vim
+```
+which sets `vim` as the default editor for shell.
+
+Often times one needs to fix a mis-typed command in terminal. This can be done
+using the `fc` command (fix command), which triggers the shell's default editor.
+
+
+Bash has two edit modes for command editing, the emacs mode and vi` mode.
 
 By default, the bash input mode is Emacs. So in order to modify the current
 command using vim
 
 `ctrl+x ctrl+e`
 
-`fc` command can bring up the default editor (say vim) to edit the previous command.
+The `fc` command can bring up the default editor (say vim) to edit the previous command.
 
 
 `.bashrc`
