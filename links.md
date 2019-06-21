@@ -27,6 +27,7 @@ permalink: /links/
     * [Stephen Wolfram](https://blog.stephenwolfram.com/)
     * [Xavier Amatriain](https://medium.com/@xamat)
     * [Yifeng Ruan](http://www.ruanyifeng.com/blog/)
+    * [Tim Qian](https://blog.t9t.io/)
 * financial independence
     * [Frugal Woods](http://www.frugalwoods.com)
     * [Mad FIentist](https://www.madfientist.com/)
