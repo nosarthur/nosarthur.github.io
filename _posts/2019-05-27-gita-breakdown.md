@@ -11,10 +11,10 @@ tags: [python, git]
 
 [gita]: https://github.com/nosarthur/gita
 
-This series of posts are written for Python beginners who are seeking ideas
-for small practice project.
+This series of posts are written for Python beginners who are seeking
+small practice project.
 By following this guide, you will build a command-line tool to manage multiple
-git repos, and learn the following modules:
+git repos, and learn modules such as
 
 - [argparse](https://docs.python.org/3/library/argparse.html):
   define command line interface (CLI) with sub-commands
@@ -32,7 +32,7 @@ git repos, and learn the following modules:
 In addition, I will cover engineering practices such as packaging, continuous
 integration, etc.
 
-As for the [command-line tool][gita], it has two functionalities:
+The [command-line tool][gita] to be built has two functionalities:
 
 1. display information of all the registered repos side by side;
 1. delegate git commands for any number of repos from any working directory.
@@ -48,7 +48,7 @@ I break up the project into 4 milestones
 - milestone 3: git delegation
 - milestone 4: speedup
 
-In the rest of this post, I will describe the expected behaviors.
+In the rest of this post, I will describe the expected behaviors for them.
 
 ## milestone 1: basic CLI
 
@@ -63,9 +63,7 @@ I denote command-line input with `$` and output with `>`.
 
 ```bash
 $ gita add /a/b/repo1 /a/d/repo2
-> 2 repos are added:
-> /a/b/repo1
-> /a/d/repo2
+> 2 repos are added.
 $ gita ls
 > repo1 repo2
 $ gita ls repo1
@@ -77,7 +75,7 @@ $ gita ls
 
 ## milestone 2: git integration
 
-Here the main goal is to add a sub-command `ll`, which displays information
+Here we will add a sub-command `ll`, which displays information
 such as repo name, branch name, edit status, commit message for all repos.
 For example,
 
@@ -105,8 +103,8 @@ The purpose of delegation is to run git commands
 
 For example, `gita fetch` will run `git fetch` for all repos.
 
-This is the most fun milestone where we integrate the knowledge from the
-previous two milestones to make powerful features.
+This is the most fun milestone where we make powerful features using
+the infrastructure built in the previous two milestones.
 
 ## milestone 4: speedup
 
@@ -124,7 +122,7 @@ Two general Python references are
 - [python3 module of the week](https://pymotw.com/3/)
 - [python standard library](https://docs.python.org/3/library/)
 
-The first one is basically a compilation of examples.
+The first one is full of nice examples.
 
 Another fun reading material is the
 [Google engineering practices](https://arxiv.org/abs/1702.01715).
