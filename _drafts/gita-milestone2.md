@@ -7,6 +7,9 @@ comments: true
 tags: [python, git]
 ---
 
+This is the second milestone where we list detailed information of the repos.
+The other posts in this series are
+
 - [overview]({% post_url 2019-05-27-gita-breakdown %})
 - [milestone 1: basic CLI]({% post_url 2019-06-02-gita-milestone1 %})
 - **milestone 2: git integration**
@@ -14,10 +17,10 @@ tags: [python, git]
 - milestone 4: speedup
 
 
-## v0.1.1: modify `add` such that only git repo paths are considered as valid path
+## v0.1.1: add only git repo paths
 
-In the first milestone, we consider any existing folder as valid path.
-The real requirement is to add only git repo folders.
+In milestone 1, we add any existing folder to `repo_path`.
+In reality, we only want to add git repo folders.
 
 
 

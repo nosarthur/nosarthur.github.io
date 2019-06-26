@@ -7,8 +7,11 @@ comments: true
 tags: [python, git]
 ---
 
+This is the second milestone where we speedup the sub-command execution.
+The other posts in this series are
+
 - [overview]({% post_url 2019-05-27-gita-breakdown %})
-- milestone 1: basic CLI
+- [milestone 1: basic CLI]({% post_url 2019-06-02-gita-milestone1 %})
 - milestone 2: git integration
 - milestone 3: git delegation
 - **milestone 4: speedup**

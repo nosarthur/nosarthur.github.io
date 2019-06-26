@@ -18,8 +18,6 @@ As a result, I use chromebook.
 
 One major task in Linux terminal is to edit files. I somehow picked the vim.
 
-
-
 - vim usage
 - bash in vim mode
 - browser with vim key bindings
@@ -69,6 +67,8 @@ text edit keys | meaning
 `ctrl+r` | redo
 `.` | repeat the previous edit
 `@:` | repeat the previous vim command, `@@` works if it has been repeated at least once
+`ctrl+a` and `ctrl+x` | increase/decrease the number under cursor (or right to cursor)
+
 
 file keys | meaning
 --- | ---
@@ -89,6 +89,7 @@ other keys | meaning
 --- | ---
 `:term`| create a terminal buffer (requires vim 8.1)
 `:h <keywords>` | get help on <keywords>, for example, `:h navigation`
+`set title` | xterm title
 
 To manage vim plugins, I use [vim-plug](https://github.com/junegunn/vim-plug).
 It is a newer tool than vundle and pathogen.
