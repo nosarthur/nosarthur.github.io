@@ -100,4 +100,6 @@ o..........o
 x..oxooxo..x
 ```
 
-
+[extend](https://forum.colemak.com/topic/2014-extend-extra-extreme/)
+[typing test](https://www.speedtypingonline.com/typing-test)
+[partial optimization](http://mkweb.bcgsc.ca/carpalx/?partial_optimization)
