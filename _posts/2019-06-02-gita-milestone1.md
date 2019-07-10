@@ -12,7 +12,7 @@ with sub-commands. Other posts in this series are
 
 - [overview]({% post_url 2019-05-27-gita-breakdown %})
 - **milestone 1: basic CLI**
-- milestone 2: git integration
+- [milestone 2: git integration]({% post_url 2019-07-10-gita-milestone2 %})
 - milestone 3: git delegation
 - milestone 4: speedup
 
@@ -336,35 +336,54 @@ To collect test coverage data, check out the [`pytest-cov` package](https://pyte
 
 A software project can have many components, possibly many repos too.
 Making sure that all the components can work together is called integration.
-Usually it takes the form of building the full software,
-performing unit tests, integration tests, performance tests, etc.
-All these processes should be automated of course.
+It involves building the full software, performing unit tests, integration tests,
+performance tests, etc. All these processes should be automated of course.
 
 Continuous integration (CI) means integrating as often as possible.
-It helps to catch bugs early and prevent catastrophes. For a small project like
-gita, we can afford to integrate for every commit. For us, CI only includes
-automated test.
+It helps to catch bugs early and prevents catastrophes. For a small project like
+gita, we can afford to integrate for every commit. Specifically, we will perform
+automated testing in CI.
 
-There are many CI tools on Github. The one I use is [Travis CI](https://travis-ci.org/).
-Another popular one is [Circle CI](https://circleci.com/).
-Both of them are free for open source projects.
+There are many CI tools on Github. And the one I use is [Travis CI](https://travis-ci.org/).
+Another popular choice is [Circle CI](https://circleci.com/).
+Both are free for open source projects.
 
-To it setup, register with your Github account and grant it access to your repo.
-Then you need to include a `.travis.yml` file in the project root folder. It
-specifies the commands to set up, run, and clean up the test.
-These commands will be triggered after every commit into the remote master
-branch, as well as the pull requests.
+To set it up, register with your Github account and grant access to your repo.
+Then include a `.travis.yml` file in the project root folder. It specifies the
+commands to set up, run, and clean up the test. These commands will be
+triggered after every commit into the remote master branch, as well as the pull requests.
+You can find more details in their documentations.
 
 ## v0.0.8: package and release
 
-So far we have been accessing the CLI via `python3 main.py`.
-If you are not inside the source code folder, explicit path of `main.py` is
-also needed.
+A concept closely related to CI is continuous deployment (CD).
+Deployment basically means making the software or service available to users.
+And CD means deploying often so that user feedbacks can be collected quickly.
 
-To eliminate this inconvenience, we can install our gita module. Installation
-copies the source code to system folder so that `python3` can find it.
-You will also be able to execute the CLI as `gita` too. For example, my
-gita command points to `/usr/local/bin/gita`, which has the following content
+For a small Python project like gita, CD is probably an overkill. In this session,
+we will implement manual deployment via [the Python Package Index (PyPI)][PyPI].
+This will allow you to install your gita package using `pip3 install gita1`.
+(Since I already took the name `gita`, you will have to pick a different name,
+say `gita1`.)
+
+There are two steps in deployment:
+
+- make installation files
+- upload to [PyPI][PyPI]
+
+[PyPI]: https://pypi.org/
+
+And we will need to install third-party tools for package and release
+
+```bash
+pip3 install twine setuptools
+```
+Remember to add them to `requirements.txt`.
+
+The purpose of installation is to enable the system `python3` to find our source code.
+It also allows us to execute the CLI as `gita` too, instead of running or
+`python3 <path-to-source-folder>/main.py`. For example, my installed gita
+command points to `/usr/local/bin/gita`, with the following content
 
 ```python
 #!/usr/local/bin/python3.6
@@ -381,17 +400,9 @@ if __name__ == '__main__':
     )
 ```
 
-The first line says that this file is to be run with a specific python command.
-The main part of the script passes the user input to the entry point of the
+The first line says that this file is to be run with a specific python version.
+The script passes the user input to the entry point of the
 installed gita package.
-
-The third-party tools for package and release can be installed with
-
-```bash
-pip3 install twine setuptools wheel
-```
-
-Remember to add them to `requirements.txt`.
 
 Setting up the packaging is as easy as adding a `setup.py` file in the project
 root folder.
@@ -424,25 +435,25 @@ pip3 install .
 Here I assume you are at the project root folder.
 
 If you want your code change to take effect immediately,
-install with the developer mode
+install in the developer mode
 
 ```
 pip3 install -e .
 ```
 It creates a symbolic link to the source code in the system folder.
 
-To make your gita package installable via `pip3`, you need to create distribution
-files and upload them to [the Python Package Index (PyPI)](https://pypi.org/),
+To make your gita package installable without source code, you need to
+upload the installation files to [the Python Package Index (PyPI)][PyPI],
 which is the official repository for python packages.
 Make sure to create an account on [PyPI](https://pypi.org/account/register/) first.
 
 To make the distribution files, run
 
 ```bash
-python3 setup.py sdist bdist_wheel
+python3 setup.py sdist
 ```
 
-It will create a folder called `dist` with the source tarball file and wheel file in it.
+It will create a folder called `dist` with the source tarball file in it.
 
 Uploading to PyPI is simply one command
 
@@ -452,11 +463,11 @@ twine upload dist/*
 
 If no error occurs, you will see the release at
 `https://pypi.org/project/<your-package-name>/`.
-Note that overwriting an existing release is disallowed on PyPI.
+Note that overwriting an existing release is forbidden on [PyPI][PyPI].
 You need to bump up the version number in `setup.py` for each upload.
 
 I also put all these commands in a `Makefile` so that I only need to remember
-short aliases.
+short aliases for each step.
 
 ## v0.1: clean up and tag
 

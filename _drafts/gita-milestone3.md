@@ -13,7 +13,7 @@ The other posts in this series are
 
 - [overview]({% post_url 2019-05-27-gita-breakdown %})
 - [milestone 1: basic CLI]({% post_url 2019-06-02-gita-milestone1 %})
-- milestone 2: git integration
+- [milestone 2: git integration]({% post_url 2019-07-10-gita-milestone2 %})
 - **milestone 3: git delegation**
 - milestone 4: speedup
 
@@ -46,4 +46,13 @@ gita super [repo-names(s)] <any-git-command-with-or-without-options>
 
 ## v0.2.3: add `super` sub-command
 
+
+## v0.3: clean up and tag
+
+This completes milestone 3. At this point, you can optionally tag the
+code base using
+
+```
+git tag v0.3
+```
 
