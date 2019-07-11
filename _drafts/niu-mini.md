@@ -4,10 +4,12 @@ title: Kbdfans 40% ortholinear Niu mini keyboard
 date:   2019-10-21 13:00:00 -0500
 categories: [coding]
 comments: true
-tags: [golang]
+tags: [keyboard]
 ---
 
-Recently I ordered my first 40% ortholinear keyboard from
+
+
+ordered my first 40% ortholinear keyboard from
 
 [kbdfans niu mini 40% keyboard](https://kbdfans.cn/collections/fully-assembled-keyboard/products/fully-assembled-niu40-mechanical-keyboard)
 
