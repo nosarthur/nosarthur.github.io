@@ -13,7 +13,7 @@ with sub-commands. Other posts in this series are
 - [overview]({% post_url 2019-05-27-gita-breakdown %})
 - **milestone 1: basic CLI**
 - [milestone 2: git integration]({% post_url 2019-07-10-gita-milestone2 %})
-- milestone 3: git delegation
+- [milestone 3: git delegation]({% post_url 2019-07-11-gita-milestone3 %})
 - milestone 4: speedup
 
 In general, I won't provide complete code for each commit, but only hints,

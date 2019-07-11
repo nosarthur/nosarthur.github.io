@@ -13,7 +13,7 @@ repos. The other posts in this series are
 - [overview]({% post_url 2019-05-27-gita-breakdown %})
 - [milestone 1: basic CLI]({% post_url 2019-06-02-gita-milestone1 %})
 - **milestone 2: git integration**
-- milestone 3: git delegation
+- [milestone 3: git delegation]({% post_url 2019-07-11-gita-milestone3 %})
 - milestone 4: speedup
 
 ## v0.1.1: add only git repo paths
