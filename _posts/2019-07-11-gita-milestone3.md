@@ -100,33 +100,34 @@ I also included help messages for the sub-parsers.
 After your code works, there is one more deployment issue. By default, only
 source code files are packaged into the installation files. To include
 `cmds.yml` for distribution, we need to have a `MANIFEST.IN` in the project
-root folder. I put the yaml file in the source code folder, and my `MANIFEST.IN`
-have the following content
+root folder with the following content
 
 ```
 include gita/cmds.yml
 ```
+It simply tells the packager where the files are.
 
 In the `setup.py`, we need to add a line of
 
 ```python
 include_package_data=True,
 ```
+to enable the inclusion of non-source-code files.
 
 ## v0.2.3: enhance yaml file
 
-One minor enhancement for our yaml representation is to include arguments. For
-example, `git remote` is not as useful as `git remote -v`, and we can define
-`gita remote [repo-name(s)]` to have the latter behavior.
+One minor enhancement for our yaml representation is to include git commands
+with arguments. For example, `git remote` is not as useful as `git remote -v`,
+and we can define `gita remote [repo-name(s)]` to have the latter behavior.
 To implement it, we can use an extra field for the full command, say, `cmd`, as
-seen in the following example
+seen below
 ```yaml
 remote:
   cmd: remote -v
   help: show remote settings
 ```
 
-Then in the Python code, this command is to be executed.
+Then in the Python code, we can execute this `cmd` instead of the entry/sub-command name.
 
 I also have other shortcut defined such as
 ```yaml
@@ -138,12 +139,12 @@ stat:
   help: show edit statistics
 ```
 
-This is analogous to git alias.
+This feature is analogous to shortening long commands with git alias.
 
 ## v0.2.4: add sub-command customization
 
 So far we have made the generation of delegated sub-commands really cheap. One
-low-hanging fruit is to allow the users to define their own sub-commands in an
+low-hanging fruit is to allow users to define their own sub-commands in an
 additional yaml file, say inside `~/.config/gita/`.
 The code change is to have the sub-parser generation code process this file.
 
@@ -158,7 +159,7 @@ gita super co prev-release
 will checkout the `prev-release` branch for all repos, given the git alias `co`
 for `checkout` exists.
 
-As for the implementation, it is not too different from the other sub-commands.
+The implementation is not too different from the other sub-commands.
 You may want to checkout `argparse.REMAINDER` for the `nargs`.
 
 ## v0.3: clean up and tag
