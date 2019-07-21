@@ -7,7 +7,8 @@ comments: true
 tags: [python, git]
 ---
 
-This is the second milestone where we speedup the sub-command execution.
+This is the fourth milestone where we speedup the sub-command execution for
+multiple repos.
 The other posts in this series are
 
 - [overview]({% post_url 2019-05-27-gita-breakdown %})
@@ -18,9 +19,133 @@ The other posts in this series are
 
 ## background
 
+So far the `gita pull` command executes `git pull` in each repo sequentially.
+This is actually the least efficient way to run multiple tasks.
+For example, if the remote server of the first repo responses slowly due to
+network issues, the execution for all other repo need to wait.
+This waiting due to data reading/writing is called IO blocks.
+
+There are two obvious improvements
+
+- use other CPU cores if they are available (by default, Python only uses one)
+- work on the next repo while waiting for the current one
+
+The first improvement is parallelism.
+For example, each core can work on one task. When a core finishes a task, it
+grabs a new one, say, from a task queue.
+This is commonly implemented as a process pool, where the number of workers
+equal to the number of CPU cores.
+Our git delegation tasks are particularly simple since they are independent of
+each other. Such tasks are called [embarrassingly parallelizable]().
+
+The second improvement is context switch.
+Note that it doesn't require multiple cores. Often it's implemented with a
+thread or process pool. With one core, only one task can proceed at a time.
+When the active task blocks, the scheduler (the program that maintains the
+threads or processes) suspends it and puts the CPU resource on another task.
+Overall, CPU idling is reduced.
+
+If you are not familiar with processes and threads, you should definitely look
+them up. Roughly speaking, one running program is a process (you can see them
+with `ps` or `top` command in terminal), and a process can have subordinate
+processes. Threads are light-weight version of processes and they live inside
+processes (try `ps -T` and `top -H` and look for rows with the same PIDs).
+One big difference is that processes don't share memories while threads of the
+same process do. One needs to be careful about multithreading since different
+threads could write to the same memory address.
+
+There is another improvement related to context switch. If the task being
+switched to is also under IO block, then the switch is wasted. If many tasks
+are long running, a lot of the switches will be wasted. A better situation is
+to somehow maintain a list of ready tasks so all switches are successful.
+One way to achieve this is via
+[asynchrony](<https://en.wikipedia.org/wiki/Asynchrony_(computer_programming)>).
+
+In our gita project, we will use the Python [asyncio library](https://docs.python.org/3.6/library/asyncio.html).
+It is easy to use as it hides a lot of the low-level details.
+If you want to know more details, a good starting point is
+[David Beazley's curious course on coroutines and concurrency](http://www.dabeaz.com/coroutines/).
+The magic keyword `yield` can be used both to give back control to the function
+caller and receive control from the caller.
+
 ## use `asyncio`
 
 ## add test
 
 
+## the interleaving output problem
+
+I am running multiple git fetch command in several repo directories.
+the symptom i had is that when git fetch are run on multiple repos, their
+outputs to the screen get interleaved.
+
+
+In the first trial, the code looks like this (and `cmds` is `['git', 'fetch']`):
+
+```python
+async def run_async(path: str, cmds: List[str]):
+    process = await asyncio.create_subprocess_exec(*cmds, cwd=path)
+    await process.wait()
+```
+
+The terminal outputs are interleaved because `await process.wait()` hands back
+control to its caller anytime IO blocks. This problem can be reproduced by the
+following code
+
+```python
+tasks = [
+    run_async('.', [
+        'python3', '-c',
+        f"print({i});import time; time.sleep({i});print({i})"
+    ]) for i in range(4)
+]
+if platform.system() == 'Windows':
+    loop = asyncio.ProactorEventLoop()
+    asyncio.set_event_loop(loop)
+else:
+    loop = asyncio.get_event_loop()
+
+try:
+    loop.run_until_complete(asyncio.gather(*tasks))
+finally:
+    loop.close()
+```
+
+```python
+0
+0
+2
+1
+3
+1
+2
+3
+```
+
+```python
+async def run_async(path: str, cmds: List[str]):
+    """
+    Run `cmds` asynchronously in `path` directory
+    """
+    process = await asyncio.create_subprocess_exec(
+        *cmds, stdout=asyncio.subprocess.PIPE, cwd=path)
+    stdout, _ = await process.communicate()
+    stdout and print(stdout.decode())
+```
+
+```python
+0
+0
+1
+1
+2
+2
+3
+3
+```
+
+
+## further readings
+
+- [A gentle introduction to multithreading](https://www.internalpointers.com/post/gentle-introduction-multithreading)
 
