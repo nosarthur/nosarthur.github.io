@@ -303,4 +303,4 @@ v, ok = <- ch
 
   {% include youtubePlayer.html id="2h_NFBFrciI" %}
 
-
+* [learning golang from zero to hero](https://milapneupane.com.np/2019/07/06/learning-golang-from-zero-to-hero/)

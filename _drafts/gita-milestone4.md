@@ -36,14 +36,14 @@ grabs a new one, say, from a task queue.
 This is commonly implemented as a process pool, where the number of workers
 equal to the number of CPU cores.
 Our git delegation tasks are particularly simple since they are independent of
-each other. Such tasks are called [embarrassingly parallelizable]().
+each other. Such tasks are called [embarrassingly parallelizable](https://en.wikipedia.org/wiki/Embarrassingly_parallel).
 
 The second improvement is context switch.
-Note that it doesn't require multiple cores. Often it's implemented with a
-thread or process pool. With one core, only one task can proceed at a time.
+Note that it doesn't require multiple cores. It can be implemented with either
+a thread or a process pool. A single core can work on only one task at a time.
 When the active task blocks, the scheduler (the program that maintains the
-threads or processes) suspends it and puts the CPU resource on another task.
-Overall, CPU idling is reduced.
+pool) suspends it and puts the CPU resource on another task.
+Overall, CPU idle time is reduced.
 
 If you are not familiar with processes and threads, you should definitely look
 them up. Roughly speaking, one running program is a process (you can see them
@@ -54,9 +54,10 @@ One big difference is that processes don't share memories while threads of the
 same process do. One needs to be careful about multithreading since different
 threads could write to the same memory address.
 
-There is another improvement related to context switch. If the task being
-switched to is also under IO block, then the switch is wasted. If many tasks
-are long running, a lot of the switches will be wasted. A better situation is
+There is another improvement on context switch at IO blocks.
+A switch is wasted if it switches to another blocked task. This is a real
+concern if tasks are long running with intermittent IO blocks.
+A better situation is
 to somehow maintain a list of ready tasks so all switches are successful.
 One way to achieve this is via
 [asynchrony](<https://en.wikipedia.org/wiki/Asynchrony_(computer_programming)>).
@@ -67,6 +68,18 @@ If you want to know more details, a good starting point is
 [David Beazley's curious course on coroutines and concurrency](http://www.dabeaz.com/coroutines/).
 The magic keyword `yield` can be used both to give back control to the function
 caller and receive control from the caller.
+
+I also encourage you to try the alternative implementations using thread or
+process pools. The relevant libraries are
+
+* [threading]()
+* [subprocess]()
+* [multiprocessing.pool.ThreadPool]()
+* [multiprocessing.Pool]()
+* [concurrent.futures.ThreadPoolExecutor](https://docs.python.org/3.6/library/concurrent.futures.html?highlight=concurrent%20futures#threadpoolexecutor)
+* [concurrent.futures.ProcessPoolExecutor](https://docs.python.org/3.6/library/concurrent.futures.html?highlight=concurrent%20futures#processpoolexecutor)
+
+The Python thread libraries don't run across different cores due to the GIL.
 
 ## use `asyncio`
 

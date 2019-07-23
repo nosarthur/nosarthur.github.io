@@ -65,13 +65,4 @@ and the slides are available here:
 
 ## python specifics
 
-The python thread libraries don't run across different cores due to the GIL.
 
-thread pool and run subprocess in each thread
-
-* [threading]()
-* [subprocess]()
-* [multiprocessing.pool.ThreadPool]()
-* [multiprocessing.Pool]()
-* [concurrent.futures.ThreadPoolExecutor](https://docs.python.org/3.6/library/concurrent.futures.html?highlight=concurrent%20futures#threadpoolexecutor)
-* [concurrent.futures.ProcessPoolExecutor](https://docs.python.org/3.6/library/concurrent.futures.html?highlight=concurrent%20futures#processpoolexecutor)

@@ -14,3 +14,4 @@ virtual machine is too expansive, and containerization is cheap.
 
 
 * [docker cheatsheet](https://github.com/eon01/DockerCheatSheet)
+* [Intro Guide to Dockerfile Best Practices](https://blog.docker.com/2019/07/intro-guide-to-dockerfile-best-practices/)

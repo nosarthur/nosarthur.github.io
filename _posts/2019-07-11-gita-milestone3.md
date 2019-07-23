@@ -65,7 +65,30 @@ def git_cmd(args):
 
 If these snippets look unfamiliar to you, go back to milestone 1.
 
-## v0.2.2: use yaml file for sub-commands
+## v0.2.2: improve the output from multiple repos
+
+When running delegated git commands for multiple repos, it could be hard to
+identify which message belongs to which repo. The goal of this session is to
+improve the output. Specifically,
+
+- every line of message should begin with the repo name
+- output from different repos should be separated by a blank line
+
+For example,
+
+```
+$ gita pull
+> repo-abc: ars tarstarstarst
+> repo-abc: arstarstarstarst
+> repo-abc: 1 file changed, 6 insertions(+), 6 deletions(-)
+> 
+> another-repo: tasra arstarst astars assss aoo
+> another-repo:    8298023..d33b002  master     -> origin/master
+> 
+> repo21: Already up to date.
+```
+
+## v0.2.3: use yaml file for sub-commands
 
 The approach in the previous session still has its caveat.
 To add many delegated sub-commands, we have a lot of tedious work.
@@ -114,7 +137,7 @@ include_package_data=True,
 ```
 to enable the inclusion of non-source-code files.
 
-## v0.2.3: enhance yaml file
+## v0.2.4: enhance yaml file
 
 One minor enhancement for our yaml representation is to include git commands
 with arguments. For example, `git remote` is not as useful as `git remote -v`,
@@ -141,14 +164,14 @@ stat:
 
 This feature is analogous to shortening long commands with git alias.
 
-## v0.2.4: add sub-command customization
+## v0.2.5: add sub-command customization
 
 So far we have made the generation of delegated sub-commands really cheap. One
 low-hanging fruit is to allow users to define their own sub-commands in an
 additional yaml file, say inside `~/.config/gita/`.
 The code change is to have the sub-parser generation code process this file.
 
-## v0.2.5: add `super` sub-command
+## v0.2.6: add `super` sub-command
 
 This `super` sub-command will allow us to execute any git commands with any
 arguments. It works even with any git aliases on user's computer. For example,
