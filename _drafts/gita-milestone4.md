@@ -45,6 +45,45 @@ When the active task blocks, the scheduler (the program that maintains the
 pool) suspends it and puts the CPU resource on another task.
 Overall, CPU idle time is reduced.
 
+An example is in order.
+
+```python
+import time
+from multiprocessing.pool import ThreadPool
+
+def run_task(interval: int):
+    print(f'{interval}s: start')
+    time.sleep(interval)
+    print(f'{interval}s: end')
+
+if __name__ == '__main__':
+    t0 = time.time()
+    with ThreadPool() as pool:
+        pool.map(run_task, [1, 2, 1])
+    t1 = time.time()
+    print(t1 - t0)
+```
+
+Here I use a thread pool to execute 3 trivial tasks. Each task simply sleeps
+for some time, which mimics IO block.
+Executing this code on my computer gives the following output
+
+```bash
+20:56 chronos (master *) _drafts $ python3.7 thread_pool_example.py
+1s: start
+2s: start
+1s: start
+1s: end
+1s: end
+2s: end
+2.013366460800171
+```
+We can see that only slightly more than 2 seconds is needed, instead of 4 seconds
+in the serial execution case.
+By default, the Python thread libraries don't run across different cores due to
+the global interpreter lock (GIL).
+Thus the speedup in the example is fully due to the second improvement.
+
 If you are not familiar with processes and threads, you should definitely look
 them up. Roughly speaking, one running program is a process (you can see them
 with `ps` or `top` command in terminal), and a process can have subordinate
@@ -53,6 +92,8 @@ processes (try `ps -T` and `top -H` and look for rows with the same PIDs).
 One big difference is that processes don't share memories while threads of the
 same process do. One needs to be careful about multithreading since different
 threads could write to the same memory address.
+
+http://kegel.com/c10k.html
 
 There is another improvement on context switch at IO blocks.
 A switch is wasted if it switches to another blocked task. This is a real
@@ -79,7 +120,6 @@ process pools. The relevant libraries are
 * [concurrent.futures.ThreadPoolExecutor](https://docs.python.org/3.6/library/concurrent.futures.html?highlight=concurrent%20futures#threadpoolexecutor)
 * [concurrent.futures.ProcessPoolExecutor](https://docs.python.org/3.6/library/concurrent.futures.html?highlight=concurrent%20futures#processpoolexecutor)
 
-The Python thread libraries don't run across different cores due to the GIL.
 
 ## use `asyncio`
 
