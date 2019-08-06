@@ -8,29 +8,30 @@ tags: [python, git]
 ---
 
 This is the fourth milestone where we speedup the sub-command execution for
-multiple repos.
-The other posts in this series are
+multiple repos. The other posts in this series are
 
 - [overview]({% post_url 2019-05-27-gita-breakdown %})
 - [milestone 1: basic CLI]({% post_url 2019-06-02-gita-milestone1 %})
 - [milestone 2: git integration]({% post_url 2019-07-10-gita-milestone2 %})
 - [milestone 3: git delegation]({% post_url 2019-07-11-gita-milestone3 %})
 - **milestone 4: speedup**
+- milestone 5: miscellaneous topics
 
 ## background
 
 So far the `gita pull` command executes `git pull` in each repo sequentially.
-This is actually the least efficient way to run multiple tasks.
+This implementation is inefficient.
 For example, if the remote server of the first repo responses slowly due to
-network issues, the execution for all other repo need to wait.
-This waiting due to data reading/writing is called IO blocks.
+network issues, the execution for all other repos has to wait.
+This kind of waiting at data reading/writing is called IO block.
 
 There are two obvious improvements
 
-- use other CPU cores if they are available (by default, Python only uses one)
-- work on the next repo while waiting for the current one
+- Use other CPU cores if they are available. By default, Python only uses one,
+  which is known as the [global interpreter lock (GIL)]().
+- Work on the next repo while waiting for the current one
 
-The first improvement is parallelism.
+The first improvement is **parallelism**.
 For example, each core can work on one task. When a core finishes a task, it
 grabs a new one, say, from a task queue.
 This is commonly implemented as a process pool, where the number of workers
@@ -38,16 +39,17 @@ equal to the number of CPU cores.
 Our git delegation tasks are particularly simple since they are independent of
 each other. Such tasks are called [embarrassingly parallelizable](https://en.wikipedia.org/wiki/Embarrassingly_parallel).
 
-The second improvement is context switch.
-Note that it doesn't require multiple cores. It can be implemented with either
-a thread or a process pool. A single core can work on only one task at a time.
-When the active task blocks, the scheduler (the program that maintains the
+The second improvement is **context switch**,
+which doesn't require multiple cores. It can be implemented with either
+a thread pool or a process pool.
+When an active task blocks, the scheduler (the program that maintains the
 pool) suspends it and puts the CPU resource on another task.
 Overall, CPU idle time is reduced.
 
 An example is in order.
 
 ```python
+# thread_pool_example.py
 import time
 from multiprocessing.pool import ThreadPool
 
@@ -78,10 +80,9 @@ Executing this code on my computer gives the following output
 2s: end
 2.013366460800171
 ```
-We can see that only slightly more than 2 seconds is needed, instead of 4 seconds
-in the serial execution case.
-By default, the Python thread libraries don't run across different cores due to
-the global interpreter lock (GIL).
+The total execution time is slightly more than 2 seconds, instead of 4 seconds
+in the serial case.
+By default, the Python thread libraries don't run across different cores.
 Thus the speedup in the example is fully due to the second improvement.
 
 If you are not familiar with processes and threads, you should definitely look
@@ -93,25 +94,23 @@ One big difference is that processes don't share memories while threads of the
 same process do. One needs to be careful about multithreading since different
 threads could write to the same memory address.
 
+There is another subtle improvement called
+[asynchrony](<https://en.wikipedia.org/wiki/Asynchrony_(computer_programming)>).
+Even though thread is more light weight than process, the system resource
+(memory in particular) can still drain when a lot of threads are requested.
+
 http://kegel.com/c10k.html
 
-There is another improvement on context switch at IO blocks.
-A switch is wasted if it switches to another blocked task. This is a real
-concern if tasks are long running with intermittent IO blocks.
-A better situation is
-to somehow maintain a list of ready tasks so all switches are successful.
-One way to achieve this is via
-[asynchrony](<https://en.wikipedia.org/wiki/Asynchrony_(computer_programming)>).
-
-In our gita project, we will use the Python [asyncio library](https://docs.python.org/3.6/library/asyncio.html).
+In the  gita project, we will use the Python [asyncio library](https://docs.python.org/3.6/library/asyncio.html).
 It is easy to use as it hides a lot of the low-level details.
 If you want to know more details, a good starting point is
 [David Beazley's curious course on coroutines and concurrency](http://www.dabeaz.com/coroutines/).
 The magic keyword `yield` can be used both to give back control to the function
 caller and receive control from the caller.
 
-I also encourage you to try the alternative implementations using thread or
-process pools. The relevant libraries are
+I also encourage you to try the alternative implementations of threads,
+processes, or the corresponding pools, and compare their performances.
+The relevant libraries are
 
 * [threading]()
 * [subprocess]()
@@ -123,16 +122,6 @@ process pools. The relevant libraries are
 
 ## use `asyncio`
 
-## add test
-
-
-## the interleaving output problem
-
-I am running multiple git fetch command in several repo directories.
-the symptom i had is that when git fetch are run on multiple repos, their
-outputs to the screen get interleaved.
-
-
 In the first trial, the code looks like this (and `cmds` is `['git', 'fetch']`):
 
 ```python
@@ -140,6 +129,16 @@ async def run_async(path: str, cmds: List[str]):
     process = await asyncio.create_subprocess_exec(*cmds, cwd=path)
     await process.wait()
 ```
+
+## add test
+
+
+## the interleaving output problem
+
+I am running multiple git fetch command in several repo directories.
+The symptom I had is that when git fetch are run on multiple repos, their
+outputs to the screen get interleaved.
+
 
 The terminal outputs are interleaved because `await process.wait()` hands back
 control to its caller anytime IO blocks. This problem can be reproduced by the
