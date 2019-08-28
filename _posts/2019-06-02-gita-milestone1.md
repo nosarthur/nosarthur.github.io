@@ -15,6 +15,7 @@ with sub-commands. Other posts in this series are
 - [milestone 2: git integration]({% post_url 2019-07-10-gita-milestone2 %})
 - [milestone 3: git delegation]({% post_url 2019-07-11-gita-milestone3 %})
 - milestone 4: speedup
+- milestone 5: miscellaneous topics
 
 In general, I won't provide complete code for each commit, but only hints,
 references, and snippets.

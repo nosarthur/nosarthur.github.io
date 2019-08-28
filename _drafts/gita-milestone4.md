@@ -17,19 +17,49 @@ multiple repos. The other posts in this series are
 - **milestone 4: speedup**
 - milestone 5: miscellaneous topics
 
-## background
-
 So far the `gita pull` command executes `git pull` in each repo sequentially.
-This implementation is inefficient.
-For example, if the remote server of the first repo responses slowly due to
-network issues, the execution for all other repos has to wait.
-This kind of waiting at data reading/writing is called IO block.
+This is actually the least efficient way to run multiple tasks.
+Suppose the remote server of the first repo has network issues, then the
+execution for all other repo need to wait.
 
 There are two obvious improvements
 
-- Use other CPU cores if they are available. By default, Python only uses one,
-  which is known as the [global interpreter lock (GIL)]().
-- Work on the next repo while waiting for the current one
+- work on the next repo while waiting for the current one
+- use other CPU cores if they are available
+
+Before we commit to any implementation, let's first go over some basics on
+operating system (OS) in the next session.
+
+## background: process, thread, and scheduler
+
+If you have never heard of processes and threads, you should definitely look
+them up.
+
+Roughly speaking, one running program is a process (you can see them
+with `ps` or `top` command in terminal), 
+
+and a process can have subordinate
+processes. Threads are light-weight version of processes and they live inside
+processes (try `ps -T` and `top -H` and look for rows with the same PIDs).
+One big difference is that processes don't share memories while threads of the
+same process do. One needs to be careful about multithreading since different
+threads could write to the same memory address.
+
+
+- CPU-bound:
+- IO-bound: 
+
+This waiting due to data reading/writing is called IO blocks.
+
+instruction per cycle (IPC) * 
+
+https://en.wikipedia.org/wiki/Instructions_per_second#Timeline_of_instructions_per_second
+
+Millions of instructions per second (MIPS)
+    
+
+- [OS Scheduler](https://www.ardanlabs.com/blog/2018/08/scheduling-in-go-part1.html)
+
 
 The first improvement is **parallelism**.
 For example, each core can work on one task. When a core finishes a task, it
@@ -68,6 +98,12 @@ if __name__ == '__main__':
 
 Here I use a thread pool to execute 3 trivial tasks. Each task simply sleeps
 for some time, which mimics IO block.
+A thread can be in one of the three states
+
+- waiting
+- runnable
+- executing
+
 Executing this code on my computer gives the following output
 
 ```bash
@@ -85,16 +121,15 @@ in the serial case.
 By default, the Python thread libraries don't run across different cores.
 Thus the speedup in the example is fully due to the second improvement.
 
-If you are not familiar with processes and threads, you should definitely look
-them up. Roughly speaking, one running program is a process (you can see them
-with `ps` or `top` command in terminal), and a process can have subordinate
-processes. Threads are light-weight version of processes and they live inside
-processes (try `ps -T` and `top -H` and look for rows with the same PIDs).
-One big difference is that processes don't share memories while threads of the
-same process do. One needs to be careful about multithreading since different
-threads could write to the same memory address.
+http://kegel.com/c10k.html
 
-There is another subtle improvement called
+There is another improvement on context switch at IO blocks.
+A switch is wasted if it switches to another blocked task. This is a real
+concern if tasks are long running with intermittent IO blocks.
+A better situation is
+to somehow maintain a list of ready tasks so all switches are successful.
+One way to achieve this is via
+
 [asynchrony](<https://en.wikipedia.org/wiki/Asynchrony_(computer_programming)>).
 Even though thread is more light weight than process, the system resource
 (memory in particular) can still drain when a lot of threads are requested.

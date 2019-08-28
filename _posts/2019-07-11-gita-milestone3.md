@@ -36,6 +36,7 @@ The other posts in this series are linked below
 - [milestone 2: git integration]({% post_url 2019-07-10-gita-milestone2 %})
 - **milestone 3: git delegation**
 - milestone 4: speedup
+- milestone 5: miscellaneous topics
 
 ## v0.2.1: delegate `fetch`, `pull`, `push`
 

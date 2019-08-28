@@ -15,6 +15,7 @@ repos. The other posts in this series are
 - **milestone 2: git integration**
 - [milestone 3: git delegation]({% post_url 2019-07-11-gita-milestone3 %})
 - milestone 4: speedup
+- milestone 5: miscellaneous topics
 
 ## v0.1.1: add only git repo paths
 

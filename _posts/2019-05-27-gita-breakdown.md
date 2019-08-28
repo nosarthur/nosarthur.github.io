@@ -47,6 +47,7 @@ I break up the project into 4 milestones
 - [milestone 2: git integration]({% post_url 2019-07-10-gita-milestone2 %})
 - [milestone 3: git delegation]({% post_url 2019-07-11-gita-milestone3 %})
 - milestone 4: speedup
+- milestone 5: miscellaneous topics
 
 In the rest of this post, I will describe the expected behaviors for them.
 
@@ -114,6 +115,11 @@ You are free to use the alternative libraries to achieve the same goal.
 
 To make it more accessible to beginners, I will also include the basics of
 parallel / asynchronous execution.
+
+## milestone 5: miscellaneous topics
+
+Here the topics include writing shell script for command auto-completion,
+marketing an open source project, etc.
 
 ## references
 

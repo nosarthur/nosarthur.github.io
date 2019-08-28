@@ -119,12 +119,70 @@ methods.
 
 ## data structures
 
+struct
+
+empty `struct` do not cost any memory and can be used as a cheap label for
+`map` and `channel`.
+
+array
+
+It is unlike C/C++ where it's a pointer in disguise, more like a structure with indexing capability
+
+
 Any comparable type can be `map` key.
 
 Somewhat peculiar situations include channel, and composite types such as
 `interface`, `struct` and array.
 
-slice
+### slice
+
+Three useful operations
+
+- `append`
+- `copy`
+- slice
+
+```go
+a := []int{1, 2}
+b := []int{3, 4}
+check := a
+copy(a, b)
+fmt.Println(a, b, check)
+// Output: [3 4] [3 4] [3 4]
+```
+
+copy a `map`, one has to copy all the content
+```go
+a := map[string]bool{"A": true, "B": true}
+b := make(map[string]bool)
+for key, value := range a {
+	b[key] = value
+}
+```
+
+https://blog.golang.org/go-slices-usage-and-internals
+
+`append` may return a different slice
+
+```go
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	s := []int{1, 2, 3}
+	ss := s[1:]
+
+	ss = append(ss, 4)
+	ss[0] += 10
+	fmt.Println(s)
+}
+```
+`s` remains as `[1, 2, 3]`, whereas `ss` becomes `10, 3, 4`.
+
+slice a slice does not make copy
 
 
 ## function
@@ -166,7 +224,14 @@ for key, value := range iterable{
 }
 ```
 
+```go
+s := []int{1, 2, 3}
+for _, v := range s {
+    v += 10
+}
+```
 
+The value of `v` is copied.
 
 ## examples
 
@@ -304,3 +369,5 @@ v, ok = <- ch
   {% include youtubePlayer.html id="2h_NFBFrciI" %}
 
 * [learning golang from zero to hero](https://milapneupane.com.np/2019/07/06/learning-golang-from-zero-to-hero/)
+- [golang FAQ](https://golang.org/doc/faq)
+- [Scheduling In Go](https://www.ardanlabs.com/blog/2018/08/scheduling-in-go-part1.html)
