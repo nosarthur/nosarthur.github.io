@@ -51,6 +51,16 @@ threads could write to the same memory address.
 
 This waiting due to data reading/writing is called IO blocks.
 
+- IO block: 1 second
+- context switch: $10^3$ ns
+- single instruction: $10^{-1}$ ns
+
+thread states
+
+- waiting
+- runnable
+- executing
+
 instruction per cycle (IPC) * 
 
 https://en.wikipedia.org/wiki/Instructions_per_second#Timeline_of_instructions_per_second

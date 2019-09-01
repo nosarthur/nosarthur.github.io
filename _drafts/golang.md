@@ -7,6 +7,8 @@ comments: true
 tags: [golang]
 ---
 
+> Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.
+
 The [Go programming language](https://en.wikipedia.org/wiki/Go_(programming_language))
 is created by Google in 2009.
 Its syntax is similar to C/C++ and Python.
@@ -36,6 +38,10 @@ All code snippets here run with go verion 1.10.1.
 
 A useful place to try snippet out is [Go playground](https://play.golang.org/).
 
+[yaegi](https://github.com/containous/yaegi)
+
+https://gophercises.com
+
 ## data types
 
 There are four kinds of data types in golang:
@@ -56,8 +62,8 @@ There are four kinds of data types in golang:
     * pointer
     * slice
     * `map`
-    * function `func`
     * channel `chan`
+    * function `func`
     * `interface`
 * `reflect.Invalid`
 
@@ -74,8 +80,10 @@ Comparable types can be used as hash keys, e.g., keys of the `map` type.
         * interface
 * not comparable
     * slice
-    * map
+    * `map`
     * functions
+
+Note that the incomparable data types can be compared to `nil`.
 
 There are only 25 keywords and 15 built-in funcitons.
 Many of them are the same as C/C++, or Python.
@@ -149,6 +157,20 @@ check := a
 copy(a, b)
 fmt.Println(a, b, check)
 // Output: [3 4] [3 4] [3 4]
+```
+
+```
+var a [10]int
+acopy := a
+a[0] = 10
+fmt.Println("a", a)
+fmt.Println("acopy", acopy)
+
+s := make([]int, 10)
+s[0] = 10
+scopy := s
+fmt.Println("s", s)
+fmt.Println("scopy", scopy)
 ```
 
 copy a `map`, one has to copy all the content
@@ -347,11 +369,22 @@ For unbuffered channel, both sending and receiving blocks until the other operat
 > A data race occurs whenever two goroutines access the same variable
   concurrently and at least one of the accesses is a write.
 
+add an example of using `sync.WaitGroup` for goroutines
+
+quick sort concurrent implementation
+
 (map lookup, type assertion) The third operator that supports an `ok` is channel receive
 
 ```go
 v, ok = <- ch
 ```
+
+## principles
+
+- Accept interfaces, return concrete structs.
+- composition over inheritance
+- communicate to, 
+- convention over configuration
 
 ## references
 
@@ -371,3 +404,4 @@ v, ok = <- ch
 * [learning golang from zero to hero](https://milapneupane.com.np/2019/07/06/learning-golang-from-zero-to-hero/)
 - [golang FAQ](https://golang.org/doc/faq)
 - [Scheduling In Go](https://www.ardanlabs.com/blog/2018/08/scheduling-in-go-part1.html)
+- [curious channels](https://dave.cheney.net/2013/04/30/curious-channels)
