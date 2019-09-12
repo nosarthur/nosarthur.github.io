@@ -298,6 +298,21 @@ fmt.Println(s[4], reflect.TypeOf(s[4]))
   7 界
   ```
 
+```
+package main
+
+import "fmt"
+
+func main() {
+	// add a sample
+	defer func() { fmt.Println("1") }()
+	defer func() { fmt.Println("2") }()
+	defer func() { fmt.Println("3") }()
+	panic("4")
+}
+```
+* The execution order of `defer` is first-in-last-out
+
 ## access control
 
 capitalized variables and functions are public, whereas uncapitalized ones

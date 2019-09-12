@@ -21,6 +21,7 @@ permalink: /links/
     * [Max Lapan](https://medium.com/@shmuma)
     * [Michael Nielsen][nielsen]
     * [Miguel Grinberg](https://blog.miguelgrinberg.com/index)
+    * [Sam Altman](http://blog.samaltman.com)
     * [Scott Aaronson](https://www.scottaaronson.com/blog/)
     * [Sebastian Raschka](https://sebastianraschka.com/blog/index.html)
     * [Soham Kamani](https://www.sohamkamani.com/blog)
