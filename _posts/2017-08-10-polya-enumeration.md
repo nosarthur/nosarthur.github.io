@@ -4,7 +4,7 @@ title: Polya enumeration theorem
 date:   2017-08-10 03:43:08 -0500
 categories: [math and physics]
 comments: true
-tags: [combinatorics, graph theory]
+tags: [combinatorics, graph theory, group theory]
 ---
 
 ## introduction
@@ -164,7 +164,7 @@ $$
 If you take the trouble to work out all the stabilizers for each necklace in Fig. 1, 
 there is a pattern: all $$a_i$$ have 2 stabilizers, and all $$b_i$$ have 4 stabilizers. 
 Also note $$D_3$$ has 8 elements. It turns out all these observations are no coincidence. 
-It is summarized in the so-called orbit-stabilizer theorem:
+It is summarized in the so-called **orbit-stabilizer theorem**:
 
 $$|G| = |orb_G(x)| |stab_G(x)|, \forall x \in X$$
 

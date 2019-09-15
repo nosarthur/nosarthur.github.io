@@ -28,6 +28,7 @@ permalink: /links/
     * [Stephen Wolfram](https://blog.stephenwolfram.com/)
     * [Xavier Amatriain](https://medium.com/@xamat)
     * [Yifeng Ruan](http://www.ruanyifeng.com/blog/)
+    * [Yihui Xie](https://yihui.name/en/about/)
     * [Tim Qian](https://blog.t9t.io/)
 * financial independence
     * [Frugal Woods](http://www.frugalwoods.com)
