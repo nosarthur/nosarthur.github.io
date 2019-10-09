@@ -1,6 +1,6 @@
 default:
-	jekyll serve --draft
+	jekyll serve --draft -P 8888
 future:
-	jekyll serve --draft --future
+	jekyll serve --draft --future -P 8888
 prod:
-	jekyll serve
+	jekyll serve -P 8888
