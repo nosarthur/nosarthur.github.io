@@ -15,9 +15,9 @@ where
 symbol | meaning
 --- | ---
 $$n$$ | $$n$$-fold rotation
-$$\bar n$$ or $$-n$$ | $$n$$-fold rotary inversion
+$$\bar n$$ or $$-n$$ | $$n$$-fold rotoinversion
 $$m$$, same as $$-2$$ | mirror
-$$\frac {n}{m}$$ or $$n/m$$ | $$n$$-fold rotation and
+$$\frac {n}{m}$$ or $$n/m$$ | $$n$$-fold rotation whose axis $$\perp$$ mirror plane
 
 ## 4 unit cell types
 
@@ -68,24 +68,45 @@ All-face centred|	F|	4
 Body centred|	I|	2
 Rhombohedrally centred|	R|	3
 
+## 32 point groups
+
+rotation 2, 3, 4, 6
+
+The point group elements leave at least one point unchanged
+
+http://newton.ex.ac.uk/research/qsystems/people/goss/symmetry/Stereographs.html
+
+{% include youtubePlayer.html id="r3DxhWhQnEI" %}
+
+
+Fall into two categories
+
+- 27 simple rotation groups
+- 5 higher symmetry groups
+
+at least 3 fold rotation
+cubic crystal system
+
 ## 7 crystal systems
 
-crystal system | characteristic symmetry | syngony | unit cell parameters | independent parameters
---- | --- | --- | --- | ---
- cubic | | $$a=b=c , \alpha=\beta=\gamma=90^\circ$$, PIF
- tetragonal| $$a=b\neq c, \alpha=\beta=\gamma=90^\circ$$, PI
- orthorhombic| $$a\neq b\neq c, \alpha=\beta=\gamma=90^\circ$$, PIFC
- hexagonal| $$a=b\neq c, \alpha=\beta=90^\circ, \gamma=120^\circ$$, P
- trigonal| $$a=b=c, \alpha=\beta=\gamma\neq90^\circ$$, P
- monoclinic| $$a\neq b\neq c, \alpha=\gamma=90^\circ, \beta\neq120^\circ$$, PC
- triclinic| 1x 1-fold | -1 | $$a\neq b\neq c, \alpha\neq\beta\neq\gamma\neq90^\circ$$, P
+crystal system | characteristic symmetry | syngony | unit cell parameters | indep. param.| Bravais lattice
+--- | --- | --- | --- | --- | ---
+ triclinic (1-2) | 1x 1-fold | -1 | $$a\neq b\neq c, \alpha\neq\beta\neq\gamma\neq90^\circ$$ | 6 | P
+ monoclinic (3-15) |1× 2-fold | 2/m | $$a\neq b\neq c, \alpha=\gamma=90^\circ, \beta\neq120^\circ$$ | 4| PC
+ orthorhombic (16-74)|3× 2-fold | mmm | $$a\neq b\neq c, \alpha=\beta=\gamma=90^\circ$$ | 3 | PIFC
+ tetragonal (75-142)| 1× 4-fold | 4/mmm | $$a=b\neq c, \alpha=\beta=\gamma=90^\circ$$ | 2 | PI
+ trigonal (143-167)| 1× 3-fold | 6/mmm (P), -3m (R)| $$a=b=c, \alpha=\beta=\gamma\neq90^\circ$$ | 2 | P
+ hexagonal (168-194)|1× 6-fold| 6/mmm | $$a=b\neq c, \alpha=\beta=90^\circ, \gamma=120^\circ$$ | 2 | P
+ cubic (195-230)|4× 3-fold | m-3m | $$a=b=c , \alpha=\beta=\gamma=90^\circ$$ | 1 | PIF
 
 ## 14 Bravais lattice
 
-## 32 point groups
-
-
 ## 230 space group
+
+translation
+
+
+{% include youtubePlayer.html id="fXAk-qcBKOs" %}
 
 ## references
 
