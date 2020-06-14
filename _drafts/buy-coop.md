@@ -67,11 +67,15 @@ At open house, each potential buyer needs to sign in and the seller's agent will
 ask if there is a buyer's agent.
 The answer to this question determines whether the seller's team get all the commission.
 
-## day : get mortgage pre-approval letter from a bank
+## day -23: get mortgage pre-approval letter from a bank
 
-## day : make offer
+Usually this should happen before getting the buyer's agent.
 
-## day : offer gets accepted
+I got it in the same day.
+
+## day -22: make offer
+
+## day -21: offer gets accepted
 
 no legal effect.
 
@@ -81,9 +85,28 @@ buyer one-sided
 
 seller
 
-## day : apply mortgage (get commitment letter from a bank)
+## day 5: apply mortgage
 
 It doesn't have to be the same bank that granted the pre-approval letter.
+
+It is common to require within 45 days.
+
+## day 9: appraisal approved
+
+The appraisal is ordered by the bank.
+
+The appraisal price is not disclosed to the seller.
+
+## day 16: initiate 401k loan
+
+## day 17: coop recognition agreement received
+
+## day 21: loan commitment letter received
+
+## day 39: board application submitted
+
+## day 54: board interview
+
 
 ## day
 ## day

@@ -31,9 +31,10 @@ permalink: /links/
     * [Yihui Xie](https://yihui.name/en/about/)
     * [Tim Qian](https://blog.t9t.io/)
 * financial independence
+    * [Mr Money Mustache](http://www.mrmoneymustache.com)
+    * [Financial Samurai](https://www.financialsamurai.com/)
     * [Frugal Woods](http://www.frugalwoods.com)
     * [Mad FIentist](https://www.madfientist.com/)
-    * [Mr Money Mustache](http://www.mrmoneymustache.com)
 
 ### ancient texts
 

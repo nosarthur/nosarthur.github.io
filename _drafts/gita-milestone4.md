@@ -8,7 +8,9 @@ tags: [python, git]
 ---
 
 This is the fourth milestone where we speedup the sub-command execution for
-multiple repos. The other posts in this series are
+multiple repos. Specifically, we will use `gita pull` as example.
+
+The other posts in this series are
 
 - [overview]({% post_url 2019-05-27-gita-breakdown %})
 - [milestone 1: basic CLI]({% post_url 2019-06-02-gita-milestone1 %})
@@ -17,15 +19,16 @@ multiple repos. The other posts in this series are
 - **milestone 4: speedup**
 - milestone 5: miscellaneous topics
 
-So far the `gita pull` command executes `git pull` in each repo sequentially.
-This is actually the least efficient way to run multiple tasks.
-Suppose the remote server of the first repo has network issues, then the
-execution for all other repo need to wait.
+In the previous posts, the `gita pull` command executes `git pull` in each
+repo sequentially.
+This is very efficient for multiple tasks:
+if the remote server of the first repo is slow, the execution for all other
+repos are delayed.
 
 There are two obvious improvements
 
-- work on the next repo while waiting for the current one
-- use other CPU cores if they are available
+- use multiple CPU cores for multiple tasks
+- switch to the next task while waiting for the current one
 
 Before we commit to any implementation, let's first go over some basics on
 operating system (OS) in the next session.
@@ -36,18 +39,18 @@ If you have never heard of processes and threads, you should definitely look
 them up.
 
 Roughly speaking, one running program is a process (you can see them
-with `ps` or `top` command in terminal), 
+with `ps` or `top` command in terminal),
+And a process can have subordinate processes.
 
-and a process can have subordinate
-processes. Threads are light-weight version of processes and they live inside
+Threads are light-weight version of processes and they live inside
 processes (try `ps -T` and `top -H` and look for rows with the same PIDs).
-One big difference is that processes don't share memories while threads of the
+One big difference is that processes don't share memories whereas threads of the
 same process do. One needs to be careful about multithreading since different
 threads could write to the same memory address.
 
 
 - CPU-bound:
-- IO-bound: 
+- IO-bound:
 
 This waiting due to data reading/writing is called IO blocks.
 
@@ -61,12 +64,12 @@ thread states
 - runnable
 - executing
 
-instruction per cycle (IPC) * 
+instruction per cycle (IPC) *
 
 https://en.wikipedia.org/wiki/Instructions_per_second#Timeline_of_instructions_per_second
 
 Millions of instructions per second (MIPS)
-    
+
 
 - [OS Scheduler](https://www.ardanlabs.com/blog/2018/08/scheduling-in-go-part1.html)
 
