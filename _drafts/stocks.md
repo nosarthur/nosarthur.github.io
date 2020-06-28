@@ -324,6 +324,10 @@ Webull free margin account.
 
 Robinhood margin account costs $5/month.
 
+trend
+
+[Guppy multiple moving average (GMMA)](https://www.investopedia.com/terms/g/guppy-multiple-moving-average.asp)
+
 ## <a name='info'></a> miscellaneous information
 
 To have a basic understanding of macro economics, check out
