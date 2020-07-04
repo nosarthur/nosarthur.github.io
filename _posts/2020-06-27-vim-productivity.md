@@ -184,6 +184,9 @@ For example, mouseless copy can be triggered by `apple + shift + c`.
 I am still new to extraterm and only use its capability for tabs and nice themes.
 Let me know if you know any other good ones on Chrome OS.
 
-> I just switched to the beta channel and found out the default Crostini terminal
-  supports tabs (I haven't figure out the keyboard shortcut to open a new tab
-  through). Also the themes got a lot better (ctrl+shift+p).
+## Epilogue
+
+I just switched to the beta channel and noticed that the default Crostini
+terminal supports tabs. You can also customize keyboard shortcuts for tabs
+using (ctrl+shift+p).
+Also the themes got a lot better. Thus there is no need for ExtraTerm.
