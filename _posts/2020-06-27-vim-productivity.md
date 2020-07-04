@@ -86,6 +86,7 @@ file keys | meaning
 window keys | meaning
 --- | ---
 `ctrl+w+v` | split window vertically
+`ctrl+w+=` | resize the split windows equally
 `ctrl+w+ctrl+w` | cycle through the windows
 `ctrl+w` then `H` or `J` or `K` or `L` | move the current window to other locations (I only use this to turn horizontally split windows to vertically split windows)
 `:vert sf <fname>` and `:vert new` | open <fname>/a new buffer in a new vertical split window
@@ -96,6 +97,7 @@ other keys | meaning
 --- | ---
 `:term`| create a terminal buffer (requires Vim 8.1)
 `:h <keywords>` | get help on <keywords>, for example, `:h navigation`
+`ctrl+^` | open the previously opened file
 
 To manage Vim plugins, I use [Vim-plug](https://github.com/junegunn/Vim-plug).
 It is a newer tool than [Vundle](https://github.com/VundleVim/Vundle.vim) and [Pathogen](https://github.com/tpope/vim-pathogen).
@@ -182,3 +184,5 @@ For example, mouseless copy can be triggered by `apple + shift + c`.
 I am still new to extraterm and only use its capability for tabs and nice themes.
 Let me know if you know any other good ones on Chrome OS.
 
+> I just switched to the beta channel and found out the default Crostini terminal
+  supports tabs. Also the themes got a lot better (ctrl+shift+p).
