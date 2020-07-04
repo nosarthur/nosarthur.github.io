@@ -19,12 +19,12 @@ Another legendary monk [Xuanzang](https://en.wikipedia.org/wiki/Xuanzang) (玄�
 
 In this post, I will provide an English translation of the sutra based on Kumarajiva's version.
 I will keep the translation simple and concise thus it is not a literal translation.
-Famous sentences will be in bold and translated in full though.
+Famous sentences will be in bold and translated in full.
 
 There are two difficulties in the translation
 
 * Ancient Chinese differs from modern Chinese
-* The same Chinese character / Sanskrit word could refer to different concepts 
+* The same Chinese character / Sanskrit word could refer to different concepts
 
 Thus I cannot guarantee my translation is correct.
 When in doubt, I also consult the Chinese version by Xuanzang, whose translation is more literal.
@@ -35,19 +35,19 @@ Before going to the main text, let us first introduce a few terminologies:
 
 eye (眼) | ear (耳) | nose (鼻) | tongue (舌) | body (身) | mind (意, [manas](https://en.wikipedia.org/wiki/Manas_(early_Buddhism)))
 --- | --- | --- | --- | --- | ---
-color (色, [rupa](https://en.wikipedia.org/wiki/R%C5%ABpa)) | sound (声) | smell (香) | taste (味) | touch (触) | thought (法, [dharma](https://en.wikipedia.org/wiki/Dharma)) 
+color (色, [rupa](https://en.wikipedia.org/wiki/R%C5%ABpa)) | sound (声) | smell (香) | taste (味) | touch (触) | thought (法, [dharma](https://en.wikipedia.org/wiki/Dharma))
 
-* [Arhat](https://en.wikipedia.org/wiki/Arhat) (阿罗汉, 罗汉): Someone who has attained [nirvana](https://en.wikipedia.org/wiki/Nirvana_(Buddhism)) (涅槃). He has eliminated all [fetters](https://en.wikipedia.org/wiki/Fetter_(Buddhism)) and thus is freed from rebirth (轮回, [samsara](https://en.wikipedia.org/wiki/Sa%E1%B9%83s%C4%81ra_(Buddhism))). The Sanskrit word could mean "the one who has destroyed the foes of afflictions". It could also mean "the one who cannot be killed". 
+* [Arhat](https://en.wikipedia.org/wiki/Arhat) (阿罗汉, 罗汉): Someone who has attained [nirvana](https://en.wikipedia.org/wiki/Nirvana_(Buddhism)) (涅槃). He has eliminated all [fetters](https://en.wikipedia.org/wiki/Fetter_(Buddhism)) and thus is freed from rebirth (轮回, [samsara](https://en.wikipedia.org/wiki/Sa%E1%B9%83s%C4%81ra_(Buddhism))). The Sanskrit word could mean "the one who has destroyed the foes of afflictions". It could also mean "the one who cannot be killed".
 
 * [Buddha](https://en.wikipedia.org/wiki/Buddha_(title)) (佛): The fully enlightened teacher, the "awakened one". He is more knowledgeable than arhats. [Gautama Buddha](https://en.wikipedia.org/wiki/Gautama_Buddha) is one of them.
 
 * [Bodhisattva](https://en.wikipedia.org/wiki/Bodhisattva) (菩萨): There are two possible usage of this word, nicely summarized on Wikipedia
 > In Theravada Buddhism, a bodhisattva is one who is striving for full enlightenment (arhat), whereas in Mahayana Buddhism, a bodhisattva is one who has already reached a very advanced state of grace or enlightenment but holds back from entering nirvana so that he may help others.
 
-* [Tathagata](https://en.wikipedia.org/wiki/Tath%C4%81gata) (如来): In Buddhism sutras, Gautama Buddha often refers to himself (or maybe all Buddhas) as tathagata. 
+* [Tathagata](https://en.wikipedia.org/wiki/Tath%C4%81gata) (如来): In Buddhism sutras, Gautama Buddha often refers to himself (or maybe all Buddhas) as tathagata.
 
 
-The British Library has [a copy of diamond sutra in Chinese dated in 868 AD](https://www.bl.uk/collection-items/the-diamond-sutra), 
+The British Library has [a copy of diamond sutra in Chinese dated in 868 AD](https://www.bl.uk/collection-items/the-diamond-sutra),
 possibly the oldest printed book.
 The whole script can be viewed online.
 
@@ -189,11 +189,11 @@ In the future it will be hard for people to understand. If someone can understan
 
 “须菩提！若善男子、善女人，以三千大千世界碎为微尘，于意云何？是微尘众宁为多不？”“甚多，世尊！何以故？若是微尘众实有者，佛则不说是微尘众，所以者何？佛说：微尘众，即非微尘众，是名微尘众。世尊！如来所说三千大千世界，即非世界，是名世界。何以故？若世界实有，即是一合相。如来说：‘一合相，即非一合相，是名一合相。’须菩提！一合相者，即是不可说，但凡夫之人贪著其事。”
 
-(More repetition on 'A is not A, thus is called A') 
+(More repetition on 'A is not A, thus is called A')
 
 “须菩提！若人言：佛说我见、人见、众生见、寿者见。须菩提！于意云何？是人解我所说义不？”“不也，世尊！是人不解如来所说义。何以故？世尊说：我见、人见、众生见、寿者见，即非我见、人见、众生见、寿者见，是名我见、人见、众生见、寿者见。”“须菩提！发阿耨多罗三藐三菩提心者，于一切法，应如是知，如是见，如是信解，不生法相。须菩提！所言法相者，如来说即非法相，是名法相。”
 
-(More repetition on 'A is not A, thus is called A') 
+(More repetition on 'A is not A, thus is called A')
 
 “须菩提！若有人以满无量阿僧祗世界七宝持用布施，若有善男子、善女人发菩提心者，持于此经，乃至四句偈等，受持读诵，为人演说，其福胜彼。云何为人演说，不取于相，如如不动。何以故？”“**一切有为法，如梦幻泡影，如露亦如电，应作如是观**”佛说是经已，长老须菩提及诸比丘、比丘尼、优婆塞、优婆夷，一切世间、天、人、阿修罗，闻佛所说，皆大欢喜，信受奉行。
 

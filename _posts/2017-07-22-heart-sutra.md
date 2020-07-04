@@ -18,20 +18,20 @@ the inspiration of the novel [Journey to the West](https://en.wikipedia.org/wiki
 Legend says that he learned Heart Sutra on his way to Indian from a foreign traveling monk.
 
 In this post, I will give an English translation based on the Chinese text.
-Translation of technical terms is simplified so that hopefully it will be easier to understand for laymen.
-The original Sanskrit pronunciation and Chinese texts are displayed along side 
+Translation of technical terms is simplified so hopefully it will be easier for laymen.
+The original Sanskrit pronunciation and Chinese texts are displayed along side
 as well. A nice Sanskrit chanting is here
 
-{% include youtubePlayer.html id="jhGI0X6jhSQ" %}
+> Disclaimer: I do not have formal education in Buddhism, thus my translation may be inaccurate.
 
-> Disclaimer: I do not have formal education in Buddhism, thus my translation may not be accurate.
+{% include youtubePlayer.html id="jhGI0X6jhSQ" %}
 
 *Arya-avalokitesvaro bodhisattvo Gambhiram prajnaparamita caryam caramano Vyavalokayati sma panca-skandhas Tamscha svabhava sunyam pasyati sma*
 
 观自在菩萨，行深般若波罗蜜多时，照见五蕴皆空，度一切苦厄。
 
 When practising deep wisdom, [Avalokitesvara](https://en.wikipedia.org/wiki/Avalokite%C5%9Bvara) saw that all composite existences had no self nature.
-This experience transcended all pain and suffering. 
+This experience transcended all pain and suffering.
 Thus he told [Sariputra](https://en.wikipedia.org/wiki/Sariputta) the following:
 
 *Iha sariputra Rupam sunyata, sunyataya rupam Yad rupam sa sunyata, Sunyataya tad rupam Evam eva, vedana samjna, samskara vijnanam.*

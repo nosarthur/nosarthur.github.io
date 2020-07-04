@@ -185,4 +185,5 @@ I am still new to extraterm and only use its capability for tabs and nice themes
 Let me know if you know any other good ones on Chrome OS.
 
 > I just switched to the beta channel and found out the default Crostini terminal
-  supports tabs. Also the themes got a lot better (ctrl+shift+p).
+  supports tabs (I haven't figure out the keyboard shortcut to open a new tab
+  through). Also the themes got a lot better (ctrl+shift+p).
