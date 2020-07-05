@@ -17,7 +17,7 @@ The other posts in this series are
 - [milestone 2: git integration]({% post_url 2019-07-10-gita-milestone2 %})
 - [milestone 3: git delegation]({% post_url 2019-07-11-gita-milestone3 %})
 - **milestone 4: speedup**
-- milestone 5: miscellaneous topics
+- [milestone 5: miscellaneous topics]({% post_url 2020-07-04-gita-milestone5 %})
 
 In the previous posts, the `gita pull` command executes `git pull` in each
 repo sequentially.

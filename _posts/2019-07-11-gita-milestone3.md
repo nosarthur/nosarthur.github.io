@@ -36,7 +36,7 @@ The other posts in this series are linked below
 - [milestone 2: git integration]({% post_url 2019-07-10-gita-milestone2 %})
 - **milestone 3: git delegation**
 - milestone 4: speedup
-- milestone 5: miscellaneous topics
+- [milestone 5: miscellaneous topics]({% post_url 2020-07-04-gita-milestone5 %})
 
 ## v0.2.1: delegate `fetch`, `pull`, `push`
 
@@ -82,10 +82,10 @@ $ gita pull
 > repo-abc: ars tarstarstarst
 > repo-abc: arstarstarstarst
 > repo-abc: 1 file changed, 6 insertions(+), 6 deletions(-)
-> 
+>
 > another-repo: tasra arstarst astars assss aoo
 > another-repo:    8298023..d33b002  master     -> origin/master
-> 
+>
 > repo21: Already up to date.
 ```
 
