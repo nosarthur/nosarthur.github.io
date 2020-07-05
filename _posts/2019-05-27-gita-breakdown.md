@@ -47,7 +47,7 @@ I break up the project into 4 milestones
 - [milestone 2: git integration]({% post_url 2019-07-10-gita-milestone2 %})
 - [milestone 3: git delegation]({% post_url 2019-07-11-gita-milestone3 %})
 - milestone 4: speedup
-- milestone 5: miscellaneous topics
+- [milestone 5: miscellaneous topics]({% post_url 2020-07-04-gita-milestone5 %})
 
 In the rest of this post, I will describe the expected behaviors for them.
 
