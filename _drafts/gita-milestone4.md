@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Milestone 4 of the gita project: speedup"
-date: 2019-08-16 01:00:00 -0500
+date: 2020-07-01 01:00:00 -0500
 categories: [side project]
 comments: true
 tags: [python, git]
@@ -21,60 +21,18 @@ The other posts in this series are
 
 In the previous posts, the `gita pull` command executes `git pull` in each
 repo sequentially.
-This is very efficient for multiple tasks:
-if the remote server of the first repo is slow, the execution for all other
-repos are delayed.
+This is NOT efficient for multiple repos:
+if the remote server of the first repo responds slowly, the execution for all
+other repos is delayed.
 
-There are two obvious improvements
+There are two obvious solutions
 
-- use multiple CPU cores for multiple tasks
-- switch to the next task while waiting for the current one
+1. use multiple CPU cores for multiple repos
+1. switch to the next repo while waiting for the current one
 
-Before we commit to any implementation, let's first go over some basics on
-operating system (OS) in the next session.
+Note that the second solution doesn't require extra CPU cores.
 
-## background: process, thread, and scheduler
-
-If you have never heard of processes and threads, you should definitely look
-them up.
-
-Roughly speaking, one running program is a process (you can see them
-with `ps` or `top` command in terminal),
-And a process can have subordinate processes.
-
-Threads are light-weight version of processes and they live inside
-processes (try `ps -T` and `top -H` and look for rows with the same PIDs).
-One big difference is that processes don't share memories whereas threads of the
-same process do. One needs to be careful about multithreading since different
-threads could write to the same memory address.
-
-
-- CPU-bound:
-- IO-bound:
-
-This waiting due to data reading/writing is called IO blocks.
-
-- IO block: 1 second
-- context switch: $10^3$ ns
-- single instruction: $10^{-1}$ ns
-
-thread states
-
-- waiting
-- runnable
-- executing
-
-instruction per cycle (IPC) *
-
-https://en.wikipedia.org/wiki/Instructions_per_second#Timeline_of_instructions_per_second
-
-Millions of instructions per second (MIPS)
-
-
-- [OS Scheduler](https://www.ardanlabs.com/blog/2018/08/scheduling-in-go-part1.html)
-
-
-The first improvement is **parallelism**.
+The first solution is **parallelism**.
 For example, each core can work on one task. When a core finishes a task, it
 grabs a new one, say, from a task queue.
 This is commonly implemented as a process pool, where the number of workers
@@ -82,12 +40,22 @@ equal to the number of CPU cores.
 Our git delegation tasks are particularly simple since they are independent of
 each other. Such tasks are called [embarrassingly parallelizable](https://en.wikipedia.org/wiki/Embarrassingly_parallel).
 
-The second improvement is **context switch**,
+The second solution is **context switch**,
 which doesn't require multiple cores. It can be implemented with either
 a thread pool or a process pool.
 When an active task blocks, the scheduler (the program that maintains the
 pool) suspends it and puts the CPU resource on another task.
 Overall, CPU idle time is reduced.
+
+(If you have never heard of processes and threads, you should definitely look
+them up. Roughly speaking, one running program is a process (you can see them
+with `ps` or `top` command in terminal),
+And a process can have subordinate processes (sub-processes).
+Threads are light-weight version of processes and they live inside
+processes (try `ps -T` or `top -H` and look for rows with the same PIDs).
+**Their main difference is that processes don't share memories whereas threads
+of the same process do.** One needs to be careful about multithreading since
+different threads can write to the same memory address.)
 
 An example is in order.
 
@@ -98,7 +66,7 @@ from multiprocessing.pool import ThreadPool
 
 def run_task(interval: int):
     print(f'{interval}s: start')
-    time.sleep(interval)
+    time.sleep(interval)  # This waiting mimics IO block
     print(f'{interval}s: end')
 
 if __name__ == '__main__':
@@ -111,16 +79,11 @@ if __name__ == '__main__':
 
 Here I use a thread pool to execute 3 trivial tasks. Each task simply sleeps
 for some time, which mimics IO block.
-A thread can be in one of the three states
-
-- waiting
-- runnable
-- executing
 
 Executing this code on my computer gives the following output
 
 ```bash
-20:56 chronos (master *) _drafts $ python3.7 thread_pool_example.py
+$ python3.7 thread_pool_example.py
 1s: start
 2s: start
 1s: start
@@ -132,9 +95,59 @@ Executing this code on my computer gives the following output
 The total execution time is slightly more than 2 seconds, instead of 4 seconds
 in the serial case.
 By default, the Python thread libraries don't run across different cores.
-Thus the speedup in the example is fully due to the second improvement.
+Thus the speedup in this example is fully due to the context switching.
 
-http://kegel.com/c10k.html
+Python standard library provides good support for multiprocessing and multithreading.
+The relevant libraries are
+
+* [threading](https://docs.python.org/3.6/library/threading.html)
+* [subprocess](https://docs.python.org/3.6/library/subprocess.html)
+* multiprocessing.pool.ThreadPool: For some reason this class is not documented.
+  You can take a look at this [blog post](http://lucasb.eyer.be/snips/python-thread-pool.html).
+* [multiprocessing.Pool](https://docs.python.org/3.6/library/multiprocessing.html#multiprocessing.pool.Pool)
+* [concurrent.futures.ThreadPoolExecutor](https://docs.python.org/3.6/library/concurrent.futures.html?highlight=concurrent%20futures#threadpoolexecutor)
+* [concurrent.futures.ProcessPoolExecutor](https://docs.python.org/3.6/library/concurrent.futures.html?highlight=concurrent%20futures#processpoolexecutor)
+
+I encourage you to try them for gita speedup, and compare their performances.
+
+In the  gita project, I used the Python [asyncio library](https://docs.python.org/3.6/library/asyncio.html).
+(Note that it requires Python3.6)
+
+
+It is easy to use as it hides a lot of the low-level details.
+If you want to know more details, a good starting point is
+[David Beazley's curious course on coroutines and concurrency](http://www.dabeaz.com/coroutines/).
+The magic keyword `yield` can be used both to give back control to the function
+caller and receive control from the caller.
+
+
+
+
+More generally, we can categorize bottlenecks in any running programs as
+
+- CPU-bound: the waiting is due to real computation.
+- IO-bound: the waiting is due to data reading/writing.
+  It could be from disk, web exchange, etc.
+
+The IO-bound blocks can benefit from the second improvement alone, whereas the
+CPU-bound blocks require more computation powers.
+
+
+
+- IO block: 1 second
+- context switch: $10^3$ ns
+- single instruction: $10^{-1}$ ns
+
+
+instruction per cycle (IPC) *
+
+https://en.wikipedia.org/wiki/Instructions_per_second#Timeline_of_instructions_per_second
+
+Millions of instructions per second (MIPS)
+
+
+
+ttp://kegel.com/c10k.html
 
 There is another improvement on context switch at IO blocks.
 A switch is wasted if it switches to another blocked task. This is a real
@@ -148,25 +161,6 @@ Even though thread is more light weight than process, the system resource
 (memory in particular) can still drain when a lot of threads are requested.
 
 http://kegel.com/c10k.html
-
-In the  gita project, we will use the Python [asyncio library](https://docs.python.org/3.6/library/asyncio.html).
-It is easy to use as it hides a lot of the low-level details.
-If you want to know more details, a good starting point is
-[David Beazley's curious course on coroutines and concurrency](http://www.dabeaz.com/coroutines/).
-The magic keyword `yield` can be used both to give back control to the function
-caller and receive control from the caller.
-
-I also encourage you to try the alternative implementations of threads,
-processes, or the corresponding pools, and compare their performances.
-The relevant libraries are
-
-* [threading]()
-* [subprocess]()
-* [multiprocessing.pool.ThreadPool]()
-* [multiprocessing.Pool]()
-* [concurrent.futures.ThreadPoolExecutor](https://docs.python.org/3.6/library/concurrent.futures.html?highlight=concurrent%20futures#threadpoolexecutor)
-* [concurrent.futures.ProcessPoolExecutor](https://docs.python.org/3.6/library/concurrent.futures.html?highlight=concurrent%20futures#processpoolexecutor)
-
 
 ## use `asyncio`
 
