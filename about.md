@@ -6,7 +6,7 @@ permalink: /about/
   <div class="wrapper">
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-3">
-        <ul class="social-media-list"> 
+        <ul class="social-media-list">
         <li><a href='https://rawgit.com/nosarthur/CV_resume/master/DongZHOU_CV.pdf'>CV</a> </li>
         <li><a href="mailto:{{ site.email }}">Email</a></li>
         <li><a href='https://rawgit.com/nosarthur/CV_resume/master/DongZHOU_resume.pdf'>Resume</a> </li>
@@ -23,7 +23,7 @@ Paul Erdős - Béla Bollobás - Alan S. Willsky - Junmo Kim - Youngwook Kee - me
 Paul Erdős - Zoltán Füredi - Endre Boros - Ramin Zabih - Ashish Raj - me OR
 Paul Erdős - Leonard J. Schulman - Andris Ambainis - John Watrous - Susan N. Coppersmith - me
         </p>
-        <p style="color:black;"> &darr; Word cloud from title words of my papers </p>
+        <p style="color:black;"> &darr; Word cloud from my papers' titles </p>
       </div>
       <img src='https://raw.githubusercontent.com/nosarthur/CV_resume/master/keywords/wordcloud.png'>
     </div>

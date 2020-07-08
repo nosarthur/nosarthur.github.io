@@ -17,7 +17,7 @@ The other posts in this series are
 - [milestone 1: basic CLI]({% post_url 2019-06-02-gita-milestone1 %})
 - [milestone 2: git integration]({% post_url 2019-07-10-gita-milestone2 %})
 - [milestone 3: git delegation]({% post_url 2019-07-11-gita-milestone3 %})
-- milestone 4: speedup
+- [milestone 4: speedup]({% post_url 2020-07-08-gita-milestone4 %})
 - **milestone 5: miscellaneous topics**
 
 ## v0.4.1: repo groups
