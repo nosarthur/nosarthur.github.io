@@ -9,8 +9,7 @@ tags: [python, git]
 
 [gita]: https://github.com/nosarthur/gita
 
-This is a step-by-step guide to reproduce [this Python project called gita][gita].
-By following this guide, you will build a command-line tool to manage multiple
+This is a step-by-step guide to build a command-line tool to manage multiple
 git repos, and learn modules such as
 
 - [argparse](https://docs.python.org/3/library/argparse.html):
@@ -33,10 +32,10 @@ This [command-line tool][gita] has two functionalities:
 1. display information of all the registered repos side by side;
 1. delegate git commands for any number of repos from any working directory.
 
+The official version is called [gita][gita].
 It has about **200 lines of code and over 700 stars** on [Github][gita].
 
 ![gita](https://github.com/nosarthur/gita/raw/master/doc/screenshot.png)
-
 
 I break up the project into 5 milestones
 
@@ -46,7 +45,7 @@ I break up the project into 5 milestones
 - [milestone 4: speedup]({% post_url 2020-07-08-gita-milestone4 %})
 - [milestone 5: miscellaneous topics]({% post_url 2020-07-04-gita-milestone5 %})
 
-The rest of this post is an overview.
+The rest of this post is a brief overview.
 
 ## milestone 1: basic CLI
 
@@ -80,7 +79,7 @@ For example,
 ```bash
 $ gita ll
 > repo1 master *_    A nice new feature
-> repo2 hot-fix *   Fix some bug
+> repo2 hot-fix *    Fix some bug
 ```
 
 Under the hood, each piece of information comes from executing a git
@@ -119,5 +118,5 @@ and marketing an open source project.
 ## general references
 
 - [Python3 module of the week](https://pymotw.com/3/): full of examples
-- [Python standard library](https://docs.python.org/3/library/)
-- [Google engineering practices](https://arxiv.org/abs/1702.01715)
+- [Python standard library](https://docs.python.org/3/library/): it's official!
+- [Google engineering practices](https://arxiv.org/abs/1702.01715): no need for intro
