@@ -19,10 +19,9 @@ repos. The other posts in this series are
 
 ## v0.1.1: add only git repo paths
 
-In milestone 1, we add any folder to `repo_path` as long as it exists.
+In milestone 1, we an add any folder to `repo_path` as long as it exists.
 In reality, we should only add git repo folders.
-
-For identification, we can check the existence of `.git` in the repo root folder:
+To identify a repo folder, we can check the existence of `.git` in the repo root folder:
 regular repos have a `.git` folder and repos generated with `git worktree` or
 `git submodule` have a `.git` file.
 
@@ -35,10 +34,10 @@ significantly over the commits. Strive for > 90% coverage if possible.
 
 ## v0.1.2: add `ll` sub-command
 
-Milestone 2's main feature is the `gita ll` sub-command, which displays detailed
+The main feature of milestone 2 is the `gita ll` sub-command, which displays detailed
 information of all repos, such as branch name, relationship between local and
 remote branches, edit status, commit message, etc. This is part of **R** in the
-CRUD API, and is more useful than `gita ls`.
+CRUD API.
 All the information items come from executing git commands. For example
 
 - branch name: `git rev-parse --abbrev-ref HEAD`
@@ -46,12 +45,11 @@ All the information items come from executing git commands. For example
 
 We will implement these two items in this commit and the rest in later commits.
 Make sure to try them in your terminal.
-If your `git` version is really old, some of these commands may not work.
+If your `git` version is really old, some of them may not work.
 
 To execute terminal command inside Python code, we will use the
 [subprocess module](https://docs.python.org/3/library/subprocess.html).
-We can use the helper function `get_repos()` from milestone 1 to get the repo
-names and their paths, and execute the git command with
+We can execute the git command with
 
 ```python
 cmd = 'git show-branch --no-name HEAD'.split()
@@ -64,18 +62,19 @@ result = subprocess.run(cmd,
 Here the standard output is redirected and saved in `result.stdout`,
 and the standard error is thrown away.
 The `cwd` keyword controls where the `cmd` is run.
+The repo `path` comes from the helper function `get_repos()` in milestone 1.
 
 In the end, the expected output looks something like
 
 ```
 $ gita ll
-> c       master fix some bug
+> repo1   master fix some bug
 > my-repo new-feature create some new feature here
 > xxx     master refactor some code
 ```
 
 For Python text formatting,
-take a look at [this link](https://docs.python.org/3/library/string.html#format-specification-mini-language).
+take a look at [this article](https://docs.python.org/3/library/string.html#format-specification-mini-language).
 
 ## v0.1.3: add edit status symbols
 
@@ -93,7 +92,7 @@ Specifically,
 - `+`: staged change
 
 In this session, we will add these edit status symbols next to the branch names.
-I also include a `_` symbol for untracked files.
+We will also add a `_` symbol for untracked files.
 The corresponding git commands are
 
 - unstaged changes: `git diff --quiet`
@@ -105,9 +104,9 @@ For the third command, we need to check the existence of `stdout`.
 
 ## v0.1.4: add local and remote relationship color
 
-Another useful information item is the relationship between the local and
-remote branches. In this commit, we will encode it in the color of the branch
-name. The colors and their represented situations are
+Another useful information is the relationship between local and remote branches.
+In this commit, we will encode it in the color of the branch name.
+The color codes are
 
 - white: local has no remote
 - green: local is the same as remote
@@ -115,7 +114,7 @@ name. The colors and their represented situations are
 - purple: local is ahead of remote (good for push)
 - yellow: local is behind remote (good for merge)
 
-The first two situations can be distinguished by command
+The first two situations can be distinguished by the command
 
 ```
 git diff --quiet @{u} @{0}
@@ -124,16 +123,16 @@ where `@{u}` denotes remote (i.e., upstream) and `@{0}` denotes local head.
 If there is no remote branch, the `returncode` is 128.
 If local is identical to the remote, the `returncode` is 0.
 If some difference exists, the `returncode` is 1.
-Unfortunately the `returncode` doesn't tell apart the other three situations.
+Unfortunately the `returncode` doesn't distinguish the other three situations.
 
-To distinguished them, we need to first find out the commit up to which the
-local and remote are identical.
-And then compare the local and remote heads to it.
-The git command for this common commit is
+To further distinguished them, we need to first find out the commit where the
+local and remote branches agree.
+And then compare the local and remote heads to this diverging point.
+The git command for the common commit is
 ```
 git merge-base @{0} @{u}
 ```
-Then you can use `git diff --quiet` two more times to tell apart the three situations.
+Then we can use `git diff --quiet` two more times to tell apart the three situations.
 
 ## v0.2: clean up and tag
 
