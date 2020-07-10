@@ -8,8 +8,7 @@ tags: [python, git]
 ---
 
 This is the fourth milestone where we speed up the sub-command execution for
-multiple repos. For concreteness, we will use `gita fetch` as example, which
-fetches updates from all repos.
+multiple repos.
 
 The other posts in this series are
 
@@ -33,8 +32,8 @@ There are two obvious solutions
 1. use multiple CPU cores for multiple repos
 1. switch to the next repo while waiting for the current one
 
-Note that the second solution doesn't require multiple CPU cores.
-Also the two can be easily combined.
+The second solution doesn't require multiple CPU cores.
+And the two solutions can be easily combined.
 
 The first solution is **parallelism**.
 For example, each core can work on one task. When a core finishes a task, it
@@ -120,7 +119,7 @@ The relevant libraries are
 * [concurrent.futures.ThreadPoolExecutor](https://docs.python.org/3.6/library/concurrent.futures.html?highlight=concurrent%20futures#threadpoolexecutor)
 * [concurrent.futures.ProcessPoolExecutor](https://docs.python.org/3.6/library/concurrent.futures.html?highlight=concurrent%20futures#processpoolexecutor)
 
-I encourage you to try them for gita speedup, and compare their performances.
+I encourage you to try them for `gita` speedup, and compare their performances.
 
 In the  gita project, I used the Python [asyncio library](https://docs.python.org/3.6/library/asyncio.html)
 (It requires Python3.6 and the API changes quite much in Python3.7). In theory it can be more efficient than
@@ -136,11 +135,11 @@ Another casual reading is
 A more technical reading is [The C10K problem](http://kegel.com/c10k.html).
 
 In the following, I will first present a simple but problematic implementation,
-its fix, and finally unit test.
+then its fix, and finally unit test.
 
 ## a simple implementation with interleaving output
 
-In my first trial, the code looks like this (and `cmds` is `['git', 'fetch']`):
+In my first trial, the code looks like this (and the `cmds` is `['git', 'fetch']`):
 
 ```python
 async def run_async(path: str, cmds: List[str]):
@@ -243,4 +242,13 @@ def test_async_output(capfd):
 You should also take a look at this article
 [Unit Testing AsyncIO Code](https://blog.miguelgrinberg.com/post/unit-testing-asyncio-code)
 by Miguel Grinberg.
+
+## v0.4: clean up and tag
+
+This completes milestone 4. At this point, you can optionally tag the
+code base using
+
+```
+git tag v0.4
+```
 

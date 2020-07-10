@@ -43,13 +43,13 @@ gita super my-group co 20-3-release
 ```
 which checks out the branch `20-3-release` for all repos in `my-group`.
 
-If you have followed the previous milestones, you will find its implementation is
+If you have followed the previous milestones, you will find its implementation
 straightforward.
 
 ## v0.4.2: bash auto completion
 
 If you use Linux terminal, you probably hit the tab key often to automatically
-complete file paths, commands, and environment variables.
+complete file paths, commands, environment variables, etc.
 You may also notice that tab completion doesn't work for all commands.
 (Indeed it doesn't work for our work-in-progress gita clone yet).
 In this commit we will make it happen.
@@ -118,13 +118,12 @@ The other building blocks for the `_gita_completions` function are
   For example, `COMP_WORDS[1]` is the word immediately after the command (say,
   after `gita`)
 
-The following two blog articles give a good summary for basics of bash auto
-completion.
+The following two blog articles give a good summary for bash auto completion.
 
 * [Bash completion tutorial](https://iridakos.com/tutorials/2018/03/01/bash-programmable-completion-tutorial.html): this alone may be enough
 * [Adding Bash Completion To a Python Script](https://www.endpoint.com/blog/2016/06/03/adding-bash-completion-to-python-script)
 
-If you never write shell script before, take a look at this book
+If you never write shell script before, try this book
 
 <a target="_blank"  href="https://www.amazon.com/gp/product/0596009658/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0596009658&linkCode=as2&tag=nosarthur2016-20&linkId=544bbc7e0f04c7ad7b1e6577c96f6dc9"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=0596009658&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=nosarthur2016-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=nosarthur2016-20&l=am2&o=1&a=0596009658" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 
@@ -190,13 +189,13 @@ If you are completely clueless like me, maybe the following articles will be use
 - [Stackoverflow open source advertising 2019](https://meta.stackoverflow.com/questions/379273/open-source-advertising-1h-2019)
 
 One annoying thing is that GitHub only saves analytics data for two weeks.
-You may be interested in checking out [repo-analytics](https://repo-analytics.github.io/)
+You may be interested in [repo-analytics](https://repo-analytics.github.io/)
 written by [Tim Qian](https://timqian.com/).
 
 ## parting words
 
-It is a nice feeling to see my own work being used by people all around the world.
-I hope you will start to create something on GitHub soon too. Remember to
+So this is the end. I hope you have learned something from these posts.
+I also hope you will start to create something on GitHub soon. Remember to
 
 - solve a real problem
 - write great `README.md`
