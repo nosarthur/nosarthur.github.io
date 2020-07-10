@@ -8,7 +8,7 @@ tags: [python, git]
 ---
 
 This is the third milestone where we implement sub-commands to delegate git
-commands for repos.
+commands.
 Specifically, the sub-commands take the format of
 
 ```
@@ -17,7 +17,7 @@ gita <sub-command> [repo-name(s)]
 If no repo name is provided, the sub-command applies to all repos. My mostly
 used sub-commands are `gita fetch` and `gita pull`.
 
-These sub-commands do not take additional arguments, which limits their usefulness.
+These sub-commands don't take additional arguments, which limits their usefulness.
 We will implement two remedies.
 One is sub-command customization, which works for fixed arguments.
 The other is the `super` sub-command
@@ -26,10 +26,7 @@ gita super [repo-names(s)] <any-git-command-with-or-without-arguments>
 ```
 where one can really execute any command.
 
-There are not many new Python tricks in this milestone. We will use the
-infrastructure built in the previous milestones to implement the new features.
-
-The other posts in this series are linked below
+The other posts in this series are
 
 - [overview]({% post_url 2019-05-27-gita-breakdown %})
 - [milestone 1: basic CLI]({% post_url 2019-06-02-gita-milestone1 %})
@@ -40,7 +37,7 @@ The other posts in this series are linked below
 
 ## v0.2.1: delegate `fetch`, `pull`, `push`
 
-The delegated sub-commands are basically the same as the bookkeeping
+The delegating sub-commands (say `gita pull`) have similar structure as the bookkeeping
 sub-commands such as `gita add` or `gita rm`. But obviously we don't want to
 add one function for each sub-command.
 One trick is to pass the git command to the sub-parser and have a function
@@ -72,8 +69,8 @@ When running delegated git commands for multiple repos, it could be hard to
 identify which message belongs to which repo. The goal of this session is to
 improve the output. Specifically,
 
-- every line of message should begin with the repo name
-- output from different repos should be separated by a blank line
+- every line of message begins with the repo name
+- outputs from different repos are separated by a blank line
 
 For example,
 
@@ -86,23 +83,23 @@ $ gita pull
 > another-repo: tasra arstarst astars assss aoo
 > another-repo:    8298023..d33b002  master     -> origin/master
 >
-> repo21: Already up to date.
+> repo3: Already up to date.
 ```
 
 ## v0.2.3: use yaml file for sub-commands
 
-The approach in the previous session still has its caveat.
-To add many delegated sub-commands, we have a lot of tedious work.
+The approach in session v0.2.1 has its caveat.
+To add multiple delegating sub-commands, we have a lot of tedious work.
 Fortunately such repetitive effort is easy to automate.
 We can build a sub-parser generation process and put the git command information
 in text format.
 
-I will use `yaml` files for the text representation, and the parsing is not
-provided in the Python standard library.
-Alternatively, you can use `json` files, which is supported by the standard
-library. But they are slightly more verbose.
+I will use `yaml` files for the text representation, which is not supported
+by the Python standard library.
+Alternatively, you can use `json` files, which is supported.
+But they are more verbose.
 
-To install `yaml` parser, run
+To install the YAML parser, run
 ```
 pip3 install pyyaml
 ```
@@ -119,10 +116,10 @@ push:
   help: push the local updates
 ```
 Here the entry names are the delegated git commands.
-I also included help messages for the sub-parsers.
+I also included some help messages.
 
-After your code works, there is one more deployment issue. By default, only
-source code files are packaged into the installation files. To include
+When your code works, there is one more deployment issue. By default, only
+source code are packaged into the installation files. To include
 `cmds.yml` for distribution, we need to have a `MANIFEST.IN` in the project
 root folder with the following content
 
@@ -131,16 +128,15 @@ include gita/cmds.yml
 ```
 It simply tells the packager where the files are.
 
-In the `setup.py`, we need to add a line of
+In the `setup.py`, we also need the following line.
 
 ```python
 include_package_data=True,
 ```
-to enable the inclusion of non-source-code files.
 
 ## v0.2.4: enhance yaml file
 
-One minor enhancement for our yaml representation is to include git commands
+Another enhancement for our YAML representation is to include git commands
 with arguments. For example, `git remote` is not as useful as `git remote -v`,
 and we can define `gita remote [repo-name(s)]` to have the latter behavior.
 To implement it, we can use an extra field for the full command, say, `cmd`, as
@@ -153,7 +149,7 @@ remote:
 
 Then in the Python code, we can execute this `cmd` instead of the entry/sub-command name.
 
-I also have other shortcut defined such as
+We can also use this YAML file to define other shortcuts. For example
 ```yaml
 br:
   cmd: branch -vv
@@ -163,14 +159,14 @@ stat:
   help: show edit statistics
 ```
 
-This feature is analogous to shortening long commands with git alias.
+This is similar to git alias.
 
 ## v0.2.5: add sub-command customization
 
-So far we have made the generation of delegated sub-commands really cheap. One
-low-hanging fruit is to allow users to define their own sub-commands in an
-additional yaml file, say inside `~/.config/gita/`.
-The code change is to have the sub-parser generation code process this file.
+So far we have made the generation of delegating sub-commands really cheap.
+One low-hanging fruit is to allow users to define their own sub-commands in
+another yaml file, say inside `~/.config/gita/`.
+All we need is to have the sub-parser generation code process this file.
 
 ## v0.2.6: add `super` sub-command
 
