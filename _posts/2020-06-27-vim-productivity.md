@@ -58,7 +58,9 @@ navigation keys | meaning
 `]c` and `[c` | next/previous change
 `*` and `#`| search forward/backward for the current word
 `/` and `?` | search forward/backward
-`fx` | find the next occurrence of `x` (replace `x` to any letter you want)
+`fx` and `Fx`| find the next occurrence of `x` (replace `x` to any letter you want) forward/backward
+`(` and `)` | go to the beginning of current/next sentence
+`{` and `}` | go to the beginning of current/next paragraph
 
 text manipulation keys | meaning
 --- | ---
@@ -97,7 +99,6 @@ other keys | meaning
 --- | ---
 `:term`| create a terminal buffer (requires Vim 8.1)
 `:h <keywords>` | get help on <keywords>, for example, `:h navigation`
-`ctrl+^` | open the previously opened file
 
 To manage Vim plugins, I use [Vim-plug](https://github.com/junegunn/Vim-plug).
 It is a newer tool than [Vundle](https://github.com/VundleVim/Vundle.vim) and [Pathogen](https://github.com/tpope/vim-pathogen).
