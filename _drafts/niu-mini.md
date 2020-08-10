@@ -118,7 +118,7 @@ There are two ways to flash firmware onto the keyboard.
 [](https://github.com/qmk/qmk_firmware/tree/master/keyboards/niu_mini)
 
 ```
-make niu_mini:default:avrdude
+make niu_mini:default:dfu
 ```
 
 
