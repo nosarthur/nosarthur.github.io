@@ -2,7 +2,7 @@
 layout: post
 title: How to be productive with Vim environment and stay mouseless
 date: 2020-06-27 17:00:00 -0500
-categories: [coding]
+categories: [productivity]
 comments: true
 tags: [Vim]
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Define extended keyboard layer on Mac using Karabina-elements and Goku
 date:   2020-08-09 13:00:00 -0500
-categories: [coding]
+categories: [productivity]
 comments: true
 tags: [keyboard, vim]
 ---
