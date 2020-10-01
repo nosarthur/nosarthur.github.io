@@ -18,8 +18,8 @@ cursor location `|` | todo | escaping | single key
 `abc|` | go to beginning of line | `<esc> + I` | `home`
 `{abc|}` | move cursor to the right of `}` | `<esc> + A` | `right_arrow`
 
-Sure I can use the single keys, but they are far away.
-My `escape` key is at `capslock` by the way.
+You can see it's more key presses using the escaping approach.
+On the other hand, these single keys are located far away.
 
 The ideal solution is to define another keyboard layer with these useful keys mapped at some
 easily accessible locations.
@@ -39,6 +39,7 @@ As shown in the image, the typical triggering key is either the `capslock`
 or the key left to the `spacebar`.
 For example, `<trigger> + k` gives rise to `down_arrow`, where `k` refers to
 the key under the right middle finger at rest position.
+Since my `capslock` key is already been used for` escape`, I use left `command` key for triggering.
 
 The following layer comes from [DreymaR on the colemak forum](https://forum.colemak.com/topic/2014-extend-extra-extreme/).
 You may also be interested in his [Big Bag of Keyboard Tricks](https://forum.colemak.com/topic/1467-dreymars-big-bag-of-keyboard-tricks-pklwindows-edition/).
