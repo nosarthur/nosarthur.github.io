@@ -1,7 +1,7 @@
 ---
 layout: post
 title: crystal lattices and space groups
-date:   2019-10-10 03:43:08 -0500
+date:   2021-10-10 03:43:08 -0500
 categories: [math and physics]
 comments: true
 tags: [crystallography, solid state physics, group theory]
