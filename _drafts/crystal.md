@@ -89,6 +89,8 @@ cubic crystal system
 
 ## 7 crystal systems
 
+The rationale here is to categorize lattice using point symmetry.
+
 crystal system | characteristic symmetry | syngony | unit cell parameters | indep. param.| Bravais lattice
 --- | --- | --- | --- | --- | ---
  triclinic (1-2) | 1x 1-fold | -1 | $$a\neq b\neq c, \alpha\neq\beta\neq\gamma\neq90^\circ$$ | 6 | P

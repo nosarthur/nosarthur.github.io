@@ -50,7 +50,7 @@ $$\left<f(X)\right> \simeq\frac{1}{N}\sum_{i=1}^N f(x_i) $$
 
 where $$N$$ is the number of data points in the ensemble.
 
-Don't worry if you don't see why it's possible to evaluate an expectation this way. 
+Don't worry if you don't see why it's possible to evaluate an expectation this way.
 All the 'magic' is in the sampling (ensemble generation) process. In this post, I will explain three different methods
 
 * [simple sampling](#simple)
@@ -98,14 +98,14 @@ In other words,
 
 $$ A_\text{pool} = A_\text{box}\left<\mathbb{1}_\text{pool}(x)\right> \simeq \frac{A_\text{box}}{N_\text{box}}\sum_{i=1}^{N_\text{box}}\mathbb{1}_\text{pool}(x_i)$$
 
-As you can see from this example, **sometimes the problem itself is not in the 
-form of a statistical average but can be converted into one**. This is where 
+As you can see from this example, **sometimes the problem itself is not in the
+form of a statistical average but can be converted into one**. This is where
 intuition and creativity come into play.
 One eminent example is the [Buffon's needle problem](https://en.wikipedia.org/wiki/Buffon%27s_needle), which estimates $$\pi$$ by throwing needles.
 
 ### example 2: volume of entangled quantum states in 15D
 
-In our 2012 IJMPB paper "[Topology of entanglement evolution of two qubits](http://www.worldscientific.com/doi/abs/10.1142/S0217979212500543)", we computed the volume of two-qubit entangled states in a 15 dimensional polarization vector representation (For some reason the reviewer forced us to call it polarization vector, I would prefer generalized [Bloch vector](https://en.wikipedia.org/wiki/Bloch_sphere)). 
+In our 2012 IJMPB paper "[Topology of entanglement evolution of two qubits](http://www.worldscientific.com/doi/abs/10.1142/S0217979212500543)", we computed the volume of two-qubit entangled states in a 15 dimensional polarization vector representation (For some reason the reviewer forced us to call it polarization vector, I would prefer generalized [Bloch vector](https://en.wikipedia.org/wiki/Bloch_sphere)).
 
 Here the idea is very similar to example 1. We use a ball to enclose all the states (both entangled and separable) and use [concurrence](https://en.wikipedia.org/wiki/Concurrence_(quantum_computing)) as the indicator function $$\mathbb{1}_\text{entangled}(x)$$ to test for entanglement, i.e.,
 
@@ -144,7 +144,7 @@ $$\sigma_{MC}^2 = \frac{1}{N-1}\left(\left<f^2\right>-\left<f\right>^2\right)$$
 For conventional numerical integration methods, the error is inversely proportional to the number of points in each dimension, i.e., $$N^{1/d}$$.
 
 If $$p(x)$$ is not uniformly random, in principle one can still use simple
-sampling, i.e., 
+sampling, i.e.,
 
 $$\left<f(X)\right> \simeq\frac{1}{N}\sum_{i=1}^N f(x_i)p(E_i) $$
 
@@ -240,19 +240,19 @@ These methods all share the name Markov Chain Monte Carlo (MCMC).
 
 Note that both the Boltzmann factor and the partition function depend on temperature, or equivalently $$\beta$$. Thus if we are interested in the system's response in a range of temperatures (for example phase transition), many MCMC simulations need to be performed. The so-called reweighting methods provide a shortcut to run many MCMC at different temperatures.
 
-The key idea is the change of variable from phase space to energy space, i.e., 
+The key idea is the change of variable from phase space to energy space, i.e.,
 
 $$ \int dq = \int g(E) dE $$
 
 where $$g(E)$$ is the [density of states (DOS)](https://en.wikipedia.org/wiki/Density_of_states). If the phase space and energy levels are discrete, the integration needs to be replaced by summation. In the discrete case, $$g(E_i)$$ becomes
 the number of states with energy $$E_i$$, although I will still call it DOS.
 
-Note that the concept of DOS is not only important to Monte 
+Note that the concept of DOS is not only important to Monte
 Carlo methods but also to condensed matter physics in general.
 This is because that **the energy space integration is in most cases easier to do than the phase space integration, no matter you do it analytically or numerically**.
 
 Another awesome feature of DOS is that it does not depend on temperature.
-Once you figure it out, you can get the expectation value of any observable 
+Once you figure it out, you can get the expectation value of any observable
 $$O$$ at any temperature using
 
 $$ \left< O(\beta) \right> = \int O(E) p(E, \beta) dE $$
@@ -261,7 +261,7 @@ where the probability distribution function is given by
 
 $$ p(E, \beta) = \frac{e^{-\beta E}}{Z(\beta)} g(E) $$
 
-Here I write out the dependence on temperature explicitly. 
+Here I write out the dependence on temperature explicitly.
 
 Before jumping into specific methods, I would like to point out two more facts
 
@@ -270,9 +270,9 @@ Before jumping into specific methods, I would like to point out two more facts
 
 ### conventional histogram reweighting
 
-The first question we can ask is: if we did a MCMC at temperature $$\beta_1$$, can we get $$p(E,\beta_2)$$ for free, i.e., the probability distribution at a different temperature? 
+The first question we can ask is: if we did a MCMC at temperature $$\beta_1$$, can we get $$p(E,\beta_2)$$ for free, i.e., the probability distribution at a different temperature?
 
-The answer is yes and it's actually quite simple. With the ensemble $$\{x_i\}$$ from the first simulation, we can make a histogram of occurrence versus energy. Up to a normalization factor, this histogram $$H(E, \beta_1)$$ is an estimate of $$p(E,\beta_1)$$. Thus up to a normalization factor, 
+The answer is yes and it's actually quite simple. With the ensemble $$\{x_i\}$$ from the first simulation, we can make a histogram of occurrence versus energy. Up to a normalization factor, this histogram $$H(E, \beta_1)$$ is an estimate of $$p(E,\beta_1)$$. Thus up to a normalization factor,
 
 $$ p(E,\beta_2) \sim H(E, \beta_1) e^{-(\beta_2-\beta_1)E} $$
 
@@ -280,15 +280,15 @@ You can easily normalized it and retrieve $$p(E,\beta_2)$$. The catch here is th
 
 Another neat idea is the so-called [multicanonical sampling](https://en.wikipedia.org/wiki/Multicanonical_ensemble), which answers the question: can we do better when $$p(E)$$ have multiple peaks?
 In this case, it's difficult to
-'tunnel' though the valley from the peak regions due to the 
+'tunnel' though the valley from the peak regions due to the
 
-* energy barrier 
+* energy barrier
 * DOS barrier.
 
 As a result, the ensemble from a MCMC simulation may
 
 * get trapped in one peak and totally miss the others
-* visit the peaky areas too often and the valley areas too rarely 
+* visit the peaky areas too often and the valley areas too rarely
 
 Both scenarios will fail the estimation of $$p(E)$$ and expectation values of observables miserably.
 
@@ -302,7 +302,7 @@ However, this $$g(E)$$ estimation is not very accurate due to the low efficiency
 Instead of making $$p(E)$$ constant, simply sampling makes $$p(q)$$ constant.
 It overcomes the energy barrier but not the DOS barrier, which is the more severe barrier. Recall that Boltzmann factor is monotonic with energy thus unable to create peak/valley in $$p(E)$$.
 
-Sampling more and more data points is not the way to go. 
+Sampling more and more data points is not the way to go.
 **The whole purpose of Monte Carlo sampling is to generate a small sample to represent the whole phase space statistics**.
 We should never sample as many points as, for example, the number of possible states.
 If there is a possibility to check every state, you should do it. Brutal force will give the exact result for every quantity, whereas many details of Monte Carlo methods could go wrong (see [Further studies](#further) section) and will go wrong (according to [Murphy's law](https://en.wikipedia.org/wiki/Murphy%27s_law)). We don't do brutal force often because the phase space is
@@ -338,8 +338,9 @@ $$ W_{n\rightarrow m} = \min\left\{1, \frac{g(E_n)}{g(E_m)}\right\}$$
 
 In other words, less likely state is always accepted.
 
-After the change, both the histogram and the DOS will be updated. Usually the DOS entry will be augmented by a factor $$f_i$$. For the first round, $$f_1=e$$ (it doesn't matter too much as long as it's greater than 1).
-This updates continues until $$H(E)$$ becomes flat. Then we reset $$H(E)$$ and 
+After the change, both the histogram and the DOS will be updated. Usually the DOS entry will be augmented by a factor $$f_i$$. For the first round, $$f_1=e$$
+(the exact value doesn't matter much as long as it's greater than 1).
+This updates continues until $$H(E)$$ becomes flat. Then we reset $$H(E)$$ and
 start over with $$f_{i+1}=\sqrt{f_i}$$. After several rounds, we can be more sure that $$g(E)$$ has converged to the right values.
 
 I need to add that the Wang-Landau method is very easy to implement and gives amazing result, almost like magic. Compared to simple sampling, it is not only

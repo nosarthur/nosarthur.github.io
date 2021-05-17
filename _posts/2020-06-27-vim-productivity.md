@@ -56,7 +56,8 @@ navigation keys | meaning
 `H`, `L`, and `M`  | go to the top/bottom/middle of screen
 `]m` and  `[m` | next/previous method
 `]c` and `[c` | next/previous change
-`*` and `#`| search forward/backward for the current word
+`*` and `#`| search forward/backward for the current word, exact match
+`g*` and `g#`| search forward/backward for the current word, superstring match
 `/` and `?` | search forward/backward
 `fx` and `Fx`| find the next occurrence of `x` (replace `x` to any letter you want) forward/backward
 `(` and `)` | go to the beginning of current/next sentence

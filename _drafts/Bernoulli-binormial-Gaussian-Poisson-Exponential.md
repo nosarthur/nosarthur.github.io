@@ -1,14 +1,15 @@
 ---
 layout: post
-title: "Bernoulli, binomial, Gaussian, and Possion"
-date:   2018-08-22 10:40:00 -0500
+title: "The evolution of basic statistical distributions: Bernoulli, binomial, Gaussian, Poisson, and exponential"
+date:   2022-08-22 10:40:00 -0500
 categories: [math and physics]
 comments: true
 tags: [probabilities, random processes]
 ---
 
-Probability theory, statistics, and stochastic processes all study undeterminstic
-events. Roughly speaking, they can be seen as theories of signal source,
+Probability theory, statistics, and stochastic processes all study events that
+are not deterministic.
+Roughly speaking, they can be seen as theories of signal source,
 results counting, and dynamics.
 Many neat results can be constructed from simple things. Here I will start from
 the simplest probability distribution - the
@@ -77,7 +78,7 @@ $$ \sum_{k=0}^n P(S = k ) = 1$$
 
 With $$p=q=0.5$$, the binomial distribution is symmetric. With increasing $$n$$,
 the distribution becomes more smooth.
-It's natrual to wonder what happens when $$n\rightarrow\infty$$.
+It's natural to ask what happens when $$n\rightarrow\infty$$.
 
 [Gaussian distribution](https://en.wikipedia.org/wiki/Normal_distribution)
 

@@ -33,7 +33,7 @@ This [command-line tool][gita] has two functionalities:
 1. delegate git commands for any number of repos from any working directory.
 
 The official version is called [gita][gita].
-It has about **200 lines of code and over 700 stars** on [Github][gita].
+It has about **200 lines of code and over 900 stars** on [Github][gita].
 
 ![gita](https://github.com/nosarthur/gita/raw/master/doc/screenshot.png)
 
