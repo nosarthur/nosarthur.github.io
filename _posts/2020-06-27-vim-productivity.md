@@ -100,6 +100,8 @@ other keys | meaning
 --- | ---
 `:term`| create a terminal buffer (requires Vim 8.1)
 `:h <keywords>` | get help on <keywords>, for example, `:h navigation`
+`zm` and `zr` | fold and unfold one level
+`zM` and `zR` | fold and unfold all
 
 To manage Vim plugins, I use [Vim-plug](https://github.com/junegunn/Vim-plug).
 It is a newer tool than [Vundle](https://github.com/VundleVim/Vundle.vim) and [Pathogen](https://github.com/tpope/vim-pathogen).
