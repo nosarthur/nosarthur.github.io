@@ -16,7 +16,7 @@ other platforms with minor changes.
 
 - apple+shift+c: mouseless copy in iTerm2
 - apple+alt+c: bring up paste history via Alfred
--
+- vim copy to clipboard
 
 ## advanced
 

@@ -46,6 +46,7 @@ navigation keys | meaning
 `%` | go to first matching parenthesis/bracket
 `+`, `-`, and `^` (or `_`) | go to first non-blank character in the next/previous/current line
 `0` and `$` | go to beginning/end of line
+`g0` and `g$` | go to beginning/end of wrapped line
 `gd` | go to the local definition of the word under cursor
 `ctrl + y` and `ctrl + e` | move the screen upward/downward one line while keeping the cursor location
 `ctrl + f` and `ctrl + b`| move the cursor forward/backward one screen
