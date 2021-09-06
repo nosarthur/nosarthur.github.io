@@ -64,3 +64,7 @@ Dr. Hamming had major contribution to [coding theory](https://en.wikipedia.org/w
 Like other thinkers who lived long interesting lives, he has many interesting things to say.
 
 {% include youtubePlayer.html id="a1zDuOPkMSw" %}
+
+It is also available in the book of [The Art of Doing Science and Engineering: Learning to Learn](https://amzn.to/3sWM4tQ)
+
+<a target="_blank"  href="https://www.amazon.com/gp/product/1732265178/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1732265178&linkCode=as2&tag=nosarthur2016-20&linkId=858d64db26508e93754926a926581758"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=1732265178&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=nosarthur2016-20" ></a>
