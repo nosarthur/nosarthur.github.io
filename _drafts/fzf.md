@@ -56,10 +56,11 @@ I use a command line note taking program called [notes](https://github.com/pimte
 and I have this line in my `.bashrc`
 
 ```bash
-alias vn='v `ls ~/notes |fzf`'
+alias vn='n o `n ls |fzf`'
 ```
 
-Here `v` is my alias to `vim`.
+Here `n` is my alias to `notes`,  `n ls` lists the documents and `n o` opens
+the one picked by `fzf`.
 
 
 ## edit source files in a git repo
@@ -101,14 +102,16 @@ export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border --multi'
 ```
 
 ```bash
-alias qd='qdel `q | tail -n +3| fzf |c1`'
+alias qd='qdel `q | tail -n +3| fzf | ff 1`'
 ```
 
-Here `c1` is another alias to extract the first column.
+Here `ff` is a custom script to extract a column:
 
 ```bash
-alias c1="awk '{print \$1}'"
+awk "{ print \$$1 }"
 ```
+
+
 
 And `q` is my tailored `qstat` command
 ```bash
