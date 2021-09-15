@@ -28,7 +28,7 @@ Such a layer is called the **extended layer**,
 and the mapping is almost standardized.
 
 For example, the following layer comes from [the Ergonomic Keyboard Mods](https://colemakmods.github.io/ergonomic-mods/extend.html) site.
-![extend-layer](https://colemakmods.github.io/ergonomic-mods/gfx/extend_simple_ansi.png)
+![extend-layer](https://colemakmods.github.io/ergonomic-mods/gfx/extend/extend_simple_ansi.png)
 
 The main change is under the right hand
 
