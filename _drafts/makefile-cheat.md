@@ -1,14 +1,11 @@
 ---
 layout: post
-title: Makefile
-date:   2021-09-18 13:43:08 -0500
+title: GNU Make Cheat Sheet
+date:   2022-01-18 03:43:08 -0500
 categories: [coding]
 comments: true
-tags: [python]
+tags: [Makefile]
 ---
-
-
-
 
 [Managing Projects with GNU Make, Third Edition By Robert Mecklenburg](https://www.oreilly.com/openbook/make3/book/)
 
@@ -18,7 +15,7 @@ tags: [python]
 
 ```
 target: prerequisites
-        command
+        recipe
 ```
 - rules
     - explicit
@@ -64,6 +61,8 @@ User-defined functions are variables holding texts.
 
 symbol|meaning
 ---|---
+`-n` | dry run
+`-C` | run in specified folder
 `-p`| print database
 `-t` | touch targets
 

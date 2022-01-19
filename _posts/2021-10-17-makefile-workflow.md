@@ -36,7 +36,7 @@ failed job, preventing re-submission to occur.
 
 ```
 output : input
-    [ -f $@ -o ! -s $< ] || run @< && touch $@
+    [ -f $@ -o ! -s $< ] || { run @< && touch $@; }
 ```
 
 Note that `-s @<` checks if `input` is a merely sentinel.
@@ -79,7 +79,7 @@ and a `input.done` created at job completion
 (the `run @<` script writes it to disk).
 ```
 input.done :  input
-    [ -f $@ -o -f $<.running -o ! -s @< ] || run @< && touch $<.running
+    [ -f $@ -o -f $<.running -o ! -s @< ] || { run @< && touch $<.running; }
 ```
 
 Supporse there are a series of such `inputs`, it may be useful to know if all
@@ -96,6 +96,10 @@ We can further figure out which ones are not done
 inputs_done_expect:=$(addsuffix .done,$(inputs))
 not_done:=$(filter-out $(inputs_done),$(inputs_done_expect))
 ```
+
+A sentinel for job completion is useful even when the output is well defined.
+Suppose the output file is large and takes time to write to disk, or it writes
+to disk by chunks, a non-zero size doesn't guarantee job completion.
 
 ## pattern 3: untouchable target
 Sometimes the output is well-defined but it cannot be touched, making
