@@ -20,11 +20,8 @@ permalink: /about/
 
       <div class="footer-col footer-col-4">
         <p style="color:black;">{{ site.description }}</p>
-        <p style="color:black;">Erdős number ≤ 5:
-Paul Erdős - Béla Bollobás - Alan S. Willsky - Junmo Kim - Youngwook Kee - me OR
-Paul Erdős - Zoltán Füredi - Endre Boros - Ramin Zabih - Ashish Raj - me OR
-Paul Erdős - Leonard J. Schulman - Andris Ambainis - John Watrous - Susan N. Coppersmith - me
-        </p>
+        <p style="color:black;">Erdős number ≤ 5: </p>
+        <img src='/assets/erdos.svg'>
         <p style="color:black;"> &darr; Word cloud from my papers' titles </p>
       </div>
       <img src='https://raw.githubusercontent.com/nosarthur/CV_resume/master/keywords/wordcloud.png'>
