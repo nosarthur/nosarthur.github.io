@@ -249,7 +249,7 @@ the number of states with energy $$E_i$$, although I will still call it DOS.
 
 Note that the concept of DOS is not only important to Monte
 Carlo methods but also to condensed matter physics in general.
-This is because that **the energy space integration is in most cases easier to do than the phase space integration, no matter you do it analytically or numerically**.
+This is because that **the energy space integration is in most cases easier to do than the phase space integration, both analytically and numerically**.
 
 Another awesome feature of DOS is that it does not depend on temperature.
 Once you figure it out, you can get the expectation value of any observable
