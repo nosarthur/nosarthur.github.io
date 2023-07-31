@@ -21,7 +21,8 @@ permalink: /about/
       <div class="footer-col footer-col-4">
         <p style="color:black;">{{ site.description }}</p>
         <p style="color:black;">Erdős number ≤ 4: </p>
-        <img src='/assets/erdos.svg'>
+<!-- <img src='/assets/erdos.svg'> -->
+
         <p style="color:black;"> &darr; Word cloud from my papers' titles </p>
       </div>
       <img src='https://raw.githubusercontent.com/nosarthur/CV_resume/master/keywords/wordcloud.png'>
