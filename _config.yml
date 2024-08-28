@@ -11,7 +11,7 @@ email: zhou.dong@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Physicist and programmer, passionate about method development and innovation.
   Past experience includes crystal structure prediction, medical imaging, quantum computing, and spectro-microscopy. <br>
-  A reader and writer. Interested in martial arts, yoga, and other ancient teachings.
+  Reader and writer. Interested in martial arts, yoga, and other ancient teachings.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://nosarthur.github.io" # the base hostname & protocol for your site
 twitter_username: nosarthur
