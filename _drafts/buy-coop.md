@@ -1,13 +1,11 @@
 ---
 layout: post
 title: Buy coop in New York city
-date:   2020-06-18 15:00:00 -0500
+date: 2020-06-18 15:00:00 -0500
 categories: [life]
 comments: true
 tags: [realty]
 ---
-
-
 
 We recently bought a coop in New York city.
 
@@ -25,10 +23,10 @@ There are 4 of them in total: seller's agent, seller's broker, buyer's agent,
 and buyer's broker.
 Here agents are the people you meet, and the brokers are companies they work for.
 
-To be concrete, suppose the property sells for $500k. Then the seller needs to
-pay $30k at closing.
+To be concrete, suppose the property sells for $600k. Then the seller needs to
+pay $36k at closing.
 For simplicity we can assume they split the commission evenly.
-Then each party gets $7.5k.
+Then each party gets $9k.
 
 I find it concerning that the buyer's agent is paid by the seller.
 
@@ -36,10 +34,10 @@ I find it concerning that the buyer's agent is paid by the seller.
 
 There are 2 rarer situations.
 
-|situation | pro | con |
-|---|---|---|
-| No buyer's agent | | |
-| For sale by owner (FSBO) | | |
+| situation                | pro | con |
+| ------------------------ | --- | --- |
+| No buyer's agent         |     |     |
+| For sale by owner (FSBO) |     |     |
 
 There is also the possibility that both the buyer's agent and seller's agent
 work for the same broker.
@@ -48,7 +46,6 @@ According to the book [Buyers Are Liars & Sellers Are Too](https://amzn.to/30yf5
 written by Richard Countney, FSBO is frowned upon.
 
 <a target="_blank"  href="https://www.amazon.com/gp/product/0743281578/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0743281578&linkCode=as2&tag=nosarthur2016-20&linkId=885a4eaeec34099c8b1835ed045a1f04"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=0743281578&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=nosarthur2016-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=nosarthur2016-20&l=am2&o=1&a=0743281578" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
-
 
 ## day -40: make the decision to buy
 
@@ -107,8 +104,8 @@ The appraisal price is not disclosed to the seller.
 
 ## day 54: board interview
 
-
 ## day
+
 ## day
 
 ## references
