@@ -448,13 +448,13 @@ there are more pairs than ligands — which is exactly the condition $$m > n-1$$
 condition for the cycle space to be non-trivial at all.
 
 With per-edge conductances in hand, the electrical analogy of case 1 sharpens into
-an exact dictionary.
-Give edge $$i$$ conductance $$w_i = 1/\sigma_i^2$$
-and let its measurement act as an EMF $$y_i$$ in series with
-internal resistance $$\sigma_i^2$$:
+an exact dictionary:
 
 | statistics                                                                               | circuit                                         |
 | ---------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| measurement $$y_i$$                                                                      | EMF in edge $$i$$                               |
+| weight $$w_i = 1/\sigma_i^2$$                                                            | conductance of edge $$i$$                       |
+| error bar $$\sigma_i^2$$                                                                 | its internal resistance                         |
 | fitted value $$\hat x_v$$                                                                | voltage at node $$v$$                           |
 | normal equations $$\mathbf B^\mathsf T\mathbf W\tilde{\boldsymbol\epsilon} = \mathbf 0$$ | Kirchhoff's current law                         |
 | residual $$\tilde\epsilon_i$$                                                            | voltage across edge $$i$$'s internal resistance |
@@ -529,7 +529,7 @@ The bridge's $$h_i=1$$ owes nothing to precision: its residual is identically ze
 no matter how large its error bar.
 Small residual does not mean trustworthy edge;
 it can equally mean untestable edge.
-The next section makes that last sentence quantitative.
+The next section makes that statement quantitative.
 
 ## leaving one edge out
 
