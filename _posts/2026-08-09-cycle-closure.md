@@ -697,15 +697,25 @@ it is the absence of any test at all.
 The picture above is the whole story on seven ligands.
 Every triangle edge has $$h = 2/3$$, every square edge $$h = 3/4$$,
 and the bridge $$h = 1$$.
-Cycle length is what sets leverage. For an edge lying in **exactly one** cycle,
-of length $$\ell$$, the law is exact: $$h = (\ell-1)/\ell$$, so $$1-h = 1/\ell$$.
+Cycle length is what sets leverage, and one formula covers every case.
+Edge $$i$$ is in parallel with everything else joining its endpoints, so writing
+$$r_i = \sigma_i^2$$ for its own resistance and $$R_{\text{rest}}$$ for that of the
+rest of the network,
+
+$$ h_i = \frac{R_{\text{rest}}}{r_i + R_{\text{rest}}} $$
+
+A bridge has no parallel path, $$R_{\text{rest}} = \infty$$, so $$h = 1$$.
+An edge lying in exactly one cycle of length $$\ell$$ has the other $$\ell-1$$ edges
+in series, so with unit weights $$h = (\ell-1)/\ell$$ and $$1-h = 1/\ell$$ —
+the triangle and the square above.
+An edge in several cycles has several paths in parallel and does better: the shared
+edge of two back-to-back triangles sees two 2-paths, $$R_{\text{rest}} = 1$$, so
+$$h = 1/2$$ rather than $$2/3$$.
+
 Each independent cycle contributes exactly one unit to the testability budget
 $$\sum_i(1-h_i)$$, and a longer loop spreads that single unit over more edges.
 Redundancy is not free: closing a big loop tests each of its edges less than
 closing a small one.
-(The "exactly one" matters. An edge sitting in several cycles is tested by each
-of them and does better than the formula suggests: put two triangles back to back
-and their shared edge drops to $$h = 1/2$$ rather than $$2/3$$.)
 
 ### a conserved budget of scrutiny
 
