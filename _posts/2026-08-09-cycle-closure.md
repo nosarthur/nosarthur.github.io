@@ -493,13 +493,13 @@ tail probability, that needs Gaussian $$\boldsymbol\epsilon$$.
 ### leverage: how much the fit trusts an edge
 
 Diagonal weights allow us to read the matrix results
-one edge at a time. Define the **leverage** of edge $$i$$ as the
-corresponding diagonal entry of the hat matrix,
+one edge at a time. Define the **leverage** of edge $$i$$, whose endpoints are
+$$s_i$$ and $$t_i$$, as the corresponding diagonal entry of the hat matrix,
 
 $$
 h_i \equiv H_{ii}
  = w_i\, \mathbf b_i^\mathsf T\mathbf L^{+}\mathbf b_i
- = w_i R_{\mathrm{eff}}(a_i,b_i)
+ = w_i R_{\mathrm{eff}}(s_i,t_i)
 $$
 
 conductance times effective resistance — a circuit quantity. Since $$w_i$$ is the
@@ -616,6 +616,25 @@ $$
 so the residual is the edge's disagreement with the network, shrunk by exactly the
 factor by which the fit has already moved to accommodate it.
 That shrinkage is the double-counting the raw residual hides.
+
+The same two numbers explain the shift in $$\hat{\mathbf x}$$ itself.
+Deleting an edge changes two things — the data loses $$y_i$$, and $$\mathbf L$$ loses
+a term — and both move the answer along the same direction $$\mathbf L^{+}\mathbf b_i$$:
+
+$$
+\underbrace{-\,w_i y_i\,\mathbf L^{+}\mathbf b_i}_{\text{the measurement leaves}}
+\;+\;
+\underbrace{w_i \hat y_i^{(i)}\,\mathbf L^{+}\mathbf b_i}_{\text{the graph rewires}}
+\;=\; -\,w_i g_i\,\mathbf L^{+}\mathbf b_i
+$$
+
+The first term drops edge $$i$$ from $$\mathbf B^\mathsf T\mathbf W\mathbf y$$ with
+$$\mathbf L$$ held fixed; the second is what the rank-one downdate of $$\mathbf L$$
+adds back, and together they recover the Sherman–Morrison shift above.
+The second coefficient is the one to stare at: deleting an edge gives exactly the
+same $$\hat{\mathbf x}$$ as keeping it and setting its measurement to the network's
+own prediction $$\hat y_i^{(i)}$$.
+The convex combination blends the two numbers; deletion swaps one for the other.
 
 ### four variances, and which one to rank on
 
